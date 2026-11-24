@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16. Developing Meditation</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/15._Advice_to_Lay_People.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(15)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/17._Kamma_and_Rebirth.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(17)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/16.%20Developing%20Meditation.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>16. Developing Meditation</h3>
+<p>Fundamentally, the teaching of Buddhism deals with oneself. We all have a big problem, and Buddhism teaches us how to correct that problem. The problem is discontent or suffering. Discontent is always there in our lives; in little thing and big things, always in some way we’re dissatisfied. When we want something, we want it only because we don’t have it. That lack creates a state of disharmony inside which expresses itself as dukkha or discontent. Our habitual reaction is to search for something to overcome that disharmony within ourselves. Because of that, we’re always searching, always looking for things. This constant searching is a major source of frustration, because whatever solution we find is never quite satisfactory. This in fact is the fundamental problem of all people; not just Buddhists, but everybody throughout the world.</p>
+<p>We always search for a solution by using cause and effect. We encounter some problem and we ask, “What will be an effective means to overcome this problem?” In that way, we examine causes and their effects. But the trouble is that we lack wisdom. Because we lack wisdom, we always tend to do the wrong causes. So we usually end up putting ourselves in situations that are worse than they were before. Because we can’t see clearly the way things work, we usually do things in just the opposite way of what we should do.</p>
+<p>You can see the truth of this in any newspaper. When you read a newspaper and see the way people act, you wonder, “Is that the right way to act?” The people you read about are in one way or another trying to relieve their suffering, their discontent. People steal and commit other crimes as a way of finding happiness for themselves. They want happiness and contentment. They commit crimes because they believe that will bring them happiness. But because of their ignorance, they do the wrong causes, which only bring more suffering than they had before.</p>
+<p>To practice Buddhism effectively, we have to realize what our situation is. We have to see that dissatisfaction is always with us. And we have to understand that the usual ways people go about curing it are rather ineffective. If they were effective, then all dissatisfaction would disappear. In reality, people in the world often think they have discovered a wonderful way to cure their discontent, only to find in the end that it doesn’t work. So they try another one and that doesn’t work either; and then another, and so on to no avail. The reason they fail is that their actions are based purely on their feelings and emotional reactions. They come up with an idea that sounds good, and so they act on it. They’re like goats going along nibbling one thing and, when that doesn’t taste very good, nibbling another and another. There’s no sort of rhyme or reason behind their choices, they act simply on instinct. People approach discontent in a similar way. What people need to find is wisdom, and then put that wisdom into action.</p>
+<p>Finding true wisdom in ourselves may take quite a long time. In the meantime, we should act in right ways, having faith in what the Buddha taught. In order to gain a level of wisdom that we can depend on in all circumstances, we must start to gradually train ourselves in the way of wisdom. Before we reach that stage, we need to have a certain code of action that will tide us over until we can see the truth for ourselves. This is where the moral precepts come in. These rules are modes of training ourselves that lead us in the direction of calm and understanding. We take these training rules on trust as being the right way because they were taught by the Buddha. Those who followed the Buddha all agree, from their own experience, that this is the right way. The best way is to take up that teaching and practice it as nearly as you can to what the Buddha taught.</p>
+<p>As you practice in that way, you steadily come to see that results in your life. You will find an increase in calmness and contentment. You no longer feel the same as other people who are all running about crazily looking for satisfaction in worldly things. Everybody’s just running about; they don’t know what they really want. They're all constantly searching. When you attain a greater state of calm and happiness, you may suddenly realize: “I don't do that now. I use to but now I don't. I can see the way they are and I know what's driving them on”. From your own calm perspective, you can observe other people and see very clearly the way they work. You begin to understand the motives behind their actions.</p>
+<p>So you must begin by practicing the basic teaching, which will allow you to steadily come to more and more calm, and more and more understanding. As you come to more calm and understanding, faith, in the sense of belief in the Buddha’s teaching, is no longer so important. Seeing the truth directly for yourself replaces mere faith because you see for yourself what’s right and good and what's wrong and bad.</p>
+<p>Most people don't even consider how constantly restless their thoughts are, spinning around thinking of this and that all the time. They’re hardly aware of them. Thoughts go on like movie frames flashing on a screen. If one can stop that mental activity, for even for a short while, and look inside, one will realize just how baneful and troublesome those thought are. Even though the thoughts come back again and again, because the habit of thinking is so strong, still one can realize how dangerous they are. One will see the value of controlling one’s thoughts and gaining a state of calm free from thinking.</p>
+<p>The results come steadily as one goes on. Gradually insight develops and one begins to see for oneself what is right and what is wrong. One begins to realize how much discontent one has been living with. And the discontent one has in the present becomes more apparent. As one’s suffering becomes apparent, the desire to cure it becomes stronger. As that happens, the ways of the world become less attractive. The world may take on a rather shabby appearance. The things that looked so good in the past seem rather tasteless now.</p>
+<p>Life is like that. We’re always looking forward to things. We always want to get the things we desire. But when we do get them, they usually last a very short time and they're gone. If we try to experience something over and over again to satisfy our desire for it, what happens? We get use to it, and before long we don’t find any satisfaction in it. The trouble is we can easily get caught up in that. You can see with drugs how people take drugs again and again and again because they think it’s such a wonderful sensation they can’t get enough of it. After a time they find that it doesn’t have the same effect. So they take more and more until it nearly kills them. That’s the way life is. When one sees the world for what it is, the desire for external pleasures tends to drop off. Eventually one comes to the point where one realizes that there's really nothing to do but to train oneself. Everything else is just playing games.</p>
+<p>In Buddhism we divide training into three levels; first is the body, second is speech and third is the mind. The way of training the body and the speech constitute the moral training. The five precepts are the basic training rules for the lay person. Beyond that comes the mental side of the training, dealing directly with the mind. So following on from moral training what we have to do is train our minds. If we try to develop wisdom directly, using the ordinary methods of thinking, at best we will gain a low level of wisdom. To gain the full effect of wisdom, we must practice samādhi meditation for calm and still mind. Nearly all people have to develop calm and concentration first before delving deeply into wisdom. With skill in samādhi, the wisdom can be developed quite easily.</p>
+<p>Normally the heart is hungry, it wants something that’s lacking. So it searches around all the time. It searches the only way it knows how to search: by looking out in the world using the five senses. That’s all it really knows. It focuses outward wanting sensations to satisfy its hunger. But what it gets from the world in this way never satisfies the hunger. On the contrary, it tends to increase desire in the end. After all the searching it’s done, the heart is still hungry. The way to satisfy the heart is by going in the opposite direction—by cutting off sensation, or at least reducing it to an absolute minimum. In order to accomplish that we have to keep our attention on a single object, like the meditation-word buddho or the breathing. In other words, give the mind one anchor to hold on to.</p>
+<p>At first the practice is very difficult because the mind refuses to settle down and stay put. Eventually the mind develops an interest in the practice, and when interest arises the tendency for the mind to jump about is gradually curtailed. You’ve probably noticed that when you were forced to do work you didn’t really want to do, if you stuck with it eventually you got into it and it started to get interesting. Once your interest was aroused, it no longer became such a hard task and the good results came more easily. It’s similar with meditation practice. At first it’s hard work, but once you get into it, enthusiasm arises. Once enthusiasm arises, the mind becomes more and more absorbed in the practice. When the mind becomes absorbed, external things automatically start dropping away and the mind focuses inward. When it focuses inward and stays there, it gets complete rest, as though it’s fully satiated within itself. Withdrawing from that internal absorption, the heart feels quite satisfied. Because of that satisfaction, it no longer wants to search for external stimuli. It’s prepared to remain still just as it is.</p>
+<p>Because there is no hindrance, that is the appropriate time to turn the mind to develop wisdom. Instead of the restlessly wandering all over the place, the calm mind is in a pliable state. When it is turned to investigate phenomena, it penetrates into them very, very deep. This is real wisdom and it has a profound effect on one’s understanding. On a more superficial level, you may occasionally gain some insight in ordinary life which surprises you with its clarity. You may consider this understanding to be very important at the time. But later when you review it you realize that it did not have much of a profound effect on you internally. The insight may be quite true, but it didn’t fundamentally alter your outlook. The type of understanding that does profoundly alter one’s outlook is like that of a young child who picks up something very hot—and doesn’t do it again. That lesson penetrates deeply and is very effective. One doesn’t easily lose that sort of wisdom.</p>
+<p>The path of wisdom that we’re striving for is of a much deeper nature. It can only be effective when we have a basis of samādhi to develop it. By developing samādhi we open a pathway to the heart, which allows wisdom to go straight in. Normally, the heart is covered over with all sorts of defiling influences. It’s virtually wrapped around with defilement so nothing can get through. The samādhi opens the heart and makes it quite pliable. Then the wisdom can be extraordinarily effective. It can quite easily reverse people’s habitual ways of interacting with the world.</p>
+<p>The kilesas are the things that wrap around and obscure the heart. They are like sand in the gears, which mucks everything up. These are the things we have to get out of the way if wisdom is to penetrate deeply. So the kilesas are things we must come to know well. Mainly, they are greed, hatred and delusion. But a whole heap of other mental defilements spring from them, which have endless ramifications. You mustn’t think that the kilesas are small things. They’re deeply ingrained and extremely important. It’s just these mental factors that cause all the trouble in the world, nothing else. Atom bombs don't set themselves off. That requires people. Bullets aren’t fired by guns without somebody pulling the trigger. What’s behind people and their actions is the kilesas. The kilesas are ever present. They are also quite subtle and extremely resourceful.</p>
+<p>They are resourceful because they dwell in a person’s heart. In fact, they’ve taken control of the heart, which is why they are ever present. We can almost say that the person is the kilesas. It’s not that they're there sometimes and sometimes they're not. They are there all the time. And their constant presence completely colors and distorts our outlook. Our fundamental views about other people and the world around us, and the approach we take to life and our customs, all these are full of kilesas. Because of that, everything we do in life is, so to speak, wrong. It’s all mixed up with kilesas. We cannot do anything perfectly until we get rid of our kilesas.</p>
+<p>At the same time, we mustn’t be too worried about this, because we always have a choice of two directions: one direction that is wrong and one direction that is right. It is our responsibility to always choose the right direction, even though it’s far from perfect. Even though it’s colored by the kilesas, still there is a right direction to take. When we head in the right direction, the kilesas steadily grow thinner and the understanding that undermines the kilesas grows stronger. By going in the wrong direction we become more and more caught up in delusion.</p>
+<p>You only have to look at people who do bad things all the time to see what happens. They become coarse and gross. They don't understand anything subtle at all. This is because their kilesas are growing fast. They're going in the wrong direction. People who go in the right direction have an aura of contentment. It’s as though there’s a shadow of happiness around them all the time. They're not worried about things in the way other people are. The world is not an unpleasant place to them. Because they are fundamentally good inside, the problems in the world don't touch them very much. The troubles in the world are really a reflection of troubles in oneself. The external troubles are merely occurrences or happenings. The real cause of the trouble is a state within oneself. If one can learn to cure oneself, the external troubles will no longer affect one.</p>
+<p><em>When meditating, is it good to switch from one meditation object to another?</em></p>
+<p>At the beginning the main task of meditation practice is to keep your mind firmly in check and to prevent it being involved with distracting thoughts. If you find switching the meditation object, or parikamma, as we call it, helps to accomplish that then switch it. You will probably find that after time you'll tend more and more to settle on just one parikamma. It’s better to stick with the one that works best for you. To begin with, use whatever is necessary to hold the mind. Don't make it too rigid; leave yourself some flexibility, some room to adapt. People who practice the way of Dhamma need to experiment and be a bit inventive. No one goes very far in Dhamma without working out their own methods to some extent. Those who are determined will discover ways that suit them well because they work it out for themselves. Having experimented, they’ve found ways of overcoming their problems.</p>
+<p><em>Have you read about the Zen masters?</em></p>
+<p>In the Zen stories, the masters have all sorts of odd sayings and unusual ways of teaching their disciples. But those are individual teachings. Unfortunately, nowadays with Zen the students read books of those teachings, which they think they then have to copy. But that’s a completely wrong approach. They're not teachings to be copied. They were individual instructions for people who had specific problems at that moment in time. The real job of today’s Zen students is to deal with the problems they have at the present moment using whatever method is suitable here and now.</p>
+<p><em>Is there a deep purpose to Buddhist chanting?</em></p>
+<p>Chanting has quite a calming effect on body and mind. Also, sound vibrations can be quite effective for establishing a good state of mind. Chanting is a very useful tool for calming one down when feeling distracted or agitated. Chanting doesn’t usually lead to very deep states of calm, but it can be very beneficial. Most of the monks use chanting quite a lot to help them in the practice.</p>
+<p><em>When walking meditation should I be thinking only about buddho, or is it okay to think about the walking itself?</em></p>
+<p>Thinking about the walking is too much for the mind to handle. You’ve got to simplify it as much as possible. You’ll probably find that the best way is to concentrate your attention on the repetition of buddho. You’ll find the repetition will automatically synchronize with the rhythm of the walking. It’s better to keep your mind on one thing rather than have it split between two. For instance, when you do breathing meditation, you shouldn’t follow the breath down. That could easily break concentration. The best place to fix your attention is usually around the tip of the nose. Fix it firmly at that place. In the books it’s compared to sawing a log: you watch only the place on the log where the saw blade falls, just that one spot. You don't watch the saw going back and forth; you just watch the log.</p>
+<p><em>How quick should the breaths be?</em></p>
+<p>Keep it absolutely natural. Don’t try to push the breath or manipulate it in any way. This isn’t a breathing exercise, so just let the breath take its own course. Breathing meditation is actually a mental exercise, giving the mind something to hold on to. Your task is to just keep the mind on the breath without trying to modify it in any way. Just let the breath do whatever it will. You'll find if you do that, the breathing will become finer and finer and finer until it becomes so subtle that it is very difficult to hold it. You may then have to use something like buddho to hold your attention. The idea here is to try to draw the mind into a finer and finer state of calm and concentration. If you lose the breath and it seems to disappear, keep your attention on the place where you last felt it. Keep your attention focused there and eventually the breath will come back. It’s best to put your attention on the breath at that place you feel it most strongly. I think with most people its somewhere around the nose; with some, however, it may be on the upper lip or inside the mouth. If you find that you get headaches from breathing meditation, you should focus on the breath somewhere below the throat, not up in the head.</p>
+<p><em>Is there a reason for the headaches?</em></p>
+<p>Usually it’s the intense concentration that’s causing tension.</p>
+<p><em>So the concentration would not be tense if it was in the abdomen or chest?</em></p>
+<p>Probably not. If you get headaches it’s usually because you are trying to use the eyes to see. You can’t because in meditation it’s quite a different process. If you see anything in meditation practice it will be with the mind. Much in the way you see a dream image. If you do get any visual images coming up in meditation, to begin with you shouldn’t have anything to do with them. Keep your attention firmly on the meditation object. If images come, they come; if they go, they go. Don’t have anything to do with them until you are skilled at meditation practice. Completely ignore them, if you can. Once you are skilled you may be able to use them, but you should be careful even then. The main danger is having a frightening image come up. If you ever do experience a frightening image, and if you can stand it, just look at the fear and try to overcome that fear. If you are overwhelmed by the fear, get out of the meditation as quickly as you can. These things can cause trouble. It’s not the image that causes the trouble, it’s the fear. The fear is the real danger; the image is just like a picture on a screen.</p>
+<p><em>Then if you fear nothing then there's no danger?</em></p>
+<p>No danger at all. Also, when a frightening image arises, the tendency is to concentrate on it. Like when you see a snake, you concentrate on it straight away. When you concentrate on these images they become larger. The concentration makes them larger, making them appear to come closer. That makes the fear stronger and they become larger still. It can drive people mad.</p>
+<p>The forest monks use fear as a meditation practice. They go off to the forest to practice, what we call dhutanga. They trek through the forest and put up an umbrella-tent under a tree somewhere and do their meditation practice in that place. Often they choose places where they know there are tigers around. Less so nowadays because there just aren’t so many places like that anymore. If a tiger roars in the forest, fear comes up very quickly, and there is nothing between them and the tiger but a mosquito net. One of the purposes of living in dangerous situations is to arouse fear in order to examine it and overcome it.</p>
+<p>There’s a story of one monk walking meditation back and forth at night using candles and suddenly there was a big growl. He heard the growl just off the meditation path. He couldn’t see it; there wasn’t enough light. He was terrified. He just stood there listening to the growling. Eventually he turned his attention inward and took stock of himself, “I’ve been learning Dhamma all this time, surely it’s about time to use it.” He eventually put Dhamma into effect. Once the power of Dhamma arose in his mind, the fear dropped away. His whole attitude toward the tiger changed then—he suddenly felt the tiger was a good friend of his. He even went out searching for it, but it had disappeared. This is a way of training the mind. If a person can overcome fear like that, fear won’t get them again easily.</p>
+<p><em>What is the easiest and quickest way to calm fear for a beginner?</em></p>
+<p>It depends on the person. The way I’ve always found effective, though it may not work with everyone, is to question myself when fear arises: “How do I know that fear inside?” It is a feeling, so I go searching for the feeling. Where is this feeling? If it’s feeling, it’s in the body somewhere. We feel it as having a location. So we search. Where is the feeling located? What is the nature of the feeling? You must keep your attention on the fear. One thing kilesas don't like is being looked at. Usually they disappear. If they’re seen, they usually disappear. So when fear arises, you should think: “This is an opportunity to see fear”. Go down and have a look, search for it.</p>
+<p><em>Can you say anything about the meaning of heaven in Buddhism; is it the same as Christian heaven?</em></p>
+<p>The heavens are not really Christian or Buddhist; they are just the heavens. Just like the world we live in now is neither Christian nor Buddhist; it’s just the world. The Buddhist theory on the various realms of existence does differ from the Christian view. Buddhists recognize innumerable different levels of the citta, or the mind. A human being with the necessary training and expertise we can go to any one of those levels of mind. Buddha could go through the whole lot; the average person cannot. Corresponding to these levels of the citta are realms of existence. The reason for this is when a being, whether its person animal or whatever, dies, that being takes rebirth depending on the state of the citta at the time of death. That mental state has two aspects. It has level and it has content. The content of the citta will probably be some emotional state connected with the past, which will help to determine the direction taken after death. The level of the citta will be much the same as that person’s level of mind when he was still alive. The realm the person is reborn in will depend on the level at the moment of death. If there are different levels of citta, the corresponding realms for rebirth must be there. The way of nature would seem to be that the types of bodies in those realms or forms of existence in those realms have developed based upon the various possible levels of the citta. In other words, the citta has the possibility of all the realms and where it is reborn will depend on the specific level of the citta at the time of death. A person whose mind is at a human level will be born as a human being. A person whose level is that of an animal will be born as an animal. A person whose level is that of the devas will be born in a heavenly realm.</p>
+<p><em>So most people in that realm have the same citta?</em></p>
+<p>These levels of the mind do not have clear-cut boundaries; they extend over quite a broad bandwidth. So there are plenty of variations in each level. But the realms of birth and the states of the mind do have a direct correlation. Now we come up to the big question: Are they real? Are the levels real? To answer that, we have to ask another question: Is this world real? Exactly how real is this world? We must then ask ourselves: How do we know this world? We know the world through seeing, hearing, smelling, tasting and touching. That’s all. When we know it in that way, exactly where do we apprehend the world? Where do we see it? Think of it in this way. When you see an object, an image goes into the eye and then travels as nerve impulses or electro chemical impulses through the optic nerve until it reaches the brain. And bang! We see a tree, a house, a person. So really speaking, we don't see those objects outside at all. We see them all right here. That isn’t the end of it, of course. It’s even more complicated than that because we have to include the body as well. We have to include the eye and the optic nerve, and so on. So when we come down to it, this world is a really shadowy place. We don't know really what it is. I think Shakespeare said that the world is the stuff of dreams. It’s true. It has its laws; we don't know why, but it does. All the other realms of existence have their basic laws also. Since this “real” world of ours is a pretty shadowy world anyway, why shouldn’t the other worlds be equally as real? And why shouldn’t there be any number of such worlds? If we want proof of the existence of devas or ghost, the only real proof is to see it ourselves. Even if we were to see them ourselves, we might still question their “realness”. It’s quite unreasonable to ask if those realms are real and not to ask if this world is real also. How real is this world? Is it any more real than those other realms? Why should we think it’s more real? We think that way only because we are used to it. That’s all.</p>
+<p><em>Is it possible to born again into the same realm but at a different level?</em></p>
+<p>Yes, just look at people in the world. People are born at many different levels. It’s hard to define what those levels are. The divisions are not clear-cut, but people are not all born equal by any means.</p>
+<p><em>Does Buddhist theory allow for animal being born into the body of a man?</em></p>
+<p>Yes, that’s quite possible. Especially if the animal has experience of human beings, either as having been human in the past or through having had very close contact with human beings over a long period of time. In that case, there may be the possibility for that animal to be reborn as a human being. For an animal that has no contact with human being and no past experience as a human being, it’s very difficult to gain a human birth. By virtue of their kamma, animals are much more restricted in their potential. Animals have their natural instincts. The natural instinct of a tiger is to kill for food. It’s not the natural instinct of human beings to kill for food. The natural instinct of an elephant is to eat vegetation, not meat. It’s just their nature, their natural way. The natural state that an animal lives in is likely to promote its rebirth in that same level.</p>
+<p><em>If a man and an animal are closely related to each other, is it possible for the man to be born as an animal?</em></p>
+<p>Not unless the animal had the power over the man. In other words, if the man makes his citta like the animal, yes. If the man lacks all moral virtue and behaves in very bad ways, yes it’s possible.</p>
+<p><em>So by imitating man, the animal will take on his tendencies?</em></p>
+<p>Yes. Dogs trained by human beings can be extremely clever. One would suppose that they have good chance of human birth in the future. But for a wolf living out in the wild, what chance is there? Its nature is wild, it’s not a human nature at all. When the wolf is reborn it will most probably be as a wolf, because that’s what it knows. There is no certainty in that, but the probability is that it will experience the same kind of birth.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/15._Advice_to_Lay_People.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">15</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">15. Advice to Lay People</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/17._Kamma_and_Rebirth.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">17</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">17. Kamma and Rebirth</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

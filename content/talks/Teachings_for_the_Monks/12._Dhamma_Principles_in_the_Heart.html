@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12. Dhamma Principles in the Heart</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/11._Renouncing_the_World.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(11)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/13._The_Whirlwind_of_Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(13)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/12.%20Dhamma%20Principles%20in%20the%20Heart.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>12. Dhamma Principles in the Heart</h3>
+<p>You must strive for what Ajaan Mahā Boowa calls lak tham, or firm principles of Dhamma. Dhamma principles firmly established in the heart create a level of stability in your meditation that is not susceptible to decline or deterioration. That level is the ground of the citta, so to speak. Once you reach that plateau, progress tends to be automatic, though an increase of effort may be needed to gain more momentum. So achieving lak tham is essential.</p>
+<p><em>Does lak tham refer to a realization, such as Sotāpanna, or does it refer to a level of samādhi that is firmly reliable?</em></p>
+<p>I never liked the terms Sotāpanna, Sakādāgāmī, and so on. They are, of course, levels of attainment discussed in the Buddhist texts. But there they are described only in terms of the kilesas that have been eliminated to reach them. They are not explained in any other way. That leaves the door wide open for people to claim: “Well, I have no doubts about Buddhism. I don’t believe there’s a self, and I don’t agree with rites and rituals...so I must be a Sotāpanna.” Such people don’t realize that that’s nonsense. There is far more than that to the establishment of firm principles in the heart. A person’s entire attitude must change.</p>
+<p>When one attains Sotāpanna, one also realizes the Noble Eightfold Path. The Eightfold Path is like a bridge crossing to the other side, and each of the stones has to be in place. When they are all properly in place, then one can cross. In practice, it means that one must develop all eight factors of the Path until they are in a perfect condition. Then one crosses over, and the fruition comes automatically. But the Noble Eightfold Path is not merely a teaching you put into practice. It’s a level you attain; and you attain it by means of the meditation practice. For that, all eight factors are necessary.</p>
+<p><em>Can you say something more about lak tham, or Sotāpanna? How would you describe it in a way that differs from what the books say?</em></p>
+<p>When you have Dhamma principles firmly established in your heart, you will automatically resist doing any action that brings unwholesome consequences, even though you may have previously done such actions unashamedly. You also gain a new perspective, which brings with it a subtle knowledge of the teachings. You see all sorts of ins and outs that are not discussed in the books. For example, you begin to carefully analyze the senses. What do you find when you analyze your senses? You have seeing, hearing, smelling, tasting, and touching. Upon careful analysis, you will see that they all work in much the same way. Up front, the sense organs have different functions; but the nervous sensations they send back to the brain all work in the same way.</p>
+<p>The sense organs are sensitive to external stimuli. For instance, the eye is sensitive to electromagnetic radiation. But, although the eye picks up electromagnetic radiation, it does not send electromagnetic radiation back to the brain. It sends a nervous current that initiates a biochemical process, which is then converted into light and color in the brain—and you see images in glorious Technicolor. But in the world outside, there is no light and no color; there's only radiation. Understanding that makes you realize that the world is not quite the place you thought it was. When that realization strikes home, your interest in the world starts to wane. You begin to see that the world out there is merely a kind of magic show, lacking any real substance.</p>
+<p>The other senses work much the same manner, each in its specific mode. Smell is obvious. Out there in nature are only chemicals, not odors. Chemicals in the air contacting the nose send nervous impulses to the brain. Only when sensations get inside of us does the experience of smell occur. So our sensory experience represents an interpretation of input from the external environment, not that external environment itself. In fact, we don’t really know the world out there. All we know is an internalized version based on our personal point of view, the perspective of the knower. The knower inside can never actually contact the world outside, because contact takes place between material substances, like chemicals and bodily tissues. The internalized sensory imprint is as close as we ever get to the physical world.</p>
+<p>The natural world seems to be very real and solid. But it appears that way only because our bodies are made up of stuff the same material elements. Fundamentally, there is no difference. In modern terms, they both consist of atoms and molecules. You ought to see this and think about it. Think about the body a lot. It’s very important. If you can see the body as being merely part of the world, and therefore not you, you will get a glimpse into where the citta— the knower—lies. Then you realize that your physical body is not so important. It’s just a conglomeration of material substances that will one day be reabsorbed into the physical environment. The question then is: why do you grasp at it?</p>
+<p>This is the crux of the matter, and the basic purpose of the meditation practice. You must learn to see the body properly. By seeing it for what it is, you realize that it isn't self. It’s that fundamental realization that is important. Having realized that the body isn't self, you simply drop it. Eventually you see that all of life is just shadows, like images flickering on a cinema screen. But to do that, you must first have a firm basis in samādhi.</p>
+<p><em>How firm would samādhi have to be before investigation goes beyond the superficial?</em></p>
+<p>That depends on the person. If it’s one of the local villagers, who works pushing a buffalo around a field, then the samādhi will probably have to be very deep; because he must rely on that to help him with his wisdom. If it’s somebody who is more intellectual, then the samādhi does not need to be quite so deep. In the end, samādhi must be firm enough to fix your undivided attention on the senses, or on the body. When you set the mind on the body, you must be able to keep it on the body. That’s where the samādhi helps. If you have trained yourself to keep your mind on buddho, or the breath, then that training can come into play when you are investigating with wisdom. You can use the same basic principles in the wisdom practice that you developed in the samādhi practice. Some people find it very difficult to attain samādhi. They should try nonetheless. And they should use the fruits of samādhi to develop some wisdom. Wisdom, when practiced properly, can help to develop samādhi as well.</p>
+<p>One has to be cautious about trying to get results too quickly with the wisdom practice. Some people are very impatient. Practicing wisdom with great intensity and determination, they may be able to breakthrough and see the truth very quickly. Then they may be so shocked by the true nature of existence that they give up. Seeing the truth of anicca, for instance, can be a mighty big shock. We think we understand anicca, but our understanding is merely intellectual. It does not penetrate to the heart. A firm foundation in samādhi can prepare you for the shock. When you have samādhi, you will have no problem accepting the truth.</p>
+<p><em>I'd like to know when to push myself in meditation, and when not to push. I find if I push really hard, then I get quite tense.</em></p>
+<p>Most people tend to think that striving hard in meditation is like doing physical exercise, but it isn’t. Striving hard in meditation is comparable to the effort you make to stay awake when you feel drowsy and want to fall asleep. That is the type of striving that’s required. The main problem is always too much thinking. People’s thoughts are usually wild and uncontrolled—they jump here and there, all over the place. And memory is the main factor that prods the thoughts. As soon as you hear a sound, you grasp at it and define it. When that happens, the mind becomes embroiled in thought. You can’t stop memories from coming up. They arise automatically. They will lessen gradually as you get more experience in meditation, but they will still come up. What you can do, though, is not take any interest in them.</p>
+<p>You must have enough mindfulness to recognize the thoughts that come up in your mind, and enough presence to reject them as distractions. Using mindfulness, you can pull away from them immediately and return to the meditation you were doing. Mindfulness is number one. Mindfulness is much more important than samādhi, because mindfulness is necessary in everything. Mindfulness brings great calm and stability to the mind. Without mindfulness, samādhi just won’t work. So, mindfulness is the thing you must strive hard to develop. It is absolutely essential. Otherwise, the main thing you have to do is just keep on with the practice. Just keep on doing it. That’s really what striving means. It means you continue trying and don’t give up. Don’t relax and let thoughts take you over and run your life. In other words, you don’t allow the mind go into wild daydreams. You keep enough mindfulness present to always have control of the mind.</p>
+<p>The mind’s defiling influences, the kilesas, are always trying to take over and drag the mind into discursive thinking and daydreaming. They will trick you into relaxing your efforts, or even giving up meditation. That’s what happens to most people. When the mind is under the sway of the kilesas, it cannot attain the calm and concentration of samādhi. So you must learn to rein in the mind with mindfulness. It is far better to do twenty minutes of serious and intense practice, than to do hours of sitting with the mind wandering all over the place. Without mindfulness present, there is no meditation at all. Ajaan Mun said that when you have mindfulness, everything you do is meditation. If you don't have mindfulness, walking and sitting meditation are merely postures, that’s all.</p>
+<p><em>Ajahn Mahā Boowa speaks in terms of getting up into the boxing-ring to give the kilesas a punch in the face and throw them to the canvas. How do you interpret that?</em></p>
+<p>When you reach the stage where mindfulness is sharp, then the battle starts. Mindfulness fends off the kilesas and keeps them at bay. But as soon as you let down your guard, the kilesas rush in. Mindfulness recognizes them, and the fight begins anew. A natural tension develops between the effort to be mindful and the kilesas’’ tendency to relax and drift into daydreaming—often thinking about sexual matters. That’s very important. You should realize that sexual desire is the primary kilesa of human beings. It’s number one. This is the one that captures our attention most of the time. The boxing-ring analogy is used to highlight the struggle between Dhamma and the kilesas. When the time comes to stand their ground, neither one is willing to back down. When the kilesas press their advantage, causing the mind to drift into daydreaming, mindfulness will counter-punch to restore control. When mindfulness lets down its guard for a moment, the kilesas land a few punches of their own. That seesaw battle is the “boxing” that Ajahn Mahā Boowa refers to.</p>
+<p><em>I remember you were once told that Buddhism is becoming popular in the West because of its association with peace, and you said, “When you really get into practice, you realize you’ve got a fight on your hands.”</em></p>
+<p>Yes, that’s true. People don’t really understand Buddhism. People generally think of the Buddha’s teaching as an absolute teaching, but it’s not. Nobody can give an absolute teaching. It’s not possible. The absolute is not susceptible to conventional language; to know it you must experience it directly.</p>
+<p>What the Buddha did do was teach a method by which we can reach the point where that absolute is known. We have to follow the path ourselves. Teaching uses the conventions of language—similes and metaphors and so on. But the interpretation of those conventions is always personal. For instance, the color red. I know what the color red means to me, but I don’t know whether it means the same to you. Although we both call it “red”, we may react to the experience of red differently. I know my experience of the red sensation, and I assume that you experience a somewhat similar sensation, but maybe you don’t. Experience of the absolute is rather like that—it is an individual matter. All you can teach others is the way to get there.</p>
+<p><em>What would you recommend for stress?</em></p>
+<p>First of all, watch your thoughts. Thoughts are the things that set up stress. When the thoughts come up, they usually polarize around some emotional state, and that triggers an emotional state you’ve known in the past. Once that emotion comes up, then you are on the merry-go-round, so to speak, as thoughts swirl about. But it doesn’t have to be that way. Using mindfulness, those thoughts can be cut off. You must be mindful enough to realize what’s happening, and then to something else in their place, like buddho, or the breath, or chanting. You've got to turn to something. Go down and chop some wood if you like.</p>
+<p><em>Ajaan Mahā Boowa talks about the citta that never dies, is never born and is independent of the five khandhas. To an unenlightened mind this sounds like a ‘thing’. How is this teaching to be understood?</em></p>
+<p>My understanding is that the citta is the active one. It’s life. Without citta, there is no life. Citta creates. It creates the five khandhas, creates the body and thoughts, creates vedanā, saññā, sankhāra, and viññāṇa. It creates everything. You mustn't think of the five khandhas as being five different rooms that the citta enters one after another. It's not like that. The citta creates a moment of viññāṇa, which then dies away. Then it creates vedanā, and that dies away. Then it goes to saññā, and that dies away. Then sankhāra, then viññāṇa again. It jumps about, doing the duty of those four: vedanā, saññā, sankhāra, and viññāṇa. It’s all the citta, the whole thing, but it takes on different duties.</p>
+<p>It’s like a man who, when he’s at home, is a father to his kids and a husband to his wife. When he goes to work, he’s the managing director. When he goes to the pub, he’s one of the boys, and so on. You can say he’s the same person performing all those duties; or you can say he’s a different person in each place, taking on different functions. It’s like that with the citta, although the citta is not a material thing. You can’t pin it down, because the citta is the one that is doing it all. You can only know the citta by becoming the citta. You can’t see it.</p>
+<p><em>Can you see the citta directly in deep samādhi?</em></p>
+<p>No. The citta is what does the seeing. If you hear someone say: “I've seen the citta”, you have to ask them: “What have you seen it with?” The mirror cannot see itself; nor can the knife cut itself. But when you fall back into being that seeing, you know it, and that’s all. You can’t say anything about it. But it is totally creative.</p>
+<p><em>Is ‘knowing’ an intrinsic quality of the citta?</em></p>
+<p>Yes, but one must realize the citta can be with Dhamma or with kilesas; so the knowing is not always right. You can know things, but be totally wrong. Citta with Dhamma is bright. Citta with kilesa is dull.</p>
+<p><em>What happens when the process of the five khandhas ends?</em></p>
+<p>That’s not possible to say. It’s effectively one of the questions the Buddha refused to answer. The Buddha said everything exists. “Everything exists” means that the six senses exist. “Existence” means sensation, and sensations are always impermanent. So existence is impermanent, and thus not real. “Reality” means permanence, or rather not impermanent. Because reality is not impermanent, it is not existence. So we get the strange proposition that: “What exists isn't real, and what is real doesn't exist”. Reality is something that existence cannot comprehend, because existence is something that reality knows to be false. Put it like that. But talking at that level is always difficult. One must qualify whatever one says.</p>
+<p><em>If someone were to argue that nothing exists outside of the five khandhas, how would you respond?</em></p>
+<p>If nothing exists outside of the five khandhas, then everything that exists must be inside the five khandhas. That is true because everything in the five khandhas is impermanent, and the hallmark of all existence is impermanence. But, by the same argument, the five khandhas are not reality, because reality is not impermanent. Reality is not known through sensation; and because you can’t sense it, it’s not the five khandhas. But you can know reality. You know it by being it.</p>
+<p><em>How do you understand the teaching on not-self?</em></p>
+<p>Many Buddhists like to say there is no self, but that’s nonsense. There is a self, no doubt about it. But it's not a permanent entity; it’s not stable at all. I like to compare the self to one of those whirlwinds in America that spins around with great force and velocity. It appears to be a solid formation moving across the landscape, but in fact it’s never one thing for more than a moment. It consists entirely of wind, and that's all. There is no substance. The self is like that.</p>
+<p>Substance or not, a whirlwind can also be very dangerous; and the self can be dangerous too. The self is actually a creation which must be continually recreated. It requires inputs of energy to keep it spinning, and that’s hard work. That’s also where a lot of the dukkha comes from. If you can get rid of that created self, you are free. But you cannot simply give it up. Basically, you don't know how to give it up. The only way to accomplish that is to get rid of taṇhā, craving and the attachments that it spawns. But you cannot just drop attachments that are deeply embedded. If you drop them in one place, you just pick them up in another. It merely shifts the focus, so it doesn’t help you. What you need to do is get rid of the causes of attachment, which are taṇhā and the kilesas. When you do that, the taṇhā and the attachment will drop away automatically. It’s like a child who is very much attached to toys. When the child matures, he loses interest and throws them away. By getting rid of taṇhā and the kilesas, you’ve reached maturity; you've grown up, so to speak. You grow out of those attachments, and they drop away automatically. That is the work of wisdom. That’s the way wisdom gets rid of the kilesas. First you must see clearly with wisdom. And the most important thing to see is the body.</p>
+<p><em>Why is body contemplation such an important practice?</em></p>
+<p>When you think of the way we live, the things we use and the activities we do, all of them are in some way related to the human body. Look at your surroundings. Cars are build to transport the human body. Airplanes are the same, and their capacity depends on the size of the human body. The houses we build—what are they for? They protect our bodies. The food we produce and eat promotes the body’s health and well-being. Exercise is done to keep the body fit. The body and its needs are a part of everything we do. Because of that, we identify strongly with the body. Breaking that sense of embodiment is very difficult, but very important. In fact, the attainment of Anāgāmī can come only when a person drops attachment to the body. But you cannot force it to happen. It has to occur in its own time, as a result of persevering at body contemplation.</p>
+<p><em>When I visualize body parts and organs in my meditation, afterwards I feel a physical tension and headaches. Can you recommend anything?</em></p>
+<p>It looks like the kilesas are reacting against the body contemplation. You may have to change the way you look at the body. Sometimes it helps to look at the body more externally, relating it to other physical phenomena. Realize that the body is just part of nature. It is made up of elements that break down and disintegrate along with all other things in the world. Or, you can try focusing on one external part—like the knee, when you’re walking. Look especially at the movement. Don’t try to visualize it, just feel it. As you feel it, try to detect the relationship of the moving parts. You may find a visual image coming up automatically, but the feeling of movement is the main focus.</p>
+<p>The Buddha suggested that if we do body contemplation, we should also practice mindfulness of breathing. That calms down the emotional side. So it is best to do the two together—not at the same time, but one after the other. Mindfulness of breathing, if that succeeds, can bring a calm state which allows you to view the body with equanimity. If your mind is not calm, seeing the body’s true nature can be disturbing.</p>
+<p>In practicing meditation, you have to learn which methods suit you. There’s no benefit in doing practices that suit someone else. You must find the methods that work for you. Some teachers claim: “This is the only correct method. You must practice this method.” For instance, the sammā arahaṃ practice taught at Wat Dhammakāya. They claim that everyone must do the sammā arahaṃ practice, because that’s what the Buddha taught. But that’s nonsense. The Buddha taught dozens of practices. So you must choose the practices that bring you the best results.</p>
+<p><em>How should a beginner approach body contemplation?</em></p>
+<p>First of all, take the body in the normal way we understand the body. Without going into any subtle ideas of the body, simply examine the condition of the human body. Ask yourself: “What sort of a thing is it?” When you investigate, you will see that your body and the material world are not fundamentally different. You ask: “Where did this body came from?” Fundamentally it came from the material world. It’s only atoms and molecules. Then you ask: “What does it depend on?” It must depend on the world for food, air, heat, light, and so on. And in the end, what happens to it? It goes back to the world. If you like, you can picture dead bodies. If you have seen dead bodies, you can picture one, and think: “My body is not fundamentally different from that.”</p>
+<p>Don't speak of yourself as the owner. The world is the owner of this body, not you. You simply have this lump of matter for temporary use. It’s rather like a person with a computer. In the computer, there is the hardware—the body, and the software—the four nāma khandhas. The person using it is the citta. The hardware is made up entirely of material substances; it’s part of the world. The body is part of the world in the same way. The software cannot be pinned down so easily, but it’s a good analogy for the four nāma khandhas. Now, what happens when you die? Fundamentally what happens is, the person using the computer has turned it off. The body has to decay, however; the computer doesn't. Perhaps it’s better to look on death as a power failure where you lose all your data.</p>
+<p><em>What is the value of the dhutanga practices?</em></p>
+<p>Generally speaking, the dhutangas should be tailored to your own kilesas. You should use the dhutangas to overcome those kilesas that are most prevalent in you. That is the true meaning of the Middle Way. You bring your mind back into proper balance, back to the middle. When the kilesas are biased in one direction, counterbalance them with a meditation practice that brings your mind back to the middle. If you find it makes you even more stressful, you’re probably using the wrong types of dhutangas. A person with a hate character should not practice the dhutangas that are likely to increase anger. He should have things neat, clean and tidy, so that the anger doesn’t arise. But the greed character should live in a horrible place, a place that is dirty, messy and uncomfortable; a place where life is difficult and the food is lousy. That helps to get rid of greed. So it depends on the nature of one’s character.</p>
+<p>But keep in mind that most people misunderstand their own basic character traits. In fact, they usually think their character to be the opposite of what it really is—for the simple reason that their intrinsic character is such an integral part of who they are that they don’t see it. But the opposite characteristic sticks out like a sore thumb. They see that very clearly. Greed characters will think that they have got lots of anger, because anger stands out whenever it comes up. It's not easy for them to see the greed, because it is there in the background all the time. It is too much a part of their nature to stand out clearly. You can get hints of your character by looking at your actions.</p>
+<p>There are passages in the Vissuddhi Magga—the early parts of the Vissuddhi Magga dealing with the dhutangas—that tell you what to look for. When the hate character walks, he digs in his heels. The greed character walks neatly. The delusion character...his feet just flip here, and flop there, all over the place. The Vissuddhi Magga is quite instructive in that way.</p>
+<p><em>When you were practicing did you have a sense of faith that would keep you going through doubt?</em></p>
+<p>Yes early on I did. I wanted to find out. I wanted to go with the practice, and I did quite a lot. Now you want to be cautious about what you do at all times. One's got to be very careful and guard one's citta all the time. This can help to spur one on. I would say it's probably best to cut out all newspapers, periodicals and journals. The less one hears of the world the better usually-helps one's practice.</p>
+<p><em>What is the role of spiritual companionship in Buddhist practice?</em></p>
+<p>Companionship is very important; the Buddha always stressed that. The things that you meet in your environment—particularly people—are important. If you associate with people who are always talking Dhamma, then the mind inclines towards Dhamma. If the talk is about the world, then the mind inclines to the world. And your choice of companions is usually influenced by the practice. If the companionship is not right, it is usually because your thoughts are going out all the time. When you think about other people, there is a tendency to be critical of their behavior, which makes developing companionship very difficult. When you turn inward and put the criticism on yourself, that eliminates the problem. And, of course, you should cultivate a friendly compassion towards all beings.</p>
+<p>But firstly, you should not think badly of others. This is very important. Avoid bad thoughts—or, at least, put them aside. You must realize that bad thoughts are going to affect you more than anyone else. And the negative effect of bad thoughts will only make it more difficult to practice meditation. It is best to completely drop those thoughts from your mind and go back to the meditation. As you gain positive results in meditation, your critical view of other people drops away. You tend to get on with people quite easily, without being overly interested in what they’re doing or what they’re saying.</p>
+<p><em>What is the best way to deal with emotional problems?</em></p>
+<p>Emotional troubles are caused by kilesas. In order to deal with them properly, you must be able to control the mind. Emotional problems begin with thinking, usually excessive thinking. If people can’t control their minds, then they will always be thinking about things that stir the emotions. When that happens, emotional troubles immediately start coming up. It is an aspect of the āsavas, the citta flowing out into thoughts. If it flows out strongly, it continues on into speech, and then into action. This causes endless trouble. If you can keep the mind on the meditation object—just on that—there is no problem. If you look at the hang-ups of people in the West, practically all of them come from thought, from thinking too much. If they stopped thinking so much, their problems would disappear. Those emotional hang-ups stimulate certain thought patterns, tending the mind to always think in that direction. Once you cut those thoughts, the problem disappears. So thinking is the problem. People experience nervous breakdowns because they think too much. They never give their minds a rest. The cure for that is to stop thinking. And meditation is the way to accomplish that.</p>
+<p>In the case of conditions like anxiety, loneliness, or depression—these are modes of feeling. They are emotional states that give rise to modes of feeling. When those feelings arise, thoughts that correspond to those feelings arise, as well. Take depression: People experience feelings of depression, and instead of looking directly at those feelings, they start thinking in ways which correspond to the depressed feelings. Once they are thinking in ways which correspond to those feelings, their minds flow out, thinking: “This is a terrible place. What’s the point of life? I don't want to live like this.” Negative thoughts always create the trouble. If they were to examine their feelings, questioning and analyzing them, to see what the nature of those feelings is, they could overcome them. Then the thoughts and the depression would gradually die away. By turning the mind inward and focusing on the negative feelings, anybody can overcome them. But it requires effort. And what’s often lacking is the effort to do it, and the willingness to do it. Very often, people who are in a state of depression cling to that depression. The kilesas want it, because it enhances their feeling of self. Without that feeling of self, people feel lost. The desire to feel the self is very important, because it drives so much of human behavior. To accentuate a feeling of self, people will do all kinds of silly things; even, in some pathological cases, mutilate themselves.</p>
+<p><em>Isn't there a difficulty in bringing the Buddhist teachings from Thailand to the West?</em></p>
+<p>There is no reason why the teachings shouldn't go to the West. After all, people are born in the same way as they are in the East, their minds work the same way, their fundamental problems are the same, their dukkha is the same—why shouldn't the Buddha’s method work in the same way? I don’t mean that one has to transport all the traditions; that’s not necessary, but the teaching is necessary. That can work in the West perfectly well. Of course people in the West are used to their ways of thinking, and they would have to give up some of those... but they can do it.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/11._Renouncing_the_World.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">11</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">11. Renouncing the World</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/13._The_Whirlwind_of_Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">13</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">13. The Whirlwind of Self</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

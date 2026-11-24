@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03. Dealing With Anger</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/02._The_Five_Khandhas.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(02)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Samādhi and Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/04._Overcoming_the_Kilesas.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(04)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/samadhi-and-wisdom/03.%20Dealing%20With%20Anger.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>03. Dealing With Anger</h3>
+<p>It’s the angry thoughts you have to stop. You must accept the feeling of dukkha. In other words, when you experience a tight feeling in the solar plexus that starts pushing up, you feel you want to get rid of it. You want to let it out. It’s that feeling you have to accept. And you have to prevent thoughts of anger coming up. It’s the thoughts that matter. Thought is kamma. And you must prevent the thoughts from flowing into speech and action. That’s getting more and more coarse. But it’s the thoughts that get things started every time. It’s quite clearly stated in paṭicca samupāda. We have the sense bases. Something comes up in the sense bases. There’s phassa, which is contact with the internal sense base, which in turn brings up an emotional state. Then there’s the feeling which arises from it. Because of the feeling, taṇhā arises. Taṇhā here is the craving to get rid of an unpleasant feeling, or to perpetuate a pleasant one. Hate and greed are really two sides of the same coin.</p>
+<p>Greed is wanting to get; hate is wanting to get rid of. In either case, it’s still wanting. With hatred, the wanting is directed toward rejection, it always wants to get rid of. What we want to reject is a feeling that has arisen that we don’t like. But that feeling is just a result of the past. The difficulty with hatred is that we must accept unpleasant feeling, and that can be quite painful. So we must go through a lot of dukkha to overcome that state. If we can succeed, we’ll be left with a state where we have a very sharp mind, a mind where we see things very clearly. Especially dukkha, we’ll see that very clearly. We’ll also see clearly the nature of anger itself and understand how dangerous it is and how much damage it can do. Not only externally it does damage, but also within ourselves. Anger is hot and fiery. When we’re unmindful it explodes out Bang! It spreads the fire all about. When you get two angry characters interacting, automatically each supports the other, so the anger comes up very, very easily. Because of this, you must stop the thoughts so they don’t flow out into speech and action. If you can do that, when you meet an angry person, you can just turn away and not react. Even though the unpleasant feeling is still there within you, don’t think about it and you’ll be alright. In such cases, you need something to hold onto internally, and Buddho can work very well. To short-circuit angry thoughts, go straightaway to the repetition of Buddho. If you’ve developed the Buddho practice then you can go to that and hold onto it.</p>
+<p>You must break the chain of anger at the level of thinking. At the beginning, when feelings arise that trigger anger, it’s probably best to go straight to the parikamma you usually use. And even if the anger subsides, don’t try investigating feelings and thoughts at this point. Just keep on the parikamma until you can gain more control of your mind. What’ you’ll usually find is this: when you overcome the angry thoughts you relax your vigilance, and the kilesas quickly bring it up again. Because you’re relaxed, you can easily get caught by another wave of angry thoughts.</p>
+<p>The same applies to greed as well. When greed arises very strongly, focus on the parikamma and don’t give attention to thoughts of greed. We need a refuge, something to hold onto. It’s necessary.</p>
+<p>We should know greed and know hatred when they come up inside us. And we should be able to distinguish between them. And we should realize that the feelings that give rise to greed and hate are not themselves greed and hate. The feelings are the results of kamma. So we must distinguish very clearly between the feelings that arise and the actual state of greed or hatred. The two are different.</p>
+<p>One trick that Ajaan Mahā Boowa said he used is, when he found hatred coming up, he turned it against the kilesas. In that way, he made the kilesas the enemy, because they really are. So hatred of the kilesas is a very strong tool. Ajaan Mahā Boowa says that when people use a sharp knife, they should use the flat side on other people and the sharp side on themselves. But they usually end up using the sharp side on other people and flat side on themselves.</p>
+<p>Thoughts themselves are one kind of kamma. The stopping of thoughts is also kamma. When you deliberately stop unwholesome thoughts, that’s a form of good kamma. Acting deliberately requires volition – and volition is kamma. Anything done intentionally is kamma.</p>
+<p>If one holds it at the level of no intention then one doesn’t react to it. It’s like a habit that comes up and that good intention will come up more easily in the future. One has to have the intention to stop it. It’s important, it’s restraint. You're developing restraint.</p>
+<p>Its saṃvara: restraint, holding back. The Buddha said that kamma is cetanā, volition. Feelings can arise without intention; they are a result of kamma. Nearly all the senses are results of kamma. Feeling is not kamma it’s just feeling that’s all.</p>
+<p>Another thing to watch out for is with some characters you get feelings of worthlessness. This brings up anger very quickly with the diminution of self. The diminution of self brings that up straight away as the kilesas come up to try to defend that situation. If that comes up, the thing is to realize that that is just a feeling – nothing more than a feeling. Realize that one has to but up with it cause its dukkha. If one allows anger to overcome that or press it down all one’s doing is making kamma for the future. The situation will come up again in the future stronger. If you can put out an anchor to hold the situation steady and not give way to it, it is reduced to that extent and starts getting less and less so you’ll have better control of it. It’s very important to do that because anger is strong and fiery. It can cause so much damage so quickly. On the other hand, if you go the right way, that can be turned to good use in the way of Dhamma. That can be very powerful.</p>
+<p>If the feelings come up you can focus on the parikamma, but realize that these feelings are merely feeling and that’s all. Don't suppress them, just let them be and keep on with the practice. If the kilesas start coming up recognize them, recognize what’s happened and get back to the parikamma. Use restraint. It’s very necessary.</p>
+<p>Part of the sīla practice is the restraint that can control one in all situations. When you have that restraint strongly, it’s very valuable and can help you an enormous amount. It can help in the world, in relationships with people, in driving a car – it’s particularly important there. In things and events that happen around you, you always need restraint. Especially when people gather together in large crowds that crowd takes on a character of its own. Crowds are dangerous and because of that it takes on a much lower intelligence than the individuals. That’s way crowds can get out of control very easily. Those who recognize this restrain themselves, and they realize they must get out of the situation quickly. They see that restraint is needed.</p>
+<p>The way of Dhamma is really the way of learning to investigate yourself, look into yourself and correct yourself, because nobody knows you like you do. Since you know yourself from inside, even the best teacher can't know you as well as you do. Because of that, you are the best person to do it. Of course, a good teacher can suggest things. And a teacher of the caliber of the Buddha can probably see things that you can't see for yourself and use that to help you directly. Some of the Arahants can do that too, but not all of them.</p>
+<p>When you have to deal with your own problems, you have to find your own methods. When you find your own method, it will be the right method automatically – because you have discovered it and adapted it to the situation as it exists. Because that method is specific to you, it may not be useful to anyone else, except in very general terms. For that reason, training and developing your capacity to investigate yourself is very important. To look and see, that’s the way of mindfulness. If one can look inside and see what's happening all the time, get to know when things are arising. It’s almost as if you get a warning signal when changes take place. When a change takes place… “What’s that?” “What’s happening?”…. “Why is that?” When you can focus inside like that, then you are not easily caught off guard.</p>
+<p>In one sutta a bhikkhu who had done a lot of practice came to the Buddha and said: “I find everything distasteful.” The Buddha said to him: “This finding everything distasteful, is this distasteful to you also?” He answered: “How could it be otherwise?”</p>
+<p>The Buddha praised him, saying: “Yes, you're doing the right thing, you’re going in the right direction.”</p>
+<p>That bhikkhu had a character rooted in hatred, although he was one who could see it clearly. Wherever he looked, whatever he looked at – he did not like it. He was never caught up with things. He never became attracted to things that would pull him outside. So he could stay inside and develop properly. Now that is rather a different case because that’s somebody who's done a lot of practice. The average person who is dosa carita, rooted in hatred, having done very little practice, is more likely to go wrong.</p>
+<p>The way of Dhamma is strange though because one’s got to come to the level rejecting of things without letting it go into hatred. It’s got to be done by seeing and understanding. It’s so easy for people doing meditation to think that they should they should dislike the food they eat, that they should develop an aversion to food. That’s wrong. It’s not that we should dislike food, but that we should see it for what it is and realize that the pleasure that we get in eating it is merely a passing thing. There is no sort of essence there at all to truly satisfy us. That’s really seeing the discontent in the world all the time, seeing the dukkha.</p>
+<p>One sees that whatever one grabs hold of is not really satisfactory. Whatever contacts me is always separate. If you want a new television set how can you make it yours? It’s always out there, separate. You can't eat the thing. It just remains out there. “It belongs to me” is only a way of speaking in the world. In fact there isn’t any belonging in it and how can one stop it decaying, going wrong. Finally it gets thrown in the rubbish heap, thrown away. This is the way of things that we are attracted to. We want to make them belong to us. The idea of making things belong to us is really a fiction. It’s not true. By investigating things in the world and investigating their nature we come to see this and the wanting tends to die away. It tends to drop away because of the realization “it’s just there, it isn’t mine, it doesn’t belong to me. Even these bodies, these are not ours – they came from the world, they belong to the world and they go back to the world. They rely on the world. We have to have air to breathe, warmth from the environment. We’re totally dependent on the world.</p>
+<p>When we’re dependent on these bodies and we think they're ours, the thought that they are ours is attachment to them. When there is attachment we’re affected by what happens to them. When they get ill or grow old or something happens, they get injured we are very concerned, worried. The one that’s concerned and worried is not the body – the concern comes from the citta inside. But it’s not the citta that’s hurt, the citta remains perfectly all right. If one can realize that the citta is what we call ourselves, and not the body or feelings or whatever else. If one can realize that difference, then one can let the body go and overcome the feeling that body is mine, so that whatever happens to it, one is never caught up in it. Not being caught up in it, one is free from it. When we talk about an Arahant it’s not the body we mean, because that thing will just die away. It’s not feeling, thought, consciousness, none of these. These arise and die away all the time. It’s the original citta, the final citta not the citta with avijjā. It’s something we can't really talk about. We give it that name, but it’s only a name. It’s beyond all names, its total freedom – and you can't even imagine it. This is the one we call the citta is the one that matters. If one can learn to get to that one, then whatever happens doesn’t matter. It doesn’t matter at all – it’s like a dream.</p>
+<p>The citta cannot be equated to any of the concepts of the universe that we have. Whatever words and concepts we have are just images – and it’s not that. There is no way to imagine it. It’s beyond. When we say we can see it, that’s only a way of speaking. My own understanding is that when we see beings like devas, or the other higher realms and the beings that live there, all we can say is they influence us. Then we produce our own image and fit it onto such things. So when we see such things, what we see is something of ourselves due to that influence. In fact, that is really what happens in this world. Things influence us so that we see them, but we’re seeing them through ourselves. That is what happens, I think, in the other realms too. The whole of this is like a dream, including all the other realms too. This is getting rather high. The understanding of it is another matter – it’s not easy.</p>
+<p>Ajaan Mahā Boowa said when he was doing the practice before he met Ajaan Mun at Wat Yothanimit near Udon Thani. He asked his upajjhāya what practice he should be doing and his upajjhāya said the Buddho practice. He did it and before long he got into samādhi. Then he went to do it again and he couldn’t get into it. He said the dukkha was terrible because he knew what he wanted and if he had never got there he wouldn’t have had nearly so much dukkha. He went on trying for about a year but couldn’t get there then he came to the conclusion that “all I can do is just go on regardless of what happens. I am not going to expect any results at all whether I get results or not. I am just going to go on with it.” He went on with it like that and after while he attained samādhi again. Then he realized what his fault was, instead of trying to do the practice of samādhi he was thinking of the results all the time. That’s the trouble; one thinks of the results and expects the experience. One’s got to think of causes not effects, not results. That’s the way to do it. One’s got to go on regardless. One’s got to keep one’s mind on what one’s doing. It’s like any work, if you’re always thinking only of the results, then you’re bound to make a mess of it.</p>
+<p><em>Comments on methods of letting go of things.</em></p>
+<p>Restraint is a defense against the kilesas. When the kilesas come up one is pulled in a certain direction. One has to pull in the opposite direction. Restraint is what does that. As to letting go, that’s not really a letting go – that’s a defense. It’s a holding on to the situation so as not to let it get out of hand. That’s really what it is. When it comes to real letting go, that comes from wisdom, that comes from seeing. When you see truly the nature of something, then it’s blown wide open, so to speak. That’s very difficult form restraint. Restraint is necessary to overcome the grosser and more difficult problems that one comes up against. It’s a matter of level. Restraint is not meant for letting go. Whatever one’s overcome with that restraint one can't say that one has let it go and it won't come up again.</p>
+<p>Whereas, if you’ve seen it with wisdom, it won't come up again. An important point about letting go is this: many people say “all you’ve got to do is just let go”. But you can't. I like to think it’s like an ant on the ceiling that wants to get to the floor. All it has to is let go but it doesn’t know how to let go. All it knows is how to put one foot in front of the other… or six feet in front of the others. If you succeed in letting go in your practice, all you will do is grab hold of something else. When you let go of one thing you’ll grab hold of another. This is the way of the kilesas. When one does the practice by training and investigating until the insight comes, then there isn’t even any trying to let go. You just find you don’t want those things – that’s all. It’s let go of already. That is the true letting go.</p>
+<p>I am not saying you can't give up cigarettes for instance. You can. Even there, the craving to go back to them is still there. It takes along time before that dies away. Even when the desire fades away, if one’s not careful one can easily go back to them. Whereas the real letting go is when one doesn’t even have a desire to look at cigarettes, it never comes up. The trouble with letting go is it seems easy. It looks as though it’s easy, but it isn’t.</p>
+<p>It seems to us that other people’s problems should be very easy for them to let go of their problems. From our own point of view we think: “why can't that person do this or why can't he do that”.</p>
+<p><em>How should one deal with anger?</em></p>
+<p>The thing is to see anger. See it more and more. When you get to know it you can do something about it. When anger comes up it comes up as feeling and it’s very strong. When one’s been used to letting it come up like that what happens is then the thoughts come up. Thoughts of anger come up. Whatever it is, they pin on something or somebody and the anger will be directed. That’s the thing you’ve got to stop. Those feelings when they come up, those you can watch and realize that those are not anger. They're unpleasant and the tendency is to give way to anger because if you don't give way to anger there is this feeling of loss as though there’s a sort of loss of self. The kilesas don't like that at all. That’s the thing one has got to put up with and accept. If one can learn to accept that, then that’s good. When these feeling come up what you have to do is recognize them first and realize these are dangerous. You can see it’s like fire and get some water quickly. Don't let your thoughts get caught up in anger. If there is any tendency to think: “oh that person is to blame”, then turn away from that person altogether, don't think about them; or else, realize that that person has many good points also. That’s the way to see it. If you can see it more and more like that, you will gradually get more of a hold on anger.</p>
+<p>Working on the anger requires mindfulness. Mindfulness is the thing you need. If it turns toward depression the cure for that is to stop thinking. Just level it at the level of feeling. The thing is whatever happens there, the anger comes up then you get a depression coming, it’s quite likely. One tends to follow the other. These are just resultant things coming up. Realize these are not what matters. They're not kamma, they are the results of past kamma. It’s your thoughts that matter. If you can turn away from thoughts of anger, or thoughts of depression, the problem will just die away.</p>
+<p>Be careful of the kilesas that come up and say “I am doing pretty well”. Be careful there is a tendency for that to come up. The thing is to realize that if you can stop thoughts, all that stops and the whole thing is clear. The whole problem disappears. It’s the thoughts that keep going all the time. You’re thinking all the time. Thinking is mostly in words. Language, words, dialogue going all the time.</p>
+<p>The feelings don't suddenly go but each time you deal with it, it will get weaker. You can look on it like “drying out” after drugs. It’s rather like that – to get off drugs you have to go through a lot of difficulty. It’s very much the same thing though this has got to do with the mind and not a material thing.</p>
+<p><em>For a moment I saw people as different they were just lumps of flesh walking around. I was a bit afraid.</em></p>
+<p>Don't push that at the moment because if there is a tendency for that to come up well okay, but let it come up in its own time. That’s important, its good, but don't push it too much because that can bring the kilesas up more and at the moment that isn’t the right thing to do.</p>
+<p><em>There seem to be so many interruptions during my practice.</em></p>
+<p>The thing is to realize whether people interrupt or not we can still do the practice. That is to say, that the practice is done inside oneself. If one keeps one’s mindfulness one is doing the practice. Ajaan Mun said to Ajaan Mahā Boowa: “If you’re being mindful you're doing the practice. If you're not being mindful, it doesn’t matter how much you are sitting or walking, you're not doing the practice.”</p>
+<p>It’s not good to do too many things all at once. When we start doing the practice we are like a child learning to walk. If the child tries to run it just falls over. It’s like that with us, if we try to do too much all at once the focus just breaks up, so we can't do it properly. So the thing is, do one thing at a time. Try to get the breathing deep first of all. When you get some success with the breathing practice, then you can learn how to use that with the investigation to develop wisdom. As Ajaan Mahā Boowa says: you should get some control or ability in samādhi first. Then when you start investigating the body to get wisdom, then the samādhi gives you a rest.</p>
+<p><em>Can we take everything coming up as a teacher to make us more mindful?</em></p>
+<p>Yes its well worth watching these things that one can learn so much from little things like that the way one should work and act.</p>
+<p><em>I see my mind as not questioning either the inner or outer environment. It’s just used to them.</em></p>
+<p>Being used to something, is just strong memory. When that memory is there you always feel you know the environment, and what to expect in the environment. We know… “The sink is over there”. We don't have to think about it. If we check and find the sink is no longer there, then where has it gone? Then the doubt comes up immediately. This is why the mind in the environment is constantly moving about looking for changes. It’s really bringing us up-to-date, the environment up-to-date.</p>
+<p><em>Limitations of the mind.</em></p>
+<p>One thing that we should realize is how limited the mind is, the limitations of the mind. It is not, as some people think, capable of doing everything. Far from it; though with the final citta that has gone beyond, that maybe a different matter, I don't know. The mind as we know it is very limited. It’s got definite limitations as to what it can do. We can see its methods of overcoming some limitations. If you get into an environment and you get to know that environment. At first that environment is unfamiliar and you look around and learn. When you learn it you can then consign the whole of that to a symbol. It’s like what we do on the computer when we put everything under one heading in the directory. Then all we need to refer to that environment is just that symbol. It can be a word but it’s also a certain knowledge inside oneself.</p>
+<p>This making up of symbols is very important because it frees the memory to be used in all sorts of other ways. Otherwise, if we had to remember everything, our brains would have to enormous to hold it all. One can see that there is a limit to it because we then tend to deal with the symbols. But the main trouble of that is, we then start giving the symbols a reality. This can be a cause of delusion very easily. I think this is part of what's behind making of self. We get something very complex, like another person, and we give that person a name. Then we just think of the name. But the reality of that person is really very complex. We’ve got sort of an idea of that person, but our idea doesn’t taken into account the changes in the way that complex person does things. How he is changing all the time.  Mindfulness. If one is really mindful, the mind is watching where the citta is going all the time. If it’s watching where the citta is going, it will see the changes in things that are taking place all the time.</p>
+<p>This comes from living in the present. When one relies on the past one relies on memory. Relying on memory means one feels secure in that memory. It means one feels secure that one remembers is still there, which is relying on permanence. You have to realize that things are not permanent, that they change. We’ve got to accept change even though we’ve got things that are fairly solid like this post, for example. The time will come when that will change also. There are other things that are changing much faster. One has to be prepared for whatever happens. A little insecurity is being prepared all the time. Get ready to accept whatever happens and notice it and know. People have the idea that they're secure. Being in a car is an excellent example. Most people jump into a car and feel completely secure, but there's no reason for feeling secure riding in a car – there is always danger in that. Because of that, whenever you travel by car you should keep in mind that: “This is not so secure. Anything could happen here.”</p>
+<p>How many people really believe that they may die in the next five minutes? Very, very few. But that happens to people – they just die like that! Five minutes before, they never even thought about it. A monk who used to stay with Ajaan Lee came here with some people a short while ago. They came here and then they went off. The car then had an accident. The driver was killed and the women were all killed. The monk was injured, but not very badly. No one expected anything to happen.</p>
+<p>The transferring of merit is not the same as the transferring kamma. When a person makes kamma that person, or that citta, will receive the results of it. It must come back on the owner. It won't come back anywhere else. If one dedicates merit to someone else, then that dedication is actually an act of kamma on our part, kusala kamma, good kamma. That can help that person in some ways. Ajaan Mahā Boowa said it’s rather like teaching somebody something. When you teach them something, they gain from that what they've learned but you don't loss anything by it.</p>
+<p>You can't transfer kamma to anyone. No way. Otherwise if there was somebody a person liked very much, they’d say: “I’ll take on the kamma of that person”. But you can't do it. Suppose you have a gun and you shoot it toward something. Once that bullet leaves the gun, there is nothing you can do about it. You can't stop it. That bullet will find its mark. Kamma is rather like that: once you’ve done it there is nothing you can do about it. It’ll come back to us and find its mark. If you like, it is yourself in the future that bears the bullet.</p>
+<p><em>What is the value of sending mettā?</em></p>
+<p>If the person you’re sending it to is in bad shape or their mind is bad, then they won't receive it. Ajaan Mahā Boowa in ‘Paṭipadā’ tells a story of a Bhikkhu that had trouble with a woman who was a ghost. The bhikkhu is telling Ajaan Mahā Boowa the story and Ajaan Mahā Boowa asked “didn’t you give mettā to her?” He said “yes, but she wouldn’t receive it”. She was there and could have received it but because of her hang ups inside, what the trouble is, she couldn’t accept it. She refused to accept it. If a person is open to accepting it, they can. But in this case, no. Mettā is the most powerful practice of the lot. Mettā is the strongest thing and because of that a lot of people are frightened of mettā. They don't know how to behave. If you have mettā for someone what you're doing by having mettā for that person is putting your own citta into a state of mettā. This is the important part. If the citta is not in a state of mettā then you won't help anyone else. By the attitude of having them in mind that can have an influence on that person. By the power of that influence their minds can be put in the same sort of state. Then they can build up good kamma on that. The mettā is an influence on that other person. Some people get the idea they're mettā broadcasting stations. They don't realize that the mettā first of all must be inside. You get these people who say they are going to have a day of special meditation to bring peace in the world.</p>
+<p><em>Choosing a religion.</em></p>
+<p>Some people are not clever. A clever person will think about religion. They think “what religions are genuine and which aren’t?” the probability is that those who have lasted a long time will be more genuine than those that haven’t. That’s all you can say. If there is a lot, then they’ll start looking about for religions that have lasted for a long time. I know in the West now there are sects in Christianity, and other religions also, which are growing one after the other and bring in new ideas and putting them together – just picking up things. This is very bad because when they think up thing like that it just comes from a conceit that this hasn’t been thought up before. In fact there is usually nothing new in them at all. You can't find anything new really. That’s because the human mind is limited. We all stuck within the limitations of the human mind.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/02._The_Five_Khandhas.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. The Five Khandhas</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Samādhi and Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Samādhi and Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/04._Overcoming_the_Kilesas.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">04</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">04. Overcoming the Kilesas</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

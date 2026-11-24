@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07. Feeling</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/06._Memory.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(06)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Uncommon Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/08._Senses.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(08)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/uncommon-wisdom/07.%20Feeling.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>07. Feeling</h3>
+<p>Craving is the root cause of attachment. Because of that, to free your mind of attachment you must go directly to taṇhā, or craving, and eliminate that. If you overcome craving, you’ll overcome attachments. But you cannot deal with the attachments directly. Trying to overcome attachments by sheer determination or willpower won’t work. The only way to overcome attachments is to get rid of their cause, which is craving. This is stated clearly in Paṭiccasamuppāda or dependent origination: “Dependent on feeling, craving arises; dependent on craving, attachment arises.” Craving being the condition for attachment, when craving is destroyed, attachment cannot arise.</p>
+<p>Because craving is dependent on feeling, when you aim to destroy craving, you have to first focus your attention on feeling. This is a critical point, because exactly at the juncture between feeling and craving you can place a barrier. Feeling is just feeling. It is a result of past kamma, whereas the taṇhā is new kamma. So by allowing the two to link up you are creating more kamma. If you can turn away at that juncture and prevent that new kamma from occurring, the situation gradually improves. But Paṭiccasamuppāda does not give practical guidance on how to do that. It reveals how the process unfolds, but it does not indicate the way to unravel the entanglement. In order to unravel it, you must learn to find the feeling. Examine feeling and see how feeling gives rise to taṇhā.</p>
+<p>Paṭiccasamuppāda is an account of the sequence of causes that condition the arising of suffering and, in reverse order, the cessation of suffering. The Buddha’s purpose in teaching dependent origination was to point out the general pattern of conditions that causes beings to wander endlessly in saṁsāra, and to show how that causal sequence can be brought to an end. The Buddha emphasized that he was able to attain enlightenment because he was able to bring dependent origination to an end within his own mind.</p>
+<p>Because Paṭiccasamuppāda is a realization that the Buddha came to on the night he gained enlightenment, as a teaching, it can be difficult to clearly comprehend. For that reason, the conditional factors of Paṭiccasamuppāda should be used as meditation subjects with considerable caution. The Buddha laid out a practical teaching. For example, Paṭiccasamuppāda explains the process of what happens to create dukkha, but it does not give the method of how to cure dukkha. In order to discover the method for curing dukkha, you must practice the Noble Eightfold Path until you understand the Four Noble Truths. That notwithstanding, a basic understanding of the process laid out by Paṭiccasamuppāda can help quite a lot in meditation practice. It details a process that can be understood at different levels of subtlety.</p>
+<p>Due to those subtleties, the factors of Paṭiccasamuppāda are difficult to interpret using conventional language. My understanding of them goes something like this: “avijjā paccaya sankhāra” means avijjā is the fundamental ignorance within oneself, a cloud of delusion which is extremely deep and all-pervasive. Ignorance produces the kamma that leads to all the conditions for birth. Dependent on the existence of those conditions, or sankhāras, viññāṇa arises. Those first three factors—avijjā, sankhāra and viññāṇa—are not dependent on physical human existence. They are most certainly mental states.</p>
+<p>The viññāṇa factor in Paṭiccasamuppāda is always referred to as “paṭisandhi viññāṇa.” This is not the normal type of viññāṇa that we refer to as consciousness. Rather, it is the re-linking consciousness that connects one birth to the next. That re-linking consciousness forms the connection between past and future which leads to grasping at the moment of conception. Paṭisandhi viññāṇa is said to be “free of doors,” that is, free of the sense doors.</p>
+<p>To understand paṭisandhi viññāṇa you should put aside the word “consciousness,” which can be quite a misleading translation. My understanding of the word viññāṇa in this context is that the prefix “vi,” meaning “divided,” is combined with “ñāṇa,” meaning “knowing.” In other words, “divided knowing.” The one mind splits into two, subject and object, and instead of being pure unlimited knowing, the mind is driven by avijjā plus kamma to discriminate so that it becomes “this” knowing “that.”</p>
+<p>A duality is thus established in which the “this” becomes nāma and the “that” becomes rūpa. Thus viññāṇa is the condition for the arising of nāma-rūpa. Although avijjā, sankhāra and viññāṇa are conditioning factors, those factors all arise simultaneous to the split into duality. No time interval is involved. It’s like a railway engine pulling a train: the engine is the cause but none of the cars move independently.</p>
+<p>So viññāṇa is a condition for nāma-rūpa to arise. Nāma-rūpa is a difficult factor to interpret. Nāma literally means name; in other words, putting names to things, designating and defining. And rūpa is the form; that is, the thing that we make concrete with the name. When we make forms concrete with names, we divide them out from the whole. Looking at the forest, we see leaves, trees and flowers. We call them leaves, trees and flowers merely to define certain aspects of what we see. But they are only <em>our</em> aspects—they do not exist as such there in the forest. The forest itself is one whole; it is we who differentiate the various aspects.</p>
+<p>In reality, our perceptions do not exist as separate entities at all. We separate the forest into various parts so that we can bring some order to our perceptions. This is how nāma-rūpa works. It is the dividing out of certain aspects of our perceptions of nature which accord with the previous sankhāras. In other words, we are defining our world according to our own past tendencies. So we create a world in the present based on data from the past. This loops back to avijjā paccaya sankhāra, with sankhāra being the karmic conditions from the past that determine rebirth.</p>
+<p>Nāma-rūpa in turn conditions saḷāyatana, which is the breaking forth of the sense fields. The senses are the fields of sight, sound, smell, taste and touch, with the mind as the field of cognition. It is not so much that the senses are faculties we acquire, but rather that the senses are productive faculties. The sense fields produce sights, sounds, smells, tastes and tactile sensations as internal phenomena, which means they are very actively involved in generating those sensations.</p>
+<p>In the Paṭiccasamuppāda formula, saḷāyatana conditions phassa, or sense contact. The sense fields allow contact between sense objects and their corresponding sense bases. So the sense bases are a precondition for contact to occur between the mind and its perceptions.</p>
+<p>Phassa gives rise to vedanā; that is, sense contact conditions the arising of feeling. In the context of Paṭiccasamuppāda, the arising of feeling is a resultant process that is caused by consequences of actions done in the past coming up in the present. The feeling may be pleasant, unpleasant or neutral.</p>
+<p>Feeling is a condition for taṇhā, or craving, to arise. Based on feeling, a personal, emotional judgment is made as to whether a feeling is considered pleasant, unpleasant or neutral, which leads directly to a craving for the pleasant, an aversion for the unpleasant and a dull indifference toward the neutral. In other words, there is a tendency to react with either greed, aversion or delusion. These reactions are all aspects of the kilesas, with feeling as their condition. Feeling arises, and then the kilesas arise.</p>
+<p>For example, you hear a sound you don’t like. Based on that sensation, an unpleasant feeling arises. That unpleasant feeling is a feeling of aversion. Thus, aversion arises dependent on circumstances. Feeling is experienced first and, if we don’t like it, that feeling then brings up aversion. Because that feeling is dukkha, a desire to suppress it arises. The tendency then is to search for scapegoats. You try to find something, like another person or a sound or the heat or whatever. You straightaway blame something like that for the unpleasant feeling. Then the anger goes out to that. This reaction is quite wrong because that anger generates a lot of thought, and that thought is kamma. That kamma will revert back to you later and produce the feeling again.</p>
+<p>But the feeling of aversion isn’t the emotion of aversion. There’s no aversion in feeling. It becomes aversion when you start thinking, criticizing, blaming and so on. That’s where the trouble comes—in the thinking. Feeling is a result of the past; but when you think, that thinking is kamma. So it’s the thoughts that keep the anger going. It’s there in Paṭiccasamuppāda. Dependent on phassa—the contact of sensation—feeling arises. Dependent on the arising of feeling, craving arises. So the craving comes dependent on feeling. But the feeling is a result of the past, so it’s just something you have to put up with. Whereas thought is taṇhā, the craving to get rid of that unpleasant feeling, which is the making of new kamma.</p>
+<p>Taṇhā has two aspects: craving to have pleasant feelings and craving not to have unpleasant feelings. Craving, in turn, gives rise to either attachment to pleasant experiences or distaste for unpleasant ones, which is the reverse side of attachment. Because of habitual emotional patterns, we usually get caught by feeling when it arises, and immediately up comes taṇhā, the craving. The only way to overcome that is to learn the method of going inward to investigate feeling.</p>
+<p>Suppose in the past you have been angry, and that anger triggers the arising of feeling in the present. That feeling is a feeling of imbalance; your mind is out of balance. Feeling out of balance, you try to restore a sense of equilibrium within. If the cause is anger, the habitual response is to blame something or someone. If the cause is greed, the response is to go out searching for sense gratification. These are the normal ways that the kilesas seek balance.</p>
+<p>Instead of restoring equilibrium, the kilesas become the causes of more defiled actions. When those actions bring results, the consequences of those actions then act as fertile ground for more defilements. In other words, seeking balance in defiled actions creates more kamma, which only makes the imbalance worse, because the consequences rebound back to you later on. In this way, the round of rebirths continues to revolve without end. As long as ignorance and defilements are calling the shots, kamma will continue to bring results and suffering will continue to accumulate. Only when ignorance and craving are destroyed will the chain of dependent origination be broken and the end of suffering be reached.</p>
+<p>To summarize in reverse order: attachment depends on craving, craving depends on feeling, feeling depends on sense contact, sense contact depends on having the sense bases, which in turn depends on having mind and body. Mind and body depend on viññāṇa, the consciousness without doors, which arises due to the ignorance that produced the kamma, leading to all the conditions for birth, ageing, sickness and death.</p>
+<p>The point where we can have the greatest impact in breaking this cycle of birth and death is at the nexus between feeling, craving and attachment. It is there that we can start unraveling Paṭiccasamuppāda. Feeling is a critical link in the chain of dependent origination because it is between feeling and craving that you can erect a barrier to prevent the evolution of the process. It’s at this juncture between feeling and craving that we have an option to either accept or reject the kilesas.</p>
+<p>Craving’s reaction to the arising of feeling is not predetermined. The arising of feeling simply means that the conditions are present for activating the kilesas. Whether the kilesas spring into action at that point or not depends on our state of mind. The kilesas don’t have to become active. We have the option of accepting or rejecting them. That’s where our freedom of will comes in. It comes in at the juncture where feeling conditions craving. When we do that, we start to dismantle Paṭiccasamuppāda until we reach the cessation of suffering.</p>
+<p>So let’s examine feeling. Feeling is a result of past kamma. Feeling is based upon something that we’ve seen, heard, smelled, tasted, touched or thought in the past. If we examine it, we’ll see that the feeling is just based on a form or a sound or a smell or a taste or a contact or a thought. That’s all. But, because of memory, we then associate that sensation with some past experience. If the experience was pleasant, we like it. If unpleasant, we don’t. And because we associate it with something in memory, a reaction takes place. We want it if it’s pleasant. We don’t want it if it’s unpleasant.</p>
+<p>So when some object is presented to us, through any of the senses, which we either like or dislike, we should try to notice the accompanying feeling—the feeling of attraction or repulsion—and how the tendency is to react with either greed or aversion. It is the reaction that’s important. The feeling arises down in the heart region, and the reaction arises down there too. But the reaction is often supported by a lot of thinking, which is up in the head. Feelings are results of kamma from the past, which is felt as pleasant or unpleasant, good or bad. When pleasant kamma comes up, it brings a feeling of “I want that,” which is triggered by greed. When aversion comes up, it triggers a response of “I don’t want this feeling. I want to reject it.”</p>
+<p>In trying to reject the feeling, we may think, “Oh, it was that person’s fault. He did it; he caused this unpleasantness.” So we make excuses and think critical, angry thoughts. Those angry thoughts are the reaction to the feeling. When angry thoughts come up, they are a form of present kamma that tends to bring up the same feeling in the future when something triggers it. So when watching feeling, it is important to pay close attention to the reaction that feeling brings about when something sets it off. That’s where we can easily go astray.</p>
+<p>For example, feeling may be set up through the senses: we hear a sound or we see or smell something, and that will bring up a memory from the past. That past situation comes up in the present as a feeling similar to the one in the past. We then react to that in the same way we did then, thus making the same type of kamma which set up the feeling originally. So the wheel goes rolling on, round and round.</p>
+<p>Usually, the contact and the feeling arise so quickly that we have great difficulty in distinguishing them. Contact giving rise to feeling takes place so fast that it is almost impossible to separate them. So it’s difficult to see that distinction. But feeling is the important factor to look at. We know that feeling comes from contact. Normally, the contact is automatic; it takes place without any deliberation. Following that contact, feeling arises. It’s a resultant process that is caused by consequences of actions done in the past coming up in the present. When that happens, mindfulness should be focused on watching the feeling to make sure that a negative reaction does not take place. In other words, when it’s an unpleasant feeling, we tell ourselves: “This unpleasantness is my own fault; it’s a result of my own kamma. I’ve got to put up with it.” We must always avoid blaming someone else.</p>
+<p>The feeling of aversion is an unpleasant feeling. We must learn to turn inwards and look at that feeling. If we can turn inwards and look at it, we won’t let it escape and turn into bad thoughts. So we defeat the kilesas at that point. Mind you, we only defeat them a little bit at a time. To get rid of aversion completely, we’ll probably have to do it many times, until it gradually, gradually goes.</p>
+<p>To accomplish that, we must look within ourselves to find out where these feelings are; and we must discover what sort of feelings give rise to what sort of mental states. It is very important in meditation practice to look for feeling, to get to know it—particularly feeling in the solar plexus region. Because when we’re upset in one way or another—it’s always felt down there. And it’s always there that the kilesas, the defilements, originate.</p>
+<p>Thoughts, speech or actions that follow the lead of the defilements create kamma. The kamma that results will come back to us as feeling in the future, starting the cycle rolling again. When we short-circuit the whole process at the link between feeling and craving, the momentum will slowly lessen, and the offending defilements will gradually die away, bit by bit.</p>
+<p>The benefits won’t appear suddenly; old habits don’t die easily. But with persistence, over time they can be reformed. What’s important is developing the good habit of being mindful of feelings as they arise and assessing their potential danger to us. It’s almost like seeing a red flag come up, warning us to be vigilant. We immediately turn inward then, thinking, “I mustn’t let this get out of hand.” This is a fundamental part of the training in sense restraint.</p>
+<p>So the way to deal with feelings is not so much a matter of deliberately not reacting to them, but rather one of being mindful of them. When we are mindful, not reacting will take place automatically. Mindfulness is a kind of monitor that checks what’s going on without interfering with it. With mindfulness, we sometimes feel like we are standing back and watching the feelings, as though from a back seat inside somewhere. Observing from that back seat, we can see clearly what’s happening, but we don’t interfere in any way. Pleasant and painful feelings are just happening, and that’s all. It’s that sort of attention that is required.</p>
+<p>So pay close attention to feelings. When unpleasant feelings arise, examine them at the point where they occur. Don’t let those feelings turn into thoughts about blaming others. Think only about the feeling, not other people. In other words, if you keep the mind inside, no harm is done. Trouble comes only when you let it escape out into thought, speech or action. By allowing the mind to go out and blame things externally, you make kamma, and that kamma comes back to you in the future in the form of the same sort of feeling. So the wheel just keeps spinning. If you don’t learn to correct this recurring cycle, you will never get free from it.</p>
+<p>To correct it, you must do the right thing by not letting the mind go out. You must focus inward—every time—to look at those unpleasant feelings. And accept them. Accept that this is your own fault. Because you have done unwholesome acts, unpleasant feelings arise as a result. So you are to blame for the result. When you accept that it’s your fault and don’t let your attention go outward, then that debt is paid and your difficulties become a little bit less. Each time you do it, they are reduced. Through that, you find a certain joy and contentment arising within. You feel happy. That happiness is a result of the work you’ve done—because you have learnt how to cure the defilements to some extent. The more you go on in this way, the more you feel buoyant and light. This result points out the right direction. It shows that you are taking the correct path. The more you experience happiness, the more you know that you’re headed in the right direction.</p>
+<p>The kilesas come up because of feeling; feeling is the goad which arouses them. So if you can put a barrier between the feeling and the craving, you stop the kilesas and they can’t become active. By being aware of the kilesas, you can see them when they come up and not react to them. Because they come up in connection with certain feelings, you know that particular feelings are the conditions for the arising of particular kilesas. When that feeling comes up, you know that certain kilesas are lurking in the background. So keep a watch out. Keep the mindfulness strong. If you watch that process, the kilesas don’t get a foothold, and the mind naturally calms down and becomes peaceful.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/06._Memory.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">06</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">06. Memory</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Uncommon Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Uncommon Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/08._Senses.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">08</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">08. Senses</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

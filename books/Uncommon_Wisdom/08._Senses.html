@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08. Senses</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/07._Feeling.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(07)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Uncommon Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/09._Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(09)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/uncommon-wisdom/08.%20Senses.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>08. Senses</h3>
+<p>Our situation—not only in this world but in all realms of existence—is a situation which is always ruled by the fundamental ignorance of avijjā. Avijjā is a basic lack of understanding that clouds the mind and deceives us into thinking that we actually do understand. We think we know things, but really speaking, we don’t. We have a veil of ignorance which prevents us from seeing the true nature of things. Our ignorance makes us believe that there is nothing beyond what our senses can perceive, nothing else but the world we live in. In truth, there’s a great deal more.</p>
+<p>Intuitively, we suspect that there is something better than this world, but we don’t know what it is. So we search for it. Because we have an array of senses to work with, we tend to focus out in the direction that the senses lead us, and look for happiness there. Of course, that’s the wrong direction—true happiness does not exist out there at all. This misunderstanding occurs because we have the five external senses and the internal senses of feeling, memory, thought and consciousness. Our natural tendency is to mix them up, using the internal state to deal with the external objects that we see, hear, smell, taste and touch—which represent the external world. This leads the focus of our attention outward. Going outward, we never find the truth.</p>
+<p>Because of not knowing the truth, the mind’s attention is drawn to perceptions in the world. In focusing out in the direction of the senses, the mind becomes attached to sensory experience and builds up so many attachments in the world that it becomes completely entangled in worldly ways. It becomes so trapped in its own delusion that it can’t see anything else.</p>
+<p>People easily get caught up in craving experience of the world through sense contact. When that happens, there is absolutely no hope of reaching the end of suffering until they can learn to overcome the wanting that pervades their minds. When wanting is subdued, then attachments are overcome. Once attachments drop away, there is nothing to stop the mind from going in the direction of freedom from suffering.</p>
+<p>The question is: How can we subdue our craving for sense experience? The mind is constantly detecting objects that are coming in through sight, sound, smell, taste and touch. That causes it to buzz about all the time, chasing after sense gratification. But what are the senses and how do they work? And why do we give them so much credence?</p>
+<p>In fact, our sense perceptions are deceiving us. Their story goes something like this: Our senses display information related to the world around us, which the mind receives and interprets in its own fashion. In other words, impressions that come in through the senses are subject to individual interpretation. Our experiences of sights, sounds, odors, flavours and tactile sensations are based on the mind’s interpretations of incoming sense data. We could say that everything is filtered through the “black box” of the mind. This means that everything we know via our senses is filtered through the mind, which then recognizes and interprets all that data in its own peculiar way.</p>
+<p>The interpretation is what we know. We don’t actually know the reality of the things out there. We have our way of interpreting them, and that’s as far as our information goes. We know the information stored in the black box, but we don’t actually know the true nature of what’s on the other side of the black box. Because we have to use the black box as an intermediary to access the world, we don’t know what the truth of things out there really is. Everything reaches us filtered through the black box of the mind.</p>
+<p>When it’s like that, we don’t really know the truth of our external environment. If we investigate it, we have to accept that the world is a very mysterious place. It isn’t quite what we think it is. People assume the world functions in a certain manner because they learn which effects come from which causes. Seeing something happen there, they notice certain results appear here. Having worked out a theory to explain why that is, they then predict that if they do this, they should get that. Because it seems to work most of the time, they feel confident that their theory is correct. But that isn’t necessarily the case. All they know is that by applying that theory they can get certain results from those causes. Because it seems so effective, people feel that it must be right. In fact, it’s only right within the scope of the method that was followed.</p>
+<p>Because people nowadays believe in the explanations of science, they believe they know all about the world. One of the fundamental assumptions in science is that the senses tell us real things, that our senses give us a true representation of what’s there. In truth, it is impossible to really understand the world outside—because our senses have no means to contact it directly. After all, how do we know the world outside? We know it through sight, sound, smell, taste and touch, all of which are experienced internally. We assume that physical matter is made up of atoms because that theory seems to work well. But even then, we don’t really know for sure what’s there.</p>
+<p>The whole of science is based on an interpretation of experience. Scientists are quite successful at working things out according to cause-and-effect relationships. But, truly speaking, all the scientists can say is that when they do something, it works. They don’t know exactly why. They don’t take into account that everything we know happens inside us. The whole of it depends on the mind.</p>
+<p>From physiological evidence alone, science is aware that the mind works like the simile of the black box, which mentally brings together all the senses and their interpretations. For example, people perceive colors in different ways. Not everybody interprets colors identically. In other words, a color is experienced differently from one person to the next. That natural bias is known by science.</p>
+<p>But the scientific picture is much more complicated because scientists are seeking only impersonal, objective information that can be measured and arranged into general theories. Buddhist practice, on the other hand, seeks direct insight into the nature of specific phenomena as they arise in the mind of the individual; that is, insight into how the mind itself affects the interpretation of sensory input. Since science cannot measure the interpretations that the mind puts on incoming sensations, it has no means to analyze them. But the subjective suppositions we make about sensations are crucial factors in how we perceive the world.</p>
+<p>Simply by using our basic powers of reasoning, we can go a long way toward developing a clearer understanding of how our minds work. This is possible provided that we are ready to accept, or at least seriously consider, whatever conclusions our reasoning leads us to. If we have fixed and rigid views, opinions or beliefs, it may be nearly impossible for us to question that “world of supposition.”</p>
+<p>The most effective way to analyze our situation is to start with our understanding of the external world, which we are convinced we have a firm grip on. So, how do we know the world? The only way available to us is via our senses: sights, sounds, smells, tastes and tactile sensations. This suggests where our investigation should start.</p>
+<p>All five senses work in much the same way, in that they are sensitive receptors that react to stimulation caused by contact with external objects. That contact, in turn, sets up a train of electro-chemical pulses that travels through the sensory nerves, terminating in the brain. This, in brief, is the regular scientific view. So it is convenient for us to accept it as a suitable starting point.</p>
+<p>Let us analyze one sense faculty, sight, as typical of them all. Say an object, such as a tree, is seen. Light reflects off all the relevant parts of the tree, and a small part of this light enters our eyes. Due to the geometry of optics, this light displays a small image of the tree upside down on the retina, much as a camera acts in taking a photo.</p>
+<p>The image selectively excites the retinal cells, which transmit nerve impulses down the optic nerve to the brain. What then happens in the brain is either poorly understood, or not yet understood. The significant point is that, from all of this, we experience the image of a tree. But, where does the experience of seeing a tree take place? Is the tree we see, in fact, out there in the world? Or, is it the image on the retina that we see? Or, is there some coded image in the brain that we see? In fact, as our entire experience of sight is of the same sort as our seeing of the tree, our perceptions of visual space and location cannot be defined except in terms of the confluence of visual objects, eye contact and eye consciousness. Therefore, the best that we can say is that the tree is seen in the realm of seeing; and it has little meaning to ask where the realm of seeing is located.</p>
+<p>In the act of seeing there are three factors: visual object, eye sense organ and eye consciousness, with eye contact being the coming together of the three. Those three do not occur in consecutive order, but rather they represent one visual moment, which means that all three of them operate simultaneously at the moment of contact. When they function together, eye consciousness occurs. You might say that a moment of eye consciousness is like a single pixel on a computer screen, of which there must be hundreds and hundreds to build up an image. That can give you an idea of how fast eye consciousness works. Eye contact is actually the confluence of all three factors meeting together, which enables the whole process to produce visual images.</p>
+<p>That process culminates in the brain, which changes nervous impulses into visual imagery, though we don’t quite know how. From that process, seeing happens. However, because seeing is an internal process based on the mind’s interpretation of sense data, we never truly know the intrinsic nature of the object we see. That’s hard for us to grasp because we have such a long history of thinking of people and things in the world as being “out there.” In truth, the world we know and everything in it are all internal. In that sense, the whole world is a world of mind.</p>
+<p>This becomes clearer when we realize that the external stimuli that contact the eye are not actually what we “see.” For instance, the lens of the eye is sensitive to electromagnetic radiation. Although the eye picks up electromagnetic radiation, it does not transmit electromagnetic radiation back to the brain. It sends a nervous current that initiates a biochemical process, which is then converted by the brain into what we interpret as light and color. From that process, visual imagery arises inside of us. Those mental images are what we see. For that reason, all seeing is composed exclusively of internal imagery.</p>
+<p>So we see sights internally, not externally. In the world outside, there is actually no light and no color; there’s only radiation. We refer to light and color, but those references are just analogies used to explain our experiences. In reality, light and color are also internal phenomena, not external ones. We don’t actually know what’s outside. All we know is what appears internally.</p>
+<p>The other senses work in much the same manner, each in its specific mode. Take hearing. The experience of sound takes place inside. Out there are only vibrations of various frequencies. When those vibrations contact the ear, that stimulation excites the auditory nerves of the inner ear, which transform the stimuli into nervous impulses. Those nervous impulses are transmitted to the brain, which processes that data in some mysterious way that causes sound to arise—within us. Truly speaking, all sound happens within us; it doesn’t happen outside at all. What’s out there isn’t really sound—it’s merely vibration. It turns into sound when it gets inside us.</p>
+<p>The same is true of smell. Out there in nature are only chemicals, not odors. When chemicals in the air contact the nose, nervous impulses are sent to the brain. Only when the sensation gets inside of us does the experience of smell occur. So our sensory experience represents an interpretation of input from the external environment, not the external environment itself. All we know is an internalized version based on our personal viewpoint, the perspective of the knower. The knower inside can never actually contact the world outside, because contact takes place between material substances, like chemicals and bodily tissues. The internalized sensory imprint is as close as we ever get to the physical world.</p>
+<p>Our sense of taste is similar. Say you have roast beef with chili sauce: there is no taste in the beef or the chili. They are made up of chemicals, not taste. When those chemicals contact your tongue, they cause a reaction. From that reaction, you get the taste. So taste arises only after the resultant chemical reactions are processed within us. We say that the taste is in the food, but it isn’t: the taste is in us.</p>
+<p>The sense of touch is just contact caused by pressure or variations of temperature, which turns into feeling only after it is processed within us. Touch works by sending information to the spinal cord, which forwards messages to the brain where the feeling is recognized and interpreted. But feeling is not present in the objects of contact themselves.</p>
+<p>To summarize, we know the world we live in by means of the sense fields: sight, sound, smell, taste and touch. We then incorporate that sensory information into our thinking, which organizes it in such a way that we experience it as external to us. In other words, we see the world as being out there in relation to us, because that’s the way it appears. And we, the ones who know the world, appear to be inside. But if we investigate the senses closely, we’ll see that the entire world actually arises inside the mind.</p>
+<p>Although it’s not difficult to understand this intellectually, in practical everyday terms, I am not sure this knowledge makes much difference, because most people will still act as though the world outside is something real. It appears like that to people because they have been brought up to think that way. But, from the point of view of investigating and learning about ourselves, this knowledge is important. We can learn that the way we think and the ways other people think are not actually the same. We see things in a certain way, but somebody else sees them in a completely different way. It’s not necessarily the case that either one is wrong; both may be right. It’s just that the experiences we base our interpretations on are different.</p>
+<p>If we want to understand the senses on a deeper, more personal level, we need to analyze the whole process more carefully. However, contemplating the senses is a challenging practice. The problem is that we are very strongly conditioned to see the world as existing outside ourselves and having a reality of its own. When we start investigating the senses, we can see intellectually that the outside reality is an illusion; that actually everything is internal. However, this understanding is still of an academic nature. Although it is quite valid at that level, we must go beyond that intellectual understanding and actually realize it for ourselves. We must realize with total certainty that the realms of the senses are things existing solely in our own minds.</p>
+<p>Seeing things in this way makes us realize that the world is not quite the place we thought it was. When that realization strikes home, our interest in the world of the senses starts to wane. We begin to see that the world out there is merely a kind of magic show, lacking any real substance. The value of that realization is a lessening of attachment to external things. We no longer view them as worth craving. Having understood with insight the true nature of sensory experience, we know that everything we perceive in the world actually arises internally. Because perceptions arise inside us, they are actually a part of us; so why should we want to possess them? That kind of seeing begins to break down our attachment to external objects.</p>
+<p>This insight is invaluable because we see with a very clear mind what the world is. We no longer receive sensations in the usual, familiar way. Usually, we are so familiar with the world that we don’t think about it very much. In a state of insight, however, we see it clearly. Seeing clearly, we learn a great deal. The value is in the lessons we learn about the world. And when we learn enough about the world, we let go of the world. We realize that attachment to it is a major cause of suffering.</p>
+<p>This is the aim of the practice of wisdom: to understand the true nature of the world, mainly for the purpose of uprooting our attachment to worldly things. When we truly comprehend the nature of the world, we realize: “Oh, it’s all inside the mind.” With that knowledge, our attachment to the world weakens. When that happens, things that occur in the world don’t affect us so much; they have less impact. We sort of shrug and say dispassionately, “That’s just the way of the world.” We let them go. As the mind detaches from external things, the focus turns more and more inside, more and more toward seeing how sense consciousness influences our perceptions of the world. It’s a complicated process.</p>
+<p>As an example, consider this: Wisdom entails seeing the past and the future from the perspective of the present moment. We cannot be aware of a visual object until after the visual data have contacted the sense base. And between the moment of vision and the moment of recognition there is a time lag. A momentary time gap exists between the arising and ceasing of one and the arising of the other. Because of that, the past moment of vision exists only in memory. The sights, sounds, et cetera that we experience are always in the past and filtered through memory. The mind seeks images and symbols from the database of previous experience to recognize and interpret incoming sense impressions and thus “understand” them. In this way, the practice of wisdom unravels the entire process of sensory experience.</p>
+<p>There is also another way to investigate this process. When we sense things, there is the one that senses and the thing that is sensed. In seeing, there is the thing that is seen and the one who sees it. From that, we get the notion that “I see that.” So, immediately a self is assumed. This self comes up in relationship to all the senses in the same way. But, in each case, it is a different “self.” The self that relates to seeing is not the same self that relates to hearing. The one that relates to the external senses is not the same one that relates to thinking or memory. Each time, it’s a different self. In the end, when we follow the way of Dhamma, we have to give up the attachment to all ideas of self.</p>
+<p>This problem of self-identity arises because we have a fixed idea of our own reality. Being attached to this fixed idea of a personal reality, we cannot see the relativity of the world. We do not understand how relative our existence is, and how changeable. We don’t like that uncertainty, so we create a self-image as a refuge, and make it appear very real and important. That precipitates a clinging to this fixed idea of self. And there is the dislike of letting go lest that self be swept away in the whirlwind of changing phenomena.</p>
+<p>But in the final analysis, the way of Dhamma is to see all perceptions as just phantoms, phantoms of your mind. That means that you know another person only in your mind. Therefore, that person is really a part of your mind. So when you’re angry with that person, you’re really angry at your own mind. Things that person says are heard internally. Because you hear them internally, they belong to you. The belief that they come from another person is just a delusion.</p>
+<p>The way of Dhamma is to truly realize that the whole fault is in you; the fault is your own, every time. It’s not that other people don’t cause trouble—in the ordinary worldly sense, they do. But you are at fault when you believe that they are causing <em>you</em> trouble and react accordingly. You are to blame because your mind has been deceived by its interpretation of sense perceptions, deceived because it knows wrongly.</p>
+<p>All we actually do know are sights, sounds, odors, flavors, feelings and thoughts. When we understand this, we realize that what we know as sight is just form, light and color; sound is just vibrations; odors and flavors are just chemicals; and touch is just feeling, whether pleasant, painful or neutral. That’s all we know. Those sensory experiences vary over a certain range, and that’s all we can say. Our whole world is composed of that sensory input. When we know all that, we know everything. People think of the world and the universe as being immeasurably large, but they’re not. Actually, they’re no bigger than our senses. The really big universe is within us, but most people are completely unaware of its vast potential.</p>
+<p>When you persevere in questioning everything, sooner or later you’ll come back to the mind, because that’s the center. You should question any sensation arising through the eyes, ears, nose, tongue, body, mind, feeling, memory, thought, consciousness or anything else. Is there anything you don’t need the mind for? You need the mind for everything. Because of that, the mind is the true essential. Everything you work on in your wisdom practice will eventually come back to that one fundamental truth.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/07._Feeling.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. Feeling</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Uncommon Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Uncommon Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/09._Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. Self</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

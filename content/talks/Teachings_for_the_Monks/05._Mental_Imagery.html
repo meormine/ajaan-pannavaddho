@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Mental Imagery</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/04._The_Delusion_of_Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(04)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/06._The_Kilesas_are_the_Enemy.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(06)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/05.%20Mental%20Imagery.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>05. Mental Imagery</h3>
+<p><em>Should I continue focusing on the breath when doing walking meditation?</em></p>
+<p>You can keep your attention on the breath, but if you find it interferes with the rhythm of walking, you may prefer to switch your focus to something else. For example, you can focus on the action of walking instead. You can pay attention to the way the legs move, or the way the feet move. But if you prefer, you can continue with the breathing practice as you walk. So there are two possible ways of approaching it: either you change to another mental focus while walking, or else you stick with the breath the whole time. If you want to stick with the breathing practice the whole time, it’s better to use it when you are walking too. When walking meditation, I suggest you try walking at a fairly normal pace. It can be a bit faster than normal, or a bit slower; but don’t do the very slow walking. The reason being, you want to develop the walking practice until it becomes a habit, so that whenever you are walking, the mind drops into that mode. If you learn to do it very slowly, you can’t suddenly drop into that mode of practice when you’re walking down the street. If you did, it would look very peculiar.</p>
+<p><em>What is Right Speech?</em></p>
+<p>Right speech is quite complex, because speech is complex. And right speech is often not speaking at all. When you must speak you should be mindful and careful of what you say. You should try to see the other person’s viewpoint, see what effect your speech is going to have on the other person. Practicing right speech is an aid in being mindful. So be careful, and think before you speak.</p>
+<p><em>How should one handle nimittas?</em></p>
+<p>When you are training for samādhi with the parikamma, it’s best not to take any notice of nimittas. Look on everything except the parikamma as being a distraction. If nimittas arise, so be it. But don’t become caught up in them. When you have enough experience, you might be able to use them, but don’t try too early. When you are doing the breathing practice, for instance, you should be focusing only on the breath. Any other object of focus will take your attention away from that. So whatever come up to take your attention away from the breath should be seen as an obstacle. Whether it’s a thought, or a nimitta, it’s a distraction pulling the mind away. When nimittas comes up, it’s easy to become interested and get caught in them. You might think they will lead you to psychic powers, or the winning lottery number. For that reason, people easily become interested in them. When they become interested, they easily get pulled away from the meditation practice. So you must see them as being distractions. Generally, when the kilesas realize that your practice is going well, they will throw up a nimitta. They will push up whatever they can to distract the mind.</p>
+<p>In the broadest sense, nimitta means any sensory object that arises in consciousness. It has a clarity that goes far beyond dream images. Most nimittas are very clear visual images that look just like the real thing. But you can also get sound nimittas, like voices telling you to do things. You can get smell, taste, and feeling in nimittas. And all of them can be distractions to meditation. Nimittas arise for various reasons, and it’s usually very difficult to find what the causes of them are. Sometimes a visual nimitta arises in the mind, and you have no idea what it is. Say you get the image of a broken piece of porcelain coming up viewed from a certain angle, and you have no idea where it came from or what it signifies. In fact, it’s probably just something you’ve seen in the past coming up. Nimittas tend to arise very clearly when a person reaches the level of upacāra samādhi, or access concentration. All sorts of images can come up in upacāra samādhi, which can be dangerous, because something very frightening can come up. Say, the image of a man brandishing a sharp sword coming towards you threatening to cut your head off. If fear then arises, that immediately makes the image appear larger because you are concentrating on it more. Concentration makes it larger, as though it’s coming closer. This increases the fear, which can cause some people to go mad. In fact, the image seen is no more than something projected on a cinema screen. Like on the cinema screen, that’s all, there’s nothing in it to be afraid of. It’s the fear that’s the real danger. Because of that, it’s generally best to avoid mental states where a lot of nimittas arise. It’s far better to go deeper into samādhi, to the appanā level of full absorption.</p>
+<p><em>What are the primary factors of samādhi?</em></p>
+<p>In both samādhi and jhāna you have the five factors of vitakka, vicāra, pīti, sukha and ekaggatā. These are the five factors which arise progressively into both samādhi and jhāna. Because they arise in both, if it’s a person’s character to drop into jhāna, then the meditation will drop into jhāna automatically. But most people shouldn’t aim to get into jhāna, they should aim for samādhi. Practicing for samādhi means that one does a practice like breath meditation, and keeps at it for quite a long time until the mind becomes really calm. That calm state is not especially deep, but when the mind withdraws from that calm state, it’s in good shape. Jhāna, on the other hand, can go very deep and very far. So much so that people who attain it don’t like to talk about it much, because most other people can’t understand it. People without that experience can’t understand what jhāna is. All we can say is that it is separate state which suits the character of some people. If those people do the practice in the normal way, they will tend to go in the direction of jhāna automatically. Most people, however, will naturally develop samādhi. Samādhi is a state of calm and concentration. When there is calm and concentration, a state of joy and happiness arises. This is a very good state of mind, but it’s not nearly as deep as the jhāna state.</p>
+<p><em>Please explain the Noble Eight-fold Path.</em></p>
+<p>There’s a lot of misunderstanding about the Noble Eight-fold Path. In the suttas, when the Buddha gives a discourse concerning the Noble Eight-fold Path, he always mentions it at the end of the discourse. After talking to people until he gets them into the right frame of mind, he talks about the Noble Eight-fold Path. Whereas, mostly when people learn about Buddhism, they start with Noble Eight-fold Path. But it’s not the right way around. One must understand that the Noble Eight-fold Path is not a path that one practices a little each day. The Noble Eight-fold Path means that all its factors are “Right”: Right Speech, Right Livelihood, Right Effort, Right Mindfulness, Right Samādhi . They are all Right, and that Right means they are perfect. And being perfect, they provide a path which is capable of taking the citta to the final goal. In other words, it’s the Path moment, the moment of Sotāpanna, Sakadāgmī, and so on. This is the true way of the Noble Eight-fold Path. Of course, one must steadily practice the factors of the Noble Eight-fold Path, that’s necessary. But simply practicing the Noble Eight-fold Path a little bit here and a little bit there won’t get you to the goal. Today we’ll do this, tomorrow we’ll do that and so on like that. It is in effect the path to Nibbāna. Which means that it’s something very deep within. It’s not a simple thing. So its fruition requires a practice of meditation that has gone very deep, to the point where all these factors coalesce together. Only when the time and conditions are right does the path take place. So the Noble Eight-fold Path is not something simple and easy. This is something which has been misunderstood.</p>
+<p><em>How is samādhi associated with the Noble Eight-fold Path?</em></p>
+<p>Right Samādhi is a samādhi that is absolutely perfect. That means that it is perfect with regards to the state and the object. And that samādhi must be associated with Right Wisdom. In other words, Right Understanding and Right Attitude. Those factors must be associated with that samādhi. In fact, all the factors of the Noble Eight-fold Path are associated with Right Samādhi.</p>
+<p><em>What is a true state of calm?</em></p>
+<p>A true state of calm is completely satisfactory. If you want to modify that state in any way, then that means it’s not really satisfactory. If you feel it’s not the state that you want, then it’s not a state of true calm. If you trying maintain it, then the trying is wrong. It should be automatic, not something you say: I’m going to do it. The “I’m going to do it” breaks up the calm straight away. It must be something that arises when the proper conditions have been prepared. In other words, the practice sets up the right conditions for a state of calm to arise. When they’re right, the mind drops into that calm, still state. At first, you don’t realize what has happened; you are just in a state of calm where no special feelings or thoughts arise. Then you come out if it, and you say, “Oh, where have I been.” It’s rather like that.</p>
+<p><em>What is upekkhā?</em></p>
+<p>Upekkhā in meditation is a very higher state, a state of complete equanimity. It means that one is not disturbed no matter what occurs. There is no disturbance at all inside the mind. In ordinary life, it’s almost as though one withdraws from the affairs of ordinary life.</p>
+<p><em>What does Right Livelihood mean?</em></p>
+<p>Right Livelihood means Right Livelihood in association with one’s social position. For a lay person, whose working in the world, means one avoids any work involving killing, stealing or dishonesty; one avoids selling things that are harmful to others, like poisons or weapons.</p>
+<p>When it comes to the bhikkhu, Right Livelihood means he gets his food by colleting alms food, for example. His purpose for becoming a bhikkhu is the practice of Dhamma, and that practice is Right Livelihood. Teaching the Dhamma is also Right Livelihood. But one mustn’t mix Right Livelihood of a lay person with that of a bhikkhu, they are different standards.</p>
+<p><em>How can we let go of self?</em></p>
+<p>The only way to let go of self is to get rid of craving, because craving and wanting cause attachment, and we’re attached to a self. But it’s not much use trying to let go of self until you have trained yourself thoroughly in meditation. Letting go of self is a very big step.</p>
+<p><em>How can we deal with anger?</em></p>
+<p>When anger arises, you must realize that the cause of that is feeling, emotional feeling. Because that feeling is unpleasant, you want to correct it, so angry thoughts come up. Your thoughts are then about anger, and those angry thoughts are directed at other people. For instance, if you sit on a lump of sticky rice, you may feel angry that someone put a lump of sticky rice there and then blame that person. And that blaming is the real problem. The feeling is a result of your past kamma, but that feeling then gives rise to a present reaction. That reaction is anger, angry thoughts. So you should try to develop your mindfulness so that you can see when that feeling comes up. And when it comes up, just accept it. Realize that the unpleasant feeling is your own fault. In that way, if you realize that you yourself are to blame, and not anyone else, you are to some extent getting rid of your own self-importance.</p>
+<p><em>How can I find joy in my daily life?</em></p>
+<p>You must realize that the joy you want arises inside yourself. Most people try to find that joy in the world, but it does not exist in the world. The place to look for it is in yourself. You can’t find joy in the world, because joy arises inside, in the heart. And since it arises in the heart, it’s no good trying to manipulate the world to get it, it won’t come. Plenty of people are making millions of money, because they think it will make them happy. They try to squeeze joy out of the money, but joy isn’t in the money. In fact, it often leads the opposite way. If you want joy you must look and see where joy arises and what causes it to arise. You must search for the true causes of it. When you do the right causes, you will get the joyous results. If you don’t do the right causes, you can try forever, but you won’t get it. People all over the world are searching for happiness and contentment. But because they look outside in the world, they are looking for it in all the wrong places. One must realize that the development in the world, in a general sense, means deterioration in people. This is because when they are developing the world, people’s minds are out in the world, and not in themselves. So they develop the world and forget themselves, and then wonder why they are unhappy.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/04._The_Delusion_of_Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">04</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">04. The Delusion of Self</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/06._The_Kilesas_are_the_Enemy.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">06</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">06. The Kilesas are the Enemy</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

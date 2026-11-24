@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. Advice to New Monks</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/13._The_Whirlwind_of_Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(13)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/15._The_Knowing_Inside.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(15)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/14.%20Advice%20to%20New%20Monks.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>14. Advice to New Monks</h3>
+<p><em>What kind of advice do you have for new bhikkhus?</em></p>
+<p>Within the first year of being ordained, a bhikkhu should go to live with a good teacher, and work as hard as he can to achieve samādhi. Until one has a taste of samādhi, one doesn’t know the value of the Dhamma and the teaching. Until a bhikkhu experiences samādhi, he fails to see the value of the Buddha’s teaching. He may read about it in books, but paper and printer’s ink are not very tasty food: after a while the mind gets rather tired of it. After that the new monk may think: “Why am I doing this? I’m just making difficulties for myself and don’t seem to be getting anywhere...” And eventually he gives up the robe. But if a monk gains some samādhi, he knows instinctively that that experience is right and good, because it is an experience of more happiness than he has ever known before. If a newly-ordained bhikkhu can get to that state and maintain it, things are okay.</p>
+<p>The best advice for a newly-ordained monk like you is to get out of Bangkok as soon as you can and go to a forest monastery where there is a good teacher so you can get down to the meditation practice. Then work at meditation as hard as you can and keep that effort up as long as possible. Don’t become distracted by external matters. There is a great temptation to stop when you have gained some experience and to begin talking to other people about it. And soon it all just fritters away.</p>
+<p>So learn the method, do the practice and to not talk to other people about it. It is well-known experience that if a person gains some valuable insight or understanding and then shares that with other people, it’s as though the strength of it dissipates. This is found with bad things very easily. If a person has done something bad in their past which he feels shame or guilt about, speaking to other people can dissipate that feeling. The same thing happens in the opposite direction with good things. If one talks about valuable personal experiences with other people, those experience appear much more ordinary and lose their taste, to the point where one no longer feel they are so valid. So it is very important to keep those experiences to oneself until one has a lot of experience, until one is strong inside.</p>
+<p>So it is important to do your samādhi practice and don’t talk about it. If you gain something or find some method of your own that works very well for you, don’t go telling other people. Not until you have had enough experience, are well used to that method and know it works well: then maybe, but not until then. This is very important.</p>
+<p>The essential thing for a new bhikkhu is to get some samādhi experience, because if he does not have that there’s nothing really to hold him. Otherwise, it’s just theory, ideas and so on: and in the end they are not enough to sustain one. It must be samādhi. It is no good thinking about things. You must keep on one thing, like the repetition of buddho or the breath. Just keep focused on the breath at the nose tip and stopping thinking, stop the thoughts entirely. When you are able to stop the thoughts, only then are you in a position to use them properly. Until you can stop thoughts, you do not have control of them so they go everywhere, and consequently remain weak. By learning to stop the thoughts, you can learn to put them where you want and to make good use of them, so they become strong.</p>
+<p>So to begin with: stop the thoughts and learn to gain calm. Because people in the West come from an environment that’s a hell of a mess, they need calm. Because, being influenced by such an environment, they’re in a hell of a mess too. And it takes them a long time to settle down and sort themselves out. They must realize that they haven’t got very long before the kilesas start coming up and saying: “Hey what are you doing here? This isn’t doing you any good!” So they must go to a place where they don’t have all the distractions, where they can get down to doing the practice properly and work hard at it.</p>
+<p>Another thing I would advise anyone who practices samādhi: stop reading, particularly newspapers and magazines. You should realize that whatever you read or hear goes into the mind and becomes food for thought. So your thinking is influenced by that. If it is food concerning bad things, the mind thinks about bad things; if it’s food about good things, it thinks about good things. But if one is trying to stop thoughts, neither kind of food is useful. So the best thing is: stop thinking. Stop all contact with news and so on, and talk with other people as little as possible. Keep to yourself and remain focused inside. It’s the best thing you can do.</p>
+<p>Be careful not to talk too much. You should watch yourself talking and then reflect on your talking: “Did that conversation do me any good? What did I get from it? What value was there in it? Did the other person get any benefit from it?” You should always try to contemplate in this way. Because we do not have enough mindfulness, we all make mistakes, we all forget quite often. So you should reflect on your speaking habits often until it starts to have an positive effect. When that happens, as soon as you think you want to start a conversation, you reflect: “Why? What’s the point?” Then the teaching is beginning to have an effect.</p>
+<p>Also I would say, for a new bhikkhu: don’t neglect simple things. New bhikkhus know about the necessity of contemplating food when they are eating, and they know they must try to be mindful when eating and walking, but they think: “These are just the simple things.” But they are not, these things are very important. Although contemplating food may initially seem to bring no results, when it is practiced steadily over time, it brings excellent results.</p>
+<p>One of the most difficult things for a new bhikkhu to control is sexual desire. Probably the most effective way of controlling this is contemplation of the body. If you find sexual desire is arising, contemplate the body. Traditionally, this means the thirty-two parts of the body. Try to see the asubha side of it: see the body as a mess, see it as though it’s all broken up, think of it as a corpse and so on. You may find that you don't feel within yourself any special result, but you will find that the sexual desire has diminished. A very good test for this is to watch your dreams. When one has a lot of sexual desire there is a tendency to have dreams of a sexual nature concerning women. When you practice body contemplation, the women in dreams don’t come near you; you may see them, but they don’t come near you. The effect is almost as if some force is somehow pushing them away, but one doesn’t quite know how.</p>
+<p>For a monk, I think this contemplation can work particularly well with women, especially if they get quite close and become rather a nuisance. Just contemplate the body, think of them as a messy lot of bones, flesh, blood, shit and so on. You will find that they are repulsed. This is a protection that a bhikkhu should have because some women are rather unstable and unpredictable, and he needs some protection. That is definitely an important thing.</p>
+<p>Or when a former girlfriend keeps coming into your head: okay, cut her head off. See the blood coming out. Pull the meat off and look at the bones. Of course you will find repulsion from doing this, thinking: “I mustn’t do that with her!” But why not? It's not harming her. It’s just something in your mind. The only thing being damaged is the image you have of her in your mind, that's all. It won’t harm her at all. So that’s probably the best way to deal with something like that. But you must make the determination to do it. If you just let it come up and don't make a determination, it won’t have any effect. The thoughts will just go on.</p>
+<p>Eating too much food easily causes trouble with meditation practice, and can encourage sexual desire. A lot of monks at Wat Pa Baan Taad go on fasts. If you do try fasting and you find it effective, then use it – but use it with caution. Don't go to excessive lengths with fasting. Generally, when Ajaan Mahā Boowa went on fast, he fasted for about a week without eating, never more than that. Sometimes he went a week without eating, and then ate one day, and then went for another week, and ate one day, and then for another week and ate one day. But he never went more than one week without eating. It seems to me that his was a very reasonable approach. Otherwise, monks can become almost addicted to fasting, and that’s not good. Another thing you can get with monks who fast: they start competing. Somebody else is doing a fast, and they think: “I’m going to go further than that.” In fact, that is contrary to the way of the Vinaya. It’s wrong according to the Vinaya, because it’s doing it for the wrong reason. Fasting should be for the reason of developing your meditation practice.</p>
+<p><em>What benefits should one expect to see from fasting?</em></p>
+<p>It clears the mind by preventing the digestion of food being a kind of ‘load’ on the mind. Because there is less of a tendency to feel sleepy, one tends to be more mindful. When fasting, the mind is generally much brighter, so one feels lighter and more inclined to doing the practice. Those are the general benefits of fasting when it goes properly. And one should use the extra time that one gains from fasting to intensify one's efforts in meditation.</p>
+<p><em>Some teachers say that samādhi meditation is unnecessary.</em></p>
+<p>Yes, in Thailand many teachers now say: “The way of samādhi and all the things connected with it are unnecessary. What you must have is vipassanā.” All I can say is: don’t listen to them. Ajaan Mahā Boowa was once asked whether that was genuine vipassanā, or not. He replied: “Some people who are thieves claim they are good, honest people. But even though they say they are good, honest people, they still remain thieves.” In fact, they use the word vipassanā, but what they are really practicing is samādhi. However much they claim it is vipassanā, it still remains samādhi. They are doing things like breathing practices, or the belly movement practice, which are not vipassanā practices, but samādhi practices for attaining calm and concentration.</p>
+<p><em>The vipassanā practice that is very popular in Bangkok is the Burmese method. They claim to attain Sotāpanna in two weeks.</em></p>
+<p>If that were the case, why don't we see the results of it? I can’t see that the people who practice in that way are any better than other people. Whereas the Ajaans that I’ve met, who are known to be genuine Arahants, they are different – and they show it. There’s no ostentation about it, they just show it in their character and their bearing; the general feel you have about them, and the way they talk. You can see the difference. But the people who practice that kind of vipassanā don’t show the same results. There’s nothing you can see of it. They may like to call themselves Sotāpanna, but personally I don’t believe it. I don’t think they know what Sotāpanna means.</p>
+<p><em>I find it very difficult to keep samādhi. I can reach it in meditation and everything is fine for a while, and then it just dissipates.</em></p>
+<p>The reason for this is probably a lack of saddhā, or faith. You cannot link that samādhi to anything. It is difficult for Westerners, who were not brought up in Buddhism, because they lack the saddhā inherent in a Buddhist background. For the Thais it is a bit easier in that way, because when they attain samādhi they can link that back to the Buddha and his experiences. They have a whole background in Buddhism. But still, you can’t do anything about that. You must accept the situation as it is and use your determination. When you find it difficult to maintain samādhi, continually refresh your commitment to get back there. You know that samādhi is good and worthwhile, so continually make a new resolve to get back there.</p>
+<p><em>It seems that saddhā is one problem Westerners seem to have. Are there other problems that Westerners in particular have?</em></p>
+<p>Yes, diṭṭhi-māna, opinionatedness. This tendency is very bad, and very strong. Mainly because in the West we are all taught that everybody should have opinions. Because of that, people feel they must be experts on everything. You can’t mention a subject without somebody saying: “I know everything about that.” Whereas, in fact, they know very little, so all they are giving is their opinions. Diṭṭhi-māna is a very prevalent conceit, and one you should be very careful about. There is a very distinct difference between opinionatedness and knowledge originating from wisdom. Opinionatedness tends to jump to conclusions without having any facts, or without knowing any background. Whereas wisdom searches the whole field, looks the whole way round and searches the background to see the workings of cause and effect. Because of that thoroughness, there is knowing, not mere views and conceited opinions born of the kilesas.</p>
+<p>It is very important to try to know the kilesas. Kilesas are the enemy, and you should know the enemy. By knowing the enemy, you become aware of when he is likely to attack, so you can understand what defenses are needed. First you must realize hat the kilesas are always there. It’s not as though they are sometimes there and sometimes not – they are always there, so there is no time when they’re not. In fact, the citta is completely ruled by the kilesas and under their sway the whole time. The kilesas give rise to something we call ‘self’. And this self is really the essence of the kilesas. We relate everything to self, and that very act of relating is carried out by the kilesas. Our outlooks and our whole worldview are created in relation to self, so they are all bound up with the kilesas as well. Everything is colored and distorted by kilesas. Because of that, we are completely subsumed by these things. But because they are so much a part of who we are, we can’t see them and so don’t know about them.</p>
+<p>You should realize that the kilesas are always present. You mustn't think that they are minor things that don't matter very much. Think of the evil that some people do – the Nazis in Germany or the Japanese in China, for example – all that evil comes from the kilesas. The kilesas can drag us into doing things that bring us immeasurable suffering. They lead directly to rebirth – sometimes good, but sometimes quite bad too. So they are no small matter. And they're very sticky, so they don't go easily. They are always on the defensive against any attempt to counter them. They use the power and skill of the human citta: that is why they are so clever, because they are using the citta. Not that the kilesas in themselves are especially clever; they are a distortion of the citta and use the citta to think up their own ends.</p>
+<p>The kilesas are the enemy, and they are not an easy enemy to deal with. One has to learn to recognize them first of all. In order to do that, you must observe your mind to see them in action. Generally you cannot see them clearly when they are acting because you are too caught by them. So you should reflect to see how they made you do this or that, how they always arise to take control of a situation.</p>
+<p>At first you won’t be able to see the difference between what you feel to be your 'self' and the kilesas. But in time you do begin to realize that there is a difference: that the kilesas are one thing and the citta is another. You realize that the kilesas usurp the citta, and in doing so produce is what might be called your self-image. And this ‘self’ is an impostor; it is not the genuine thing at all. The one that is genuine is very hard to realize, because that one is ‘not-self'. That one is true and without blemish. And this one is not at fault. It might be called the ‘true citta’’ or just ‘Dhamma’. And that is the one we are searching to become. But doing that requires that we learn how to give up that which we call the ‘self’ – and that’s hard work.</p>
+<p>You must train yourself until you reach the position where you can do that. Until you reach that position, there's no hope of giving up self. You cannot just say: “I’ll give it up now.”, because the kilesas are the ones saying that. All the kilesas do is give up one thing and take up another. Usually when people try to do that before it is time, they give up ‘self’ and they take up the idea that “I am an Arahant”, or something like that. What they’ve actually done is made another self and given it the name ‘Arahant’. So they are worse off because they think they have nothing more to do. They have an opinion that leads them in the wrong way all the time. If they can’t shake that false view, they are finished.</p>
+<p>So the kilesas are a formidable enemy; in fact they are the only enemy. Invariably, if your meditation practice doesn't seem to be going right, it's the kilesas that are responsible. Often, they are dragging you down so much that you can't think straight, or make any firm resolve. And the thing they get hold of mostly is feeling – just plain physical feeling, often located around the area of the solar plexus. That's all, just that feeling. If you can make the resolve: “To hell with these feelings, I'm going to do the practice regardless of feelings”, then you can beat them. But you've got to keep on defeating them time after time – not just once.</p>
+<p>But, although the kilesas are powerful, we still have the power of choice. And in any situation that arises, we always have the choice of whether to go in the right direction or the wrong direction. The right direction still has kilesas in it, but it is leading to a reduction of the kilesas, to thinning them out. In other words, it leads in the right direction to get free from the kilesas. But if we choose the wrong direction, the kilesas will increase and become thicker. The kilesas will always try to bias our choices to point us in the wrong direction. But we always have the choice to deliberately go against them; that is, to go in the right direction. We won’t get rid of the kilesas by making that choice, but we will be headed in the right direction to get rid of them. Moral behavior is essentially that: going against the pull of the kilesas. Whenever a question of morality arises, to go in the right direction is to go against that pull. It’s difficult because the kilesas put up a stubborn resistance.</p>
+<p>The enticement of the kilesas is so often merely a desire to feel relaxed and at ease, which we want so much. Whereas going against the kilesas produces tension, irritability, annoyance, feelings of constriction and so on. But all of those unpleasant feelings are an attempt by the kilesas to pull us back, because countering them means going in the direction to get rid of them. In a more technical sense, these unpleasant feelings are merely the results of bad kamma created in the past arising in the presence. Because of the natural pull of the kilesas, the arising of those bad feelings tends to induce us to follow our habitual downhill path – the wrong direction – in a misguided attempt to get rid of those unpleasant feelings. But when we go in that direction we reinforce the kamma that will produce those feelings in the future – so the wheel of saṃsāra rolls on.</p>
+<p>So we always have the choice of going in the right direction, or in the wrong direction. When we deliberately and continually choose the right direction, we not only start thinning out the kilesas, but we gain the power and strength of will to go against them with greater ease. Whereas, if we follow them all the time, we just end up like jellyfish: weak and completely under their sway.</p>
+<p><em>How do we know if our efforts are having an effect on reducing the kilesas?</em></p>
+<p>You find that your estimation of your own self-esteem becomes greater. I don't mean this in a negative way of feeling self-important, but rather as a feeling of your own worth, experienced internally and unrelated to what anyone else may think. Inside you feel that without a doubt you have something that is truly valuable. You don't feel like an old foot-rag. As the kilesas are reduced, that thing of value starts growing. And you will also find that there is firmness inside, a firmness that is capable of fighting the kilesas and going against them. All these factors do show externally, but the external appearance is not what matters – that’s just a by-product. It’s the internal changes that really matter. It is possible that you may not realize what specific things you have done to bring that change about, but at the same time you are quite certain that you have developed in a positive way. You may not be able to put your finger on it, and say exactly what has brought it about, but a real improvement has taken place. You know that you have changed, that you have a decidedly different mental perspective.</p>
+<p><em>Some meditators try to use shear willpower to get results quickly.</em></p>
+<p>That rarely ever works. The more one tries to push it in that way, the more the obstacles come up to oppose it. Because that willpower to get quick results is bound up with the kilesas. It is “I am going to get quick results”, with the emphasis on ‘I’. In other words, “I am going to force those results, regardless”. If one is practicing under the supervision of a really good teacher, one might be able to use that faculty, that power. But without that expert supervision, what generally happens is this: A person, who has a number of ways to go, will only see one or two of these ways and not see the others. And the way he should go is the way he doesn't see, because, due to his character, that is the way where his kilesas are strongest. So he will stick only with his strengths and not develop the areas in which he is weak. But the areas in which he is weak are the areas in which the kilesas are strongest, so in order to overcome them those are the areas in which he has to make the greatest effort. So he will always continue lopsidedly developing his strengths at the expense of his weaknesses. It's much easier that way. But he cannot see the factors that really need development, so he doesn't go that way. He goes the other way, the wrong way.</p>
+<p>Typically, people who are greed characters always think they are hate characters, while people who have a problem with hatred always think their real problem is greed. The reason for this is: when greed arises in a person who is a greed character, it is so much a part of his nature that he does not see it. Whereas, when hatred arises, it sticks out like a sore thumb, so he thinks his character is rooted in hatred. He thinks he must do practices to counteract hatred, but that's not his real problem. It's greed that he must counteract.</p>
+<p>That's one of the reasons why it is very difficult for people to develop Dhamma on their own without a teacher. A good teacher will, in one way or another, indicate the general direction that a person should take. Ajaan Mahā Boowa is very skilled at that. He rarely tells somebody: “You should do this practice or that practice”. Although he usually suggests a range of practices, in one way or another he will do things or indicate things or say a little bit here or a little bit there to gradually steer a meditator on the course that is proper for that individual. He is very good at that. But, as long as it’s within the realm of Dhamma, he will not force the person at all.</p>
+<p><em>Do you think it wise for a new bhikkhu to stay with the first teacher for five years?</em></p>
+<p>I would say that it is not good to take the attitude that some monks do, that they will stay with a teacher for five years regardless, but without concern for doing the practice properly. You should think of living with a teacher for five years as being the period when you learn the practice well enough so that, if you want, you can leave him and find a calm quiet place to practice on your own.</p>
+<p>One of the troubles now, of course, is the way of the world has invaded the forest monasteries. The young men who become bhikkhus nowadays usually have a very good education, often a university degree, and they are completely infected with Western traditions and views, so they don't have a proper feeling for religion. This is a difficult thing to describe really. It means that with the right spiritual outlook, one sees the religion as being the important thing, not just another aspect of the mundane world. In other words, a bhikkhu thinking in terms of the way of the world thinks in terms of expediency: how one should behave properly in a worldly context. The knowledge that he seeks concerns the way people think and act in the world.</p>
+<p>Whereas the way of religion is quite different. It is the way of that which is true, genuine, and leading to freedom. It does not like the sham of the world. The spiritual attitude is quite different from the worldly attitude. Seeing people in the world, one feels sorry for them. One feels that one would like to help them; but at the same time one feels a certain disgust for them and the way they act. Even good people lack the right spiritual attitude. One sees the things they are interested in, the things that they do and the way they act, and one knows it isn't right.</p>
+<p><em>Can one get a good foundation in Buddhism from reading books?</em></p>
+<p>Books are quite valuable, but they must be used in the right way. And the right way is to use them to enhance your practice, especially the wisdom practice. For instance, when you are doing a lot of wisdom practice, a lot of investigating, you can find some line of text that will set you thinking in a positive way. Books can point out good objects of Dhamma to keep in mind. Books can be quite useful as a mine or storehouse of potential for your wisdom practice.</p>
+<p>But for samādhi, it is different. Ajaan Mahā Boowa says that before he went to Ajaan Mun he had been a bhikkhu for seven years, and learnt Pāli up to mahā grade. His teacher wanted him to go further with his studies, but he himself wanted to go off to the forest and develop his meditation practice. So he left and began searching for Ajaan Mun. When he finally met Ajaan Mun, he told him about his previous Pāli studies. Ajaan Mun told him that for the time being he must forget all that he learnt and focus only on meditation. He must put aside all the knowledge that he gained from his studies because it would only be a hindrance to his progress. Only later, when he had developed enough spiritually, would that knowledge become really useful to him. In the beginning stages of meditation it wouldn't help at all.</p>
+<p>The books really deal with an analysis of the way. But until you have developed a suitable basis of calm, analyzing in that way will not lead to proper wisdom. You must understand the nature of wisdom. Wisdom is not merely thinking about things. Thinking and reflecting can lead to wisdom only when you have a basis of calm. Without the calm, all you have is discursive thought, which just produces restlessness. So you must develop a basis of calm to start with. A few people can develop wisdom directly from the words, but they are very rare. It is something of the way of Zen: they start with the way of wisdom and let samādhi develop from that. But the majority of people cannot do that successfully, so they must go the way of calm. Then they find with time that thinking can lead to wisdom. But this thinking is quite unlike their normal restless thinking. It does not merely slip around on the surface. It can go deep into one thing with ease and slowly work over it. Probing deep into the object, it sees the whole thing with absolute clarity. And the feeling is quite different: it is a feeling from the heart, which is very satisfying, very cooling, and very firm.</p>
+<p>It is worth realizing the nature of calm. Mindful calm should not be muddled up with unmindful calm. When people listen to a desanā, given by a skilled Ajaan, a state of calm can develop just by listening. To the person listening it feels a bit like going to sleep. There is a feeling of drowsiness, strange thoughts may come up spontaneously, which can seem like a distraction. When that happens confusion sets in. That person is actually experiencing a bit of calm, but he doesn't realize it. So he tries to pull himself out of it and breaks it all up. In fact, that state of calm is valuable, so one should just let it be. One should not try to remember what the Ajaan is saying, but just let the sound of Dhamma go in. When it goes in, the understanding will stick their on its own. After the desanā one can hardly remember a word of it, but it doesn't matter because it is all still there. And at the right time it will come up again. So that state of calm is important. The fellow who is nodding off isn't simply falling asleep. The mind starts drifting a little bit, and images often come up, as though one is about to nod off. The skill of practice is to get to that state and prevent it from actually going into sleep. One has to keep it on the edge with mindfulness. Recognizing it, one must avoid getting restless and pulling out, but also avoid going in so deep that it falls into sleep.</p>
+<p>People don't understand the nature of these experiences. They hear of samādhi and wisdom and so forth, but they don't realize that there are experiences in ordinary life that are close to them. People don't recognize them because they don't know what they are looking for.</p>
+<p>Do you ever have experiences when you feel drowsy and all sorts of things come up, nimittas like sounds and sights and so on? Not external, but internal: calm and unaffected. It can be quite beneficial to get into that state and hold it. If a lot of nimittas come up, don't take any notice of them, don't become interested, just keep on gently holding the practice at that level. Too much interest in nimittas can lead to negative results, particularly if they are frightening images. When your mind becomes absorbed in frightening images, that's bad because it is unpleasant, and fear can come up. You must realize that all nimittas, whether audio or visual, are just that: mere sounds and images. In and of themselves, none of them are harmful. The harm comes from fear. That's the danger; fear is the danger, not anything else.</p>
+<p>It's common in the West for people to think that anyone seeing or hearing things like that is mad. What people don't realize is: that's not madness. After all, if one sees things like that, one sees them, that's all. What is madness is if you then believe you are Jesus Christ or Napoleon or something of that sort. That is madness. It's one’s beliefs and one’s thoughts that make one mad, not the images that come up.</p>
+<p>The general rule is: when nimittas come up, sights or sounds, don't pay any attention to them. When they come, ignore them and just let them go. Don't become interested and don't think about them, but just keep on with the practice. That's the right way. Occasionally, you can learn something from them, particularly if they are nimittas of the body. But mostly they are just junk from the past. Sometimes you might see something psychic: something at a distance or something that might happen tomorrow. But they are usually just chance occurrences. To become interested in those experiences as a manifestation of psychic ability and to try to gain control of it is all wrong. We have enough problems to deal with in our practice already without cluttering our minds with more. Especially as we can't even deal properly with the ones we have.</p>
+<p>The field of psychic phenomena is a field for delusion, there's no doubt about it. It can definitely drive people mad – because of their views and opinions about it. If you naturally have psychic powers, all well and good, but it is wrong to go searching for them. We are searching for the freedom we can gain from overcoming dukkha by practicing the way that leads to sukha. This means focusing internally to find the causes of dukkha. But psychic phenomena are nearly all external phenomena out there in the world. Whereas the right way of Dhamma is not focused out in the world – it is always focused inwards.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/13._The_Whirlwind_of_Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">13</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">13. The Whirlwind of Self</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/15._The_Knowing_Inside.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">15</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">15. The Knowing Inside</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

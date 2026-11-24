@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Introduction to Buddhist Practice</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to Introduction to Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/02._The_Basis_of_Practice.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(02)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Pannavaddho-Introduction-to-Buddhist-Practice/01.%20Introduction%20to%20Buddhist%20Practice.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>01. An Introduction to Buddhist Practice</h3>
+<p>When a person is introduced to Buddhism for the first time, the first thing he should do is to forget all about his background of Christianity – and his Christian views and other similar views – and start from scratch. The story of the Buddha begins like this. The Buddha found that he had a problem and he left home to try to find the answer to this problem. He went searching for teachers, he went to this teacher and then that teacher but he found he still had the problem. Finally he had to go off on his own to search for the solution, because he could not find anyone who knew about it. And he found the answer within himself, and he found the way to get to the state where he got the answer to his question and got free from his problem.</p>
+<p>This problem is a fundamental problem that we all have It is the problem of discontent. You can call it discontent, or suffering, or pain, or sorrow, but here we shall use the word discontent. All the time we are discontented. All the time we are wanting things, and we only want things because we are not contented. If we were contented then we would not want these things. So automatically our wanting is a sign of discontent. Not only wanting of things, but our wanting to move about, go here, go there, do this, do that, wanting to cure all our little irritations, to scratch here and scratch there. We are very much like a dog with a sore on its head. The dog runs about all over the place trying to find a cure for this sore which is on its own head. You also cannot get rid of that problem by running about searching for the answer in the world outside yourself.</p>
+<p>So the Buddha said that the cause of this trouble is in fact our own doing. It’s our own craving, our own wanting and all the time we are searching for the answer to this in the wrong way. We are searching for it outwardly when we should be searching for it inwardly. Thus the Buddha taught the Four Noble Truths culminating in the path or the way people should follow to realise the truth. First there is the truth of dukkha, which is discontent or suffering. This is the cornerstone. The second truth is the cause of dukkha, which is craving or wanting. The third truth is the cessation of dukkha, and the fourth one is the path leading to the cessation of dukkha. If we look at these, first there is dukkha which is the problem that we are trying to get rid of. Then there are the causes of our problems. The third is the ceasing of the problems which is the goal we are trying to attain. And fourthly there is the way and the means we must practice in order to attain this goal. It is rather like an illness. If you have an illness, first of all you have to define that illness, then you have to look for the causes, then you have to see the possibility of its complete cure and lastly you have to prescribe and take the right medicine. These are the Four Noble Truths.</p>
+<p>The Noble Eight-fold Path is the medicine. The first factor is the factor of Right Understanding or Right View, because as one’s understanding or view is, so one reacts. A person who is a capitalist acts in one way, while a communist will act in another way, just due to their differing views of life. So Right View is the right view of life, the right understanding of ones aims and objectives, and the right understanding of the way one should practice.</p>
+<p>The second factor is Right Attitude or Intention. This is an attitude of mind which aims at the cessation of dukkha. It is an attitude that is not easily caught up in the world, an attitude that sees what is important in terms of the path one must follow. The realisation of what is essential and what is not, and that the fundamental thing which is important is one’s own heart.<br />
+The next three factors of the Noble Eight–fold path are Right Speech, Right Action, and Right Livelihood. These are the moral factors. The Buddha gave these because they are causes which will bring about happiness and to some extent undo the discontent we experience. The difficulty is that the average person cannot see the reasoning behind this. Therefore the Buddha had to give these as a preliminary teaching for people to practice so that they can gradually clean up whatever is causing the trouble inside them and so gradually come to see the connection between their behaviour and the discontent they experience.</p>
+<p>Right Speech is speech which is appropriate in the circumstances where it is spoken, speech which is modest and truthful. Right Action for people living in the world means the five precepts. These are the precepts of training oneself to refrain from killing, to refrain from stealing, to refrain from indulging in wrong forms of sex, to refrain from lying and slander, and to refrain from taking intoxicants of any kind. These are the basic elements of Right Action.</p>
+<p>Right Livelihood refers to making a living in such a way as does not involve harming other living beings. It is a livelihood which does not require one to break any of the five moral precepts mentioned above.</p>
+<p>The remaining three factors are Right Effort, Right Mindfulness and Right Samādhi. Right Effort means, in fact, the effort one puts forward to both promote one’s mind and cure one’s mind. It is the effort to get rid of doing evil things and promote doing good things. It is also the effort to avoid evil things which are already there in the mind and also the promotion and development of good things which are already there in the mind.</p>
+<p>So Right Effort is the effort to cultivate those things which tend to lead us toward the path, toward the goal. This is often quite an effort. If for instance we are sitting in meditation practice and we feel that we would like to go to sleep but at the same time we realise that we are not really tired, without effort we tend to lie down and go to sleep. Right Effort is the effort to overcome that tendency. Effort here means a mental effort, not merely a physical exertion, but an effort just the same. This is the nature of Right Effort, the effort to see those things which can lead us astray as well as those leading to the path. It is often very easy to get diverted into doing something which we feel is very important for leading us toward the path, such as reading a book about meditation, instead of actually doing the meditation practice. So lacking in right effort we put the practice to one side.</p>
+<p>Right Mindfulness is the keeping of one’s mind in the present and on oneself in the sense that one does not forget oneself. One does not let one’s mind go out daydreaming, wandering about as if one had forgotten one’s own existence. One keeps oneself always in the present, in the here and now, with whatever one is doing.. In meditation practice this means keeping one’s undivided attention on the object of one’s meditation.</p>
+<p>Right Effort and Right Mindfulness lead us to Right Samādhi. Samādhi is an technical term which means a state of deep absorption of mind where the mind is completely concentrated on one object. When it is absorbed like this the mind goes very calm, thoughts stop and a brightness arises. It can happen that the whole body disappears until one is left with just pure knowing and nothing else. This is a state of happiness which is more than one has ever experienced before. But this Right Samādhi is not the end result. This is a state where the mind is very clear, very sharp. Coming out of this state one can then use this clarity and sharpness to examine and investigate what ones true nature is.</p>
+<p>These last three factors of Right Effort, Right Mindfulness, and Right Samādhi are the basis for Buddhist meditation practice. The first aim is to try to develop Right Samādhi. Samādhi can also be called calm, developing calm. But it is not a calm which the average person knows about. The average person may very occasionally just by chance get into a state of samādhi, but it is rare. And if they do it is usually just a flash and then it is gone. This calm is a state of essential calm where everything has stopped and there is complete stillness. All the disturbances of the mind, running here and running there, stop completely. One realises then that this state is a state of real happiness. After that experience one is never really satisfied until one can get back to that state.<br />
+Meditation practice requires a lot of hard work. The instructions for meditation practice make up about 0.01%, the rest of it is a lot of individual effort. There are several meditation techniques but the one perhaps best suited to Westerners is the one in which the breath is used. One pays attention to one’s breathing. This is not a breathing exercise in which the breath is forced or manipulated but one lets the breath go its own way and one just becomes aware of it going in and out. Keep your attention on that point where you feel the breath passing in and out most strongly and try to keep your awareness on the feeling of the breath at that position all the time. If you go on at it for some time, first of all the mind will begin to jump away, thinking about this, thinking about that, all over the place. So when it wanders you have to pull it back again, then it jumps away again and you have to pull it back again. You have to keep on pulling the mind back to the breathing all the time, until eventually it begins to settle down a little bit. Then, when it begins to settle down, you will find a sense of calm which begins to increase and there is no enthusiasm for other things. Then there is less of a tendency for thoughts to jump about. But this does vary from day to day. Some days the mind jumps about all over the place and you cannot do anything to stop it, while on another day it is much better. It varies a lot like that.</p>
+<p>Then if you continue in this way you may get a point or a spot appearing. The point may not be visible, it may be just a knowing at a point. Then you should put your attention entirely on the knowing at that point. If you keep your attention on that you will come to realise after a time that this point or knowing and the heart are the same. Then if you can go on further you will find that the “citta” will drop down to the heart. When it drops to the heart there is absolute stillness. That is what we call the attainment of samādhi. Coming out of that state the mind feels absolutely fresh and sharp and clear.</p>
+<p>At first this attainment of samādhi is likely to last only a brief moment, and then you may not experience that state again for months. So you must keep at it and try and try again. This happens because instead of putting the attention on the breath and fixing it there, one thinks about that previous state which one attained. So the mind is on the wrong thing. One tends to thing about that from experience which is in the past, and this becomes a distraction. It is only when one gives up thinking about that and comes back to the breath in the present with the determination that whatever happens I am going to keep the mind here, that one begins to get results again. People often get into difficulties because they are looking for experiences that they have had before, instead of trying to do what is necessary here in the present. In other words, they are looking at the effects instead of the causes. </p>
+<p>Going on with the practice one can gradually get some measure of control over samādhi. It requires a long time and a great deal of practice until one reaches a point where one can drop into samādhi quickly and easily. But one must realise that samādhi is not the end result. It is a wonderful state, a wonderful experience, and it makes some people believe that there is a god. But it is not the end result by any means. The reason being that when you get into samādhi it is wonderful while you are there but when you come out you are back in the same old world again. It is not permanent and because it is not permanent it is not the real thing.</p>
+<p>One always has to be very analytical in these matters to see whether, in fact, this is a state free of discontent or not. One must contemplate: Have I actually got rid of this discontent or not? Invariably one will find discontent in that state and one must be careful not to get caught.</p>
+<p>Wisdom is the only way to seek a permanent solution, free from discontent. In order to gain wisdom the mind must be sharpened up, much as if you want to cut down a tree you must sharpen up the axe. So when the mind is sharp then you can begin attacking whatever burdens the mind and overcome it. It is our own ignorance all the time which leads in the wrong direction, searching for every thing out in the world, always looking the wrong way.</p>
+<p>Ignorance or avijjā is the root of the problem and its servants spread out from it. These are the so called kilesas – or defilements, which in their root form consist of greed, hate, and delusion. But they spread out from these three into a whole range of derived qualities including anxiety, worry, slothfulness, laziness, jealousy, stinginess, selfishness, arrogance and so on. The kilesas are always waiting, ready to adapt any of theses modes to our thoughts, emotions and actions. But we do not realise that they are there and we do not understand what a burden they are. These are what leads us out into the world, and they act almost like demons. When we are doing meditation practice, the more success we gain in the practice the more these kilesas will resist and try to stop us.</p>
+<p>The reason for this is that these kilesas are in the heart, and Dhamma, the way of truth, is also in the heart. So there is a battle going on. Because the kilesas are situated in the heart they try to use the power of the human mind to force it to go out in the wrong direction. And by using the power of the mind the kilesas are very subtle and they are very clever in their ways of doing this. They act just like demons.</p>
+<p>The root of all these kilesas, the big one, is Avijjā or fundamental ignorance. The source of this fundamental ignorance is very deeply rooted in the mind. It is almost as if it is the root of what we are, as though what we are is that fundamental ignorance. So we have to cut this root out, and cutting it out is a very big task. It is as if everything that we are has to be chopped away and something entirely new has to appear. That “new” one is really there all the time but it is covered up and concealed from us underneath a lot of rubbish. The rubbish of the kilesas, the rubbish of avijjā. Only when we get rid of that rubbish will that “new“ one become exposed. Only then are we truly free. Only then is the way of the Buddha complete.</p>
+<p>As far as the actual meditation practise is concerned people vary in their abilities and their approach, but the sort of ideal way is when we come out of the samādhi practise, the mind is fresh, calm, wieldy, it is flexible and it is fit to be worked. So you can turn it to investigating in the way of wisdom. The first thing to investigate is the first factor which makes up oneself – this body. So investigate the nature of this body, because this body we inherently and automatically think of as self, more than any thing else. So we have to question this body. What is this body? Is it me? Is it mine? Who does it belong to? What is it’s nature? Is it beautiful or not? What is it made up of? How does it work? We question this body, we go through it, back and forth, back and forth, until insight comes.</p>
+<p>The body is the first thing to look at, this is the big deceiver. In the Bhikkhu ordination ceremony the newly ordained monk is always given five subjects of meditation. Kesa, Loma, Nakhā, Danta, Taco. Hair of the head, hair of the body, nails, teeth, skin. All of these body parts are really leading up to one thing – the skin which is the biggest deceiver. It deceives us as to what we are, what this body really is. The object of the meditation practise here is to understand the body, to see the body for what it really is. When one can come to the realisation that this body is not me, it does not belong to me, it has a way of it’s own and at best one is in charge of it for a short time, then one can come to realise that whatever happens to this body does not really happen to me. It is as though it could be happening to someone else. To the extent that we are successful here, to that extent discontent and suffering will disappear. Concerns about the body, concerns about death, this whole lot will disappear.</p>
+<p>The body is something which we grasp at conception, and cling to and become attached to. We want this body because this is a base, a sort of anchor for us. The body itself is neither good nor evil. It is neutral. It is just part of the world, part of nature. The good or evil is not in the body, it is in the heart.</p>
+<p>The Buddha divided what we call a “person” up into: <br />
+a.) the body as being the physical base, and <br />
+b.) the mind which is made up of feeling, memory, thought and consciousness. </p>
+<p>Simply put, these are the five factors which make up a person. The body is the material side, the other four factors are modifications of what we call the citta. Explaining the citta is quite difficult because there is no true comparison to it in the world at all. To get some idea of this, we may say that the body is the hardware whereas the citta is the software. But it is non-material and there is no way in which one can point to it, because it is the one that is doing the pointing. Its modifications give rise to the phenomena of feeling, memory, thought, and consciousness, but these are all the one changing citta. Thus the citta slits about taking on the characteristics of “consciousness”, then changing and becoming “thought” – or “memory” – or “feeling”. These characteristics are unstable in the same way as the body. So when the body dies these all fall away as well. This means that the mind is also not part of the person. In fact the body and mind are just like tools, like a pair of hands which we make use of. But there is the one inside which is the volitional one, the one that acts intentionally, which is the one which is infected by the kilesas or defilements. This is the one that makes them go in the ways that are evil or the ways that are good.</p>
+<p>It is important to understand what is good and what is evil, and thus what is moral for these are often misunderstood. The basis of morality is discontent. Bad or evil are those causes in the world through body or speech which lead to more discontent, more suffering, more pain, more unsatisfactoriness. Those cause which lead to less discontent, less suffering, more contentment, more happiness are what we call good. A problem arises here because most people cannot see the link between the action and the result. It is because of this that the Buddha gave a set of moral precepts for people to follow – for those who cannot see the ways of cause and effect.</p>
+<p>From the point of view of the true citta these things are peripheral. The true citta is the citta free from defilements and avijjā. It is difficult to realise how everything we do, think, or remember of feel requires the activity of the citta. Mostly we are so involved with things in the world that we forget ourselves and we forget the citta and the fundamental basis of our existence. For it is the function of the citta which knows, cognises, and experiences everything, rightly or wrongly as it may be. Therefore, the citta is the centre and everything else is peripheral. Usually people think that they have a citta, but this is the wrong way around. We should perhaps ask whether the citta has the person.</p>
+<p>So the task we have is to get down to the meditation practice in order to cure those faulty and wrong understanding which cause us so much trouble. Assuming you are doing the breathing practise, you should put your full attention on the breathing. Follow the in and out breaths and wherever you feel the breath most strongly, pin your attention to that point and feel the breath going out and coming back in again. It is like sawing a piece of wood, you must keep your attention right at that point where the saw blade cuts the wood. You do not follow the saw blade moving back and forth, but keep your attention solely on the one point, the point where it makes contact. It is the same with the breath, you watch just at the point where it makes contact. As you continue doing this the breath at that point may become more and more refined. If eventually you reach a point where you feel that the breath goes very, very fine until you can no longer feel it, then continue to keep your attention on that point and it will come back again. When you find that your attention has wandered from this point and thoughts come in, pull the mind back again quickly. Always try to be aware that the mind has wandered and bring it back quickly to the breath. You really have to develop a monitor within yourself which is constantly on guard and warns you when the mind has gone astray. Sound is one difficult obstacle. The mind will tend to follow sounds and wander away from the meditation object. So when meditating and you hear a sound, this monitor will tell you to beware, so when a sound tries to pull your attention away you resist and hold firmly to the meditation.</p>
+<p>In fact, it is necessary to realise that the prime purpose of this practice is to arose mindfulness, and it has been said by teachers that one is only effectively doing the practice when mindfulness is present. If mindfulness is absent one has ceased to do the practice.</p>
+<p>There will be many different kinds of distraction to overcome along the way, but if you persist the rewards do come. And when they come they are well worth it. As you progress you will find good results coming in many different ways. You will find that your attention span increases. You will notice that when you are talking with other people, those people cannot keep their mind on the subject. Their minds seem to be jumping all over the place. Once your attention span becomes longer you can see this fault clearly in other people and realise that once “I was just like that myself.” So you begin to realise there was something missing in your outlook which is now self–evident. Gradually you will notice that you see through things in the world, the reasons and the motives behind the things people say and the way people act. You see the deceitfulness which permeates practically everything in the world, and you are no longer fooled by it so easily.</p>
+<p>So try hard all the time to keep your mind firmly fixed on the breathing, or whatever your subject of meditation is, resist the distractions which can lead you astray, and keep yourself solely on the path of practise. This is your job. If you do your job well the rewards will come of themselves.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Introduction to Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Introduction to Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/02._The_Basis_of_Practice.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. The Basis of Practice</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

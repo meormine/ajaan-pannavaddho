@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. The Delusion of Self</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/03._Freedom_Through_Discipline.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(03)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/05._Mental_Imagery.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(05)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/04.%20The%20Delusion%20of%20Self.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>04. The Delusion of Self</h3>
+<p>There’s a distinction made between the living Arahant, who gains Nibbāna before he dies, as compared to the Arahant’s state of Nibbāna after death. But, fundamentally, there is no difference. The state of Nibbāna is just the state of Nibbāna. The only difference is that, from the worldly viewpoint, the physical body was attached to that person who was an Arahant. It’s not attached after death, but it was before. In the one case, the body is actually alive; in the other case, it’s dead and has gone completely away.</p>
+<p>You can’t have two states of Nibbāna, two Nibbānas, it’s not like that. When a person attains Arahant, he has attained what the Buddha attained. You have to use the teaching of the Buddha to get there, do what he had done, and he taught us the way, he taught it basically. He even taught it, we still have to work it out for ourselves because there is only so much you can tell people in words. Words are things which deceive, but they also communicate. We have to use them, because we haven’t got any other way.</p>
+<p><em>How do the Mahayana Boddhisattva and the Arahant differ?</em></p>
+<p>From what I’ve read and what I’ve seen, I think that what the Mahayanists call Arahant is what we call Anāgāmī. But the thing is the very definite distinction between the Buddha and the ordinary person, or the person who attains Arahant; because the Buddha has amazing powers and is the pathfinder as well, whereas one who follows the Buddha is not. As far as Nibbāna is concerned you can’t get any distinction. You cannot have Nibbāna of this sort of Nibbāna or that sort. It’s not like that. It’s like saying that there are differences in the quality space, but space is just space. You can say there’s a difference in space. You can say what’s in space, the objects, but the existence of objects doesn’t mean that space has disappeared. It’s rather like that. In one place the object may be a great palace; in another place, a slum. But the space is not different.</p>
+<p>The Arahant has gone home, gotten back home – back to his true nature. Beyond this sort of stage in which we exist, you get Nibbāna. But to understand the full meaning of that, one has to be there to know. In one sense you can say, it’s ones own personal experience of returning to what one should be, with the rider that one has given up the attitude of the human being. We talk about one doing it, but actually one’s self no longer exists. It’s a very difficult state to talk about. It is impossible to have distinctions in Nibbāna, because distinctions mean phenomena straight away. And from what I can see all of the signs point to Nibbāna as being an absolute; as being emptiness -as far as we’re concerned anyway, that is, empty of the world; as being the true nature of each person. But when that person attains Nibbāna, it’s like a river that flows into the ocean, where you cannot distinguish the water of the river from the water of the ocean. They become one, and there’s no distinction.</p>
+<p><em>What happened when the Buddha and the Arahants came to visit Ajaan Mun?</em></p>
+<p>My interpretation is this: The influence of Buddha, or the Arahant, came to Ajaan Mun, and he instinctively saw that influence as a human being. When he saw the Buddha, the Buddha appeared as it naturally occurs to that person to think of the Buddha, or an Arahant for that matter. We know only our senses. Our senses tell us things. When we see an Arahant floating down from the sky coming to talk with us, this could very well be one’s own way of interpreting that experience. What really comes is the influence of the Arahant on that person. But we don’t actually know what this influence is. It’s possible that it represents the purity of mind of the person to whom the Buddha comes. That may be the influencing factor. These things are difficult to interpret, and quite mysterious. We can find interpretations, but we cannot be sure if they are true or not.</p>
+<p><em>How can the self be used to get rid of self?</em></p>
+<p>The way the mind works, things are coming and going very fast. When the citta tends to have a particular kind of kilesa, because the citta is changing quickly, it can also bring up other things which are against that. In truth, the first citta has already disappeared. But it is the memory of it that comes up. Memory functions to bring up the idea of the first citta and then the mind realizes it is bad, and must be corrected. But underlying that is also the idea that “I” must correct this. So, there’s also delusion there, delusion of self doing the action. When we say “I must correct my kilesas”, we use the idea of ‘I’ to do it. But what actually happens is quite different. By using the word ‘I’, we bring up some idea, or way of thinking, and then we put that into practice. Now that may be effective in overcoming the previous kilesas, but we are interpreting what takes place as ‘I’ am overcoming kilesas. In other words, the ‘I’ am overcoming the kilesas can also be a delusion. But there’s no reason why one shouldn’t use it. It’s important to see anattā correctly, because many people misunderstand what anattā is. He says, when one practices sīla and Samādhi, one should think in terms of self, and self development. When it comes to wisdom, one should see everything as being anattā. In other words, the idea of anattā is used to overcome the view of attā. And he also says, if one breaks through and finally realizes what the state is, one throws out both attā and anattā, both are chucked out. In other words, it’s a fundamentally wrong idea. It’s not so much that there is or there is not a self, the whole idea of self is just wrong, just false.</p>
+<p>When practicing sīla and samādhi, you have to use the idea of self. And when you are practicing them, you must think about correcting the bad things, and promoting what is good. When you go beyond that to the stage developing wisdom, then you must try to see the delusion and work through it. It’s like sharpening an axe to cut down a tree. When the axe is blunt, the tree is difficult to cut down. So you sharpen it up. When it’s sharp, you can cut the tree down easily. Similarly, when the mind is disturbed and restless, you can’t start developing wisdom. But once you’ve developed Samādhi, you can turn to wisdom and work to cut down the delusion. But there’s no harm in looking before that, and try to realize where you have delusion. In the end, you have to look everywhere. You must overturn all stones to see what’s underneath. People always want some firm basis which they can say that is real. Something they can measure against. For instance, some people say that God is their firm basis. But fundamentally there is no firm basis, because everything is relative. We can’t use Nibbāna as a firm basis because we don’t know it, and we can’t really compare things with it. When we see that there is no firm basis, that doesn’t mean to say that we shouldn’t have a refuge. A refuge is a practical thing. When the samādhi is developed, that’ll bring a refuge within. Wisdom, the seeing and realizing of things, can be a refuge also. That can bring a lot more sukkha than the samādhi, because the sukkha of samādhi lasts while the samādhi lasts. But when you withdraw from samādhi, it doesn’t last for long. It’s not fixed there. But the sukkha of wisdom is the clearing away of kilesas, and that does last.</p>
+<p><em>What about Samādhi practice?</em></p>
+<p>When we practice samādhi, the kilesas become weaker, which means the Dhamma is getting stronger. So the kilesas submit. They don’t make themselves felt so much because they are afraid and that frees the citta to work on Dhamma much more. But the kilesas they’re very sticky, and they don’t go easily. Just because one has quelled the kilesas doesn’t mean they are not there. Because they’re quelled, and one gets into a very, very quiet and calm state, it doesn’t mean that the state one gets into is Nibbāna. But it’s a good state all the same, because when the kilesas are weak it allows one to do the practice properly. It allows one to realize the nature of things.</p>
+<p>Samādhi brings a state of calm. When you do that often, the calm penetrates and gets into one and becomes part of one’s nature. When it reaches that level, one tends to be calm the whole time. Then the kilesas are not coming up easily, and they are seen for what they are. So one does not like behavior that’s full of kilesas, or even be associated with it. And that calm state is always there, as something firm and reliable inside. When it is like that, it’s the time one should start investigating. Some people who are very skilled at samādhi might then go on to explore the different stages of jhāna up to nirodha-samāpatti. For most people, and that means nearly everybody, it’s no use trying for nirodha. They must do it by the way of wisdom. And someone who can get nirodha, like Anuruddha, who knew where the Buddha was when he was entering Parinibbāna, he knew what state the Buddha was in, he knew when the Buddha passed away. That’s the type of citta that can get to Nibbāna, absolutely clear.</p>
+<p><em>How do I know my practice is progressing?</em></p>
+<p>By the results, the results of the practice. You find that in yourself you feel better, that you feel more confident in yourself. You feel more calm? Your mind is clearer? You find the kilesas like greed and hate don’t come up so much. All of these are indications. What actually happens in the practice will bringing calm to your mind. It’s the results that tell you how your meditation is progressing. If after some time you fell that you haven’t got the proper results, you want to review the results and see why; what’s wrong? At the same time you shouldn’t be looking for results, you should do the practice with the idea of just doing the practice and whatever results come, then you can review them afterwards. When you are looking for results and trying to attain results, then you are looking at the effects and not looking at the causes. In other words, you must do the causes, the right things to get there. If you reflect on some experience you had and think, ‘I must get to that experience again’. But when you are thinking about that all the time, then you don’t get there because the mind is not doing the right thing. Instead, it has to do the things it did previously to get there.</p>
+<p><em>How to overcome sexual desire?</em></p>
+<p>The direct way is the asubha practice. See the loathsomeness of bodies, dead bodies. This is the best way. You must not underrate sexual desire, it’s very strong. And it’s one of the major kilesas, if not the major kilesa. It’s very hard to overcome. But one who overcomes it attains Anāgāmī; and an Anāgāmī doesn’t come back, because it’s the sexual desire that brings one back to the world all of the time – the wanting of bodies, the liking of bodies, the attachment to them – this is what brings one back. So attaining Anāgāmī is what prevents one from coming back, because the wanting dies away. This is where the body practice becomes very valuable. You see the nature of the body and when you have seen it properly, the wanting of bodies won’t be there.</p>
+<p><em>How does samādhi differ from wisdom?</em></p>
+<p>When you practice samādhi, then you gain samādhi, but you do not directly gain wisdom. Samādhi is the basis for wisdom, but you have to deliberately turn your attention to the practice of wisdom. In other words, instead of practicing samādhi, you practice wisdom. And you have to train yourself in wisdom, just as you had to trained yourself in samādhi. You may use a parikamma as a preparatory object. For example, the arising of phenomena, and the falling and dying away of phenomena. In other words, dealing with anicca, or impermanence. This example is given quite often in the Visuddhimagga. The other example, of course, is contemplating the body. These are wisdom practices. When the samādhi is strong, then one can turn and use these wisdom practices. But the samādhi itself will not bring wisdom. There is slight danger when one practices samādhi until one gets very calm that one will become addicted to the calm. In other words, some people want to stay in the calm of samādhi all the time. They don’t want to do any work. Whereas the practice of wisdom is doing the work, the work of getting rid of the kilesas. But one mustn’t think that samādhi alone will get rid of the kilesas. In fact, other religions have practices for developing samādhi, but what they lack is training in wisdom. The practice of samādhi brings about a state of calm, in other words, the stopping the thought. Whereas wisdom requires thinking. To gain wisdom, you’ve got to think.</p>
+<p><em>How does one get started on Body Contemplation?</em></p>
+<p>Consider: The skin, is it pleasant? How long will it last? Is it you? What happens if you take the skin off? What’s it like underneath? Thinking like that. Thinking all the time: What is this body? Where did it come from? It came from the world. It belongs to the world, so it will go back to the world. Why then should you think the body is yours? Keep thinking about that, and after some time you will start seeing it that way. You begin to realize that the body is not who you are. When the wisdom is well developed, then wherever you look you see wisdom.</p>
+<p>The samādhi is used really to stop or restrict restless thinking. Once you’ve stopped that then you can turn and develop thinking to be one-pointed, which means thinking in the right way. The mind then becomes flexible and adaptable. It’s no longer rigid; it’s no longer fickle and jumping about. Ajaan Mahā Boowa says that when he was practicing, he developed samādhi first. Then Ajaan Mun told him he must practice wisdom. At first, he thought Ajaan Mun was wrong, but when the wisdom developed, he realized how right Ajaan Mun was. Samādhi alone is not the way; it’s the preliminary attainment that will help to develop wisdom.</p>
+<p><em>What was so unique about the Buddha’s search for Enlightenment?</em></p>
+<p>One of the remarkable things about the Buddha is: He went through all sorts of trainings and he reached the pinnacle of them; but when he reviewed them, he found that they were not the goal he was searching for. He realized that he was on the wrong path. And that’s difficult, because normally when a person reaches the top level of a meditation technique, he tends to become a teacher in the field of his expertise. But the Buddha didn’t do that. He could see that he wasn’t there. He knew that instinctively. Which means that the idea of Nibbāna as an ultimate goal is inherently there in people. It’s something they all want, but they don’t recognize it. We also have a feeling in us that there should be something better than the state of mind we have at present. And it’s for that reason that we have craving coming up, always wanting, wanting. We think that maybe when we make enough money we will be contented. Then we find that making money doesn’t make us happy, so we don’t know what to do then. Unlike the Buddha, who when he succeeded at something and found it didn’t work, he tried another way. And to have that realization when you don’t have the path to follow, or the teaching to guide you, takes a very developed mind. We have it easy because we have all of the Buddha’s teaching already. The Buddha didn’t have that.</p>
+<p><em>How many hours a day should we practice?</em></p>
+<p>It is very difficult to say. It depends very much on each person’s kamma. In general, you must develop the practice until it’s there all of the time. I remember going to Ajaan Waen’s wat in Chang Mai. And someone asked Ajaan Waen how much time one should spend doing meditation. Ajaan Waen looked a bit puzzled and the said: “the whole time, of course.” When you can do it the whole time, that’s when the results come.</p>
+<p><em>How necessary is faith in Buddhism?</em></p>
+<p>Faith or saddhā is very important. Many Westerners who come to Buddhism feel they don’t want to do all the chanting and devotional exercises, and they go too far. Usually they don’t appreciate it because they equate it with Christianity, and they have just turned away from Christianity. But they throw the baby out with the bath water. Instead of developing a proper basis of faith, they go in the wrong direction. Fundamentally, they’ve got to develop things like saddhā, and often the chanting and devotional exercises can help. Chanting is quite valuable as a preliminary to meditation practice. It clears the mind of a lot of worldly activity. It’s particularly very valuable for lay people who have just finished work and want to get into meditation practice. When they do chanting, the chanting takes the mind completely off the work they have been doing. And then they are more fit to do the meditation practice.</p>
+<p>Most people who make a lot of gains in meditation have strong saddhā, by that I mean faith in the Buddha and what the Buddha taught. Saddhā must be there. Many Westerners think they can do it without saddhā, but they can’t just chuck out faith all together. The practice of Buddhānusati, the contemplation of the Buddha, is quite a good practice for developing saddhā.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/03._Freedom_Through_Discipline.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. Freedom Through Discipline</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/05._Mental_Imagery.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">05</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">05. Mental Imagery</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

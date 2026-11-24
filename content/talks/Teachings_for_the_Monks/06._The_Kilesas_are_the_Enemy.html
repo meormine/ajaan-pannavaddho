@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. The Kilesas are the Enemy</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/05._Mental_Imagery.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(05)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/07._Developing_the_Path_Factors.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(07)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/06.%20The%20Kilesas%20are%20the%20Enemy.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>06. The Kilesas are the Enemy</h3>
+<p><em>Do monks have different obstacles to overcome than laypeople do?</em></p>
+<p>The only concrete obstacles that monks have are those acts that are not permitted by the monastic rules. Those rules are the restraints required of a Buddhist monk. Laypeople, on the other hand, do not live under the same restraints. Otherwise, there is very little difference between the two when it comes to mind development. After all, every monk was a lay person before he ordained, and any mental obstacles he had are not suddenly remove by the mere act of becoming a monk. When a person becomes a monk, he puts on the robes and goes through an ordination ceremony; but the kilesas remain just the same. They are still there in his mind, and they are the real obstacles. The monk then observes a set of rules, which he must use to train himself to overcome the kilesas that are obstructing his progress in meditation. The monastic rules are incumbent upon a monk, but there is really no reason why a lay person cannot practice those same rules. They can if they want to, but that is up to them. There is nothing special about becoming a monk that automatically removes mental obstructions.</p>
+<p>The main reason for becoming a monk is that it’s a mode of life accepted by society where the monk can live and work on his own mental development in a Sangha of like-minded individuals without having to bother about making money, and without having to get himself involved in the mess of the worldly life. In other words, he has sufficient freedom to practice and train himself. How well he actually uses that opportunity is up to him, and possibly his teacher as well. But life in the Sangha itself does not create an obstacle.</p>
+<p><em>Can we simply focus of our attention on the thinking process?</em></p>
+<p>You can, provided that you are mindful of your thoughts and watchful of their direction. But you must remain constantly aware of them. If you can calmly watch your mind when it is full of whirling thoughts, that is quite valuable. The main trouble is that one tends to get caught up in them. If you get caught up in those thoughts, you become involved in them. Once you are involved in them, the thoughts take over. They take you over, so you are no longer just watching them. When that happens, it’s not good. When you simply watch your thoughts, you remain separate from them. Mindfulness is present, constantly observing, allowing you to learn a great deal about the nature of thought. If you can maintain that attention, it will probably quell the thoughts too.</p>
+<p>Another thing you can do when thoughts arise is to question: Where do they come from? From where do they arise? Look inside and see what is giving rise to those thoughts. The old saying has it that Rome was not built in a day. In the same way, the practice of mindfulness is something that one has to do steadily and gradually. If one does that, the right results will come. It may take some time. But the amount of time it takes will depend on the amount of effort, and on the nature of one’s kilesas. But you should never think: “I am no good at practice. I should just give up”, because those thoughts come from the kilesas also. One must start to examine what the kilesas are, and how they arise. The kilesas are very important. They are the enemy.</p>
+<p><em>Are kilesa and sankhāra the same thing?</em></p>
+<p>No, they are not the same. They are quite different. Sankhāra has two basic meanings. Sankhāra in the external sense means the parts that make up something, or the bits and pieces that comprise something. Everything is made up of sankhāras. The other meaning of sankhāra is the thinking process. It means the development of thought, starting from one theme and then building up into all sorts of related ideas and concepts. The first meaning is more external, like the sankhāras that make up the human body. Whereas sankhāra khandha means the mental process of thinking, and the way it proliferates all the time. As far as the kilesas are concerned, in their essence the kilesas mean ignorance which has given rise to greed, hate, and delusion. That is the basis of them. But they proliferate out into a whole lot of other things, like envy, jealousy, stinginess, worry, conceit, arrogance and so on. These are all variations of the basic kilesas. The kilesas are not located in the khandhas, the groups that make up body and mind. Fundamentally, the kilesas are in what we call the citta. The citta is the true essence of oneself – one's true nature.</p>
+<p>The kilesas are the operative factors in the arising of greed and aversion. The kilesas come up mainly due to the primary kilesa of self. When a feeling of loss of self arises, there is a scramble to reestablish the self’s prominent position. It’s as though the idol of self-importance has been knocked down a bit, so we must work hard to build it up again. We do that by blaming and criticizing everyone else in order to boost our own self-importance. And that’s the wrong way to act. The right way to act is to accept that unpleasant feeling when it arises, and realize that it is one’s own fault. It is actually the consequence of one’s own kamma. This is the way that kamma works. If it is bad kamma one must simply accept it. By accepting it fully, one clears the balance sheet of that past action.</p>
+<p><em>Can we talk about individual cittas, or is it all one citta?</em></p>
+<p>Individual or many cease to have any meaning at that level. It’s gone beyond speech, beyond concepts. We can only call it emptiness. Empty of everything we know in this world. But it is reality. We come to the odd proposition that existence equals impermanence. Because it is constantly changing, everything in existence is impermanent. For that reason, what exists is unreal, because reality means permanence. On the other hand, reality does not exist. So existence is unreal, and reality does not exist. Try to work that out.</p>
+<p><em>What is your general view of the Mahayana tradition?</em></p>
+<p>The Mahayana tradition is a mish-mash of all sorts of things, some very good, some not so good. The Buddha’s teaching is there in some of the schools of Mahayana. After all, Mahayana is not just one teaching, it covers a whole range of teachings. And in those there are very good teachings, like the mind-only theory. That’s perfectly valid. That’s a reasonable doctrine, and it is there in Theravada too. The Madyamika ideas are certainly interesting. But they try to deal with everything, making out that everything is empty, and that even the emptiness is empty. In the end you feel, why the hell are they even talking about it? But certainly there are very good teachings in the Mahayana.</p>
+<p><em>Does everything exist?</em></p>
+<p>Yes, we can say that everything exists; but what does “everything exists” mean? It means that the five senses exist, or the sixth including the mind. For instance, you see a tree and you say they it exists. But that type of existence is illusionary simply because the things that you see Are changing all the time. It may appear the same as it was yesterday, but what you really mean is, what you see now conforms to what you remember of what you saw yesterday. So you rely on memory to fix your idea of existence in place, when in fact everything is changing all the time. Because of that, you can say that all existence is unreal. You cannot find any permanent entity in it at all. So anything that is real must be permanent; that is, unchanging. But because there is no change, it cannot exist, nor can it be known. How can you know space, for example? You can’t chop space into lumps and say here’s a bit of space. You can only relate space to objects. So we define space by the objects within space. Pure space is unknowable.</p>
+<p><em>I've heard it said that dukkha is caused by the attraction and repulsion of atoms.</em></p>
+<p>You must realize that atoms and things of that sort are the explanations of science, which attempt to explain how things in the world work. But all of these explanations are simply a scientist’s mental constructs that are then tested to prove their validity. In other words, a scientist has some idea of how this gives rise to that. So he tests it and finds a certain correlation there. From that he proposes a theory about how atoms interact, for instance. Later it is discovered that the theory does not work in certain situations, so the theory is modified a bit to fit the new circumstances. Later they find that the theory doesn’t cover other circumstances, so it is modified again. Eventually the theory is discredited, so they have to chuck it out and construct a new one. That’s the way science works. It’s an evolving method which tries to understand the world outside in terms of the human mind. But, in fact, it is impossible to really understand the world outside because there is no way for our senses to contact it directly. After all, what is the world outside? It’s just seeing, hearing, smelling, tasting, and touching, all of which are experienced internally. We assume that physical matter is made up of atoms because that theory seems to work well. But we don’t really know for sure what is there.</p>
+<p><em>What is the relationship of the citta to body and mind?</em></p>
+<p>The body and mind are simply mechanisms. The citta is the force that pushes them about. The citta is the one that has power. The citta initiates volition and intention. Because it has volition and intention, it creates kamma. Only the citta can create kamma. Without the citta, the body and mind cannot create kamma. When the citta has kilesas in it, the kamma it creates depends on the nature of those defilements. The kilesas are in control of the citta's power, so they can make body and mind act in ways that promote greed, hatred and delusion. The real power of the citta is neutral, but the kilesas are biased, so they pull the strength of the citta in their direction. The kilesas want this and want that. All the time they are grasping after something. And they push the citta about to make the body and mind strive to attain those things. But the kilesas don’t care who receives the results of the actions they initiate. In the end, the citta will reap the results of those actions, which is why there is so much pain and suffering. But the kilesas don’t care about that.</p>
+<p>The citta is best described as “the one who knows”. When it knows something external, like objects in the world, then it becomes viññāṇa. The viññāṇa is a form of the citta. It takes on the special function of knowing things in the world. It also has the function, or the capacity, of volition. In other words, it acts with intention. The intention can be good or bad depending on the kilesas. For that reason, we make good and bad kamma, depending on the kilesas we have. But once the citta gets free from the kilesas, those defilements no longer control the actions of body and mind, so those khandhas are free to go their own way. That is the state of the Arahant.</p>
+<p>When a person becomes Arahant, the citta attains freedom from the khandhas. The citta has gone free from the world; it has gone to a completely still state. But the khandhas will continue operating much in the way they operated before. Since the kilesas are gone from the citta, there are no evil influences to cause the khandhas to do bad or harmful actions. The khandhas of the Arahant keep on functioning, and the character of the person who attained that state will remain much the same as it was before. If he was easygoing and mild in the past, then he will be mild and easygoing when he becomes Arahant. If he was angry and irascible before he was enlightened, then he will be irascible and angry after he becomes enlightened. But he will use those character traits as a means to teach people. In other words, he does not use them in wrong ways. Because of that, it is extremely difficult to know who is an Arahant, since the characters of Arahants differ so much.</p>
+<p><em>Can two Arahant's teach the practice of Dhamma differently?</em></p>
+<p>Yes. They might have different ideas. That’s quite possible. But each one will have a good reason for teaching in that way. And both of them will be right in their own sphere of practice. In other words, one Arahant may stress the practice of seeing the body as the four elements. He may say that this is an excellent method because he had very good success with it. Another Arahant, however, might emphasize the breathing practice instead. In fact, each is teaching a method that he found to be very effective. They are not saying that one method is the only way; but rather, those are the methods they know best. But Arahants can make mistakes. There is no doubt about that. They do not make mistakes about Dhamma; but as far as the practice is concerned, there is a possibility for them to make mistakes. But their mistakes will not have any bad intentions behind them. They will be mistakes due to not knowing. After all, the Arahants are not strange people, they are just people. They are the only sane people, too.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/05._Mental_Imagery.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">05</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">05. Mental Imagery</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/07._Developing_the_Path_Factors.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. Developing the Path Factors</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
