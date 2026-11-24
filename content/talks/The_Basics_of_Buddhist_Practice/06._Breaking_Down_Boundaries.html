@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06. Breaking Down Boundaries</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/05._Buddho.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(05)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/07._The_Purpose_of_Practice.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(07)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/06.%20Breaking%20Down%20Boundaries.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>06. Breaking Down Boundaries</h3>
+<p>It’s important to realize that we essentially have two bodies: the physical body, and the mental body, which we can call the subtle body. The subtle mental body is that image of our physical body that we have in our minds. This is the one that is responsive to feeling and sensation. The physical body is the mechanism that produces data for the subtle body. When we think of ourselves, we think of the subtle body. This is the aspect of our own embodiment that we have in mind. And it’s not the same as the physical body. Also, when we think of other people, we tend to think of them in terms of the mental body, rather than the physical body, because this is the only one we actually experience. We don't really know what other people are like. We can identify them only in terms of our own experiences, relative to what we know about ourselves. When I judge a person to be very irascible, I am making an interpretation of his character based on what I know about being irascible. I may claim that he is more irascible than I am, but that’s merely fitting a scale onto something I already experience. I don't really know what he experiences; I can only guess in my own terms.</p>
+<p><em>Can going deeper into this realization can help our relationships with other people?</em></p>
+<p>Yes it can. But, in most people, the barrier to that realization is attachment to their own self-identity. In order to breach that psychological barrier, one must give up a part of one’s self. One must accept that, at a certain level, one can no longer make a distinction between oneself and other people. Most people are not prepared to go to that extent. By accepting that, they would be forced to relinquish many of their personal motives and ways of behavior. They couldn’t consider other people as real enemies then, because when there are no distinctions made, hating others is equivalent to hating oneself. By making a distinction, we define what “I” am. We like hating people and loving people because that defines me as opposed to them. We like sensation because it defines us as distinct from the things that we are not. So we like hating people because it makes us feel ourselves more strongly.</p>
+<p><em>Isn’t breaking down barriers one goal of the practice of Dhamma?</em></p>
+<p>Yes it is. The whole of the Buddha’s teaching is aimed at breaking down boundaries, because what we are striving for is the unconditioned. That’s the goal. The conditioned means boundaries, psychological boundaries. But we must be careful that, when breaking down one boundary, we don't erect another one in its place. There’s quite a tendency for people do that. There was a woman I once knew who, thinking she was very Buddhist, liked to claim that she loved the absolute. In fact, she was identifying herself: “I am the sort of person who loves the absolute”. She was trying to break down boundaries in one direction, but in another direction she was putting up a very big one: the identification of self. The tendency is to focus on a certain aspect of Dhamma in an attempt to break down boundaries without being circumspect enough to notice the other boundaries we may be creating in the process. So we must be vigilant, and maintain all-around vision.</p>
+<p><em>Do you think that equanimity and humility are signs that one is on the right path?</em></p>
+<p>Yes they can be, but you have to be very careful when applying them to yourself that you are not fooling yourself.</p>
+<p><em>Like pretending to be humble?</em></p>
+<p>Yes, and it’s so easy to do that. “I am very humble” can be a big conceit. In which case, it’s the opposite of humility. So be very careful. Conceit is one of the most dangerous of the kilesas, and it’s one of the last to go too.</p>
+<p><em>It’s very subtle?</em></p>
+<p>Yes, that’s why the end product of Dhamma comes when one can find absolutely nothing. One cannot even define the one who's found nothing. When there is nothing to find at all, no questions can come up. One can’t find anything to ask a question about. That’s the end product.</p>
+<p><em>Is that true equanimity?</em></p>
+<p>In the end, it’s Nibbāna. The final cessation. The nature of it must be that all distinctions disappear. It’s not so much that one attains anything, but rather that the one who would do the attaining has disappeared. When that happens, talk about humility and equanimity misses the point, because no one is there to be humble, or to have equanimity. In Theravada Buddhism, one epithet for reaching Nibbāna is “to come to the end of all questions”. This doesn’t mean that all questions have been answered; it means there are no more questions that one can possibly ask. The basis for asking questions no longer exists. No one is there to ask the questions, and there is nothing to ask the questions about.</p>
+<p>Nibbāna is described as being empty of all distinctions. But you mustn’t make the mistake, as many people do, of saying “we are all one”. That’s merely another form of distinction. On the one side, we are many; on the other side, we are all one. But who is this “we”? When you talk about one, you can also talk about many. In which case, all ideas of oneness disappear. When it comes to Nibbāna, all words and concepts cease, completely.</p>
+<p>When we look at the Buddhist Canon, especially the more recent texts like the Visuddhimagga, we find numerous references to the Abidhamma. The Abidhamma is written in a kind of shorthand, shorthand for the entire teaching. But how many people actually understand its true meaning. Many people who try to practice the Abidhamma, especially Westerners, tend to learn all the texts by heart and work out intellectually how all the factors fit together, until finally they have an Abidhamma chart that looks like a huge football coupon. From that, they gain the belief that they understand Dhamma. But it’s not the Dhamma in charts that needs to be understood, it’s the Dhamma in one’s own heart that must to be seen.</p>
+<p>The Buddha taught that one should build a raft of Dhamma for crossing the stream of saṃsāra – not an ocean liner. I suspect that, in many cases, people are trying to build an ocean liner for crossing the stream. It’s the influence of the kilesas that pushes people to work to find out all these details, instead actually getting down to the primary task of crossing the stream.</p>
+<p>The Buddha and his disciples, whose teachings make up the basis of these texts, found these truths out by experience. They taught by experience. Because they had realized the truth, what they taught was absolutely valid. People are now trying to reverse the process, by taking what's taught in the Abidhamma texts and turning it back into experience. They don’t understand how much has been left out. The Abidhamma presents a concise, skeletal teaching, and the skeleton must be fleshed out by the individual meditator until it arises fresh and spontaneous within the mind. Otherwise, people become deluded very easily. For that reason, I feel that, as a teaching, the Abidhamma is not very suitable.</p>
+<p>The proper way is to construct the raft as best you can to begin with and then set out across the stream, improvising and improving your raft as you struggle to make the crossing. It’s not a matter of going through a set of procedures, progressing methodically from one step to the next; but it’s more like using your own ingenuity to scramble across by taking advantage of whatever means you can devise. In other words, you have to take the basic teaching, the raft, and find your own way by overcoming each obstacle when you come to it. If you try to get everything into place first – if you try to build the perfect raft – then you will simply waste a lot of time preparing and never reach the water. So develop samādhi and wisdom as best you can, and then constantly put them to use, constantly strive to sharpen them, using your experiences in meditation as a whetstone. And always be searching for the way across, the way out of saṃsāra. As long as you are truly searching for the way, and remain within the bounds of Dhamma, you will always keep on the right track.</p>
+<p><em>What is meant by effort in Buddhist practice?</em></p>
+<p>It’s like the effort you make to remain awake when you want to sleep, when you’re tired and everything is pulling you into sleep. That’s the type of effort you need in meditation. Everything is pulling you in one direction, but you know it’s right to go in the other direction, so you use effort to reverse it. For example, when you’re concentrating on the meditation object – whether the breath or the word buddho – and a thought suddenly comes into your mind that seems very important to pursue: it’s the effort to pull against that distracting thought and say it’s not important. It’s the effort to stay focused on the meditation object.</p>
+<p><em>Someone who has been practicing a long time sees how the identification with the body brings suffering.</em></p>
+<p>Yes, but to begin with that understanding is usually only intellectual. You may see instances where it has practical applications, but the acceptance of the truth of it is probably quite a long way off. The results of body practice manifest in a rather peculiar way. While you are doing it, you often don’t feel that you are gaining very much. You don’t attain sublime states of samādhi, for instance. Only later, after continuous and sustained practice, do the results begin to appear. You start to realize that the body is not what you thought it was. You become less concerned about your bodily appearance and welfare. Doing body contemplation can cause quite a reaction in other people, too. It usually tends to repel other people. They don’t know why they feel repelled, and you yourself often don’t understand the reason either.</p>
+<p>We harbor a lot of fond delusions about our bodies. When these delusions start to break down, the basis of self begins breaking down, too. Where the self is concerned, the body is the thing that’s important. You begin to see that our whole outlook on the world depends on the body. When you consider any activity in life, almost all of them depend on the body. Our houses are built according to the needs of this body; our cars and towns are based on the dimensions of the human body. All the things we use are designed to fit bodily requirements. When our delusions about the body break down, our delusions about the nature of the world begin to fall apart.</p>
+<p><em>Is it necessary to have an experience of the unconditioned in meditation in order to be convinced we are not the body?</em></p>
+<p>If one had experienced that previously, one would be on the path at the Sotāpanna level, and one cannot lose that level of attainment. That’s something high.</p>
+<p>A great deal of understanding can be gained through practicing body contemplation. But understanding the body and seeing it as not-self won’t necessarily bring one to the stage of Sotāpanna. There are other things one has to do as well. I would say that somebody who can see the body clearly and understand its true nature is close to Sotāpanna, and it wouldn’t take much for him to get there. But it wouldn’t necessarily mean that he’d attained that already.</p>
+<p><em>Is using pain to investigate the body better than investigating the body without pain?</em></p>
+<p>It is best to keep them as separate practices to begin with. Later, when you have more experience, you can join the two practices. But initially, it’s better to develop strict body contemplation. Like any other meditation practice, you must go on working quite a long time without getting any obvious results. And when the results do come, they often come at a time when you least expect them – perhaps when you are not even doing meditation. For instance, you look at a person as you are walking along the road, and suddenly you see only skin, flesh and bones. Or maybe you look at someone’s head, and suddenly you see only the skull. Things like that may come up unexpectedly. It’s the sort of thing the average person never thinks about, it never occurs to them. It happens because body contemplation breaks down the hard and fast views we have of the human body.</p>
+<p><em>How can we combine body contemplation with investigating pain?</em></p>
+<p>We identify pain as being a part of the body, or as being in the body. So once you have investigated the body and seen it for what it is, you can then question: is pain really the same as the body, is it actually in the body, where exactly is it? In that way, you can use the two practices together. But investigating feelings involves a greater degree of subtlety. The location of the feeling will move; it’s always shifting. The parts of the body are easier to grasp and fix in your mind. Because of that, working on the body is easier than working on feelings. The body is something that you know well enough that you can take parts of it in your mind and keep your attention on them, turning them around and thinking about them to see their attributes and their associations, and to see cause and effect in them. But it’s difficult to do that with feelings. Investigating the mind is an even deeper level of subtlety, which is more difficult still. So because we know so much about the body already, it’s a very good subject for meditation.</p>
+<p>It’s up to each individual to decide the best method to use for body contemplation, although starting with hair of head, hair of the body, nails, teeth and skin can form a very good basis. If you feel you would rather investigate the body as arms, legs, head, organs of the body and so on, that’s quite a legitimate practice too. Consider that the human body is merely a combination of various parts; it’s not a completely whole entity at all. Apart from the head, most bodily parts can be cut off and the body will remain alive. An enormous amount can be removed from the body without it dying. Then you can reflect: “If I refer to this as my body, what about this arm, is it mine? If it’s cut off, is it still mine?”</p>
+<p><em>What do you mean by dropping into a “state of paññā”? Is that the same as a flash of insight?</em></p>
+<p>I wouldn’t say it was a flash of insight, though it can appear that way in some cases. A state of paññā is that state in which we see the implications of what we are investigating. We may know theoretically what the implications of having a body are, but we don't truly see them in ourselves. We still think and act very much as though the body is who we are. When we see with paññā, it’s like standing back and viewing the body from a detached point of view. When we see it truly with paññā, a complete knowing arises that the body is in no way oneself. That wisdom state is different from mere thinking and reflecting. Thinking is jumpy; it doesn’t stay long on one thing. Paññā remains fixed on the object. The mind goes deep into a meditative state where it ponders the object calmly and clearly without wavering in the least. It simply knows the object, in all its profound implications. It’s not so much that one sees something that one hasn’t seen before. It’s more like seeing something that one has seen many times before, but seeing it from a completely new perspective. The understanding comes from quite deep inside, so there is no possibility of being deceived. On the other hand, there is no feeling of “now I understand”. It isn’t that at all. You are simply seeing something that you’ve seen before in a new and different way that makes the truth of it suddenly become very obvious.</p>
+<p>Those meditators who are skilled at paññā can remain in that state for a long period of time. I would say that the Arahants are frequently, if not continually, in that state, where they see through everything and nothing escapes them. Many people think that the good Ajaans don’t see or know things, but actually when they are in a state of paññā nothing escapes their knowing.</p>
+<p>A state of paññā isn’t like a flash of insight. Actually it can occur when you are not doing meditation, when you are just sitting down or walking. It will come and last a period, and then it dies away. You may suddenly look at your body and realize intuitively the profound nature of its loathsomeness. Then you become aware of another person nearby and you feel certain that he must be able to see your body in the same way. It seems so obvious to you at that moment. Of course, the other person can’t see your body in the same way because his mind is not in a state of paññā. But when you are in that state, the truth seems so obvious that it feels as though everyone else should be able to see it too.</p>
+<p><em>How should we investigate the ti-lakkhaṇa?</em></p>
+<p>The ti-lakkhaṇa are very important. Take anicca. We think of things as being real. We think of them as having existence – even though we know very well they change. When something changes, our tendency is to explain why it changed. By explaining the changes, it’s as though we are reassuring ourselves that, although it has changed, it’s still the same thing. Explaining the change makes us feel better about it. For example, when we light a match, it burns up and disappears. Where has it gone? So we explain …it’s changed into gas and various other elements. That explanation makes us feel better, as though the match is somehow still there, just in a different form.</p>
+<p>In this way, we are always trying to deny it anicca. We want to believe that things are real, that they are permanent, when in fact they are not. Existence is always a dynamic process. In truth, anicca is the essence of existence, because without constant change nothing could exist. If anything could remain stationary – absolutely still without any change – it would immediately disappear. It could not exist. So anicca allows things to exist. It is the very nature of existence. This is true both physically and mentally. If all manifestation of mind ceases to exist, the mind just goes straight into deep samādhi and all duality ceases. All objects of consciousness, all thoughts, ideas, and sensations, the whole lot just disappears.</p>
+<p>In practicing samādhi, we try to reduce the amount of change by keeping the mind fixed on one object. By doing that, we force the process of change to become more subtle. When that happens, the mind becomes more subtle, which in turn causes the object to appear more subtle. This subtlety causes the awareness of the object to be more sensitive. The more we go into that powerful, sensitive state, the closer we come to the mind’s knowing essence.</p>
+<p>The ti-lakkhaṇa can be contemplated together. The realm of existence entails constant change. How can change be satisfactory? Even if you get the utmost satisfaction at any one moment … it then changes. So it cannot be anything but unsatisfactory. Where there is change, there is always discontent. So anicca and dukkha naturally follow one another. As for anattā: where there is anicca, there must also be anattā, because there is no time when any self-entity can possibly exist. What we call self is a relationship. It’s a point that we try to define by using its surroundings. In other words, I see that tree, so that which is experienced as “I” must be the one that sees it. The same applies to the other senses, too. We use sensory input to try to define this point. But, because the point that we experience as self is defined by the changing phenomena of sensory input, it is also changing. It’s not that the self perspective does not exist; it does, but it’s not permanent. We like to think of our sense of self as being the ultimate reality, but actually it’s just an impostor. The self is changing just as much, and just as fast, as the things that define it. Another way of putting it is: everything surrounding the center tells you where that center is. If those things were not there, you couldn’t locate a center. The self is a point that is defined by everything surrounding it, and because that is all anicca, the point is anicca, as well. It’s all impermanent. This is one way of contemplating anattā.</p>
+<p>Another way of contemplating anattā is to reflect on what the suttas say. The suttas state that “All things are anicca. What is anicca is dukkha. What is dukkha is anattā.” This indicates that in the Buddha’s time it must have been plainly obvious to everyone that the true nature of “self” must be absolute sukha. In other words, if it was not sukha, then it could not be self. Time after time in the suttas you get this formula coming up. It must have been quite obvious to the average person at that time, in a way that it is not obvious to people nowadays. Philosophy seems to have been a common subject in those days, almost like politics is today. So the relationship between sukha and self must have been common knowledge.</p>
+<p>To put it the other way, what is dukkha must also be anattā . Anything that is real must be nicca, or more properly, it must not be anicca. When it is not anicca, there is no relationship to other things, no changing. Therefore, it has the full possibility of being sukha, or at least not dukkha. Those who have attained that experience say that, if people could experience that state for even five seconds, for the rest of their lives they would never be satisfied until they found it again. They’d search for that high and low. Once they do see it clearly, that changes their outlook forever.</p>
+<p><em>Do you find any major differences between what's called atman and pure citta?</em></p>
+<p>In the Vedanta the word atman is used. It is apparently used in a rather philosophical sense – there is an ultimate reality called atman.</p>
+<p>The Buddha did not go into ultimate philosophy at all. Instead, the Buddha used method. He gave the method of anattā, saying our problems are anicca dukkha anattā. He did not say that the ultimate reality was nicca sukha attā. He said that the ultimate was not anicca, not dukkha, not anattā. Which is very different. Nicca sukha and attā are merely the opposites of anicca dukkha and anattā; whereas the ultimate, the unconditioned, cannot be bound by any qualities that define it in any way. All definitions are wrong. The unconditioned is just that – totally unconditioned – so no words can possibly describe it. It’s not something that can be pinned down with language. When you reach the unconditioned, all words cease. They have to, because all words are conditioned. The unconditioned can be known only by being that.</p>
+<p>The Buddha was a teacher. In his teaching, he kept strictly to the teaching method, and did not emphasize theory. He said he taught only two things, dukkha and its cessation. His teaching is a practical method for overcoming dukkha. He did not give way to speculation.</p>
+<p>My reading of his attitude is: The world is full of people who, because of their outlook and mental state, have no idea what the ultimate is. The only way they can come to know the ultimate is by actually getting there. Teaching them the philosophy of what it means won’t help them to reach that. What they need to be taught is the way to get there. When they reach that state, they will know it for themselves.</p>
+<p><em>What did you mean by saying that Zen is exclusively a wisdom teaching?</em></p>
+<p>Zen methods try to force a person to understand everything directly. They do not deal much with samādhi. It’s a most excellent teaching for people who have a lot of wisdom; but for people who don’t, there is nothing they can get hold of. So it isn’t broad enough as a general teaching. There is too little emphasis on samādhi, and too little emphasis on fully rational teaching, as well. The tendency is to try to break up reason. You can break up reason in people who are very good at reasoning, with possibly good effects, but you shouldn’t try break up reason in people who have very little anyway.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/05._Buddho.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">05</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">05. Buddho</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/07._The_Purpose_of_Practice.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. The Purpose of Practice</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

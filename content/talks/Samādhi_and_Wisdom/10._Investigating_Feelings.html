@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Investigating Feelings</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/09._Samādhi_and_Jhāna.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(09)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Samādhi and Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/11._The_Question_of_Rebirth.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(11)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/samadhi-and-wisdom/10.%20Investigating%20Feelings.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>10. Investigating Feelings</h3>
+<p>Feelings of tiredness mostly come from the kilesas. There is a lot of difference between genuine tiredness and false tiredness. False tiredness is when you feel sleepy or drowsy, and your mind cannot think very well. Genuine tiredness comes when one’s done a lot of work and probably hasn’t had much sleep. It’s almost as though something is buzzing inside your head, but the mind is still perfectly active. When it’s like that, you know that you must take some rest. The two kinds of tiredness are quite different. Most tiredness is kilesas. I’d say 80 per cent is kilesas. If people are forced to work – like in wartime when bombs are dropping about and they have to work for long periods of time – they become tired. But it’s not that their minds are tired so they can’t think. They are simply exhausted. In that case, it comes to a point where they must take some rest. It’s quite a different thing from the tiredness or sloth and torpor that come from the kilesas.</p>
+<p>First of all, tiredness is just feeling. It comes up because of feeling. In the Paṭiccasamupāda formula there is passa, the contact of sensation. Passa gives rise to the feeling or the conditions of feeling. Feeling, in turn, is a condition for the kilesas. It’s the feeling that’s the condition. Feeling arises, and then the kilesas arise. Feeling arises from sensation, from the contact of sensation through any of the senses, including the mind. When these arise, then feeling arises. One also has the alternative that the kilesas may not arise. The arising of feeling simply means that there are the conditions for the kilesas to arise. Whether they arise or not depends on a person’s own volition. They don't have to arise. We have the option of accepting them or not. That’s where our freedom of will comes in. It comes in at that point.</p>
+<p>The kilesas grab hold of the citta. One of the fundamental tricks of the kilesas is to build up a self. They create the self idea. It’s always the kilesas that create the delusion that we exist in relationship to something else, meaning there must be a self in relation to what’s not-self. The kilesas then believe that what matters is the advantage to self, so they do whatever they can to promote self. They do it by seductive means, or by frightening means, or by whatever means they can. Ultimately, the troubles we experience are all caused by the idea of self. When there is self, there is also what is not-self; and there is the relationship between them. The relationship is one where that which is not-self defines self, and that which is self defines the not-self. The two sides work together. Without the not-self, the self just disappears, it means nothing. It must always be there, always pointing to self, to “I am”. If you ask someone: “Who are you, what are you?” they’ll tell who or what they are in relationship to all sorts of things, none of which say who or what they really are.</p>
+<p>The trouble we face with the kilesas is that we ourselves are the kilesas. What we think of as ourselves is a creation of the kilesas. Our very nature is the kilesas. They’re what we know. Because they have become integrated into our very nature, they have the strength of the citta behind them. Without the citta, they're nothing. The citta is the power behind the kilesas, and they usurp this power. This power should be something quite different, but the kilesas grab it and take it for their own use. They don't care about what happens to the citta. But, in the end, the citta is the one that’s responsible, the one that receives the results from it – the dukkha, of course.</p>
+<p>Ordinary feelings are more important for you to investigate at the moment. You have to work from what's gross to what's subtle. It’s no good trying to find out things that are very subtle when you have a lot of gross things that you must learn about. For that reason, it’s always taught that you should contemplate the body first, because that is the grossest part of oneself. It’s the easiest to see. There it is, you can see it, you can feel it, you can grasp hold of it. To go more subtle than that is only useful if something is going on in the background that pushes one in that direction. Some people may find it easier to investigate feeling, but then body and feeling are usually lumped together. Although feeling is more a mental thing and body a more physical thing, the two go very closely together.</p>
+<p>When investigating the body, how do we know the body, how do we experience it? We know the body through feeling. It’s hard to experience the body any other way. Of course, we can think of body in terms of its constituent parts and so on. These are things we’ve seen in the world and learned from the world. We know about them. But we actually experience the body internally as feeling. That is the main source of our experience, but not the whole of it. When we are dealing with the kilesas, we must use whichever method gives us the best results. Because of that, to take the body as bits and pieces is perfectly valid as a meditation practice.</p>
+<p>You must always keep in mind that the Buddha’s teaching is never absolute truth. It’s always a method, a skillful means to an end. We cannot explain absolute truth, there is no way. What we’re dealing with here is a method. It’s a relative truth in the world. If you search, you can easily find holes in it. But you must realize the whole of the teaching is a method to take you from your present deluded state to a state where the citta is clear enough and knows enough to make the “jump to Nibbāna”, so to speak. You have to raise the citta’s level up to that point, then you can get there. If you try to do it without raising the level of the citta, there's no hope of success. It’s like someone saying that they are going to jump to the moon: they can try as much as they like, but they won’t be able to do it – that’s all. The only way to get there is to find a rocket. When one has done all the proper training with that, then one might be able to get there.</p>
+<p><em>What is “feeling within feeling”?</em></p>
+<p>This has always been a problematic phrase. If you look strictly at the Pāli, it can mean one of two things. First of all it can mean vedanānupassī vedanā… The word anupassī can mean “the one who does”. The one who is doing feeling contemplation, on feeling. This can be taken to mean that one is not doing body contemplation. In other words, if one is doing body contemplation and goes to feeling, one is doing it with the idea of contemplating the body as a body. If one is doing feeling contemplation, then one takes feeling as the basis for the body, and not any of the others. That’s one meaning that can be given to feeling within feeling.</p>
+<p>This can be thought of in quite a few ways. It is not something that we can say definitely what it means. Most of the ways are right as well. Actually, the exact meaning doesn’t really matter. If you do the contemplations of body, feeling, citta and dhamma, I think it will come out all right. You'll find the way to go.</p>
+<p>I suppose you could take it to mean that one investigates feeling without taking it merely as an intellectual exercise. You do it on the actual experience itself. It’s always been a bit of a puzzle.</p>
+<p>In the Paṭipadā, Ajaan Mahā Boowa talks to Ajaan Khao about investigating feeling. He tells Ajaan Khao how Ajaan Mun came to him when he was sick with malaria and berated him quite a lot. Ajaan Mun was afraid that Ajaan Mahā Khao might give way to the pain. He told him: “You’ve got to get down to it. Examine the feeling, investigate it. Don’t give way.” He said that when a bhikkhu is in a lot of pain, he should definitely get down and examine the feeling. That is something a bhikkhu must do. Even some lay people who become sick don't give way. Ajaan Khao told a story about an old man on his death bed who wanted to see Ajaan Mun before he died. So Ajaan Mun went to visit him. As soon as he saw Ajaan Mun he sat straight up and showed he was extremely glad to see him. He was very, very happy to see Ajaan Mun. The people around were really surprised because normally he couldn’t sit up by himself, they always had to help him. But as soon as he saw Ajaan Mun, he sat straight up. The man died soon after Ajaan Mun left, but instead of being afraid, he was full of happiness – he was very happy right up to the last moment. Ajaan Mun brought this up to tell Ajaan Khao: “If a lay person can do that, why can't you.”</p>
+<p>I had trouble with my knee once. While sitting for Pāṭimokkha recitation, my knee was bent at an awkward angle, so it was very painful. Investigating it worked quite well then. I investigated and thought about it: “I know this pain. This pain isn’t the one here, the one who know it. It’s not me. Whatever I am, it’s not me. It’s just a pain, that’s all – just a feeling. That feeling is something separate. Why should I get all upset about it? I am not upset about pain in somebody else.” After that it became rather interesting. I kept on looking at the pain changing until it eventually died away.</p>
+<p><em>Pain in the head seems so hard to get away from.</em></p>
+<p>Again it’s the identification of oneself being in the head. One way to overcome that is to put yourself outside looking at it. Just look at it. See where it is and how it changes. After all, it’s pain just the same. Often headaches of that sort are due to eyes and pressure on the eyes. It feels like pressure on the eyes. One should look on things of that sort as opportunities to do something. Ajaan Khao said that his meditation always gained much more when he was sick than it did at normal times. He said that whether his investigations actually relieved the pain or not wasn’t so important; but the understanding he gained to overcome the kilesas was very important.</p>
+<p><em>Is pain the result of kamma?</em></p>
+<p>Yes, in the sense that the body is a result of kamma. If you want to have a body of this sort, you must expect pain and all sorts of troubles. The human body is subject to that. Pain is a result of kamma, but we mustn’t think all results are caused by kamma. What we can say is: the results that do not come from kamma are avoidable; those that are from kamma, you can't avoid. You can try to remedy them but, try as you will, it just won’t work. In the field of kamma, it is very important to try to work out from the results you experience what type of kamma you have tended to produce in the past, and then to watch out that you don’t produce that kind of kamma again. This is important. If you can do that, you can see your own faults and the types of things you tend to do that are wrong. You can see that the results of kamma you experience in the present originate from doing the same sort of things in the past. It is impossible to know all of the ins and outs of kamma. The Buddha said one shouldn’t even try, that one will simply go mad trying to do it. He said that only the Buddhas can know kamma in its entirety; not even the Arahants can do it. But by careful observation you can still understand quite a lot about how kamma works and the principles behind it. You can often see specific instances of kamma in oneself, and you can probably see the ways of kamma at work in other people, to some extent. That’s a perfectly valid practice.</p>
+<p>The results of your kamma in this life will set the situation for your next life, unless you’ve done enough work to go beyond kamma, but not many have. At the time of death, the results of kamma set the situation for the next life – that’s very important. You must see what types of kamma tend to produce that. The types of kamma are those brought about by: kāmataṇhā, bhavataṇhā and vibhavataṇhā. Bhavataṇhā is wanting the situation to perpetuate indefinitely, whatever one’s situation is. When one feels happy with one’s situation in life, one wants that to go indefinitely. On the other hand, if one wants it to change and become something other, that’s vibhavataṇhā, not wanting to be what one is. Some people are not satisfied with what they are. They want to become something else, something that they think is much better or higher or whatever. If this desire is strong enough, it can have effects. If it’s a desire to enter the path and strive to become an Arahant, that’s ok as long as they don't want it so much that they delude themselves into believing that they've attained it already. That also can happen, and often does.</p>
+<p><em>I had a “medium” give me information about a past life that explains my problems in meditation. Can this be useful information?</em></p>
+<p>You have to see for yourself if it fits. As with any of these psychic readings, if the psychic person has real ability, and if they are totally disinterested, they can give correct results. But if the least little bit of self-interest is present, the information is likely to be wrong – because the kilesas get into it. If it’s free from kilesas, it’s quite likely to be correct. The problem is, you never know whether the information is actually correct or not. In any case, if it leads you to some positive method of practice, then is can be very useful.</p>
+<p>Some people have the faculty of looking into the past – they can review their own past lives. The Buddha had that ability. He could go back eons. But it’s not necessary for everyone to do that. We talk about “going back”, it isn’t really going backwards in time at all. It’s a form of memory, and it’s in the present. If you really went back, that would be real – that would be presented as real. But reviewing past lives isn’t like that. It’s just images or sensations coming up in the present. So the whole of the past is really memory. Because of that, we can deal with the past as images and knowledge of the past that we see in meditation practice, or as the results of the past coming up in the present. They’re the same thing, but they’re used in a different way. So if we cannot go back to the past, we have to deal with all the phenomena we find in ourselves in the present, here and now. Deal with it there and see what's wrong, where the troubles lie.</p>
+<p>It’s important to try to locate what we might call the “ground of the citta”. That’s the level at which the citta normally works. What it tends to always revert back to. This is important. If you look often you can locate the spot that it seems to revert to inside yourself. The ground of the citta means the level of the citta. The citta can experience many different levels. Our cittas are on the human level. But there is quite a lot of variation in that, from people that are extremely low and coarse to people who are very high, near to the deva realm. It’s quite a large range. </p>
+<p><em>Where are our cittas normally located, at what level?</em> </p>
+<p>At special times we may move away from it, going below or above it. But it has a normal level that it tends to revert to. This is important to know. If we can gain some understanding of our own level, we can possibly see where our faults are, what's wrong and what we have to do.</p>
+<p><em>What is meant by the level of the citta?</em></p>
+<p>The level of the citta will change at times, but it tends to revert to that basic level. If a person practices in good ways, or in bad ways, and they go on doing that for a long time, the level of the citta can change. It can go up or go down. The ground of the citta can change. For example, if a person who is normally quite friendly gets in to a long-lasting situation that causes a lot of anger to come up, that anger can take over and become the citta’s basic level. We also see it in people who have mental trouble. When they become stuck in that mental state for a long time, then that becomes the level of the citta. It can change in that way. One of the problems we have is that we all tend to think that things are fixed inside. That’s not so. They can change all the time, going this way or that way. It depends entirely on the conditions that produce the state. Conditions that occur very frequently can bias the citta in a certain direction.</p>
+<p>To put it in another way: when we develop habits, those habits tend to take hold of us. When we become thoroughly involved in those habits, they can become so strong that we just become part of them. So that can change us.</p>
+<p>In saṃsāra nothing is fixed, everything is waving about all the time. When a person becomes enlightened, the citta is then fixed. It has reverted back to its original state. On the other hand, the five khandhas still continue functioning until they break apart. When they break apart, the person – the citta – has total freedom. There is not much you can say about that state. I haven’t done it. I know the direction but I don't know what it is.</p>
+<p><em>You said the other day that “we will create a black box for our next life”.</em></p>
+<p>The “black box” is the mind. That simile means that everything we know through our senses goes into the mind, which then interprets all those things in a certain way. All we know is the way that we interpret them. In fact, we don't know what the things out there really are at all. We have our way of interpreting them, and that’s all. We know the information that the black box is telling us, but we don't actually know what is on the other side of the black box. Because we have to use the black box to access the world, we don't know what the truth of things out there really is. Everything is filtered through the black box of the mind.</p>
+<p>The tendency is for the mind to work like the simile of the black box, incorporating all our senses and the interpretation put on them. It’s known by science that this is true. People perceive colors in different ways. Not everybody sees colors in the same way. In other words, the sensation you get from a color is different in different people. I think that is known by science from physiological evidence. But it is really much worse than that because science doesn’t know the interpretation the mind puts on incoming sensations. Science cannot analyze that. But the interpretation put on sensations is the important thing. What actually happens is that a sensation goes in through the retina of the eye, which then changes it into nervous information that is no longer the same as what came in. It has changed entirely. That then goes to the brain, which somehow sorts it out and presents an image to viññāṇa. Viññāṇa receives and accepts it, so we take it in and that’s what we know. Viññāṇa actually it goes through a whole series of stages. When you ask, “what did that originally come from”? All we can say is what our experience is. We assume it came from something out there, a certain color or shape or whatever it is. We don't really know though. In that sense, the whole world is a world of mind.</p>
+<p>In practical terms, I am not sure this knowledge makes much difference because most people will act in the same way as though the world outside is something real. It appears like that to people because they have been brought up to think like that. But from the point of view of investigating and learning about oneself this knowledge is important. We can learn that the way we think and the ways other people think are not actually the same. We ourselves see things in a certain way, but somebody else sees them in a completely different way. It’s not necessarily the case that either one is wrong, both may be right. It may just be the interpretations that are different. For this reason, communication at the level of saṃsāra is very uncertain. On the other hand, very few people have the faculty of communication at a very high level. It’s very rare. The language of the citta is where two people can communicate and know exactly what the meaning is. Even when they are using speech they know because the spoken words react inside.</p>
+<p>We have to realize that the world is a very mysterious place. It isn’t quite what we think it is. People nowadays think we know all about it because of what science tells us, but science is all on the other side of the “black box”. So we don't really know much. People assume the world exists in a certain manner because they learn what effect comes from causes. They see something happening here, and they see the results here. Having worked out a theory to explain why that is, they then predict that if you do this you should get that. They find it works like that. Finding that, they feel confident that their theory is correct, but it isn’t necessarily correct. All they know is that using that theory they can get certain results from those causes. They then go on to evolve that theory by trying different things. They have to modify it gradually, making it more and more useful and correct, until eventually they get a very powerful thing that can tell us which results come from which causes. Because it seems so effective, people feel that it must be correct.</p>
+<p>In fact it’s only correct because of the method that was developed. It’s a case of the survival of the fittest. Looking at survival of the fittest in terms of life, many interpretations can be put on it. Many branches of life can be analyzed using that same method. So why shouldn’t the same thing happen in scientific theory. Why shouldn’t there be any number of possible interpretations? It happens that a scientific theory has gone along a certain line because some people got the idea it worked in that way. Later they modified it to cover other instances. Then somebody else got the idea that it worked in other ways as well, until it gradually evolved into a very effective theory. Even then, nobody actually knows the truth of science. All we know is that science seems to work in its own sphere.</p>
+<p>One of the fundamental assumptions in science is that the senses tell us real things, that our senses give us a true representation of what's there. But even that is very difficult to discuss because when you try to work out what is a “true representation”, you find there is no way to define it at all. The whole thing is entirely up in the air. The exceptions to the “rule” are always explained away. When something doesn’t fit, science says there is something wrong with the experiment.</p>
+<p>Science has discovered that certain outcomes take place because of expectations. They found rats performed in mazes based on the scientist’s expectations. This is very obvious in the life sciences, but it’s also true to some extent in other areas. Self-fulfilling prophecies are quite well known now.</p>
+<p>It’s interesting to see the way the world works, how things are affected by the way people think. The most obvious example nowadays is in economics. It requires such a little thing to make the markets to go up or down. The slightest thing can change them. So much of that comes from the way people are thinking, and nothing else. When we look at money, the whole of money it’s a mental thing. What is money, a pound note or whatever? It’s just a piece of paper, nothing else. It has value only because people give it value. We can use it only because everybody accepts that value. But value itself is a mental thing, it has no substance. So the confidence people have in money is really a mental thing. If that confidence goes, it is worthless.</p>
+<p>People drive themselves mad over money. In the 1930’s there was one man in America who had three million dollars and lost two million. So he committed suicide, even though he had one million left. How crazy! By looking at the world, we can learn a lot about the ways of people and the views that they have, and the paucity of it all.</p>
+<p>The value of giving donations is to break your attachment to things such as money, so you don’t feel so attached to it. The less you feel attached to it, the less you are influenced by it. It’s a good thing. The trouble nowadays is that everything has become economic. In the world nowadays money and making money are the things that have value. Money is now more valuable than people. People don't matter now. But when people no longer matter, money goes sour also.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/09._Samādhi_and_Jhāna.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. Samādhi and Jhāna</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Samādhi and Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Samādhi and Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/11._The_Question_of_Rebirth.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">11</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">11. The Question of Rebirth</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

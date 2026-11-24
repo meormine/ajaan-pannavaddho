@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08. The Way to True Freedom</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/07._Developing_the_Path_Factors.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(07)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/09._Knowing_One’s_Character.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(09)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/08.%20The%20Way%20to%20True%20Freedom.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>08. The Way to True Freedom</h3>
+<p><em>In what sense is samādhi “right”?</em></p>
+<p>A cat watching a mouse can have samādhi, but its not right samādhi. Samādhi can turn into wrong samādhi quite easily. A burglar concentrating intently on cracking a safe can have samādhi, but it is not right samādhi. The difference between right samādhi and wrong samādhi is very pronounced. Right samādhi brings happiness, while wrong samādhi brings suffering. The other religions can attain right samādhi, too, in the sense it’s not morally tainted. But because it does not involve the Noble Eightfold Path, it is not Right Samādhi in the Buddhist sense. Samādhi is fundamentally a state of getting the mind completely concentrated and absorbed in an object, to the point where the mind forgets all other things. So samādhi is something that is not strictly Buddhist at all. And it is never claimed to be strictly Buddhist. It’s obvious that when the Buddha went to his first two teachers, he learned to master the highest jhānas, which are allied to samādhi. But he knew perfectly well that he had not reached the ultimate goal. Although samādhi was very useful, it was not what he was after, so he left those teachers. The difference between Buddhism and other religions lies is not so much in sīla and samādhi, but in the practice of paññā, or wisdom. That’s where the real difference starts.</p>
+<p><em>Is it possible to have Sammā Samādhi without having Sammā Sīla?</em></p>
+<p>No, you cannot attain Sammā Samādhi without sīla being right. When the sīla is wrong, that will almost certainly come up and cause trouble to the mind. It is important to realize that, to succeed, the Noble Eightfold Path must to be right in all its factors. When all the factors are right, they come together to act like a bridge leading one from the ordinary mundane state to the state of Nibbāna. At first, the realization of Nibbāna takes place momentarily. The pull of the kilesas is too strong for the mind to remain there, so it comes back to mundane consciousness again, where it must do more work. But you should realize that the Noble Eightfold Path is not a pathway where you start learning about morality, then samādhi and finally wisdom in progressive stages. It’s not that sort of path at all. It is the path where all the factors drop together internally, in the mediation practice. When they all coalesce together into one, that experience manifests the path that enables you to go over to the realization of Nibbāna. Talk about “realizing” Nibbāna is in some ways to miss the point. You must understand that Nibbāna is always there within you. It is your true nature. Nibbāna is always there in everybody. Everybody knows Nibbāna, but they don’t realize it. They do not recognize it. The reason they don’t recognize it is because of their strong attachment to mundane existence. That attachment pulls their minds out into the world. When we have attachment to anything, we cannot attain Nibbāna. We must give up everything for that to happen.</p>
+<p><em>Couldn't an immoral person develop deep states of samadhi and then use that samadhi to investigate arising in passing away until the true nature of anicca is realized?</em></p>
+<p>No, not at all. The reason being, if they ever did break through to realize the true meaning of anicca, that experience would probably drive them mad. You must have sīla as the basis. If you try to jump too high before you have that basis, you’ll fall down and have a lot of trouble. I divide the human being into two fundamental areas of mental activity. One area is up in the brain. That’s the intellect. The intellect is like a pair of hands, which is very useful for doing work. The intellect is valuable; in fact, it’s essential for learning and developing Dhamma. But the boss of the intellect is located in the heart region. That’s the one that orders the intellect about. It’s the one that wants things, the one that craves existence. It’s the area where the kilesas are located as well. The kilesas are not actually located in the intellect at all. So it’s down in the heart region where we must develop the practice. But some people are top heavy; in other words, they push the intellect very hard and don’t develop the emotions. Their emotions are still those of a child. That top-heaviness then causes them endless difficulty. Their intellects are involved in a variety of different things, but underneath they’re just children.</p>
+<p>The right way to develop your mind is to develop your emotions first. The proper basis for the emotions is found in sīla and samādhi. When the samādhi is there, then the samādhi helps to develop those factors that are correct for the wisdom practice. Such factors as concentration of mind, flexibly of mind, adaptability, and uprightness. These qualities are just right for the wisdom practice. When you develop samādhi up to the level where those factors arise, you can easily investigate with wisdom and gain real and profound insight.</p>
+<p>There are people who can one-pointedly develop contemplation of the body without distraction until they become absorbed in it. That concentrated effort in wisdom practice will help them to develop samādhi as well, until samādhi arises almost automatically. But most people cannot develop samādhi in that way. When they try, in no time the mind becomes distracted. That type of person must work on the samādhi practice first.</p>
+<p>Those people who tend to get angry very easily must be careful when doing body contemplation. Contemplating the physical body as it is doesn't pose a problem, but asubha practice can easily stir up the anger. If one realizes what is happening and controls the anger, it won’t matter; but most people will give way to it. And that isn’t good. If you find that happening, then you shouldn’t do the asubha practice. You should do a practice that is more soothing, one that helps to overcome the anger.</p>
+<p><em>How can we focus our practice on the emotional side of our personality?</em></p>
+<p>When you focus on the breathing practice, for instance, you first place your attention where you feel the breath the strongest. But in no time memories begin to come up. And memories arise from the heart. You must develop the mindfulness to recognize that, and when the memories come up you have to learn, not only to recognize them, but to turn away from those memories and back to the breathing practice. You realize that memories are trying to intrude, but you don't give them any attention. You are focusing solely on the breath – that is the thing that matters. The memories are just a distraction. If you can maintain that attitude, then you will succeed in meditation.</p>
+<p>But mostly what happens is a memory comes up and grabs your attention, and whoop – the mind becomes unstable and immediately loses its focus. Often it takes a long time to bring it back to the breath. So mindfulness training, focused on the breath, is a training to stabilize the mind. And this stability occurs in the heart center, where the memories arise. Actually, samādhi is not really an intellectual training at all. It’s an emotional one. The reason why samādhi is so valuable is that it corrects the emotions and it makes them strong in the right way. And when they’re strong in a right way, if you see anything that is really quite horrific when you are investigating with wisdom, you can withstand it easily because strong samādhi brings a state of great calm. When a state of great calm is present, the mind is happy and content, so the kilesas have no reason to come up and cause trouble. As long as the kilesas don't come up, the mind is free to turn and do some meaningful investigation. And it can do so without fear of harmful effects.</p>
+<p>But you must be careful when investigating without the proper development of samādhi to stabilize the mind. For instance, when contemplating the significance of anicca, if you see the truth of anicca very profoundly, the experience can be quite devastating. You find that everything is moving, everything is on the go. Nothing is stationary, there is nothing firm to hold on to, and nowhere can you rest. This experience can be quite devastating to a person. When that is the case, the development of samādhi is very important.</p>
+<p><em>If we are investigating anicca and some devastating experience happens, should we back off or continue investigating?</em></p>
+<p>It depends on your character. If you are strong enough to bash through regardless, then it’s all right to continue. But you must be very careful of your emotions. When the emotions are very strong, that means the kilesas are very strong, and you mustn’t underrate their power to create havoc. To push ahead like that, you have to be very confident of your ability to succeed. If you are the least doubtful, you shouldn’t continue.</p>
+<p><em>What do you mean by memory as a distraction to meditation?</em></p>
+<p>I'm not talking about the content of memory. The kilesas will bring up some memory, it could be anything, trying pull you away from the meditation practice. Such memories can arise in association with the sound of a bird or the sound of a car backfiring, for example. Those memories then act like tags, which the citta grasps hold of. That grasping is taṇhā. Those associations are taken up by sankhāra, which produces thoughts and imaginations. Building up gradually, step by step, eventually those thoughts end up going all the way around the world and back.</p>
+<p><em>What kind of object is best for daily meditation?</em></p>
+<p>The object should be an internal one, something you can use to overcome distraction. You shouldn't use external objects for that purpose. Generally, you are safe when you keep your focus inside. Sending it out is dangerous. The āsavas are talked about quite a lot in the suttas. The āsavas represent a flowing out of the mind. And it flows out like this: when a memory arises, that memory arouses feeling. Feeling tends to give rise to a reaction, either attraction or repulsion. If one gives way to that reaction, the mind will arouse either greed or hatred based on that feeling. Greed will tend to promote pleasant feeling, while aversion will try to squash unpleasant feeling. An adverse reaction to unpleasant feeling is an attempt to correct the situation. When that happens, the mind immediately flows out with thoughts of blame, criticism and revenge. A grasping, greedy reaction seeks for satisfaction in external causes. In both cases the mind is flowing out into the world. And the mind’s tendency to flow out into the world is the main cause of chronic discontent. So we must strive to keep it inside.</p>
+<p><em>How do we keep mindfulness during a very active and busy schedule?</em></p>
+<p>Firstly, when training for mindfulness, one tries to be aware of what one is doing and of the things one is dealing with. But that is only the training for mindfulness, it’s not the real thing. The real mindfulness is almost automatic. It is mindful awareness at the mano dvara, the door of the mind. Everything enters the mind through that door, so if your mindfulness is focused there, then whatever comes in, you know it. There is no effort involved, it is simply automatic. But automatic mindfulness depends on the prior sustained effort you made to practice mindfulness in all of your daily activities. Having reached the stage when mindfulness is automatic, you begin to realize that the whole world exists inside the mind, that it is actually internal the whole time. Everything comes in through the mind-door, so there is no need to send the mind out to them.</p>
+<p><em>What is the nature of anicca?</em></p>
+<p>The nature of anicca is very broad. Anicca arises not only inside oneself, but everywhere in the world of existence. You can say that the essence of existence is constant change. Without change, there is no existence. Just look at the nature of change within yourself. Look at the body and see how it is changing all the time. Look at the blood flowing around all over the place. The nerve endings are firing all the time. Digestion is taking place constantly. Endless processes in the body are taking place and changing all the time. Nothing is ever static. When you look outside yourself at the world around you, you see that everything is in constant motion. Nothing remains still.<br />
+In fact, the only reason we can sense things is because they are changing. Our senses all work based upon change. Without change, we couldn’t see things, for instance. Light moves, it travels. In traveling, it strikes the retina of the eye. That sets up further changes. It flashes signals back to the brain, setting up a chain reaction. Images appear. Those images undergo change, then break up and disappear. Thoughts and concepts follow, arising and ceasing in an endless continuum. Both outside and inside, everything is changing. There’s nothing fixed at all. The only fixed one, only really reliable one, is Nibbāna. Nibbāna is outside of what is changing.</p>
+<p>The nature of existence can be expressed as a paradox. We can say that anything that changes is not real, because it does not last. So what exists is not real and what is real does not exist. Thus reality and existence are two opposites. The world of our sensual experiences is an aspect of existence because nothing remains the same from one moment to the next. Nothing we experience is fixed and immutable; all is flowing and changing. Nibbāna is the one that is not changing. And Nibbāna is there within each one of us. It’s our true nature. Really speaking, we should all be in the state of Nibbāna. Arahants are the only people who are normal. Because we have kilesas, all the rest of us are a bit peculiar. When we get rid of the kilesas, there is nothing to disturb the citta. When the citta is completely undisturbed, it automatically goes to Nibbāna. Nibbāna is the citta’s true nature. Because of that, enlightenment is possible at any moment. Without the kilesas, the citta goes naturally to the state that it should be in. So really speaking, Nibbāna means going back home.</p>
+<p><em>What is the most effective way to get rid of attachment?</em></p>
+<p>You cannot use volition alone to get rid of attachment. Only by getting rid of wanting, or taṇhā, can you get rid of attachment. This connection is stated very clearly in Paṭiccasamuppada. Feeling is the condition for the arising of taṇhā. Taṇhā is the condition for attachment. So in order to get rid of attachment, you must first get rid of the taṇhā. That means that you must not react to feelings with taṇhā. You can erect a barrier between the feeling and the wanting so as to stop it from going any further. You can train yourself in that way.</p>
+<p><em>Is Nibbāna accessible only to the ariya puggala?</em></p>
+<p>Nibbāna is accessible to everybody. But the ariya puggala has already realized it, if only momentarily. That momentary realization is such that it leaves no trace in normal memory. The ariya puggala cannot remember what happened because there is nothing in the experience of Nibbāna for memory to latch hold of. Because of that, when Nibbāna is known for a moment, a situation is setup where the goal is known, but it is not known in any concrete way. You know with certainty that the goal is in that direction. When you know that, you understand how the other practices like worship and ritual are all nonsense. Those practices do not lead directly to Nibbāna. It becomes absolutely clear that the way to Nibbāna is the way that the Buddha taught, the Noble Eightfold Path. The texts say that the path of Sotāpanna is the path of finding out. In other words, wisdom arises. The other three paths are the paths of effort. In other words, once the right direction has been found, then effort must be put into getting rid of the kilesas in order to go the rest of the way.</p>
+<p><em>Are there Arahants from the Buddha’s time still alive today?</em></p>
+<p>When you talk of an Arahant being alive, you must think it possible for the Arahant to be dead, as well. But this isn’t the case. Nibbāna is not in the realm of life and death. The Arahant is not the five khandhas, which are subject to birth and decay. The Arahant is a pure citta, and the pure citta never dies. So, in that sense, we can say that the Arahants are all there all the time. But we cannot sense them in any way. That doesn’t mean that they cannot help us, maybe they can. But we cannot understand that type of help they give because it is not the same type of help one person gives to another.</p>
+<p><em>Could you give an example?</em></p>
+<p>It’s the type of help needed when a person is doing meditation and he comes up against a major obstacle, perhaps even demons and devils. But those demons and devils are never outside, they are inside the person’s mind. In fact, we can say that all the realms of existence are inside the mind. Everything. The devils, the demons, the hell regions, the human region, the devas, the brahmas, they are all inside. They’re not outside. So it does no good to pray to an outside entity for help. If the Arahant can help that it is because the Arahant is also within the mind. But, because everything is inside the mind, the distinction between the Arahant and the ordinary person begins to disappear. As the Buddha once said, people are like streams and rivers flowing down toward the ocean. When the streams and rivers reach the ocean and merge together, what happens to each individual? How can you identify them? At that point it is all simply the ocean, so there is no way to identify the waters of individual streams and rivers. But, at the same time, you cannot say that they are not there.</p>
+<p><em>How can we develop a sense of urgency in our meditation?</em></p>
+<p>You must do something to stir yourself up. One way of doing it is to look at the world and think, supposing I died now where would I be reborn? You have no way of knowing. Perhaps you would be born in places of chronic war and starvation. You don’t know what direction your kamma is going to take you. So you feel a sense of urgency to develop your meditation to a point where you will not fall helplessly into an unfavorable birth.</p>
+<p>You must realize that the whole the Buddha’s teaching is a method. The Buddha never voiced an absolute truth, because absolute truth cannot be spoken. What the Buddha did was to use a method to point the way to that truth. The Buddha said that he taught only two things: dukkha and the cessation of dukkha. Only those two. Similarly, the Buddha once picked up a handful of leaves from the forests and asked his disciples which were the greater, the leaves in his hand or those in the forest. His disciples said that the leaves in his hand were few, while the leaves in the forest were many. The Buddha said that what he taught was like leaves in his hand, compared to all of what he knew, which was like leaves in the forest. And, he asked, why don’t I teach you all these other things? Because they do not lead to the cessation of dukkha, they do not lead to Nibbāna. In other words, what the Buddha was saying is: I am giving you the method by which you should train and practice and develop yourself. When you follow that method correctly you will come to Nibbāna. Then you will see the truth for yourself, and all questions will be answered.</p>
+<p><em>How does a Sotāpanna experiences his attainment?</em></p>
+<p>Someone who has attained Sotāpanna will know that something profound has happened. He will know changes took place, but he won’t be able say clearly whether that experience was Sotāpanna or not. We’ve read about Sotāpanna in the books, but what does it mean? It is said that a Sotāpanna gets rid of doubt, attachment to ritualism, and the idea that body is self. But how do we know that these specific changes have taken place within our minds? Was it Sotāpanna or was it merely jhāna? We can’t be sure that point. But, in fact, it doesn’t matter what we call it; what matters is that we know that experience first-hand. That’s enough. Terms like Sotāpanna, Sakādāgāmī and Anāgāmī can be dangerous because people pick them up and begin to question: “Am I a Sotāpanna? Am I a Sakādāgāmī? Have I got there?” And then they become concerned about whether they’ve reached this attainment or that attainment. But the thing is, they know what happened. And that’s all they need to know. And if it was something good that happened, then why not try to do it again?</p>
+<p><em>How would you recommend investigating the senses?</em></p>
+<p>You can investigate them in terms of both anicca and anattā. But contemplating the senses is a bit difficult. The trouble is, we are very strongly conditioned to seeing the world as being outside ourselves, and as having a reality of its own. When you start investigating the senses, intellectually you can see that the outside reality is an illusion; that actually everything is internal. That understanding is still at the level of suttamaya-paññā; in other words, at the level of working it out intellectually. And that understanding is quite valid. But then you must go beyond that intellectual understanding and actually see it and realize it for yourself. You must realize with total certainty that the realm of the senses is something existing in your own mind. And that is difficult to do.</p>
+<p>You must realize what it means. You can investigate seeing, hearing, smelling, tasting, and feeling, the external senses. But the difficult one is the mind, the internal sense. That’s difficult to investigate because it’s very difficult to get hold of. And the mind operates extremely rapidly; it is not like the external senses, which you can pin on an object. You can see how the senses work. With sight, you have the lens of the eye, and radiation coming into it. There is an image projected on the lens and the excitation of the nerve endings in the retina, followed by a transmission back to the brain. After that, the computer in the brain gets going and throws up an internal image. That image is interpreted by us as light and color. But light and color do not exist out there in the world; all that exists out there is radiation. There is no light and no color in the world. We refer to light and color, but those are just analogies used to explain our experiences. But in reality, light and color are internal phenomena, not external ones. The value of being able to realize that is a lessening of attachment to external things. Because when you understand with insight the true nature of your visual experiences, you will realize that everything you see in the world actually arises internally. If those visual images arise internally, then they are actually a part of you, so why should you want to possess them? That kind of seeing begins to break down your attachment to external things.</p>
+<p><em>What are some of your skepticisms about Tibetan Buddhism?</em></p>
+<p>I can’t help feeling a bit skeptical about the concept of the tulkas? A tulka is said to be the recurring human rebirth of a highly spiritual being. And although some highly spiritual beings are reborn in the human realm, the Tibetans seem to have made it into a doctrine. It’s as though they believe that if some great tulka dies he must be reborn forthwith as a human being. No allowance is made for the fact that he may have been reborn in the deva realms or the brahma realms, for instance. The Tibetans simply go out looking for him in the human realm as if it is a foregone conclusion that he will be there. I’m pretty doubtful about that. They say that the tulka makes a solemn resolve to be reborn as a human being. But what is it that brings one back to the human realm? The only way one can return as a human being is to act in ways that involve the kilesas. And why would a highly developed spiritual being want to do that? Why wouldn’t he want to get rid of those kilesas instead?</p>
+<p><em>Is it advisable to make a solemn vow to attain Nibbāna?</em></p>
+<p>Only if you are certain that you can fulfill that vow. If you can, and the vow is strong enough, then you may succeed. The Buddha is a good example of this. When he sat down at the Bodhi tree, he made a solemn vow that he would not get up from his seat until he had attained enlightenment. And he succeeded. Had he not succeeded, he was prepared to die there and let the flesh fall off of his bones. That was the Buddha’s solemn vow. But he made that vow only after he had trained with the top meditation teachers of his day and had practiced many extreme austerities. Only after years of intensive training did the Buddha sit down under the Bodhi tree and make his solemn vow to attain Nibbāna. If we then compare that with our own efforts, most of us look pretty miserable.</p>
+<p><em>How does one know if the austerities one is practicing are beneficial?</em></p>
+<p>If you have doubts about certain austerities, those austerities probably are not right for you. You must have the attitude that the austerities you are practicing are essential, and that you are doing them for some real purpose. You should not practice austerities just because you think they will give you a boost, like some sort of tonic. You should practice austerities for the purpose of overcoming certain kinds of kilesas. And you should be quite clear about your purpose. If you look at the dhutangas, nearly all of them are designed to overcome greed. I don’t think that any of them are designed to overcome hatred. Probably because at the time of the Buddha greed was much more prevalent than hate. Nowadays it’s hatred that is strong, not greed.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/07._Developing_the_Path_Factors.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">07</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">07. Developing the Path Factors</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/09._Knowing_One’s_Character.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. Knowing One’s Character</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

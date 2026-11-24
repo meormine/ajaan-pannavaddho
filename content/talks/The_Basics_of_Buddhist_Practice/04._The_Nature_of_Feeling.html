@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. The Nature of Feeling</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/03._Personal_Impressions.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(03)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/05._Buddho.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(05)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/04.%20The%20Nature%20of%20Feeling.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>04. The Nature of Feeling</h3>
+<p>We have to train ourselves until we get to that level where we can understand what Nibbāna really means. We are all looking for contentment – for happiness. And we all have discontent. Discontent is our problem. So what we are really searching for is a refuge. People search for refuges all over the place. First of all, they look inside, but although the primary refuge exists inside them – the best of the lot – they can’t get to it because it’s covered by a lot of defilements – greed, hatred, delusion and ignorance. Because of that, when people go inside themselves, all they see is a mess. They find nothing there that they want. So they fail to find a refuge there. What do people do then? They go out into the world. They look for money, for cars, for other people – for all sorts of worldly things. But the trouble is, any refuge in the world cannot in any true sense be possessed. If you buy a car: it’s only yours in a conventional sense. There’s nothing that has changed in the car to make it belong to you. And anyway, the thing is going to rust and fall to pieces sooner or later. And then, it’s all gone. Your refuge is gone. And money is the same: it comes, it goes. There’s no certainty in any of that. So there’s no really secure refuge in the world at all.</p>
+<p>A wise person, upon hearing the teaching of the Buddha, learns that he must go inside prepared to struggle. He has to fight the kilesas, the defilements. Because by fighting the defilements, he may come to break through and see something of what’s really there. If he succeeds, that which he sees is so worthwhile – so valuable – that his interest in the world just disappears. He’s no longer interested in the world. He becomes interested only in getting inside his own heart the whole time – because this is the one place where there’s a real and satisfactory refuge.</p>
+<p>Our job in the practice is to find out how to train ourselves so that we can come to that point of understanding and see the truth. And the goal must accomplish, which underscores the whole of the Buddhasāsanā, is to destroy the kilesas – greed, hatred and delusion – all of which spring from fundamental ignorance. This is what we have to do.</p>
+<p>Now, when we look at the paṭiccasamuppāda – the wheel – we find there in the middle of it – there’s feeling. And dependent on feeling arises taṇhā – craving. This is very important. Because all of the kilesas – the defilements – arise because of feeling. So we’ve got to learn to look within ourselves to find out where these feelings are; and we’ve got to find what sort of feelings give rise to what sort of states of mind. It is very important in meditation practice to look for feeling, to get to know it – particularly feeling in the solar plexus region. Because when we’re upset in one way or another – it’s always felt down there. And it’s always there that the kilesas, the defilements, come from. When unpleasant feeling arises, we don’t like to feel that the fault is our own. So we search externally and find something to blame. We blame somebody else or, if the defilement is greed, we crave for something external. If the defilement is hatred, we blame somebody else or something else.</p>
+<p>This is the way people react to feeling all the time. To try and placate those feelings, they blame something externally. In other words, “I’m not at fault!” In that way, they try to cure unpleasant feelings; but it doesn’t really cure them. Instead, by allowing the mind to go out and blame things externally, they make kamma, and that kamma comes back on them in the future in the form of these same sorts of feelings. So the wheel just goes round and round and round – on and on like that. If we don’t learn to correct this, we will never get free of it.</p>
+<p>To correct it one must do the right thing by not letting the mind go out. One has got to go in – every time – and look at those unpleasant feelings. And accept them. Accept that this is one’s own fault. Because one has done unwholesome acts, unpleasant feelings arise as a result. So the result is one’s own fault. When one accepts that it’s one’s own fault, and one examines that and doesn’t let the attention go outward, then that debt is paid, and the one’s difficulties become a little bit less. Each time one does it, they become less and less. Through that, one finds a certain joy and contentment arising within. One feels happy. One feels contented. And it’s because of the work one has done – because one has learnt how to cure the defilements to some extent. The more one goes on in this way, the more one feels buoyant and light. This result points out the right direction. This shows that one is going the right way. The more one experiences happiness, the more one knows that one is going in the right direction.</p>
+<p>People in the world don’t know how to look after themselves and how to behave. They’re trapped and caught in the world. And they’re trapped by attraction to the things they see, the things they hear, by other people and what they tell them. And the one factor that causes us to go on and on like this is the factor of memory. Memory is the one thing that teaches us to go in the wrong direction the whole time. Since we were very young, we’ve stored all sorts of things from the past in our memory. And they entered memory mostly at an early age when we couldn’t really discriminate, when we couldn’t think whether they were right or wrong. When memories go in like that – they stick there and come up later. Because these ‘facts of memory’ come up automatically, we think that they’re right. Our view of the world is created by the ideas we’ve learned – and most of them are wrong. But because memory is constantly informing us, we think the world is like this, or we think other people are like that – we think all sort of things! And it’s just memory telling us what to think. We don’t check to find out whether it’s true or not. But we should. We should learn to question everything. To look and question and see whether things are right or wrong.</p>
+<p>Memory is very important. We try to make a refuge of memory as well. We think that if we learn everything about the world, then by knowing those things we know exactly what to do in any situation. The problem is that situations arise which we don’t know how to deal with because we’ve never had that experience. This is what happens time after time really: we find ourselves in a new situation which we’ve got no memory for! So, we don’t know what to do. Time after time it comes up like that. And because of that, the refuge of memory doesn’t really help us very much. It tells us – but really in the wrong way – what to do. So, we’ve got to be very cautious of memory. One’s memory tells one something, and one’s got to think: “Is this true or not?” This is the way to learn.</p>
+<p>Practicing the way of Buddhism correctly results in an increased understanding of how things are really working – how our minds really work. Why we do things. Why other people behave as they do. And we see all sorts of things and understand all sorts of things which were never understood before. The understanding comes in many ways. And the understanding that we gain gives us certainty that we are on the right path. It shows us that this must be the right path because everything fits together. And when we can see the path like that, we know what direction we have to go to get free. This gives us the confidence to go on practicing meditation in the way of Dhamma. If we can do that, we can gain freedom.</p>
+<p>Most people in the world don’t know where they are! They more or less give up the whole situation as a bad job. They’re stuck – they’re sort of like: “Oh, I don’t know. Maybe there’s a god. Maybe there isn’t a god.” They don’t know where they stand. But in the practice of Dhamma, one can find out exactly what the situation is, and where the main root of one’s problems lies. And one finds that the whole of it is in oneself – it’s all inside.</p>
+<p>If it were outside, it is possible we wouldn’t be able to know about it – because we can’t really contact it. We have to work through the senses. We don’t really know what the senses are telling us. We think we know, but we don’t. One can work that out quite easily. And because of that, if the problem is external, we may not be able to cure it at all. In other words, if there is a god out there somewhere, maybe we can’t do anything about it, because he has just laid this on us – he just put this state on us. But when one realizes that the trouble is in oneself, it’s right there to be cured in oneself too – by oneself. So, this gives one the confidence that one can do it.</p>
+<p>And it’s no good going to a priest or someone like that, they can’t help. Even the Arahants – the Enlightened Ones – they can’t cure others. They can point out the way. They can say what you should do, what way you should go. But you’ve got to do it for yourself. Nobody else can do it. In other words: it’s a personal way and it’s a practical way. That’s the way of Buddha-Dhamma. But one must realize that this isn’t an absolute teaching. In other words, we’re not saying there’s anything absolutely true here. You can’t talk about Absolute Truth – it’s the end result. It’s way beyond. But the teaching of the Buddha is a practical teaching. It practically leads one in the right direction. It practically leads one on towards freedom. This is the way the Buddha taught. He didn’t teach that we have absolute gods or absolute dogmas, or that you must believe in them – anything of that sort. He taught that this way practically will lead you to freedom.</p>
+<p>The Buddha once said in the forest to his followers. He picked up some leaves from the ground. He said, “Which are more? These leaves in my hand or those in the forest?” And they said, “Well, there’s millions in the forest. There’s only a few in your hand.” And he goes, “Yes. This is what I teach you. It’s like the leaves in my hand compared with what I know which is like the leaves in the forest.” And he said, “Why do I only teach you this? Because this leads you to freedom. All the rest of this stuff is of little substance. When you get free you can understand for yourself. When you get free, then you’re free to find out for yourself.” When you are free you can. You’ve got the right attitude, and the right mind, the right way of doing it. But until you’re free, even if the Buddha were to tell you all of these things, you wouldn’t understand them. So, the thing is we’ve got to get free, we’ve got to develop our understanding on the inside for ourselves. When we can do that, then we can see for ourselves. After we’ve done the job, after we’ve got free, then we can ask all the questions we like. One’s on one’s own then. One knows what to do.</p>
+<p><em>If we know that someone has ill will towards us should we do things together or just avoid them?</em></p>
+<p>Practice mettā. One should do whatever doesn’t upset them. In other words, if you know something upsets that person don't do it. If doing things together upsets them, then don't do things together. If it upsets them the other way, then you do things together. Whatever doesn’t upset them: you do that. But always practice mettā. Supposing you don't like someone: consider how that person has been born as a human being – that means that he has some good merit. If he had no merit, he wouldn’t be born as a human being. So that’s the first good point. Then you consider that: because he’s come to the Buddhasāsanā and come to a monastery with a very good teacher, then he must have quite a lot of merit. One should think things like that to make oneself realize that that person, whatever his faults may be, still has lots of very good qualities too, so you should have mettā and look after him.</p>
+<p><em>What if we don't have any dislike towards someone …it’s only one way.</em></p>
+<p>In that case one does whatever is suitable there; and if they have ill-will, that’s their business.</p>
+<p><em>Do we have to avoid them?</em></p>
+<p>You don't have to. It depends on the circumstances. If avoiding them helps, it’s probably better to try and avoid them. If avoiding them doesn’t help, then there’s no need to. But mettā is very powerful so mettā can have a very powerful effect. The Buddha said that the most powerful force is mettā. It’s true, because people are afraid of somebody with mettā. This is the way it is. They're afraid in a respectful sense: they don't know quite why but they feel that they don't want to do anything to that person – or to damage that person – because they’re afraid of him. A very strange effect.</p>
+<p><em>You said that we should look at the feelings. Is that all – just know the feeling? Or what do you do with that?</em></p>
+<p>Examine it. If it’s feeling, it has a location. It has a position in the body. The feeling has a mode – a particular quality – that’s not the same as other feelings. And it has a mode of changing – of moving about. One looks and searches and finds out exactly what it’s doing. Then one questions to oneself: why should I dislike this feeling when I like other feelings? What’s the difference? One questions and sort of probes into it all of the time like that. Then you think: well, supposing I wanted to change this feeling, could I? You’ll probably find you can’t, but it’s worth trying. See what happens.</p>
+<p><em>Does this relate to the levels one’s samādhi is at?</em></p>
+<p>No, this is automatic. The thing is: supposing you have an argument with someone and you don't feel very happy about it afterward. In a couple of day’s time, you see that person again and immediately this feeling comes up because of that argument. That’s the trigger for it, you see. That’s the trigger for the kamma that one’s made from that time. When that feeling comes up, if you’re not careful the anger will come up as well. What you must do is: stop that anger. Examine that feeling to see what the feeling is. Search out that feeling. If you can control that feeling – or at least let it be and accept it and not give way to it with anger – then you defeat the kilesas, the defilements. Having done that once, you'll understand what the feeling means. Then you’ll realize, “Oh! Of course. I see how this works now.”</p>
+<p><em>When is the best time to examine your feelings? When they arise or when you’re sitting in meditation or when?</em></p>
+<p>First of all, you want to be able to recollect a time when feelings of that sort arose in the past and how that led to an angry reaction. In that way, you begin to understand the causes of your actions. Then, when a similar situation comes up in the future, you’re primed so that you know what to do. Otherwise, when the feeling comes up quickly, the sudden anger may catch you off guard – it’s just too quick. You can’t do anything. If you’ve thought about it and sort of analyzed this in yourself from past occasions, then you can learn a lot about it. You’ve got to get a road mapped out, so to speak. A route of getting to safety mapped out.</p>
+<p>The same thing applies, of course, to greed. I mean, one walks along the street and you see a large television set and: “Wooh! I like that.” Then what happens? Feeling of wanting arises – going out to the object of desire. So one starts thinking about it; and by thinking about it upādāna, attachment, arises. And once that attachment has arisen, one can’t stop thinking about it. This attachment is all based on feeling. The person who realizes this can see the problem and the solution. As soon as that wanting arises, stop! Look. Look inside. See what’s going on. Feeling is very important because it’s between feeling and taṇhā, the craving, that you can put a barrier. That’s the place where you can put the barrier and not let it proceed from feeling to wanting.</p>
+<p>When you do that, you start unwinding paṭiccasamuppāda: factors in the wheel leading from ignorance right through to birth and death and backwards again. It goes round like that. And the feeling depends upon what's called phassa: the coming together of the sense base, the object and consciousness. And that depends on having the senses. Which in turn depends on having a mind and a body. They depend on viññāṇa: the consciousness without doors – as they call it. It’s a technical term. And it goes back to the ignorance that produced the kamma, leading one to have all the conditions for birth arising. It goes around from ignorance through the various steps until it comes to the sense bases: eye, ear, nose, tongue, body and the mind. And based on those senses, you see, hear, smell, taste things and so on. This is followed by the contact of sensation. Then feeling! Feeling arises. Alright, that feeling is just based upon something that you’ve seen, heard, smelled or tasted. If you examine it you’ll see that the feeling is just based upon a form – a shape – or a sound or a smell or a taste or contact. That’s all. But, because of memory, we then associate that with something else. And because we associate it with something in memory, then a reaction comes: “Rrrgh! I don't like that!” or whatever it is. Because of the feeling!</p>
+<p>The Buddha, when he became enlightened, said that he felt that he didn’t want to teach the Dhamma because nobody would understand it. And it’s said that the Great Brahma came to him and asked him to teach. But Ajaan Mahā Boowa usually puts it that he reviewed his own past and he saw how he also had ignorance and how he had worked trying to find the way. Eventually, he found the way and he saw that there were other people who could accomplish this also. There were people in the world that had the right attitude and the right mind-set to understand the truth. So he decided to teach. He worked out the best method for teaching people of all different types. And his teaching is what we call the Buddhasāsanā, the teaching of the Buddha.</p>
+<p>The Buddha’s teaching is really a method to get people to go from their present state to a state where they can understand. A person in an ordinary state of consciousness can’t properly fathom the truth of Dhamma. It’s as though everybody has a totally wrong view of themselves and the world. And because of that totally wrong view, they see everything wrongly. And they perpetuate these wrong views. But because wrong view is all they’ve ever known, it’s difficult for people to understand the predicament they’re in. In other words, people are caught in a situation that they’ve created for themselves, but they don’t even know what the situation is because we can’t see any other perspective. This is the difficulty one has to understand.</p>
+<p>One might ask: “Well, how did the Buddha know that what he understood was correct – as against what we understand?” And the reason that he knew that he was correct was that there was nothing left. When you come to nothing, then you know that you can’t go further. That means that everything that he saw in the world, everything he knew, was kind of unreal, and what he knew as the Real Truth was not this kind of thing at all. It was something quite different. It’s difficult to explain.</p>
+<p><em>Does feeling arise based on saññā?</em></p>
+<p>Feeling arises based on saññā. Yes, that’s true. What happens is the saññā arising – the memory arising – of a particular situation has an emotional state associated with it. Now, if by this practice, watching the feeling here, one doesn’t let the kamma be produced, that emotional state will gradually grow less. Until the saññā can arise, you can see – supposing it’s somebody you don't like: you see the person, the saññā arises, “Yes, I don't like the person”, but there’s no feeling. No feeling arises, it’s just neutral. The whole thing just dies away because there is no support for it – that’s where the giving up comes in. The giving up is not something that you do – it’s automatic. One can’t let go volitionally. Rather, one lets go by understanding. When the understanding comes, the letting go takes place of itself. A lot of people say, “You’ve got to let go”, but the things you can intentionally let go of are few. I mean, you can give up smoking, but even if you give up smoking, the taṇhā – the craving for it – is still there. There’s a pull all the time. It’s only when the taṇhā ceases to arise, and the thoughts don't go in that direction, then it’s really been given up.</p>
+<p><em>In that situation, investigating the craving for cigarettes will eventually cause it to die away?</em></p>
+<p>When one is giving up something like smoking, the best thing to do when the thought of it comes up is to turn immediately to something else. Don’t let the thought arise. Practically, that’s the best thing to do. I know, because I’ve done it. You can also do that with other attachments. You can turn away and don't let the thought arise. However one does it, one must avoid getting caught up in that feeling.</p>
+<p><em>If it’s already caught up and it’s a very strong habit, then it’s just a matter of investigating that over and over again?</em></p>
+<p>Yes, you’ve got to investigate the feeling. Yes, over and over again to counteract a strong habit.</p>
+<p><em>If some feeling arises again and again, could it be related to our past action or past kamma?</em></p>
+<p>Oh yes. Yes, definitely. Kamma and the results of kamma are very complex. You may have one strong incident which is the main kamma that gives rise to particular feelings for example – and those feelings arise time after time because of that one strong incident. If the same kamma is not reproduced each time, it will gradually get weaker. It may take a long time – especially for very strong kamma in a person. It’s very complex. Kamma: the Buddha said that if you try to work out the whole of kamma it will drive you mad. You can’t do it.</p>
+<p><em>Is there a way to know if a feeling is kamma-related or not?</em></p>
+<p>I think you can say feeling is always related to kamma in some way. This body is kamma-related. This body came from kamma. Because of that, this is associated with it in some way.</p>
+<p><em>Can you produce kamma by thinking?</em></p>
+<p>Yes. There are three types of kamma: thought, speech and action – and thought is the most subtle. Speech is more gross. Action is the most gross. The position of morality in Buddhism is that it concerns speech and action only – not thought – because thoughts are too subtle for people to control. They are too difficult to control, so the Buddha said that the first duty is to get everything right outside – and outside is speech and action. Even though you’re turbulent inside, get it right outside first, so that you don't upset the world around you. Because, when you upset the world, the world comes back on you – and if they do that, then you’re not in a peaceful situation, and you can’t really do any of the other practices. So, one must set your responsibility to the world right with the sīla, moral virtue. When one is at peace with the world, then one is free to forget worldly concerns and go inside. But, if your relationship with the world is not right and people are coming causing trouble all the time, that’s not good.</p>
+<p><em>If someone asks you about another person and you know a lot of bad things about them, would telling them the truth create bad kamma?</em></p>
+<p>This is where one has to use wisdom. It’s like the old story of a soldier, an officer, who was saying a lot of bad things about one of the other officers to the commander. The commander pulled him up and said, “You shouldn’t talk like that about your fellow officers.” He said, “Either you should speak good of them or say nothing.” He (the soldier) said, “Ok, I’ll go now”, and just before he went, the commander said to him, “And about that officer you mentioned, I have nothing to say.” That’s the use of wisdom. In other words, if somebody asks you, “What's your opinion?” You say, “Well, I don't want to say.” Or you can say, “I like to speak good of people, but about this person I can’t say anything at all.” Wisdom can get one out of many troubles.</p>
+<p><em>If a thought keeps coming back, even though you say “Buddho, Buddho, etc…” What do you do?</em></p>
+<p>If a thought comes back like that, it’s based on feeling and memory.</p>
+<p><em>I think it’s memory…it’s just something that happened.</em></p>
+<p>Don't underrate feeling. Feeling is not something that’s vague and uncertain. Feeling is very precise, very complex. In fact, you can say that before speech arises, there is always feeling; and that feeling, in a nut shell, has got the whole of what you want to say. The feeling comes out and goes into a dialogue. The way of feeling is most complex.</p>
+<p><em>Sometimes I have a thought that seems to be trying to establish and increase my sense of self.</em></p>
+<p>Yes! This is a strong factor of taṇhā: this is the motive behind so much. The promotion of self. Because we always want an identity and, to establish an identity, we’ve got to establish what is not us. What is not our self. And, because of that, we establish the world, the whole world, and everybody, other people – everything: “That’s not my self, but it defines where ‘I’ am. I am in the middle of that, so to speak.” And these thoughts, in all sorts of ways, are trying to establish what one is.</p>
+<p>Memory helps in this too, because one has memories from the past and that establishes what one is, based on the past. And these memories keep coming up, and one keeps thinking about them and keeps refreshing them so that one can be quite sure of one’s environment. Memory is established there all of the time, and the constant bringing up of thoughts of the past – from all over the place – which one has thought about before many, many times: one does this just to confirm one’s situation – to confirm one’s environment – to confirm that “This is ME here”. It’s very complex. But, the tendency to have thoughts coming up to establish a selfidentity is a very strong tendency. And it’s a difficult one to deal with. In fact, the attachment to self really isn’t eliminated until the Path of Arahantship. The self is one of the last fetters to go. This is the attavādupādāna: the attachment to the conceit of self.</p>
+<p>Ajaan Mahā Boowa said that when one practices for sīla and for samādhi, one should think in terms of oneself and self-development. When one turns and practices paññā – investigating, examining, looking into things – one should see everything as being anattā, not-self. There is no self in anything. Until finally, when one breaks through, one chucks out both self and not-self as being two forms of delusion. This is a practical teaching. Many people get worried about the implications of anattā or not-self: “Have I got a self or haven’t I?” They talk about anattā quite a lot but they don't really understand it. In truth, anattā is a practical teaching to overcome that false idea of self-identity that we have.</p>
+<p>The Buddha said that the idea of self-identity can be associated with any one of the five khandhas. Sometimes, it is body. Sometimes, feeling. Sometimes, thought. Sometimes, memory. Sometimes, consciousness. And it can slip about from one to the other depending on circumstances. The aim of the wisdom is to see that all of the evidence is pointing to the fact that there is no fixed entity there at all. Whatever is there, just changes all the time.</p>
+<p>The final one, and the most difficult one to understand is the citta. People don't understand the citta at all. It’s difficult to understand because the citta is not something which you can point to. Normally, we perceive objects, which means that the object is there, and I am here perceiving it. With the citta, you can’t do that – because it’s the citta that does the perceiving. The citta, itself, is the one that knows. It doesn’t always know rightly, but it knows. Because the citta is the knowing, it can’t perceive itself as a object.</p>
+<p>But the citta is really the basis of everything. I like the simile of the cinema screen. If you have a cinema screen, you get all sorts of images on it. Many things appear there, and they change about all of the time. But it’s all projected on that one screen. But no matter how real those images appear, just turn off the projector and they are all gone. Then, there is only the screen left. In the case of the cinema, we can see the screen; but with the citta, we can’t even see the screen.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/03._Personal_Impressions.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. Personal Impressions</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/05._Buddho.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">05</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">05. Buddho</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

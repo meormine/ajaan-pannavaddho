@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Buddho</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/04._The_Nature_of_Feeling.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(04)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/06._Breaking_Down_Boundaries.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(06)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/05.%20Buddho.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>05. Buddho</h3>
+<p><em>Should I use the repetition of buddho in conjunction with awareness of the breath?</em></p>
+<p>The main thing is you have to try it for yourself because different people have different experiences. I find that I cannot use the repetition of buddho in conjunction with awareness of the breath. But many people find that it is very useful to combine them into one practice. Personally, I must do either one or the other, but not both at the same time. I usually focus on the breathing practice, but at times the repetition of buddho is very useful. It is especially useful for quelling restless thoughts. But this is something that you have to try for yourself. It is difficult to give any hard and fast rules which apply to everyone.</p>
+<p>I’ll suggest one practice that you might want to try. You can use either mindfulness of the breath or the repetition of buddho as the base practice. As you focus on your meditation object try to stop all thoughts, and the words that express them. When you focus on the throat and feel that a word or a phrase is pushing up, hold the pressure there and deliberately suppress it. Most of our thoughts are expressed in terms of speech, so if we can stop the words, the thoughts will begin to die away. So you use the breath or the buddho as an aid to counteract the verbalization of the mind. If you are using the repetition of buddho, eventually you should stop even the word buddho from arising. It’s almost as though thoughts and words are like bubbles that are constantly floating to the surface, and it is your job to keep a constant watch inside to catch them before they burst into consciousness. In other words, you catch them and hold them still internally. At first, you will not be able to hold the words for very long before they break free into thoughts. But as you work at it with diligence, you will gain greater proficiency at controlling your thinking. Then it becomes a very beneficial practice. It is important to keep in mind that most of our thoughts are maintained by words. For instance, when anger arises, the anger is maintained by thinking angry thoughts. If you can stop those thoughts, then the anger does not have much of a basis to work from.</p>
+<p><em>Is awareness of the breath suitable for walking meditation?</em></p>
+<p>It is suitable, but you must be careful because the rhythm of walking and the rhythm of breathing tend to interfere with one another. In other words, there is a tendency to modify your breathing to bring it into line with the rhythm of walking. Although this tends to happen, it is still a good practice. However, Ajaan Mahā Boowa has said that it is probably better to use the repetition of buddho when doing walking meditation practice. If the repetition of buddho is coordinated with the pace of walking, that doesn’t matter. In the end, it is usually a matter of experimenting to find out which method best suits your character. In other words, which method brings you the best results in meditation. In the kammaṭṭhāna practice of the Thai Forest tradition, you must be flexible and innovative, or even inventive, in the methods that you use.</p>
+<p><em>What is the best way to investigate the three characteristics, the Ti-lakkhaṇa?</em></p>
+<p>You look you see the three characteristics being displayed. First you should look for their grosser aspects, those in your own body and in the external world. I remember when I was young living in England I used to stay in my grandfather’s house. Now the house is gone, it has been pulled down, it is not there anymore. The whole situation has changed completely. Time rolls on and everything from the past disappears. That’s the nature of constant change. Whatever we are attached to will eventually disappear over time. One’s body is the same; it is constantly changing all the time. The body doesn’t last either.</p>
+<p>From that we can see that whenever we cling to anything that is in a state of constant change, that clinging is thwarted by impermanence, which in turn brings dissatisfaction and suffering. You have something in your grasp that you want to hold on to, and suddenly it’s gone. Dukkha is bound to follow. So it’s easy to see how impermanence leads to discontent.</p>
+<p>Since everything we grasp at turns into dukkha, we cannot find anything that is truly sukha. Happiness and contentment are what we are searching for; they are the characteristics that we imagine a true self must have. But because happiness and contentment are undercut by the changing nature of all phenomena, we begin to see that everything is anattā, devoid of any personal essence or identity. We desire self because we look on self as being a place of refuge, a place of peace and rest where we can always be happy and content. And yet, no matter where we look we cannot find that perfectly contented self. It simply does not exist for us.</p>
+<p>The only place where we can find the kind of happiness and contentment we are looking for is in Dhamma. Only if we can make Dhamma into self can we reach our goal. Dhamma cannot be found by looking outside of ourselves, by searching in the world or the universe. Everything in that realm is anattā, so no basis for any refuge can be found there. If we try to make a refuge for ourselves in the world, that refuge will always be unstable and subject to disintegration. We identify with our bodies as being extensions of self, and therefore a refuge, much in the same way that we look on self as being a refuge. But the body isn’t a refuge. The body is just part of this world. It came from the world, it’s maintained by worldly substance and when it dies it will go back to the world. It can never be a stable refuge. It is the same with the four nāma khandhas as well. They are all constantly arising and ceasing.</p>
+<p>So we can say that nowhere in the entire universe is there anything that can be a stable and enduring refuge, which would be the definition of a true self. So the Buddha taught anattā in the sense that it applies to the universe of the five khandhas, which incorporates everything we know. Beyond the five khandhas, there is that which we might call the self. But the word ‘self’ has a definition only within the context of the universe of saṃsāra, which makes the use of the word ‘self’ problematic here. The definition that we give to self does not apply to that which transcends the universe of the five khandhas. So in Buddhism we preferred to use Nibbāna. The only person who can correctly apply the word ‘self’ to that, is the person who has experienced it.</p>
+<p><em>Nibbana is anattā also, is it not?</em></p>
+<p>No, that’s wrong. Nibbāna is not anattā. The ancient texts certainly say that, but Ajaan Mahā Boowa disagrees, and for very good reason. It is not possible to pin down Nibbāna with any conditions or characteristic whatsoever, be it attā or anattā. Wherever there is anattā, there must also be its opposite, attā, as well. It is the nature of duality that you cannot have one without the other. That is the nature of saṃsāra. In truth, there is nothing that you can say to describe Nibbāna. It is not subject to any conventional understanding. By saying that Nibbāna is anattā, you are ascribing to it a conventional characteristic. But Nibbāna, the Unconditioned, is entirely without conditions. So it is wrong to condition Nibbāna by saying that it is anattā. It’s simply not true.</p>
+<p><em>What is the aim of investigating the three characteristics?</em></p>
+<p>The aim of one’s investigation should always be to counteract the kilesas. So you should always use the Ti-lakkhaṇa in your investigations in ways that undermine the kilesas. For example, I’ve heard it claimed that the atomic nucleus is anicca because it is constantly changing. It may be true, but that is only a hypothesis, which is not the right way to get rid of the kilesas. In other words, if you use the three characteristics to promote your own views, you may simply be using them to increase discursive thinking, which helps the kilesas to grow. So keep your investigations to things that undermine and reduce to kilesas. Generally, that means that you keep your investigations to matters that affect you personally: to your body and your mind, and to those things in the world that your mind is emotionally attachment to. Ārammaṇa in Pali language. Ārammaṇa means objects of attachment. But not the objects of attachment out there in the world; but rather the objects of attachment perceived in the mind.</p>
+<p>So basically you apply the three characteristics to the five khandhas and objects of emotional attachment, with the aim of reducing the kilesas. I’ve seen in certain of the Buddhist publications some of the most abstruse scientific articles about Buddhist principles like the three characteristics. To me they just show that the person writing those articles hasn’t understood anything about the Buddhist teachings. They are just full of theory and abstract views.</p>
+<p>Investigation is very important in Buddhist practice. It comes from the Pāli word vicāra, which means to investigate or contemplate. It means that you take up the object that you are going to contemplate or investigate and you turn it around in your mind, thinking about it and probing into it to determine its relationship to other things, seeing what its nature is and why it’s there. Rather like a dog gnawing a bone.</p>
+<p>Calm is an important prerequisite for investigating, but it is not essential as long as you can keep your mind focused firmly on the thing you are contemplating. Lack of calm becomes an issue when your thoughts begin wandering to other things. A restless mind can easily hamper the investigation. As long as you can keep your mind on the object that you are contemplating, mental calm need not be an issue. The focus itself will have a calming effect.</p>
+<p><em>Is mettā a quality that we can develop in our practice?</em></p>
+<p>Generally, when we get good results in either the breathing practice or the buddho practice, mettā will be a natural byproduct of our success. When the mind is calm and properly focused, we tend to have a positive outlook on ourselves and others. The best way to maintain mettā is to always view others in a very positive light, and to avoid having negative thoughts about them. Criticism is a very important negative which should be avoided. Some people simply repeat the phrase “May you be happy, may you be happy” and call that mettā meditation. Often the motives of people who repeat “May you be happy” are quite contrary to that sentiment. The mere words are far from sufficient. In fact, those words simply display what a person’s attitude should be, but they do not display what one’s attitude is. The practice for mettā is merely a method for developing that state of mind, it should not be confused with the state of mind itself.</p>
+<p>It is important that people develop all of the brahmavihāras because they act sort of as lubricants to help prevent friction in one’s daily interactions. For people who actively dislike others, who have the characteristic of hatred, it is very important that they developed the state of mettā within their hearts. It is not necessary that they try to radiate mettā to other people, because all that will do is develop a certain conceited attitude within them that they have the power to radiate mettā to others. They must realize that the important thing is to develop mettā in themselves. So first of all they have to question: What is meant by mettā? Then try to search for the essence of it and develop that. Unless you actually have mettā in your heart you cannot radiated to anyone else. Usually the radiation of mettā is merely a concept that people have, and not genuine mettā at all. It can very easily turn into something to support their own conceit. For Buddhist meditation practices to be correct, they should be focused somewhere on oneself, either one’s body or one’s mind. Truly speaking, meditation practices should not be focused on other people. Awareness of the breath, buddho and body contemplation are all good examples. When you do the mettā practice thinking “May all beings be happy” the tendency is to be mindful outside of yourself.</p>
+<p><em>Mahayāna traditions tend to emphasize compassion quite a lot.</em></p>
+<p>Yes. But I have a bit of trouble understanding how they use the word compassion. I’m not quite sure what they mean by it, because it does not seem to equate with what I understand of compassion. As I see it, compassion is the seeing of the suffering of other beings combined with the wish that all beings be free from suffering. It’s the seeing of suffering that is important, not necessarily taking any action to alleviate it. In fact we may not be in a position to have any effect on it. The compassion comes up regardless of whether we do anything about it or not. Whenever we think of other people and see the state that they live in, we realize that there is in large part nothing that we can do to remedy the situation. Mainly because people don’t want help. Even if we are able to give help, oftentimes people are not interested in being helped. Often we can see their state, we can see what’s wrong and we can see what they should be doing to remedy it. But they refuse to change, and there’s just nothing we can do about it. There’s a lack of interest or concern in them that makes it impossible to reach them. No one is grabbing the lifeline that we throw out to them. Then we can merely have compassion for them seeing that this is the way they are and this is a state they’re in. On the other hand, we should always reflect back on ourselves to consider that we may be subject to the same fault. Out of compassion someone else may be trying to help us, but we just can’t see it or accept it. So we do not want to get caught up in the conceit of our own sense of compassion. There’s a danger in that too.</p>
+<p><em>Who is it that knows that the khandhas are not the self?</em></p>
+<p>The citta is the one who knows. In the realm of the khandhas it is viññāṇa that knows. Viññāṇa is the aspect of the citta directly related to the khandhas. The best way to describe the relationship between the citta and the khandhas is to use the analogy of the ocean. The citta is like ocean depths, while the khandhas are like waves on the surface. The waves are not separate from the depths of the ocean, but they do not really affect the ocean either. Being blown by the winds, the waves can be quite turbulent, but the depths remain calm. The avijjā in the citta uses the function of viññāṇa to perceive objects – forms, sounds and so on. Those perceptions constitute the waves on the surface of the ocean. The Buddha said that perceptions are essentially all of one essential element, just with different names. For instance, with fire you can have a wood fire, a coal fire, a gas fire and so forth, but essentially they are all just fire with different names.</p>
+<p>So viññāṇa is that which perceives the sensations. And it perceives them the way it does because avijjā is infused into the citta. The avijjā usurps the power off the citta and uses delusion to cloud its perceptions. And the one thing that the citta with avijjā craves above all else is to experience sensations. The reason that it desires to experience sensation is that it wants confirmation of its own existence; in other words, the existence of self. The only way that it can experience self is in relation to other things. And it needs a means to accomplish that, so viññāṇa is necessary. But in the larger picture of the citta, the depths of the ocean as it were, viññāṇa is quite unnecessary. From that point of view, if viññāṇa were to disappear, nothing would be lost. The waves are completely extraneous to the depths of the ocean. In a sense, the citta is never defiled and never purify; it’s there all the time just the same as it always was. What we see as defilement is really an outcome of the superficial activities of avijjā. The true depths of the citta are not affected. And Nibbāna is the realization of this truth, the truth about citta’s real nature. Viññāṇa as that which knows is only a function of the citta in saṃsāra.</p>
+<p>One thing that I should point out: because of avijjā the one who knows does not always know correctly. That is not the fault of viññāṇa; viññāṇa is just a function. It is the delusion created by the kilesas that causes false knowing. For example, when you see a green color, that color is merely a sensation associated with viññāṇa. The sensation itself is quite neutral; it has no right or wrong. But when we come to identify it we have to interpret that sensation using the function of memory, and that interpretation can easily be affected by delusion. Based on that interpretation, we may act in a certain way that has moral repercussions. So the delusion of avijjā and the kilesas uses the functions of the mental khandhas to distort the knowing quality of the citta. When our perceptions are supported by greed or anger, the knowing becomes quite false; when they are supported by mindfulness and wisdom, there is a far greater chance that the knowing his right.</p>
+<p><em>Why are mindfulness and wisdom so important to the practice of Buddhist meditation?</em></p>
+<p>To begin with, we must investigate and find that what we are and the way we function. If we don’t do that, we can’t see what is causing the dukkha. Unless we investigate and look for it carefully, we cannot see the taṇhā-upadāna that is causing the dukkha. We have to identify these things within ourselves so that we can overcome them. In order to do that, we must overcome the status quo, our normal state of unawareness – the ability to think and act while being completely unaware of what we are doing. The mind is simply not present. When it’s like that, thinking and acting are quite automatic without the underlying knowingness of the mind being really engaged. That is why mindfulness is so important. It keeps the mind focused in the present moment, so that we can see and know what we are thinking and doing. When we are fully aware of what we think and do, we must then put that knowledge into a framework of reference to see how our thoughts and actions relate to everything else that is going on around us. From that we can make a judgment, deciding whether what we think and do a good or bad, right or wrong. We can determine what their results are likely to be. This is where mindfulness and wisdom come in.</p>
+<p>Mindfulness provides us with the data that we need to investigate with wisdom. By being constantly aware of what is happening in the present moment, mindfulness is the awareness that gathers the data that we need to work with. It delineates the parameters of whatever it is we want to focus on. Once we have the raw data in the form of details, we can begin building up a clear picture as a basis for understanding. In a sense, mindfulness supervises the investigation, but in a passive, not an active, way.</p>
+<p>In the context of our mental delusion, avijjā acts much like a demon. There is a very personal aspect to it in relation to us, almost as if it were a living thing. The reason is, of course, that avijjā is there in the citta, and the citta is alive. And because of avijjā being in the citta, it takes on the characteristics of the citta. That is its peculiarity – there is nothing like avijjā in the world outside; the only place you can find avijjā is in the heart. It cannot be found external to that. Because of that, avijjā is something very peculiar, almost like a wrong function in the citta. And this wrong function is the real cause of the trouble because the wrong function leads us to create kamma, the results of which will in turn promote that very same wrong function. Wisdom is that faculty which enables us to understand what’s taking place in terms of cause and effect. When we understand the ways of cause and effect, we then have the wherewithal to begin to undo the damage.</p>
+<p>When wisdom finally reaches the level of avijjā, that is a very deep and profound understanding. There is a very deep level of the citta known as bhavanga. The state of bhavanga, or the stream of bhavanga, is the location of avijjā. It is seeds planted at this level that lead us on to rebirth. So avijjā is the one that keeps the wheel of saṃsāra turning. Because it is embedded so deep, it is extremely difficult to get rid of. The practice of samādhi can take us into the state of bhavanga, but wisdom is required to root out the problem.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/04._The_Nature_of_Feeling.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">04</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">04. The Nature of Feeling</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/06._Breaking_Down_Boundaries.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">06</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">06. Breaking Down Boundaries</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

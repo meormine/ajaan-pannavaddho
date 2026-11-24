@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Introduction to the Sangha</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/02._The_Five_Precepts.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(02)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/01.%20Introduction%20to%20the%20Sangha.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>01. Introduction to the Sangha</h3>
+<p>Fundamentally, like most of us, the Buddha had problems when he was young. He had many questions and he wanted to solve them. Eventually, he set off from his family and went out to try to solve these problems. He went to many different teachers and learned a great deal from them. But only after he left all his teachers and went off on his own did he finally manage to find the answers to those problems. What we have now is the teaching that came from the enlightened Buddha. That teaching is the basis of Buddhism. What we have to gain and the results we attain are based on his teaching. In other words, the Buddha is the one who discovered the way. He found the path to the solution of life’s problems. We as Buddhists try to follow what he did and use the understanding that comes from him in order to clear the way for ourselves.</p>
+<p>The Buddha’s teaching basically hinges on the truth of discontent or suffering. Discontent is prevalent in everybody. It’s always there in all sorts of ways, both small and large. It’s never ending. Buddha saw discontent was the primary problem. It is, in fact, the motive behind whatever we do. When we do something, we do it because we feel we are going to get more contentment or less discontent by doing that than if we don't do it. All the time we’re motivated in one way or another by this one factor of discontent. There is a background of dissatisfaction shaping the direction of our lives all the time.</p>
+<p>For instance, how often do we have the factors of greed or hatred arising, in all there many forms? We’re greedy because we feel that we’re lacking something. When we lack something, we want to get it. Sometimes what we’re lacking is something that’s really necessary, like food, and that’s okay. There’s still a certain amount of greed in it, but that’s not a major problem. But so many of our wants have been created by us. So we are constantly creating our greed. In that way, we are constantly creating our own discontent as we try to satisfy that greed. Hate is exactly the opposite. We constantly try to get rid of the things that we don’t like or want. It’s really just two sides of the same coin: the wanting to have and the wanting not to have.</p>
+<p>These are the factors that constantly motivate us and drive us on. In all of this, the one fundamental law we use to find satisfaction is the law of cause and effect. If I want to achieve a certain result from doing something, I always think in terms of cause and effect: If I do this, what’s the result going to be? So we use cause and effect to predict what results we’re going to get from our actions. Then we go ahead and act on that basis. If we have wisdom, maybe we’ll get the results we want. But mostly we don't. Mostly we go the wrong way and do all the wrong actions, thinking they’re going to bring us the satisfaction we want. But they don't; they usually bring us the opposite.</p>
+<p>This you can see by reading any newspaper. You can see it in the way people act: lacking morals, lacking wisdom, and lacking any understanding of the way life works. They do the wrong actions, get unsatisfactory results and suffer the whole time. The more they continue going in that direction, the more they’re going to suffer. It’s not so much that somebody else causes them to suffer; rather, they bring it on themselves by their own actions.</p>
+<p>Whenever we act, we program ourselves by that action. When we program ourselves, sooner or later that programming is going to show in the results, it’s going to come back on us. The Buddha saw this tendency, and he taught us to observe how our minds work. He said that if we want to get free from suffering, we must develop wisdom. We’ve got to know what results will come from our actions. By virtue of that understanding, we can decide which actions we should do and which we shouldn’t. Most people just don't know.</p>
+<p>Take the question of morality: how many people have any real understanding of the way morality works? When people don't understand the way morality works, they do all the wrong things thinking they're doing the right ones. In the West, this tendency is very prevalent now. Lack of moral virtue is a problem that’s causing a great deal of trouble. And that’s due to a complete misunderstanding of the way morality works. Peoples say: “Why should we be moral?” Many of them do not believe in any kind of higher moral authority. They think that there will be no repercussions from their actions. Therefore, if they do immoral actions they will get away with them. They failed to understand that they change themselves every time they do an immoral act. They change themselves in a manner that inevitably steers them into a situation where they will receive the repercussions of that action.</p>
+<p>The Buddha saw that this is the way it is. He taught that since the discontent is our fault to begin with, we can free ourselves from it. We can get free from it by learning to develop wisdom and understanding. We develop this understanding by training ourselves to sharpen our minds, to control ourselves, and to stop the restless waywardness of our thoughts. In that way, we can hold the mind still and penetrate deeply with wisdom. If we accomplish that, then we can use the mind to probe the question of the causes happiness and suffering.</p>
+<p>The first set of such questions deals with the body and the mind: What is the human body? Is it me, is it mine? What is this mind? Is it me, is it mine? Questions about matters out in the world are not important because all those questions reflect back to ourselves. So we must go directly to the center, which is one’s own body and mind. If we try to solve the problems in the world, it’s an endless task. As soon as one problem is solved, another one arises. So what we must do is solve the problems in the one that creates the problems, which is oneself. If we can solve the problems in ourselves, the problems of the world will automatically be solved.</p>
+<p>The Buddha taught that to solve these problems and overcome our discontent we have to practice the path to freedom. To begin with, we must train ourselves in the way of morality, then develop the mind, and thirdly develop wisdom based upon mindfulness and effort. Mindfulness means keeping the mind in the present moment and thus being aware of oneself all the time. It means restraining the mind from thinking and wandering about, and thus not forgetting oneself. This is what the Buddha taught, and it forms the basis of Buddhism.</p>
+<p>What I’ve given you is the core of Buddhist practice. The factors I’ve talked about can be expanded greatly, but the fundamental basis is the understanding of our situation as one of discontent and suffering, understanding the cause of that discontent, and seeing the path, or the way to cure discontent. That is the basis of Buddhism.</p>
+<p>The curing of all discontent results in a situation that nobody has been able to describe because it has gone completely beyond this world. All the things we find in the world are conditioned. They all come under the laws of cause and effect. Everything has conditions. Every situation has conditions which bring that situation about. The complete cessation of discontent is an unconditioned state, an entirely free state where there are no conditions at all. It’s quite incomprehensible to somebody who hasn’t attained it.</p>
+<p><em>I am curious about what attracted you to Buddhism in Thailand.</em></p>
+<p>My interest was caught by reading. I was brought up rather vaguely as Anglican. I couldn’t really see much in the Anglican Church. They’re good moral people, but morality on its own isn’t enough. It’s necessary to go a lot deeper than that. Because of the situation in the Anglican Church, I really wasn’t interested religion. Then I chanced to come across a book on Buddhism. This interested me a great deal. I read quite widely, with a special emphasis on books on Buddhism. Then I thought I should investigate one or two other religions. I looked into Hinduism, which is a terrific hodgepodge of things. It isn’t one thing, it’s a hundred things. Then I looked into Christianity. I was quite interested in Catholicism, but I wasn’t satisfied. Eventually I made a choice. But I am not sure it really was a choice; I think the choice was all ready there to go the way of Buddhism.</p>
+<p><em>Do all religions lead to the same end?</em></p>
+<p>This you can’t say precisely, because you have to be able to define what you mean by each one of those religions. Really speaking, under the heading of any one religion there are dozens of factors whose validity depends on the individual and how he believes them. Whether they lead to the same end is not such a simple question at all. Christianity can be interpreted in a way that relates very closely to Buddhism. Not all of the dogmas can be fitted in, but the general ideas can be to some extent. It depends on the person who practices whether he can fit them in or not.</p>
+<p>The Buddha used the comparison with a disease. That disease is our discontent. We must understand the cause of the disease, which is our wanting, our greed and our hatred, what we call our defilements, which are always coming up to push us in the wrong direction. Christians might call it the devil; but it’s inside, it’s not out there. These defilements are physiological factors in ourselves that always push us in the wrong direction. We must realize that they are the cause of the disease and so to cure it we’ve got to overcome the defilements. We need a regular path, a regular way practice and a regular way of training to do that.</p>
+<p>In Buddhism, we hold very firmly the idea of what we call the citta. The nearest English translation for citta is soul; the only problem is I am not quite sure what soul actually means in English. It’s not a simple word at all. I have a far better idea what citta means. So it’s hard to equate the two exactly. The citta is an essence of knowing, which in its original state is utterly incomprehensible. The nature of the citta is beyond all ways of thinking and all ways of understanding. In its modifications, the mental faculties, it is used by the defilements to produce what we call the self, and all the ways that self works. The defilements take control of the self-identity, using the power of the citta, the human power, to push us in the wrong direction.</p>
+<p>It’s just these defilements that cause all of the trouble in the world. We get all sorts of problems in the world like the atomic bomb and dictatorships and so on. But the real trouble in the world is not these things but the defilements, the kilesas in each individual’s heart. If we cannot get at those, we will never really cure the problems. That’s what they all stem from. As the first verse of one of the prime books in Buddhism says: “Mind is the forerunner of all states”. They all arise because of mind. If we act in evil ways, that evil will come back on us. If we act in a good way, that good will come back too.</p>
+<p><em>These teachings you explain should be applicable to everyone, why the necessity of monasticism?</em></p>
+<p>You probably have in mind Christian monasticism as a comparison. You have to see what happened at the time of the Buddha. At the time of the Buddha, and to some extent today, the monk was a wanderer. He had just his bowl, his robes and not much else. He had only a few possessions. He wandered about from place to place, usually living in the forest outside the village. In India then, as in Thailand now, he could receive alms food in the village. People would give him food for the merit they gained from their generosity. He would then have the time and convenience to go out and do the proper contemplation and practices he should be doing.</p>
+<p>When one does meditation practices and starts developing the mind, the mind becomes very sensitive. When it becomes sensitive, it can be very easily disturbed by things. We’re always taught that when one’s mind is becoming developed, one must be very careful. So one is told to control the senses, and try to keep them inside and not just let one’s senses be wandering about. People who are living a lay life have to go about their normal business, doing a job, meeting other people, traveling and so on, which makes it almost impossible for them to really get control of the mind.</p>
+<p>So the monastic life creates a situation where people can get away from everyday society for quite long periods of time so they can learn how to control their minds. If they can gain full control of their minds and get rid of the kilesas, then they can come back and help other people. They're in the situation to really help because know exactly what they are talking about from their own experience. They're the ones that have cured the defilements within themselves. They have the wisdom to see the right way. The average person hasn’t. Because of this, monasticism is quite necessary. It’s a very valuable tradition. Unfortunately, the number of monasteries that try to follow the way as it should be practiced is few. The number of monks that do what they really should be doing is few. In Thailand there is an enormous number of what might be called traditional monks. They're just following old traditions; many don't really understand the teaching. Here at Wat Pa Baan Taad we are very fortunate. We have a very good teacher. He can lead people very effectively.</p>
+<p><em>Can you tell us something about the daily life here?</em></p>
+<p>The daily life here is really extraordinarily simple. We get up on our own and do our meditation practice early in the morning, some monks may even stay up all night doing meditation. Otherwise, we get up early, about four a.m. and practice meditation until it gets light, then come down to the sala and prepare it for the morning meal. We scrub the floor with coconut fibers and sweep it all around. After that, it’s time to go for the alms round. We walk around the village where the villagers offer us the food, then we come back. The food is then shared out among the monks. We eat the food from our alms bowls using only our hands. We don't use a knife or fork. Afterwards we wash our bowls and clean up the sala. Usually the teacher will give a talk to the lay people who have come to offer food.</p>
+<p>After the meal we return to our huts and there’s time then to do more of our meditation practice until about 3 or 4 o’clock in the afternoon, it varies depending on the time of year, when sweeping starts. We sweep the ground and after that we have a bath at the well, using ordinary cold water. Then we have time for ourselves the rest of the evening. Sometimes in the evening the teacher will call a meeting when he’ll instruct us on meditation, not every day but sometimes. At other times, we may have some work to do, a little bit of building, or sometimes other work. That’s about what it comes to; our life is quite simply.</p>
+<p>As far as daily chanting is concerned, mostly the monks do it on their own. This is a practice monastery. It’s not like a city monastery where the monks go out to do chanting in people’s houses. Normally the only time forest monks go out is if there’s a funeral. When somebody dies in the village, they’ll go out to chant for the dead.</p>
+<p><em>How does the master instruct his disciples?</em></p>
+<p>The master often gives Dhamma talks in the evening where he instructs his students on meditation. Or some subject will come up when the monks are eating the meal and the master will discuss it. Sometimes he tells monks off; he can be quite fierce. His admonitions are always pointing to the development of mindfulness and clear comprehension. He wants to make sure that the monks keep their minds on what they are doing and think about the correct way of doing things.</p>
+<p><em>How did he become a master?</em></p>
+<p>To begin with he was a disciple of another master named Ajaan Mun. Ajaan Mun was very famous and he had many disciples following him. Ajaan Mahā Boowa was with him for about nine years all together. He did his meditation practice under the watchful eye of Ajarn Mun. When he gained success in the meditation practice, he started going off in the forest on his own. The forest is an excellent training ground; there’s nothing like it. Ajaan Mahā Boowa practiced for a long time with Ajaan Mun, who continually steered him in the right direction. Finally, he came to realize the truth. When that breakthrough occurred, he was in the position to become a teacher in his own right, but he didn’t. Instead, he walked through almost every province in Thailand.</p>
+<p>Ajaan Mahā Boowa eventually settled here in his home village because his mother was very old and he decided he would look after her. She became a nun and came to live here in the woman’s compound with another old lady. Gradually the villagers came and he gave talks to them and they liked his talks. So they donated the land for the monastery. Then other monks came here because they liked his teachings and it spread like that.</p>
+<p><em>Can a man ordain only temporarily as a monk?</em></p>
+<p>In Thailand there’s a tradition that young men become monks for a short period, sometimes for just a few weeks. Some people come from the three months of the rainy season. It’s very prevalent nowadays. Personally, I don't agree with the temporary ordinations, but its part of the tradition now and we can’t change it. I think it’s wrong that a person should become a monk when he’s already thinking of leaving the robe. That’s a personal view of mine. The person who's more sincere about remaining a monk generally will remain a monk for a minimum of two or three years.</p>
+<p>In Buddhism the arrangement between the monk and his teacher is not fixed. A monk can leave the monastery anytime he likes. Whether he can come back again depends on the teacher. And he is quite free to give up the monkhood at anytime. It must be like that because we observe quite rigid and strict moral rules. A person who cannot stand it and feels he is going to do something in the robe that would be extremely bad must have the option to give up the robes at anytime. It’s far better to give up the robe and then do what he wants as a layperson.</p>
+<p><em>What does ordination empower you to do?</em></p>
+<p>Ordination allows you to wear the robes and become a member of the Sangha, the monastic order. As members of the Sangha we adhere to a strict set of rules. And these rules are very beneficial to those practicing the path to end all suffering. They act as guidelines showing where we should go and where we shouldn’t. As long as we follow those rules and keep within their boundaries, we feel completely free of blame as far as the world goes. There is a blameless sense that everything in the world is okay as far as we are concerned. That leaves our minds free of concern about external matters, which allows us to get down to the business of developing our minds to the fullest. Without those rules to protect us, we might be unaware of the proper boundaries and begin questioning our behavior, thinking: “I wonder if I should do that or not?”. In other words, worrying about external things when we should be focusing inside. So the rules are psychologically quite important.</p>
+<p>The ordinary person usually takes the five precepts. First one takes the rule of training to refrain from deliberately killing any living being. The intention to kill is important here. The other four are the rules of training to refrain from stealing, from indulging in wrong forms of sex, from using wrong speech and from taking drinks and drugs which cause trouble to the mind. Those are the five basic precepts. There are eight and ten precepts for those who want to go further. They don't take food after midday. They refrain from singing and dancing and other forms of entertainment, including television. They don’t wear jewelry or use cosmetics. They don't sit on high seats or sleep on luxurious beds. And they don't handle money. Those are the full ten precepts.</p>
+<p>It is said the basic five precepts are the basic minimum requirement for a human state. Anybody who violates these rules is in some way going against the human state. Conversely, maintaining that standard of conduct is equivalent to maintaining the human state. As far as rebirth goes, one is likely to be born as a human being.</p>
+<p><em>The ceremonies of Buddhism today, would they be essential to the way?</em></p>
+<p>Most of the ceremonies are not essential to the way. As far as the order of monks is concerned, we have a very large number of rules. We have a lot of procedure describing the way things should be done. However, as far as reaching the ultimate goal is concerned, it’s not absolutely essential. It is used as a guide and training for monks as they strive to reach that goal. Many of the rules are designed to make one mindful; to keep one’s mind on what one’s doing.</p>
+<p><em>Is the doctrine of reincarnation an essential part of the Buddhist beliefs?</em></p>
+<p>Oh yes! We don't actually call it reincarnation, we call it rebirth. Rebirth is based on the principle that causes have effects. If by one’s actions one creates certain causes, the effects that were set in motion by those causes are bound to arise sometime in the future. If those effects haven’t taken place before one dies, the effects have a natural momentum that will carry on into the future. There is a force generated by one’s actions that must have an outlet. That force will have its outlet depending on the nature of the actions that have been done. Depending on the type of action done, that force can arise anywhere throughout the whole realm of existence. It may arise in the heavenly realms the gods, or in the human realm, or in the animal realm or the various realms of hell. Many Buddhist monks have seen these realms in their meditation. You can actually go to see them for yourself if your meditation is good enough.</p>
+<p><em>Then each person is in a continual process of being reborn again and again?</em></p>
+<p>Yes, you can put it like that. Among our mental defilements, one of the strongest is that of wanting existence. By existence we mean a state of being or a form of life where there is sensation and the knowing of sensation. Because of the defilements, we tend to promote those actions which lead to future existence. And because we tend to go depending on our actions, so the actions themselves tend to produce the next life.</p>
+<p><em>The presence of the statue of Buddha in the monastery, is it simply to remind you to be grateful for the way?</em></p>
+<p>Yes. Originally there were no statues of the Buddha at all. At first they simply used an umbrella and a seat. The idea being that the seat was ready for the Buddha in case he should ever come to give a talk. People used the seat and the umbrella as a focal point for their faith. Only later did image-making become common. I think the original idea of the images was that when the image was made by a skilled person it would depict a certain psychological state. If a person’s mind is clear enough he can see this in the image and realize what it’s meant to portray. In other words, the image is a teaching symbol. Nowadays I am afraid they're made just because people think they're nice to look at.</p>
+<p><em>How do Christian and Buddhist monasticism compare?</em></p>
+<p>Western monastics come together frequently for prayers and so on, and part of your purpose is to be a community. Buddhist monastics come together in a place that’s suitable for meditation, where can live and have the freedom to do their practice. The whole idea stems back to the wanderer in the forest, who fundamentally went off on his own. A monk who goes off into the forest has to put up with a great deal of hardship. It’s not easy living in the forest. Most of the usual conveniences of life are lacking and they are not easy to find. Monks living in the forest often have to walk long distances to receive their alms food, which can take quite a long time to make the round-trip to the nearest village and back. The food is often quite inadequate, just village food, nothing special at all.</p>
+<p>The monk may be living in a place where there are wild animals about, some of them very dangerous. He’ll have no external protection at all. At most, he’ll have a platform made of bamboo to sleep on that affords no protection against elephants and tigers. He’ll quite likely see tigers and often hear their roars at night. When he encounters tigers his only protection is the strength of his own mind. It’s a very frightening situation. The overcoming of that fear is a very powerful training. Also, when one is in the presence of a tiger, all the nonsense is driven out of one’s mind. It comes done to what one really is. It’s no good pretending. One knows very well that one is absolutely helpless and faceless. It’s a wonderful training.</p>
+<p><em>Our idea of a personal God that we can relate to, that is very different from Buddhism, is that correct?</em></p>
+<p>Yes, the usual concepts that are held in Christianity are not the same, I’d say that. I always find one of the difficulties with the word God is to know what the word means. There is certainly no universal definition. I would say that in some interpretations of the word God are quite foreign to Buddhism. In other interpretations, we may find some common ground. As far as a personal god is concerned, I can only speak for my own ideas. There is obviously something there which that word represents, but as a Buddhist I would not use the word “God” to indicate it. I’d probably use the word citta, the pure citta. It’s that which acts within oneself, but with the feeling that ‘I am not doing it’. Something other is doing it. Whether that is what's meant by personal God in Christianity, I don't know. In Buddhism we would also call it Dhamma.</p>
+<p>Dhamma is a very complex term. Dhamma means the norm, or that substratum that underlies everything. Because it underlies everything, we can’t say what it is, because defining what it is is also dependant on it. In other words, that substratum can fundamentally be contacted only in one's own heart. I don't mean the physical heart. Everything relies on Dhamma; it is as though it’s the foundation to everything. The things that rely on it are sensation, thought, and understanding; in fact everything we know. So if we try to know Dhamma, what are we going to know it with? We can only know it with something that has arisen from that substratum itself. That doesn’t really tell us what it is. In other words, we can’t know it the way we know other things. We can only know it by contacting it, being it. Whether you would call that a personal God, I don’t know.</p>
+<p><em>If you reach the high state of interior wisdom, can you reach a point where you no longer reincarnate?</em></p>
+<p>Very definitely, that’s the aim of Buddhism. We see life in this world as being “a veil of tears”, as the Christians say. We see it as much worse, in fact. We see it as almost demonic. We know that the demons are inside of us, not out there. These demons are the defilements which lead to so much suffering. I don't think that people can realize the true nature of the suffering involved in our situation until they have overcome it, even for just a very short period. Then they will see that the difference is so enormous. People would never be satisfied until they found that. They don't see that because they are completely swamped by discontent and suffering all the time. It’s always coming up, the whole time. Every thought is colored by it.</p>
+<p><em>Is the purpose of the monks and nuns the same?</em></p>
+<p>Fundamentally yes. But it seems to be much more difficult for women. Women are quite clever enough, it’s not that they lack wisdom. Women have the same ability to sharpen their minds. One of the troubles is, they have difficulty getting on together. A group of men living together can usually get along, more or less. But a group of women has a different dynamic, I don't know why. They all seem to want to be boss. That’s just the way it works. There are always difficulties.</p>
+<p><em>I heard it said that in Thailand the monks are respected more than the nuns.</em></p>
+<p>It’s quite true. One reason is that many women don’t become nuns until they grow old. The woman’s section of a monastery becomes rather like an old folk’s home. When you get old people together like that, they just go on behaving the way they've behaved all their lives, which is gossiping together and cooking and so on. There isn’t much reason for respect. When that is the norm, the social outlook of non-respect tends to grow. Even women who really want to do the practice properly find the situation very difficult. There are one or two places I know of where women live together in an exemplary manner. There is nothing to stop women from practicing Dhamma, but it always seemed to be more difficult for them.</p>
+<p>The Buddha did establish an order of nuns to begin with. They used to wear robes the same as the monks do. But the order died out due to war and famine. Nowadays there is a concerted effort to revive the order of nuns. The problem is, they're going about in the wrong way. So many of its advocates have ideas of women’s liberation mixed into their efforts, which brings in self-interest and the defilements very strongly. When that happens, everything goes wrong. Because it goes in the wrong direction, their revival won’t last. The one thing that is absolutely essential is a degree of humility, a degree of acceptance.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/02._The_Five_Precepts.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. The Five Precepts</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

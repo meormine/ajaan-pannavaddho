@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. The Nature of Delusion</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/14._The_Internal_Senses.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(14)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Samādhi and Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/16._Body,_Citta_&_Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(16)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/samadhi-and-wisdom/15.%20The%20Nature%20of%20Delusion.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>15. The Nature of Delusion</h3>
+<p>Ajaan Mahā Boowa doesn’t like talking about jhāna, so I won't say much about it. Instead, Ajaan Mahā Boowa teaches samādhi. Samādhi is the method of developing calm that is sufficient to bring insight; that is, it lays a sufficient basis to use wisdom to develop understanding of Dhamma. Because samādhi is sufficient, I don't think Ajaan Mahā Boowa wants to teach any more than that. He says that people who naturally go the way of jhāna must go that way; but it’s not worthwhile for other people to try to develop it. It seems as though there is something in the way of a natural ability in jhāna. I wouldn’t like to say what it is, because I am not sure of it.</p>
+<p>It is quite obvious that jhāna can bring about various psychic powers. Because of that, it is a wonderful field for the kilesas to play with. The kilesas can take hold of those results and use them for all sorts of purposes, which don’t do anything to get rid of the kilesas. For that reason, it is far better to keep one’s mind on the process of samādhi that leads to understanding, insight and the development of wisdom. That practice does what it should do. By doing that, one knows one is on the right path. Also, jhāna is not mentioned in the Eightfold Path, but Right Samādhi is. At least one knows what one is dealing with there.</p>
+<p>Jhāna is explained in the suttas, but not thoroughly. Perhaps the Buddha explained it thoroughly, but down through the ages the description has been formalized, so it’s difficult to be sure what’s being talked about. It may have something to do with the ability to go deeply into concentration, but I am not sure.</p>
+<p>In any case, I don't think it’s necessary. There is a lot in the Dhamma that we can speculate about but, in the end, we don’t know what the truth of it is. It is not so much that it might be untrue, but we just don’t know about how to interpret it. Some aspects of Dhamma are quite difficult to interpret properly. Because of that, we have to keep our eye on the kilesas. Their interpretations are always biased, so they can always cause trouble. More than anywhere else, that is where we must look.</p>
+<p>Primarily, the kilesas come under the heading of taṇhā. The three basic factors of taṇhā are greed, hate and delusion. You probably understand the greed and the hate fairly well, but the delusion is difficult to see. It’s the one that catches us every time. Delusion is our worldview. It includes all our beliefs, our ideas and our views about everything. These things are all stuck in our memory. This is the importance of memory. We remember things and situations because we want security. For example, when we come to a new place we search around to find where the things we need are located. Having searched around, we remember where those things are. So we know where to look for them. All of that information is implanted in our memory, and we search around quite frequently to make sure everything is where it should be. We compare with memory all the time. If something has changed, we question the new order and then we adjust memory accordingly. We always want the assurance that things are more or less permanent. We’re always looking for permanence – permanence in the sense that our memory tells us that things are as they were yesterday, or ten minutes ago. We’re always trying to fix the world around us, our environment, so that we know it and feel secure in it. That lulls us into a sense of false security because it deludes us into thinking that our world is permanent, when in fact it’s not. Everything is constantly changing. Even if we don't see it changing, the changes are there.</p>
+<p>We must realize that change doesn’t mean just change out in the world; it also means change in ourselves. When we see something from a different position, or at a different time, there is a change in that object. But the change is largely in oneself, the one who sees it. That’s the real meaning of anicca: constant change. Everything is changing within ourselves the whole time. We remember seeing something in the past, but by the time we see it again it has gotten older. But more than that, in the meantime we have learned more about all sorts of things, so internally the thing is not seen in the same way. It seems to have changed, when in fact it’s we who have changed more. The changes in us are much more important than the changes outside. These changes occur in our mind, our attitude, our understanding and so on.</p>
+<p>When we see things, we compare them with our memory of them to see if the comparison holds up, to see if they’re the same. We have developed an idea of permanence that we fix onto the world. Then, when it changes dramatically – like when it’s destroyed by a bomb – we are really upset. It seems to have suddenly changed, but actually it has been changing the whole time. Our minds just gave it the appearance of permanence, that’s all. In that way, we tend to get deluded by way of seeing and understanding. We have to do that because we crave security. Without that feeling of security we would have to be constantly watchful of everything in our environment and that makes us feel uncomfortable.</p>
+<p>This happens when monks go wandering in the forest. The forest is an unfamiliar place where there is very little for memory to fix on and compare with the past. The day-to-day natural pattern of change is easy to see. Monks can never tell when a tiger is going to pop up, or a big snake is going to come along – they just don't know. Because of that, their false sense of security is cut through, which allows the tendency to think in terms of permanence to drop away. That puts them in a better position to see anicca and to realize the insecurity that they live with all the time.</p>
+<p>Fundamentally we are always insecure. Nobody knows when a blood clot will go into one’s heart. We just don't know. It’s always possible; it could happen at any time. This body is a dangerous thing. We have to look after it as best we can, but we also have to realize that: “This may be my last day …I better keep my mind on Dhamma”. Then we can start trying to defeat the kilesas. The trouble is, we forget. If we could live our lives as though everyday is our last day, that would be very good. I think it was Dr. Johnson that said: “The knowledge that you're going to be executed that morning sharpens the mind wonderfully”. That is the attitude we should have. We should be aware like that all the time, but it’s difficult.</p>
+<p>Ajaan Mahā Boowa talks a lot about paccupanna-dhamma, Dhamma in the present moment. The present moment is where you should be, as much as possible. When you can keep your mind in the present, your worries and concerns of the past and future drop away. The mind is just on this moment, here and now. You see then that the past is a fiction – it has no reality. The future is a fiction – it also has no reality. The only reality is this moment, and that’s all. Because there is nothing to pin on to it, you can't say that this moment is changing or not changing. By keeping as near as you can to that moment, you will find that the mind sharpens up and the samādhi isn’t difficult because mindfulness is always present. To keep the mind in the present, you’ve got to focus on what's there, because there is nothing else to pin onto. The mind likes to pin on to things. It’s natural for the mind to always be focused on something. So if you're going to keep it in the present, you’ve got to fix on what's right there in front of you, and nothing else. This is the relative present. To attain the true present is difficult. The true present is lokuttara-dhamma, which goes beyond the kilesas. But keeping your attention firmly in the present as much as you can is a very valuable practice. Keeping the mind in the present also overcomes the fear of death. When you are in the present you know that the future is illusory, so death doesn’t exist at the moment.</p>
+<p><em>If you feel “foggy”, but you’re mindful of that, is that okay?</em></p>
+<p>If you can really be mindful, then that mindfulness will overcome the fogginess. Once you look at that and see what it really is, your mindful attention overcomes that problem state. It works the same with practically everything. When you turn to look at a problematic mental state, that problem tends to diminish. The thing that keeps the state going is taking your attention away from it by thinking about something else or trying to find some distraction to divert your attention. That usually doesn’t stop it. At best it’s a temporary cure.</p>
+<p>Say a person feels bored. What is boredom? Boredom really means you can't fix the mind on anything. Concentration brings happiness. Boredom means that the mind is dispersed so it can't focus on anything long enough to bring up interest and feel contentment. When the mind is like that, it’s bored. When you turn to examine that state, you immediately bring up something to concentrate on. That itself tends to get rid of the state.</p>
+<p>Why do people climb mountains and cliffs? To me it’s pretty obvious. You might say “because they are there”, but that’s hardly a good reason. The real reason is that when you're climbing a mountain you’ve got to be concentrated. If you aren’t, you fall down. Such activities force one into concentration, which keeps the kilesas out of the way. Because of that, one feels happy. One likes the happiness and contentment it brings. The mind is in the present, and nowhere else. You couldn’t afford to have it anywhere else. If you're climbing a vertical cliff, you must keep your mind on what you're doing, or else you'll fall. That seems to me the obvious reason why people do dangerous activities. People do things that interest them because the things that interest them tend to concentrate their minds and bring them happiness. As long as what they are doing is not contrary to the moral precepts, then it’s probably a good thing. If people like to go climb mountains, they can…..but it’s not for me.</p>
+<p>Whatever we do, our motive is to get away from dukkha. That is what everyone is constantly trying to do. It makes no difference whether they're Buddhist or not. They always find dukkha, they are always searching for a way out of it. Even scratching a small irritation is the same thing: one is trying to find a way out of dukkha. It’s as though we have a pair of scales inside, and as dukkha goes down on one side, we try to balance it up on the other side. We have to find the right counterweights to put on the other side. We test the dukkha inside. That is the function of feeling. Feeling is the test. It tests the situation to see if we like it or not. Feeling is testing if something is painful or not, whether it brings dukkha or not. We use that test the all the time. What we do depends on the results of that test. If it is unpleasant, we try to overcome; if it is pleasant, we try to increase it.</p>
+<p>Pleasant and unpleasant are internal experiences. When a pleasant sensation continues for a long time, it ceases to feel pleasant and tends to turn painful. We don't realize how much of what we know, see, think and do is internal to ourselves. It’s the same with feelings and sensations. There is no feeling out there in the world. Feelings are all internal. When something hits you, you feel pain. But the thing that hits you has no feeling in it; nor does the place on your body where it hits have feeling. The feeling is a reaction that arises internally as a result of the contact. The feeling is something peculiar to us. Because of that, it is hard to define it to anyone else. It’s all inside. The senses are all internal. We see and understand the world through our senses in our own special way.</p>
+<p>What is taste? Say you have roast beef with chili sauce: there is no taste in the beef or the chili. They are made up of chemicals, not taste. When those chemicals contact your tongue, they cause a reaction. From that reaction you get the taste. We say that the taste is in the food, but it isn’t: the taste is in ourselves. We react to the food. It’s all internal. We can understand this intellectually quite easily, but only when we truly realize it do the attachments drop away.</p>
+<p>The same is true of seeing. What we see changes when it goes into the eye. What enters in the eye changes into nervous impulses, or a kind of nervous code that is relayed to the brain. Somehow the brain changes those impulses into visual imagery, though we don't know quite how. From that process we see things. But because seeing is an internal process, we don't really know the thing we see. That is hard to realize because we have such a long history of thinking of people and things in the world as being out there; whereas, in fact, the world and everything in it are all internal. There may be a world out there, but it’s not what we think it is. This is hard to realize.</p>
+<p>Sound is another example. Truly speaking, what's out there isn’t sound – its just vibration. It turns into sound when it gets inside us. What travels through the air are frequencies of vibration, which are then transformed into nervous impulses by the inner ear. The experience of sound takes place inside.</p>
+<p>Yes, everything is a shadow of the citta. All the senses and their corresponding sense organs are different, but the nervous system backing them up is very similar for all the senses. We assume that what happens to the sense impulses in the brain is analogous to this. We then build up the world from that sense data. When the brain is finished with it, it’s handed over to viññāṇa. Viññāṇa receives it and knows it. This is where the knowing comes from; it’s in viññāṇa, which is a form of the citta.</p>
+<p><em>Does that form the difference in each person?</em></p>
+<p>No, the difference in each person will be in the whole of the five khandhas; for instance, in the background of memory, and in the way we tend to think. In order to know something, it must be identified against memory. The way we will identify it will depend on our own past. Different people will identify the same thing in quite different ways. People have different likes and dislikes, so when something comes up, one person will like it and another dislike it.</p>
+<p><em>This is perception?</em></p>
+<p>Perception is really a function of viññāṇa. Saññā is memory. In the West, saññā is translated as perception, but that’s wrong. This came about because the first translations in the West were done by scholars. They had learned Greek and Roman and European philosophies, so they tried to apply those concepts to the five khandhas. They used the word perception for saññā, but that isn’t its meaning at all. Saññā is memory, but it’s the overall function of memory, not just mere remembrance. The perception of anything is viññāṇa. Perceiving means receiving and knowing. But consciousness is a better translation for viññāṇa. Consciousness means “awareness to know”. It’s really knowing together with awareness.</p>
+<p><em>In that mental formation, is that where the kamma is formed?</em></p>
+<p>That is where kamma is formed. It’s formed there because that’s where the thinking process takes place. The rest is all providing data for the sankhāra.<br />
+What happens is that sensations come in and viññāṇa knows them. They're tested against memory to identify them, and then they’re tested against feeling to see if you like or dislike them. Then the sankhāra, or the thinking process, gets hold of them and decides: “I don't like it, so I am going to do this …or that”. It’s a rough way of putting it, but that’s the sort of thing that happens.</p>
+<p><em>Consciousness comes last in the list of khandhas. Does that mean it arises last?</em></p>
+<p>There must be knowing before anything can happen. When we see a familiar object, there will be a reference to memory which will bring up the whole background memory. The thing is seen in a broad context. If it’s unfamiliar, the mind has to go into the details of it and build it up into a picture. Each time it adds a new detail, it must identify it with memory. It goes through the whole process until it has enough data to identify it.</p>
+<p>Childhood learning probably occurs something like that. As I see it, you can't describe the process in too much detail because the process going on in the mind will function according to what the situation is. In one case, it may go through the process very thoroughly; in another it may go through only parts of it. The mind is not like a machine that keeps repeating itself mechanically.</p>
+<p>Look at an object and watch the way your eye follows it, the way your eye moves over it. It jumps all over the place, but generally it will follow the outline shape of an object. With a long object, it is likely to go up and down more. With a fat object, it tends to go around and from side to side more. The eyes’ movement depends on the shape of the object.</p>
+<p><em>Can we practice by looking at things, just know what they are and drop it there?</em></p>
+<p>If your citta is truly focused internally, you may be able to. Mostly, it’s very difficult to do that because you will jump to feeling automatically. So much of our awareness is automatic. We have habitual ways of experiencing things and we tend to follow those habits more readily than anything else. We tend to focus by habit. It’s worth trying to look into your sense awareness; it can show you where some of the kilesas come from.</p>
+<p><em>With feeling, I find it difficult to guard the sense doors. It’s too quick.</em></p>
+<p>See the senses as being internal requires a lot of work. You must go through them time after time after time, and examine them quite a lot. It can be done, but it’s not easy. We tend to switch back to our normal method of awareness so quickly and easily. It just goes back again automatically.</p>
+<p><em>Did the Buddha give any instruction about how to achieve the guarding of the senses?</em></p>
+<p>Yes. The guarding of the senses comes under the heading of the indriya saṃvara. It means guarding or restraining the sense faculties. The first thing is not to let your attention wander about too much. Keep it inside. When you're walking, keep your gaze down – one plough length ahead. Instead of searching around looking, listening and thinking all the time, keep it inside. The restraint of senses is there automatically in the practice of mindfulness. If you’re mindful, your senses will be restrained by that practice. So learn to keep the citta inside. That will help to restrain the senses. What the Buddha said specifically about restraining the senses came under the heading of sīla, but the whole of the meditation practice will also bring that about.</p>
+<p>The main reason why the senses tend to be unrestrained is our interest in experiencing sensations. We want to know everything that is round about us. Partly, it’s the feeling of security, or lack of security; but partly it’s also taṇhā. We’re thinking there is something in this for us. When we see the reason why we crave sensations, we also see the reason why we should restrain the senses, and we also see the way to achieve it. When an inclination to look at something arises, and one deliberately restrains that urge and keeps the eyes down. Hearing is more difficult because you can't shut your ears. It can be difficult if you’re up against large loud speakers.</p>
+<p>The thing that interests me is to see how the citta can switch from one sense input to another. The ear must be receiving and hearing many different sounds all the time, but if you switch your attention to one specific sound, you won't hear the other sounds. The reason is that viññāṇa is acknowledging only that sound. Viññāṇa is required in order to hear. If the viññāṇa, the ear consciousness, isn’t on the sound, then you won't hear it. When you focus on the sound of one particular chicken crowing, you won't notice the other sounds in your environment. They are still coming in the ear, but they're not heard. All sounds are coming in, but viññāṇa will only acknowledge what it is focused on.</p>
+<p><em>What is it when for a long time a sound doesn’t bother you, then all of a sudden it becomes annoying?</em></p>
+<p>The reason why it doesn’t bother you is that viññāṇa is satisfied somewhere else. When that satisfaction dies away, viññāṇa can easily focus on the sound; then, because of a lack of satisfaction, you find the sound very annoying. This is the way we are.</p>
+<p><em>I found it interesting in how Ajaan Khao studied pain and the five khandhas together.</em></p>
+<p>When strong pain arises – either from illness or from sitting long hours – it presents you the opportunity to do research into the nature of that feeling. But it must be researched using wisdom. It’s no good just sitting and bearing it. That doesn’t work. That doesn’t do anything. Putting up with the severe pain it may be very noble, but it’s not of much use. Rather, you should investigate pain the whole time. Where is the pain? What sort of a pain is it?</p>
+<p>What is the difference between the pain and the part of the body that hurts? Suppose the knee hurts: if you were to cut the knee open, where would you find the pain? You can't. You can find nerves there, the things that convey the sensation, but the nerves are not the pain. They're analogous to electric wires going to the brain – they just convey the signal. The pain isn’t in the knee at all.</p>
+<p>The feeling sense is probably the most interesting. I suppose it’s the most primitive sense, and it’s the most important of all the senses. There are people who are blind or deaf or who can't smell or taste anything, but one rarely finds someone who can't feel anything. There's only one case I’ve ever heard of.</p>
+<p><em>Can one get away from the bodily pain by lifting up the mind?</em></p>
+<p>Yes, one can do that, but should one. If it’s the case where one is listening to a Dhamma talk, it’s probably a good thing to do. But when doing meditation practice, the important thing is to know that feeling as best you can.</p>
+<p>You must look at the pain and question it. Just enduring the pain is not enough. That doesn’t help. For example, you can question: “I feel the pain in my knee, but where am I? Where am I who feels this pain? Am I in my knee? If I’m not in the knee, then the one who feels the pain and the knee are quite separate. Why am I so bothered about it?” That’s one way to do it.</p>
+<p>You should never investigate pain with the intention of trying to get rid of the pain, because that’s taṇhā. You should do it in order to know that pain and realize its nature, in order to know what feeling is. When you question it in that way, you begin to realize that the pain and one who knows the pain are two separate things. Because of that, why are you so worried about the pain? Why do you call that feeling pain anyway? Another feeling you call pleasant. What's the difference? Why should you think of one as being painful and the other as being pleasant? Search then to find out the difference between the two.</p>
+<p>Is the pain really located in the knee? You can search all the tissues and bones and ligaments, but you won’t find the actual pain in any of them. There may find nervous reactions taking place there, but none of them are pain. They are merely processes. The nervous reactions come up the spine into the brain, followed by a reaction in the brain. In that case, should you be feeling the pain in the knee or in the brain? Where, in fact, is the pain? The mechanism of feeling is in the brain. So if the reaction takes place in the brain, why do you feel it in the knee? Question yourself like this; the answers are interesting.</p>
+<p>What you find out is that there is a “feeling body”. It’s a mind-made body that is coincident with the physical body, and that mirrors the physical body. It’s a phantom body; it’s not a physical body at all. It’s a mental construct which simulates the body. That mind-made body is the body we know through feeling. The pain is located somewhere in that simulated feeling body, so we associate that part of the body with the pain. If you investigate this carefully, you will see it for yourself. Then you will realize that the body you really know is the feeling body. But you have to see that for yourself.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/14._The_Internal_Senses.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">14</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">14. The Internal Senses</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Samādhi and Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Samādhi and Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/16._Body,_Citta_&_Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">16</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">16. Body, Citta & Self</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

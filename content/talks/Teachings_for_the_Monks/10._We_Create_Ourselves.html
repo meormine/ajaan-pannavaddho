@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. We Create Ourselves</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/09._Knowing_One’s_Character.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(09)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/11._Renouncing_the_World.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(11)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/10.%20We%20Create%20Ourselves.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>10. We Create Ourselves</h3>
+<p><em>At the beginning of your monastic life, what challenges did you face?</em></p>
+<p>I think the main challenge was just maintaining my focus on the meditation practice. I did the practice and my mind went into distraction time after time and I just had to keep constantly pulling it back. I’d say that was the main challenge I faced. As far as the external things were concerned, I returned from Thailand to England shortly after I ordained as a monk. And that was a bit of a challenge because the monks I ordained with all gave up the robe, so I was left holding the baby. And the baby was the English Sangha Trust, which was a big responsibility. But I knew perfectly well at that time that I’d have to find a teacher who I could rely on for guidance. Fortunately, I met a Thai person who was returning to Thailand and I asked him to help me locate a suitable teacher there. He was a mining engineer whose job required him to travel to the Mekong River area searching for minerals. When he was working in the area he liked to spend the night in a nearby monastery. And he’d ask people about the teachers, the Ajaans, in the area. In that way, he learned about the Ajaans who came from the Ajaan Mun forest tradition. And when I came to Thailand he said, “Oh, there are many excellent Ajaans who could give you good guidance.” One day he came to me and said, “There is a well-known Ajaan staying in Wat Bowornives now.” I went to Wat Bowornives and met Ajaan Mahā Boowa. I liked him, and I liked the way he spoke and behaved. So I asked him if I could stay with him at his forest monastery. And he agreed. So I went, and I've more or less been there ever since.</p>
+<p><em>In the beginning, what was your main problem in meditation?</em></p>
+<p>Distraction. Lots of distracted thinking. The problem lasted a long time too. Distraction is one of the main problems people have because the mind tends to go into distraction automatically. And I once questioned: What is the purpose of this tendency, the practical purpose for human life? It seems that it is quite likely to be a method of refreshing memory. At least that’s one of the functions it performs. By constantly rethinking and rehashing our experiences, we refresh our memory of them.</p>
+<p><em>What are relationships like in monastic life?</em></p>
+<p>Monastic relationships are more of psychic rather than a physical nature. In any case, relationships are often a result of past kamma. In that respect, kamma can be very strange. It can put you into a situation where you have an uncanny feeling that you recognize the people that you’re living with. Sometimes in a good way, sometimes in a bad way. And it is quite likely that you will instinctively drop into a mode of relationship that you had with that person in the past. This is how kamma works. It pitches one into a situation that one has already created for oneself in the past.</p>
+<p>Kamma, in fact, is very important. Kamma means action, action done by body, speech, or mind. And the actions of kamma bring results. The results occur in due course when the conditions are right; which means to say that the conditions, just by chance, happen to be in a suitable mode for that particular kamma to come to fruition. That begs the question: can we control our kamma and its fruition? The answer is that we can partially control it because, for instance, if we deliberately put ourselves into dangerous situations we are chancing our kamma. There may be kamma waiting to bear fruit that may cause us to have an accident in that situation. Because of that, the Buddha and the Ajaans all say that people should avoid dangers that they don’t have to go into. If you know a situation is potentially dangerous, and you deliberately put yourself in that situation, that may be giving the chance for some kamma to bear fruit. If it’s a good result, that doesn't matter; but if it is bad kamma, you must be cautious.</p>
+<p>Really speaking, we create ourselves. Kamma means that what we do, we become. And we become that because we have acted in a certain way. So we create our own future. If we want our futures to be good, we must look very carefully at the kamma we make. And be very cautious. This is where mindfulness comes in – the awareness of what is right and what is wrong, what is good and what is bad. By practicing in the right way and doing the right actions, you can develop a pretty good future for yourself. But if you go the other way, it may be very bad. So kamma is very important. When there is kamma, there must be rebirth. We call it rebirth, but actually it is future birth dependent on preceding conditions. When birth takes place again, we pitch ourselves into a situation that originates from something we have done in the past, which means our kamma. If our kamma is good, we can enjoy a good birth. If bad kamma prevails, it could be quite disastrous. It is worthwhile taking a look at the world and questioning: where would be a good place to be reborn? You will probably find that there are not many favorable places. The world is a pretty rough place nowadays. The lesson of that is that we should try to transcend this world altogether, or at least attain a state where we have more certainty about the future. If you want something to motivate you in your practice, something that gives you a good reason why you should practice diligently, think of kamma and its results and the way of future birth. It's a very important contemplation.</p>
+<p><em>Sometimes monks living in the forest have to face dangerous situations.</em></p>
+<p>If a monk is going into the mountains or the forests for the purpose developing his meditation practice, that is quite a reasonable thing to do, even though there are dangers present. But that type of danger is worth the risk because of the value it brings to meditation. The dangers experienced there are usually not lifethreatening; and even though they may entail a lot of hardship, they are usually not physically harmful. If, on the other hand, you start trying to scale cliffs you may unnecessarily be putting yourself and your life at risk. You should be very cautious about such activities. Buddha said that this human life is valuable, and that one should always be careful.</p>
+<p><em>What are the relative values of actions done by body, speech, and mind?</em></p>
+<p>The grossest actions, which are bodily actions, bring the grossest kammic results. Speech is midway. The mind is the most subtle. So the kamma comes up in different ways depending on where it is created. If you give way to thoughts of anger, those thoughts are kamma, backed by taṇhā, or craving. The taṇhā is the wanting to get rid of unpleasant feelings, which can bring about anger. And one tries to get rid of those unpleasant feelings by blaming or criticizing something or other. Those critical thoughts are a type of mental kamma that will come back on one in terms of more unwholesome thoughts. The taṇhā creates a situation of attachment. In the case of anger, it is attachment to this situation that caused the angry reaction. Because that attachment is still there, the anger can easily arise again. When the trigger goes for that sort of situation to occur again (maybe you see the guy somewhere on the street, and suddenly it all comes up), then you have the same problem coming again – and the tendency to make more kamma.</p>
+<p>To effectively get rid of the tendency to anger, you must get rid of it not only in speech and action, but in mind as well. The mind is very important. Probably the best way to do that is to realize that the angry mental state that comes up is a danger to you. Look on it as being something dangerous and unhealthy. Use mindfulness to catch it and to turn and look at the cause of it, which is the feeling. Then you should be able to catch it and hold it. But you must beware, because when you do capture it and hold it, you may relax and begin to feel quite satisfied with yourself. Then a short while later the feeling comes up again, catching you unaware. So you must keep at it constantly until the anger really does disappear. It is one of the primary methods of training you should try develop.</p>
+<p><em>Can one suppress anger?</em></p>
+<p>If you have a tendency towards anger and you allow the anger to come up as thought, the thought is still kamma. If you suppress it totally, that is to say physically, verbally, and mentally, then there is nothing to come up. So the anger must die away. That doesn’t mean to say that the situation won’t be remembered and later bring it all up again. That may happen. Which means that you must deal with it each time it comes up. And each time you deal with it, it gets weaker. But suppressing the speech and action, but not suppressing thought, can cause quite a lot of trouble. For example, smokers who want to quit smoking may throw away their cigarettes and stop smoking, but in their minds they are still thinking about and craving for a cigarette. So in essence they really haven't stopped, they’ve only paused. Their minds are still bound to the old habit. If the mind is bound like that, all the conditions are there to start again. If they give up the thoughts, if they turn away from the thoughts whenever they arise, then the problem will die away properly.</p>
+<p>When one finds faults and criticizes a lot, that’s the root of anger coming up. You must learn that fault finding, criticizing, and anything of that sort is completely wrong. It’s the opposite of what you should be doing. You should take no interest in whether things are right or wrong, or whether they are good or bad. It is quite harmful to have a tendency to criticize and find fault with people all the time. This doesn’t mean that if it is your job to search for faults in things, that you shouldn’t find faults in that sense. Like if you have an inspection job and you have to find what’s wrong and correct it. But if it’s a mental habit of fault-finding, that’s bad. You should try to overcome that tendency. The way to overcome it is to put in mind the idea that whatever other people do is none of your business. It is up to other people what they do. If they do it wrong, they do it wrong, that’s all.</p>
+<p><em>What is the purpose of mindfulness in meditation practice?</em></p>
+<p>Mindfulness is what gives one data to do the practice. For you to be properly aware of anything, you must have your attention focused on that object. If you’re doing one thing and your mind is focused on something else, you are merely performing an automatic action. And you can’t learn from that. Sometimes that unmindful action might be harmful. Something wrong might happen, and being unmindful you are unprepared for it. Then you don't know how to act, or you act wrongly. This can easily happen if you do not have mindfulness.</p>
+<p>In order to learn the way of Dhamma, you must learn by experience. Mindfulness is very important here because it points things out as they happen in the present. Otherwise, you must rely on memory, and memory can become quite distorted. But if you have mindfulness, the mindfulness will fix your experience quite well. And one learns from that. It’s like when you are walking without mindfulness: you can trip or slip up pretty easily and get into trouble. But when you are mindful, your mind is watching in the present, and it’s aware of what is happening. So you don’t get the same tendency to trip up or have trouble. Mindfulness is one of the most important teachings. Wisdom is another one. But if you don’t have mindfulness, the wisdom has got very little to work on. When mindfulness is present overseeing the task, the wisdom can pick up data and understand what is happening all the time.</p>
+<p><em>What is the way to get the best balance of effort in meditation practice?</em></p>
+<p>It depends very much on the strength of the kilesas. If the kilesas are coming up strongly, then you have to use a lot of effort to overcome their defiling influence. But if the kilesas are weak, you don’t have to use as much effort to overcome them. It’s like an enemy attacking you. If they’re attacking you in force, then you have to repel them in force. If they’re attacking weakly, it’s quite easy to repel them. In that case, you don’t want to bring the whole army out to deal with them. So how much effort you should use will depend very much on the kilesas. If the kilesas are strong, you really have to get down to it and work hard. This is suggested in a sutta in the Majjhimā Nikāya, where the Buddha explained how to combat the kilesas when they come up in strength. First, you reflect on the Buddha and what the Buddha did. If that doesn’t work, you should consider what the results will be if you don’t do the practice. Where will you end up? You might go to the hell region or some bad destination. If all else fails, you must simply put your tongue on the top of your mouth, grit your teeth, and deal with the kilesas by force. In other words, your defense against a kilesas must be equal to force of the attack.</p>
+<p><em>Should we put ourselves in unfamiliar situations to promote mindfulness?</em></p>
+<p>The best thing is to try it. Ajaan Khao use to do just that. He would go and sit in practice at night at a certain place in the forest, or on a mountain, and stay there until he began to feel familiar with the place. Then he’d get up in the middle of the night and go to another place and sit down there to practice. After some time he’d go to another place. All the places were located near the area where he was living. He’d shift from place to place at night because when he started getting familiar with a place, he started losing the strength of mindfulness. When he lost the strength of mindfulness, he felt he could let go and relax a little. So, in order to stop that laxness, he’d move to a new location.</p>
+<p>That was Ajaan Khao’s mode of practice. But each person has to find the mode practice that is most suitable. Moving from place to place to do your meditation has value because when you are in one place for a longtime, a lot of what you do becomes automatic. You soon learn where everything is and exactly what’s needed, and you know have to think about things very much. When you move somewhere else you suddenly have to think about everything. For some people that’s good, and for other people it’s not so good. If being forced to think about things just sends your mind into a whirl, it doesn’t do much good. But if it breaks up the tendency to be habitual, it can be excellent training. If that suits you, I’d say do it. It's quite interesting how many of the Ajaans used to go out at night in the forest without a light. They walked meditation in the dark without a light. But I’m not suggesting people should try that until they have developed enough samādhi.</p>
+<p><em>Can you give an example of a kilesa that was really strong and what you did to combat it?</em></p>
+<p>The mental distraction was always a big problem. In that case, you must constantly pull it back to the task of keeping the mind on the parikamma, for example, the breathing practice or the repetition of buddho. One has to pull it back to that task every time it goes away. And you must keep on relentlessly until the kilesas give way. If you persist in going against the kilesas, they usually get weaker and weaker as time goes by. The kilesas cannot withstand persistence. With dogged persistence, you can eventually break through. But you must not give up until you succeed. It's like what Napoleon said: he said other people were just as clever as he was, he simply persisted when others gave way.</p>
+<p><em>How to develop right samādhi?</em></p>
+<p>Right Samādhi basically has two meanings. One is samādhi that has the right purpose and object. In other words, you are practicing samādhi for the right purpose, for the developing of Dhamma. And the object you use is an object of Dhamma, like the breathing or buddho or body contemplation. Practicing like that, the samādhi is right because it is going in the way of Dhamma. On another level, there is the Right Samādhi of the Noble Eightfold Path. That is a different aspect, because that comes up only after all the other path factors are right. When the Eightfold Path factors are all right, including the factor of samādhi, that can become a path moment when one breaks through and, in a way of speaking, catches a glimpse of Nibbāna. But the Noble Eightfold Path isn’t just the training in developing the path factors, though that certainly is necessary. But the Noble Eightfold Path is not attained simply by practicing the eight factors. That happens only when all of the factors come together and coalesce in a state that is absolutely right and correct. When that happens, then the jump can take place. It’s like a bridge leading it over to the other side.</p>
+<p><em>Please explain what moderation in eating means.</em></p>
+<p>Moderation in eating starts off with eating only that amount of food that doesn’t make you fat. That’s a simple way of putting it. But moderation in eating also means that you don’t look for the choice bits of food, but you take the food as it comes. In the end, moderation in eating means that you try to eat those things that help the meditation practice. The Indians have an interesting way of putting it. They say that there are three types of food: tamas, rajas, and setva. The tamas food makes you feel heavy and thick. The rajas food, the moderate type, and makes you hot and it can increase sensuality. The setva food makes you light and buoyant and doesn’t require a lot of digestion. In general, one will probably need a combination of all three. But don’t take too much of the first two types of food because they can have a big effect on the practice. They can dull your mind, because when you eat food, blood has to go the stomach for digestion. When the blood goes to the stomach, it doesn’t go to the head, to the brain. Because of that, you feel sleepy and have difficulty maintaining mindfulness. On the other hand, if you were to eat only the light setva food you might get malnutrition, so you must be a bit cautious.</p>
+<p><em>What should you do in meditation when a nimitta arises?</em></p>
+<p>Look on the nimitta as a distraction. Don’t have anything to do with it. Don’t try to get rid of it, and don’t try to make it persist. Just lose interest in it. A nimitta comes up much in the same way as a memory does. If you grasp at a memory when it comes up, the mind follows it, which means you have gone away from the practice. So it’s a distraction. If a nimitta comes up, it is a distraction in the same way. So you don’t want to be bothered about nimittas when you doing the meditation practice for the purpose of calm and concentration. But there are other times when a nimitta arising from the practice can help a great deal. If you get a nimitta arising of yourself as a corpse lying dead in front of you, that can be quite beneficial. If you can retain it and bring it to mind often, it can prevent the kilesas grabbing hold of you. Or an asubha nimitta can be quite important too. If it suits your character, the mental image of a human body gradually decaying and decomposing can have a profound impact on meditation.</p>
+<p><em>How should you not pay attention to the nimitta?</em></p>
+<p>Your viññāṇa, or consciousness, is the one that knows the nimitta. As long as viññāṇa is concentrating on the nimitta, you can’t get rid of it because it’s the central focus of concentration. But if you intentionally make your concentration go back to the breath, and you force it to stay there, then the nimitta will disappear. When the viññāṇa turns from the image and goes to the breathing, the nimitta loses all its power. It’s like this: suppose you are driving a car and talking to a person in the car and you come to a busy intersection where cars are going all over the place and the person is still talking but you don’t know what he is saying because your mind has turned from that person to concentrate on what’s happening in front of you. When you turn your attention from one thing to another, that other thing just disappears. As far as you are concerned, it's just not there. You can do the same thing with nimittas. When you turn away from the nimitta and focus on something else, the nimitta no longer has any power over your attention.</p>
+<p><em>If the image that arises in meditation takes the form of brightness of mind, should we focus on that brightness or not?</em></p>
+<p>The brightness of mind means the perception of light, which is there whether your eyes are open or closed. Everything seems bright. It can be visible light, and it can become very strong too. More than anything else, brightness of mind is an indication of the state of the citta. When the state of the citta is good, you may get light coming up. But not everybody does. In people who have a tendency toward wisdom, the wisdom may block the brightness. The reason for that seems to be that when that person has light coming up, the wisdom jumps on it and begins to question it, and that stops it. But you shouldn’t go searching for brightness or light in your meditation. If it comes up, okay. If not, it doesn’t matter. Light is not the major thing that matters in meditation, but it is a good indication that the mind is concentrated.</p>
+<p>The brightness of mind is a bit like a speedometer indicating the state of mind. But the brightness is not something you should focus on or worry about; it’s just giving an indication of your mental state. Brightness is something that easily attracts attention, and because of that attraction it can also distract a person from the meditation practice. So the best thing to do is to go on with practice regardless of the brightness, which will probably make it grow even brighter.</p>
+<p>Ajaan Mahā Boowa said he experienced an amazing brightness of mind just before he attained enlightenment. He could see that there was a focal point to the brightness and he questioned what that focal point was. He eventually realized that the focal point was the essence of repeated birth and death, the very nucleus of existence in saṃsāra. As soon as he chucked out the brightness and its focal point he attained enlightenment straightaway. In other words, that brightness was preventing him from going beyond. After that, he described the former brightness of mind as being like buffalo shit compared to the state of the enlightened mind.</p>
+<p><em>What should you do when the breath disappears in meditation?</em></p>
+<p>If, when doing the meditation on breathing, the breath becomes very, very fine until you can no longer find it, then you should keep your attention on that point where you were watching the breath before it faded away. When watching the breath, you should be focusing on it at one point, that point where it is felt most strongly. As the feeling of the breath passing that point becomes finer and finer, you must keep on that point as the main thing to hold the attention. If the breath disappears from your awareness, stay with that point and it will come back again. If the breathing should stop entirely because it’s gone so calm that there is no breath left, don’t panic, it will eventually come back again. Most people panic when that happens and quickly start breathing again, which breaks up the calm and concentration. The cessation of the breath is quite valuable. It's not something you should break up.</p>
+<p><em>Do you have any recommendations on how to handle anxiety?</em></p>
+<p>You can do it by taking in a breath in and pushing it down deep and low in the stomach, and then letting it come out very, very slowly. Do that no more than three times. If you do it too much it’s bad for you; but if you do it just once or twice it’s alright. And it can help quite a lot because the breath and mind are very close, so they affect each other. If you can overcome anxiety in the way of breathing, that then also helps to overcome it in the mind. The two will affect each other.</p>
+<p><em>Can one spontaneously attain meditative absorption as a result of kamma or some other condition?</em></p>
+<p>You certainly can attain it from kamma, and other conditions as well, but the conditions have to be the right ones. If you have practiced meditation in the past, it can come up through that. You can get a boost in the practice from past kamma, from what you have done in the past. If you have attained samādhi in the past, that can lead to spontaneous meditative absorption arising in the present. Meditative absorption is another word for samādhi. The aim of the practice is to attain that absorption of mind, because with that absorption the mind becomes calm. When the mind is calm, it’s happy. It’s happy because the kilesas are not bothering it.</p>
+<p><em>What advice do you have for people who find it difficult to attain samādhi because their minds cannot stop thinking?</em></p>
+<p>You must search and question why it is so difficult for you to attain samādhi. It’s a general axiom in Buddhism that all conditions arise because of the surrounding circumstances, so you must examine those circumstances to find out what conditions are stopping it. You must look around in your current circumstances and discover where the problem lies. Circumstances can be varied; for example, it may be the food you eat, or the weather, or the actions you have done, or speaking too much or too little; it can be internal bodily conditions, it can be the people you associate with, it can be one of many different things. So you must search and try to find the key to your problem. The conditions can even stretch back into past kamma. If any of those factors are wrong, then the conditions may not be right for the attainment of samādhi. So you have to look at those conditions and find out where the fault lies. Quite often, it’s simply too much thinking. The mind is whirling around all the time. In that case, you must learn how to stop thinking. Developing samādhi means the stopping of thought. That doesn't mean to say you stop it all the time, of course, but when you are practicing samādhi you should stop it. In other words, you learn how to control thought.</p>
+<p><em>Why is it that some people never seem to find the right teacher?</em></p>
+<p>Some people truly search to find the right teacher, but they ended up searching in vain. But it can also happen that a person, even though he meets good teachers, avoids putting himself under a teacher because he doesn’t want to be disciplined. I know quite a lot of people in the West are like that. They go from one teacher to another, but they can never find any teacher that really satisfies them. It may be because once the teacher starts telling them what they should really do, up come their kilesas to resist the teaching, and they think: “This teacher is no good.” A Zen Master once said: “When you find a good teacher, hang up your sandals and stay there.” There’s another story from the Zen tradition. A monk went to see a teacher and when he entered the teacher’s room and paid his respects the teacher immediately asked him on which side of the door he had placed his walking stick. The monk could not remember and realized that the teacher had caught him being unmindful. So he thought, “This is a good teacher for me”, and he stayed.</p>
+<p><em>Do you find valuable lessons in the stories of the Christian monastics?</em></p>
+<p>There are valuable lessons. The value is in the qualities of the people involved. Some of them had remarkably good qualities. One monk, a Russian orthodox, went to a quiet place in the forest to live, and after a time people came and found him. Before long they started to build a monastery there. That’s when he realized he should go to another place. So he went to another quiet place, and eventually the same thing happened again. So he moved again. In other words, the world was trying to catch him all the time. But he refused to be caught by it. It’s reminiscent of the simile of the log. Buddha saw a log of wood floating down the Ganges and he told his disciples that the log would eventually reach the ocean, provided it didn’t get snagged up by roots and weeds, provided it didn’t get caught on a sand bank, provided it didn’t go rotten and sink, and provided it wasn’t taken by gods or men for use. If none of those things befell it, in the end it would float out to the ocean. The simile means that provided a monk doesn’t give way to all the attachments of the world, then he will eventually float out to Nibbāna. The Russian monk was not a Buddhist, of course, but his way of practice was good. In Christianity they had many people who were very enthusiastic and very zealous, but they were saddled with a lousy doctrine.</p>
+<p><em>Do you think that people who believe in God can have right view?</em></p>
+<p>I would say that belief in God is not right view, but it can lead to right understanding in the end. If the person searches for God and doesn’t give up, goes on and on and on searching for God, and he’s never satisfied, he’s bound in the end to realize that God is a figment of his own mind. And that can bring him to right view. The ordinary meaning that people have of God is almost an impossible condition. It's a complete mixture. People say, “It’s God’s doing” or “It’s God’s will”, but they have never thought out the implications of what that means. The actions they ascribe to God may be completely immoral, but they never consider the moral dilemma that such contradictions create.</p>
+<p>So the answer can depend on what one means by God, and on the level of the person who believes. For the ordinary person pushing a plow around the field, it probably doesn’t matter that much. A belief in God may help him cope in some ways. But people who really want to develop spiritually have to question what is meant by God. When considering God, you have to ask some questions. First of all, there are the gods of the brahma worlds. A lot of the gods we hear about would seem to equate to that level because they are a part of the world of saṃsāra just like we are. For a person to contact a god and be affected by a god, that god must be impermanent, since we are not affected by things that are not impermanent. The only thing that can affect us in that way is Nibbāna, because Nibbāna is part of us anyway, and not something separate.</p>
+<p><em>Some people say that God is the same as Dhamma.</em></p>
+<p>That is just semantics. When you say that God is Dhamma, you are just giving it another name. It depends on what your fundamental idea of Dhamma is, and what your fundamental idea of God is. To put it like that is very misleading. It is not right to say that the God of Buddhism is called Dhamma. It’s not like that; it’s not correct. People who come to Buddhism, they should learn a bit about semantics; that is, the meaning of words. The meaning of a word depends on the person who uses it. Often a person can change its meaning to suit his own purposes. When the person uses the words and another person picks up the word, there’s no way to tell if the person who picked up the word picked up the same meaning as the person who spoke it. Words are symbols, and those symbols can have whatever meaning you want to give them. If a person gives a wrong meaning, they get the wrong end of the stick. The speaker and the listener are at cross-purposes all the time. You should be very cautious with words; it’s very easy to get muddled with them.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/09._Knowing_One’s_Character.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. Knowing One’s Character</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/11._Renouncing_the_World.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">11</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">11. Renouncing the World</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

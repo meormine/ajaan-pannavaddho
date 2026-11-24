@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. The Tornado of Self</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/01._The_Benefits_of_Sangha.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(01)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/03._Freedom_Through_Discipline.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(03)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/02.%20The%20Tornado%20of%20Self.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>02. The Tornado of Self</h3>
+<p><em>What is real and what is unreal?</em></p>
+<p>Everything that is impermanent is unreal. Because it’s changing all the time, it never has any time to be real. If you say it is a ‘thing’, then the thing immediately disappears. So there is a lack of reality there. But because everything is moving, we can experience things. We can experience movement and see things, and so on. But we never actually get to things, since we are always separate from them. When you come to Nibbāna — the pure citta — that is real. Because it’s real, it’s permanent as well. There’s no change in it. Because of that, we can say: “What is impermanent exists, but it is unreal; whereas what is permanent does not exist, but it is real!” But that ‘real’, although it is not existence — because existence means the experience of sensation — it is the reality. This is a paradox which is difficult to understand. The citta, being in that state of emptiness, can take on any characteristics. It is free and unlimited. And, in fact, it does take on some of the characteristics of the kilesas. When the citta takes on the characteristics of the kilesas it manifests an apparent movement, but its underlying reality is not affected. It's difficult to fathom. You need a mind a bit like a corkscrew to understand the principles involved here.</p>
+<p>We cannot say that we have no ‘self’ because we create it by referring to it. That very reference creates it. The self perspective is there all the time, but it is a constantly changing perspective created by the kilesas, and that's all. I visualize it like one of those tornadoes you get in Texas. It comes buzzing across the plains, whirling around and damaging everything in its path. But when you examine it, it is only air! Nothing else. And when it stops whirling, where is it? You can’t find it! In another words, there’s no substance in it. There is no entity there. Its existence is simply that whirling — that constant dynamic movement. The ‘self’ is very much like that. It’s just whirling about all over the place, driven by the kilesas in the citta. The citta empowers the kilesas. It’s the one that gives them strength. The kilesas are rooted in the citta, so it always tends to go in the direction of the kilesas. And it acts like a tornado then. But it is not right to say there is no self. Certainly there is no entity of self, no permanent self. But there is an impermanent self-perspective which is constantly changing from moment to moment.</p>
+<p><em>Is there the quality of awareness in the pure citta of the Arahant?</em></p>
+<p>The quality of awareness may be or may not be there, because the Arahant does not need such faculties. The Arahant doesn’t need to be mindful. Those faculties are all factors of the training to become an Arahant. You can see in the suttas where it says that the Buddha set up mindfulness before him. Now, if he was always mindful, why was it necessary for him to set up mindfulness? It means he was not always mindful, because there was no need to be. The Arahant has completed the job, so he can sit back and relax. He had can put his feet up and take it easy.</p>
+<p><em>What is the pure citta? Is it the same as Nibbāna?</em></p>
+<p>The nature of Nibbāna is emptiness. When our consciousness is rooted in this world, we cannot become aware of emptiness. So we cannot know what it is. Because we are always aware of things — feelings, sensations and so on. And everything we know is apparently separate from us. In other words, there is duality: there is the one who knows and there is the thing that’s known, or perceived. And because of that apparent separation between the two, we never really get into contact with the things we perceive at all. For that reason, we are always in the sort of half-state where we want things but we can never really get them. For example, somebody wants a motorcar so they buy it and then they say “I’ve got it now!” In what way has it changed? Nothing has changed! All that's changed is the idea in the person’s mind. The car is just the same. To say “it’s mine” is just a way of speaking, a social convention, that’s all. Because of that, we really have no possessions. It’s only that we think we do. We really do not have a body either. Our bodies do not belong to us. They belong to the world. They come from the world, are supported by the world and go back to the world. This thing we call a body belongs entirely to the world.</p>
+<p><em>How can one reflect skillfully on self?</em></p>
+<p>To reflect unskillfully on self and not-self is when people try to convince everybody that they don't have a self. But what doesn't have a self? They say ‘I’, implying self-identity, and then they say that that ‘I’ has no self. What is it that has no self? In their conversations, some of these people try to avoid using the personal pronoun ‘I’, as if that is going to change their deep-rooted self perspective. That is the way of being unskillful. Many Buddhists have a belief in not-self, but beliefs are just views. And their belief in not-self doesn’t go deeply inward at all. Having no depth to it, it’s just a superficial view. The truth is that everything they do comes from a deep-seated self-identity. On a deep level, the self is something very real to them. When you look in Buddhist publications, many of them use the term ‘no-self’, and claim that anattā means there is no self at all. This indicates that they have not understood anattā properly. It is true that there is no permanent self, no fixed entity that you can call a self. But that doesn’t mean there is not a whirlwind of changing phenomena that you can call a self.</p>
+<p><em>The nature of Nibbāna is emptiness, empty of what?</em></p>
+<p>Empty of this world. Empty of saṃsāra. Because what we think of as being full or being something is always saṃsāra, always dualistic and relative. Because of that, where those things are lacking, the world says it is empty. But that emptiness is not a nothingness; it’s a reality. That reality is quite incomprehensible to us because we have to think about it in relative terms. Our thinking minds can only understand in relative terms. What we are is built up around the thinking mind, so we try to comprehend emptiness in relative terms, but we can’t. What we call a thing is itself merely a conventional reality, a product of our minds, but we don’t realize it.</p>
+<p>A good example is the way the senses work. When seeing an object, the object seen affects the eyes, and from there sensory data goes inward to the brain where it is processed somehow. From that visual process an image arises inside of us. That internal image is what we see. Because of that, all our seeing is composed of internal images. It’s quite simple to work out. Even though what contacts the eye is a very small and inverted on the retina, yet we see huge mountains and trees. And we don’t realize that it happened only because of a very, very small stimulation we got on the retina. So we see sights internally, not externally. For that reason, the whole world of seeing is within us — it’s not outside. In fact, we do not know what’s outside. The same is true of the hearing. Out there are only vibrations that contact the ear and excite the auditory nerves, which in turn send sensory data to the brain.</p>
+<p>In some mysterious way the brain processes that data and we experience those strange sounds that we hear. Really speaking, all sounds are within us, not outside. It’s same with the other senses. Smelling and tasting are just chemicals, but they become smell and taste when they get into us. Feeling is just contact or variations of temperature, which turn into feeling when they get into us. Because of that, our view of the world is a very personal view. We can only view the world from ourselves; we cannot view it from anywhere else. Even if we try to put ourselves into the position of someone else, it still remains our view of someone else. So we see the world entirely from our own viewpoint. And that viewpoint is always internal. The whole of it is quite empty of any real substance as well.</p>
+<p>The problem is that we have a fixed idea of our own reality. With this fixed idea of our own reality, we cannot see the relativity of the world. We can’t see how relative we are, and how changeable. And the kilesas don’t like that change and uncertainty, so they bring up the notion of ‘self’ and make it appear very important and real. Then we cling to this self-identity out of fear that there is nothing else outside that. So there is a dislike of letting go.</p>
+<p><em>What are good methods for bringing up effort?</em></p>
+<p>You must gain some positive experience in meditation, even if only a little. Then you can recollect those good results and strive to experience them again in the future. This can help to bring up effort. Until you have gained some good experience in the practice, meditation can seem like hard work, which makes it difficult to keep putting forth the effort. Because you are resisting the kilesas, it is not easy to develop determination when you are trying to do meditation practice. In worldly pursuits is easier to become determine. For example, when playing football you can be absolutely determined to get the ball into the goal and win. But there are kilesas behind that. When it's something bad, it’s very easy to be determined. But for good things it is not so easy. A cat looking at a mouse is almost in samādhi, but it’s not right samādhi. It's wrong samādhi. But it’s easy. It is easy to think about bad things, but good things are difficult because the kilesas don’t like them. When you think of bad things the kilesas will help you, they won’t interfere. They let you do it, because it’s going their way. But when you come to do something that is right in the way of Dhamma, the kilesas don’t like that at all, so they kicked up and cause trouble.</p>
+<p>It's worth reflecting on how important it is for you to generate the effort to overcome the kilesas. You mustn’t think the kilesas are small things that don’t matter. They do matter! All the human trouble in the world comes from kilesas. After all, guns don’t shoot themselves, bombs don’t drop themselves, and people don’t torture themselves (not mostly, anyway!). These actions are the products of the kilesas in people’s minds. That is the way the kilesas work, so they are not small. And the most important of the kilesas is, of course, rāga-taṇhā, or sexual craving. It’s extremely important. And it comes up in all sorts of ways. In the male it comes up as aggression, and in the female comes up as enticement. There is a strong push and pull between the two. These defiling tendencies easily spread out into all our activities. Aggression comes up in business, in sports and in war, for instance. These tendencies stemming from rāga-taṇhā are very prominent in human beings. In fact, rāga-taṇhā is probably the most important group of kilesas in the human being. If you can overcome rāga-taṇhā, then you are safe from further birth in the human realm. That is the state of Anāgāmī.</p>
+<p><em>Does rāga-taṇhā include all the sense spheres?</em></p>
+<p>You cannot fix any definite boundary. When you investigate rāga-taṇhā, you find all sorts of things you never realized before come from sexual desire. The way the human mind thinks is symbolic, it uses symbols all the time. And sexual symbols are everywhere. People use them without even realizing it. Somebody who had developed wisdom can observe people and the way they talk and the images they create and see that most of the symbols they use are sex symbols. But most people don’t realize that. And that is because they don’t understand the way their minds work.</p>
+<p><em>Is that why the body investigation is emphasized?</em></p>
+<p>Yes, body contemplation and the asubha practices. The asubha contemplations are the best ones to deal with sexual craving. When rāga-taṇhā comes up, the asubha contemplations are the antidote. They are very effective.</p>
+<p><em>When an Arahant smokes cigarettes or chews betel nut, both of which can be addictive, is that not a form of desire?</em></p>
+<p>Firstly, you must realize what the Arahant is and is not. The Arahant is the pure citta. The Arahant is not the body, and not the mind. The citta is pure because all the kilesas have gone. So if the Arahant happens to find that chewing betel nut helps to sharpen the mind a bit, he uses it for that purpose. Betel nut is a stimulant that is used to sharpen the mind if one wants to give a talk, for example. It can quite useful in that way. As to desire, it’s not desire. But there is nothing to stop an Arahant getting pleasure out to something. If chewing betel nut brings some pleasures, why not? He’s done his work and passed beyond. Chewing betel nut doesn’t have any effect on the citta. It affects only the body and mind, that’s all. The citta remains pure. In another words, the Arahant does not need to do any more training. He does not need to cut out those things that people think are bad or immoral, simply because he knows that those actions do not bring him any more contentment.</p>
+<p>And the Arahant has the brahmavihāras present as well. So the Arahant will maintain the monastic rules, attend recitations of the Pāṭimokkha and continue to go on almsround every day even though those practices are no longer necessary for his development in Dhamma. It is not for his own sake that he keeps them up, it is for the sake of other people. Although these practices do not matter to his development, they do matter to other people because they set a good example. If the Arahant does not follow those practices, nobody else will. So as teachers they must be careful to set the right example. There was the case of one Arahant who did not go to the Pāṭimokkha, and the Buddha asked: “Why don’t you go?” And he said: “Well, I’ve got no need to!” And the Buddha said: “If you don’t go, who will? You are known to be an Arahant, but you don’t go so everybody else will assume that they don't need to go either. So you must go.”</p>
+<p><em>What is the argument against smoking?</em></p>
+<p>Because for people with kilesas, there probably is taṇhā there. I know. About 33-34 years ago, I was living at a monastery in Lopburi province. I was smoking at the time. So one night, sitting in a hut on the top of the hill, I thought to myself: “Why do I smoke?” After reflecting on it for awhile, I realized that it was probably because of taṇhā, because of my attachment to tobacco. I knew that the Buddha taught that taṇhā brings dukkha, so I immediately decided that I must stop. I did, and I haven't smoked since. I’m not saying that it’s logically as easy to give up smoking as that. But I had thought many times about giving up smoking, as many smokers do. But that time, I stop. In giving up smoking, it is not enough to just stop smoking cigarettes. You must also give up the very idea of smoking. Because of that, anyone giving up smoking should refrain from even thinking about smoking. If thoughts of cigarettes come into the mind, turn away from them quickly! By that means, you quit smoking both externally and internally. That is the way to do it.</p>
+<p><em>Shouldn't an Arahant set a good example for others by not smoking cigarettes?</em></p>
+<p>Perhaps. But traditionally in the northeast region of Thailand condemnation of cigarette smoking has never been very strong. It is considered normal for men to smoke. There has never been a debate over the advantages and disadvantages of smoking. Local Thais don't take the attitude, which is very prevalent in the West, that anything that is experienced as pleasant must be bad for you, or even evil. The Calvinist attitude that all pleasures are in some way evil, so we mustn’t enjoy pleasure, is quite prevalent in Western society. But activities like smoking are not particularly evil, and don't have any damaging effects on the mind, even if they do on the body.</p>
+<p>Such questions are given an exaggerated importance in the West. Another one is: Why do monks eat meat? — as though there is something fundamentally immoral about eating meat. But Buddhist precepts never say you must not eat meat; they say you must not kill. Taking life and eating meat are two very different actions. The killing of an animal requires very definite type of volition that is completely absent when a person eats meat. Meat is not an animal. As monks we do not kill animals, and if we know, hear or suspect that an animal has been deliberately killed to feed us, we are not allowed to accept that meat. That is one of the monastic rules. But if the meat is simply bought in the market, there is no prohibition because we have no direct connection to the act of killing. In other words, it’s not kamma. There may be an indirect cause and effect in it, but there is no kamma involved. So eating meat does not prevent one from becoming an Arahant, which is our whole purpose.</p>
+<p><em>Do the Mahayana teachings have Right View in terms of the Noble Eightfold Path?</em></p>
+<p>There is not much wrong view in the Madyamika School or the Viññāṇavadha School. The fundamentals of those two schools can be found in Theravāda as well, although the emphasis is somewhat different. I am suspicious about a few of their teachings, but on the whole the teachings are not really wrong. But when it comes to the Bodhisattva ideal, I don’t see the point. Is it right to restrict yourself from attaining Nibbāna so that you can return to the world to teach people? What brings you back, after all, is kilesas! Kilesas are the cause of rebirth. Is it wise to promote kilesas so you can come back again? The reasoning seems all wrong to me.</p>
+<p><em>Is the Arahant not the same as the Bodhisattva?</em></p>
+<p>No, because the Bodhisattva makes a vow that he will keep being reborn until all beings are enlightened. Now, there is a get out in that vow. Because when you have attained enlightenment, the only “all beings” you know are the ones in your own mind. So by becoming enlightened, you have enlightened all beings. It seems to me to be a teaching that arose because Mahayana went more towards teaching lay people than teaching the bhikkhu Sangha. The Bodhisattva vows are a kind of lay teaching. As bhikkhus, I think the obvious approach is to say: “I’ve got kilesas. These kilesas are the real problem, so I must get rid of them.” What is the point of bothering to make resolves to come back again until you have got rid of the kilesas? After you get rid of the kilesas, you are in the excellent position to know what to do. You will be free then, and you will know what you should do. If there is any coming back to do, you will know about it and arrange it accordingly. But it is important to keep in mind that our primary task is to try get rid of those kilesas. That’s what the whole of Buddha’s teaching is about.</p>
+<p><em>What faculties do we need to develop to overcome the kilesas?</em></p>
+<p>The most important faculty used to overcome the kilesas is mindfulness. There is little doubt about that. Mindfulness is the best tool you have. Mindfulness automatically tends to show you where the kilesas are and how they operate. When you are always watchful, keeping an eye on them, the kilesas cannot easily get a grip on you. To overcome the kilesas, you must go directly at taṇhā, craving. The craving is the trouble. By overcoming craving, you overcome attachments. But you cannot deal with the attachments directly. Trying to overcome attachments by will power or by sheer determination does not work. To get rid of the attachments you must first get rid of their cause. The cause of attachments is taṇhā, craving. You see it in the Paṭiccasamuppada. Taṇhā is the condition for the arising of attachment. When you get rid of the taṇhā, the attachment cannot arise. And if you want to get rid of the taṇhā, you have to watch the feeling, because feeling is the condition for taṇhā. That is a very important point, because exactly at that point you can put a barrier between the feeling and taṇhā. The feeling is just feeling; it’s the result of past kamma. Whereas taṇhā is new kamma, the kamma created in the present. If you can turn away and stop that new kamma from coming up, then the situation gradually gets better. But the Paṭiccasamuppada does not explain how to do this. It merely explains what happens, but it does not show the way to deal with it. The way to deal with it is to find that feeling and examine it to see how that feeling gives rise to taṇhā.</p>
+<p>To give an example: Say you hear something you don't like, which causes an unpleasant feeling to arise. We tend to think of that unpleasant feeling as a feeling of aversion or a feeling of hatred. But the feeling of hatred is not itself hatred. There is no hate in the feeling. It only becomes hatred when you start thinking and criticizing and blaming. That’s where the troubles come, in the thinking. The feeling of aversion is an unpleasant feeling. It usually occurs down near the solar plexus. To deal with it, you must learn to turn inwards and look at that feeling. That's very important. By turning inward and looking at it, you prevent it from escaping and turning into bad thoughts. In that way, you can defeat it, because no more kamma is created by the kilesas. To begin with, you can only defeat it a little bit in that particular situation. To get rid of that particular hatred completely, you will have to do it many times. As you do, that hatred will gradually fade away.</p>
+<p>So try to learn to look inside and find out where the feelings are located and what types of feelings arise. Think back and reflect on the last time you felt hatred. What happened? What did you say? How did you act? Realize that in order to avoid unpleasant consequences you must not let those feelings turn into thoughts. Because of that, you should think about the feeling, not about the other person. In other words, if you keep it internally there is no problem, and no harm is done. If you let it escape out into thoughts, speech and actions, that’s where the trouble comes, because that’s where the kamma is created.</p>
+<p>The human being is divided into emotions and intellect. The emotional side is very important. In the West, the intellect is pushed as being very important. Of course, intellect is important; but it’s a menace if it gets out of balance with the emotions. The two must be in proper balance. If the balance tilts to the side of the emotions, so the emotions are strong and the intellect is weak, that is not actually dangerous. Although, it can lead to some pretty bizarre actions. If, on the other hand, the intellect is excessive and the emotion are not develop enough, that’s dangerous. It’s this sort of mentality that leads people to insanity and suicide. So you must get to know your emotional side. The right way to develop the emotions is the way of samādhi. Samādhi practice is the way to achieve a proper balance. The intellect is, basically, the way of wisdom. But samādhi first, intellect second!</p>
+<p><em>Should we strive to gain deep samādhi first, before doing much work on vipassanā?</em></p>
+<p>I would say yes. Samādhi is a training that restrains the mind and prevents wild or wayward thoughts by developing strong mindfulness. It’s best to develop samādhi for quite some time until you at least have some experience in it before gently turning the mind to vipassanā. It’s also best to keep your practice more on the samādhi side of it, and from time to time turn and carefully investigate the body.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/01._The_Benefits_of_Sangha.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">01</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">01. The Benefits of Sangha</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/03._Freedom_Through_Discipline.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. Freedom Through Discipline</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

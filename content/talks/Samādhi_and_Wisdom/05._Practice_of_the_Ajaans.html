@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Practice of the Ajaans</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/04._Overcoming_the_Kilesas.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(04)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Samādhi and Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/06._The_Power_of_Sexual_Craving.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(06)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/samadhi-and-wisdom/05.%20Practice%20of%20the%20Ajaans.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>05. Practice of the Ajaans</h3>
+<p>I’ve just been going through the Paṭipadā to check the translation. It’s somewhere near the state of printing. Once I’ve checked it through and got all the corrections done, there is only the introduction and the glossary to do. It should be finished soon. The Paṭipadā is a companion to the Biography of Ajaan Mun. It’s called “The Dhutanga Kammaṭṭhāna Practice of Ajaan Mun”. Dhutanga is the ascetic practices. It goes into the practice of Ajaan Mun and many of his disciples. It’s pretty comprehensive. Ajaan Mahā Boowa wrote it.</p>
+<p><em>Did Ajaan Mun write anything himself?</em></p>
+<p>There seems to be some uncertainty about that, perhaps one or two things, but there is nothing that is guaranteed to be Ajaan Mun’s writing, as far as I know. There are some of his talks that somebody wrote down afterwards. The trouble is, when somebody does that, you never know how accurate their memory is. They often bring in things that weren’t really said or they understood what was said in a certain way that is not quite right. You can never be sure. According to Ajaan Lah (he’s in Pu Jor Kor, near the Mukdahan toward the east from here), if you listen to Ajaan Mahā Boowa’s teaching, it’s the same as Ajaan Mun’s. You can say it encompasses everything Ajaan Mun taught so it gives you a pretty good idea of what Ajaan Mun taught. Apparently Ajaan Mun’s teaching was sometimes very fierce.</p>
+<p>At the moment I’ve reached the place where he (Ajaan Mahā Boowa) gives the partial story of Ajaan Khao, who lived in Wat Tham Klong Pain. He was very good, very good indeed. When Ajaan Khao left his village, none of the villagers there wanted him to go. They said: “You can't do anything nowadays, it’s all finished. The time when people gained enlightenment is long past now. The best you can do is read the books, learn from the books and become a good scholar.” He didn’t say anything but he thought to himself: “These people don't know the way of Dhamma. They're talking about Dhamma like this but they don't know. It’s what they say I should listen to, but what the Buddha said”. Eventually he left, he went wandering dhutanga. He walked from his village in Ubon to That Phanom, about 150 miles, looking for Ajaan Mun. He didn’t find him there. Then he walked from there to Udon, and he didn’t find him there either. He heard Ajaan Mun was in Changmai, so he went up there, walking along the Mekong River then across to Changmai. Eventually he caught up with him, but Ajaan Mun wouldn’t let him stay with him to begin with. He’d talk Dhamma to him, he’d teach him, then he’d say: “You go off on your own. I don’t want anyone to stay with me”. So he had to go off and do the practice on his own. He went on practicing what Ajaan Mun taught him for about 3 or 4 years. Then Ajaan Mun said: “Alright, this rains retreat period you can come and stay with me”. After that he stayed with Ajaan Mun every rains retreat. He attained enlightenment; one can say that without a doubt. He taught at Wat Tham Klong Pain, which is about forty miles from here. I met him several times. I was never taught much by him though I met him several times. In the Paṭipadā, Ajaan Mahā Boowa explains how he practiced. His practice was very strict and very strenuous too. In the forest he had three caṇkama paths made for walking meditation. He called one the Buddha, the second one Dhamma and the third one Sangha. He’d go to the Buddha path and he’d look on his walking meditation as praise to the Buddha. Later he went to the second path, where he walked in praise to the Dhamma, then to the third path in praise to the Sangha.</p>
+<p>He said when a person lives in a place for awhile they get use to that place. Once they get use to a place they feel comfortable. When they feel comfortable they don't mind letting their mind wonder. So he said what he use to do is stay in a place for a short while and then move. It didn’t matter where, just a short distance away was enough. He’d go at night and stay at one place, then he'd move to stay at another place. When he felt that he was getting too used to that, he'd go somewhere else. He kept on doing that all the time and he found that he got good results. He found that he could keep his mind under control and keep the kilesas down. The way he practiced was really quite strenuous. Very few people can do it as strongly as he did. Nowadays you rarely find people who can do it like him, very few.</p>
+<p><em>I’ve gotten the impression we should be practicing ten hours a day, and I feel like I am just settling in.</em></p>
+<p>If you're use to doing ten hours a day, that’s one thing. But to think that you can come directly from an ordinary lay life and do ten hours of meditation practice a day in a short period of time, that’s too much. That is something one has to develop gradually. Do what you can, that’s all. When you’re not doing the meditation practices of sitting or walking, try to keep your mind from wandering around all over the place. Just try and keep it on what you’re doing at the time. That’s always good.</p>
+<p><em>It seems quite important to get on well with the Thai people here.</em></p>
+<p>You should use wisdom here. It’s okay to get on with the people and you may have to give way a little on this, but when it comes to the practice of Dhamma you must realize it’s your own life, your own citta, and you must try to purify it by yourself. No one else can do it for you. Because of this, it’s not good to give way too much. Giving way a little bit for courtesy’s sake, that’s alright. But you mustn’t give way too much. Keep the attitude: I’ve got do the practice. If you asked Ajaan Mahā Boowa that, he'd say not to do the cooking. Look on the practice as being the thing you should do. That’s the important thing.</p>
+<p><em>How would you describe wisdom?</em></p>
+<p>Wisdom is evaluating the situation to see what is necessary to keep the relationship level, not letting things get out of balance. Using wisdom in the world often means we have to work out some clever method of doing what's necessary. There usually are clever methods. If someone asks you a question that you don't want to answer, there is usually a way to get around it without telling a lie. It’s alright doing this, as far as morals go there's nothing wrong in it. It’s far better doing that than telling a deliberate lie. I like the Thai method of this, when you ask a Thai: “What do you think this or that?”, the answer is “Yes”.</p>
+<p>Meditation practice is not easy, and the reason is the kilesas. If it wasn’t for the kilesas, everyone could succeed at meditation practice. There would be no problems at all. But the kilesas always come up to cause trouble, pulling us this way and that way. Many people don't know what the kilesas are and how they arise. The kilesas are really oneself – what one thinks of as oneself. It’s from the kilesas that one has built up the whole of oneself. The kilesas have been the leading light. When looking at ourselves, we think of ourselves as being in an environment, the environment of the world. We think of ourselves in relationship to all sorts of external things. In large part those relationships are dependent on the kilesas. Because of that, what we've built up as our “self” has a certain balance to it.</p>
+<p>The trouble is, this balance doesn’t remain constant. Things come to upset it. And that upsets us. When we’re upset, we feel we must do something to bring the balance back again. Very often our method of bringing the balance back again is more kilesas. For example, a person is upset by someone, so he gets angry. Anger is his way of trying to bring the situation back into balance. The kilesas are always pulling back inside, trying to keep that balance of oneself. When we examine that and see it properly, we will learn how we should act. The right way to act when that balance is upset is to know the situation with mindfulness and then reckon: “I must avoid doing anything that’s coming from the kilesas. If necessary, I’ve just got to put up with it. Let it go”. We accept the situation. By accepting it, we do not make more kilesas, and thereby strengthen them. This is important because by not reacting to them we learn that not reacting causes the least problem and the least trouble. Eventually everything dies away. Instead of everything getting hotter and more up in the air, things go smoothly. It also means building up a habit of not reacting. I don't mean that if someone’s a real nuisance you can't put on a show of anger. If you can do it with out actually getting angry, then it doesn’t matter – like making a show of anger to a child, just to bring it into line, that’s all. If one actually lets anger arise, if it gets hot down in the solar plexus, then that’s a different story. That’s bad. It’s upsetting, and it’s not pleasant. It’s dukkha. We tend to justify our anger and that just increases the dukkha.</p>
+<p>Kilesas always loop, one thing leads to another, making the situation more and more troublesome. We have to learn how to act and react properly in situations that arise. A lot of aspects of Dhamma are in a sense good psychology. But the ways of Dhamma go rather further because they have behind them an understanding of what the purpose is, what the aim is, what we’re trying to achieve. Unlike in psychology, we see that there is an end to the purpose, there is some real goal to be attained. Whereas psychology is just leading people back to a rather messy social norm.</p>
+<p>States of mind require certain conditions to arise. If the essential conditions are lacking, then those states won't arise easily. It is true that other people can influence our state of mind. From our own point of view, that influence comes from what we understand the other person to be. What is another person? We tend think of a person as body, but there is something more behind that. There is an attitude, almost like a taste…it’s hard to describe. That is much more representative of the real person that just the body. We often look on the body of the person as being the important thing, especially facial expressions, sound of the voice and so on. Although all these things are just externals, we understand to be the person.</p>
+<p>The influence of a person is something more subtle. All I can say is that the presence of Ajaan Mahā Boowa is probably helping to uplift one’s citta a bit. It’s the attitude of a teacher. When you have a teacher, the teacher to start with is separate. What you must do by practice and by learning is to build up the teacher inside. When the teacher is completely inside, then you will probably never have to refer to the external teacher. This is the attitude. When you have built up the teacher inside then you are independent. That’s the important thing. If you can create that teacher inside you can go anywhere. In a sense, the teacher is always inside anyway.</p>
+<p>You can see things that come from the citta, but you can’t see the citta directly. You can see only its shadow. You can see the attitudes that come from it. You can see these attitudes in other people; and it’s very easy to see them in children because they act naturally. When you can see the way they behave, you can see what their behavior comes from, but you can't pin it down. You know perfectly well that there is something behind it but you can't pin it down. In fact, it’s the citta. Our own actions come out in the same way, but again, we can't pin down where they come from. It’s like I said the other day about walking meditation: “When you come to the end of the path and are about to turn, see if you can see the volition to turn as it arises”. It’s very hard to see. You can try to see it but… “Where is it?” It’s there all right, and after sometime you begin to realize it what's happening, but it’s not easy.</p>
+<p>This is particularly true of the states we attain and the experiences we have in samādhi. All sorts of states can come up in samādhi: visions, feelings, sounds as well, but the important thing behind it all is the citta. That’s what really matters all the time – those other things are just peripheral, like things projected onto a screen. It’s the one behind the projections that matters.</p>
+<p>That’s a very difficult thing to realize – very difficult. Just as a knife cannot cut itself, so the citta cannot look at itself. There is no way. The citta is the one that does the looking, and the only thing it can look at is itself as it was in the past. You have to make a distinction in time. The citta at this moment can only look at previous cittas. You can learn from that, but you still can't see clearly what it was because you must get your information from past actions and phenomena that have already arisen. You can learn from that what the phenomena were, and you can gradually learn about the citta and the way it functions. It’s difficult because the citta is so very subtle. The citta is the one that always causes people the greatest trouble; but it’s the one that is most valuable too, the one that really matters all the time. The citta is the essence, the thing that really matters in a person – nothing else matters. If the citta is taken out of a person…dead completely dead. The citta is life. It is also the meaning of life. Because of that, what does not have a citta isn’t alive – it’s just material substance, that’s all.</p>
+<p>Take just one joint while you're walking and see it moving. See how this bone is just doing that. Take one thing at a time and try to define it as closely as you can…</p>
+<p><em>I try to stay in the moment and feel my way into the bone…sometimes it feels like the bone has its own consciousness.</em></p>
+<p>It hasn’t got its own consciousness, but feeling the bone is alright. The thing is, that you have to do it in your own way because your way won't be the same as that of other people. The citta is like that. The citta has its own mode of doing things. The citta is not made in a factory. Cittas are not all the same. They're quite different from person to person. Because of that, they do things in different ways. They see things differently. If you tell a person to do a particular practice, he will pick it up in the way he understands it. Another person goes in a quite different way. Both ways are right, but each is right for that particular person. You cannot say that there is one right way for everyone. So whichever way you understand it, use that. Mostly, if something is wrong, it will show up.</p>
+<p><em>The idea came from yoga, that each part of the body has its own consciousness.</em></p>
+<p>As to whether cells have consciousness or not is a moot point. I don't know. I don't think it matters anyway. The body seems to be made up of little groups. First there are the cells, which form into groups of cells; these groups form into larger groups, eventually forming the organs and the different parts of the body. The whole body is constructed of cells grouping together, one on another. Because of that, the body is a very complex organism, so it’s impossible to tell if one particular group is a separate entity or not. What sort of entity would it be? Has it got anything behind it? Finally we just have to take the body as a biological mechanism, and leave it at that, because we don't really quite know what it is. What you can say is what the body is in your own experience of it. From your own experience you can definitely say what the body is. I don't have to tell you because you can work that out yourself.</p>
+<p>Generally, when starting the practice, it’s best not to attempt to do anything too complex. It’s like a child: when you want to teach it something, you start with simple things and gradually build up to more complex things. Similarly with meditation practice, you should begin with something simple. As you become use to that, then you can go on to more complex things. This is why in the breathing practice we begin by putting our attention at one point, and that’s all. We are simply aware of the breath at that point. Later we become aware of the breath as it passes that point, and of every pass of the breath as it goes in and out. We just watch it constantly. Later we may take up the idea of impermanence, how it changes every moment. The beginning of the breath isn’t the same as the next moment, or the next moment – each time it’s changing. The moment that has passed has disappeared completely into the past, it’s gone. It is as though it was a thousand years ago. It no longer matters. It’s gone just like that. We can no longer find that part of the breath anywhere. The whole breath is moving all the time in the same way. The moment of the immediate present is moving along, leaving a path of past moments behind it. The future doesn’t yet exist. You can take up that contemplation, but you shouldn’t do that to begin with because it’s too complex, too much.</p>
+<p>You can also see the dukkha, the discontent, in breathing. You’ve been breathing back and forth the whole of your life like that, and you can't stop. You can see it going on and on – movement all the time – you can see the dukkha, the discontent, the suffering in it. You can’t just relax and make it stop. You’ve got to go on. You can see the three marks of existence: anicca, which is impermanence or change, dukkha, the unsatisfactoriness of things, discontent and suffering, anattā, none of these things are a real abiding entity, they are all just phenomena. Buddha said that those three characteristics are the marks of everything. All things have these three characteristics. It will depend on a person’s character which one they pick to investigate, which one they like most, which one that suits them most. Different people tend toward a different one of those three. In fact, any one of the three will bring up the other two as well.</p>
+<p><em>What about you? Which one of those three do you practice most?</em></p>
+<p>Anattā. It seems obvious to me. But choosing one doesn’t mean we shouldn’t consider the others too. The others are quite important also. But anattā is the one that has more meaning to me.</p>
+<p>You can see that wherever you look everything is made up of bits, bits and pieces put together. Everything right down to molecules and atoms, they’re still bits and pieces. They've got all sorts of strange names for the original bits and pieces, but I don't think they're original either. In the end, they are still just bits and pieces.</p>
+<p><em>I remember in school when the teacher told me that the smallest particle was the electron in the atom I asked what was that made up of.</em></p>
+<p>You could say energy. It seems these things are not real particles, they're just waves. Sometimes waves, sometimes particles – they just behave in different ways and no one really understands them. In truth, we can only understand things which are within the limits of our basic understanding. We have a complex symbolic way of understanding things which we must use. When we encounter something that doesn’t follow the same pattern, we just don't understand it. We might be able to express in mathematics, but then people don't really understand what the mathematics means, either.</p>
+<p>It’s worth considering the limits of the mind – the mind is limited. People tend to think that we can know anything and everything. But we can't, simply because we are limited by our own minds. Take our senses, for example. We have the five external senses and the mind inside. Whatever we think of in terms of sensory phenomenon, that’s the whole world, the whole universe; it all comes in through the five senses. From that we use the mind to try to understand how things work in the world. Then maybe we find things in the world that don't work quite the way we understand them. We just don't know to understand them. We can only understand things as our minds understand them, and that’s the limit. In fact, the mind is really quite limited.</p>
+<p>Perhaps those like the Arahants who have a thorough experience of the citta can get other forms of knowledge, other forms of knowing, that I can't say. But for the ordinary person, that’s us, we have a very limited capacity to know things, to understand things.</p>
+<p>When we know and understand things our knowledge and understanding always arises in a particular symbolic form in the mind. We look at something and we say it’s square. Well “square” is a sort of symbolic shape in our minds. We fit things that we see into that shape, even though squareness is only a concept that does not really exist outside of the vision we have of it in our minds. We always fit things into a pattern. Symbols are worth thinking about; if you like thinking, think about symbols. Symbols are very important. Everywhere we have symbols. To start with, all of our words are symbols. Our written language is all symbols. That’s just the beginning.</p>
+<p>It reminds me of a symposium in England I attended where they had invited different religious teachers, each teaching different forms of religions. A Chinese person teaching Confucianism stood up and asked: “Does anyone want some confusion?” He knew what he was talking about!</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/04._Overcoming_the_Kilesas.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">04</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">04. Overcoming the Kilesas</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Samādhi_and_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Samādhi and Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Samādhi and Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Samādhi_and_Wisdom/06._The_Power_of_Sexual_Craving.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">06</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">06. The Power of Sexual Craving</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

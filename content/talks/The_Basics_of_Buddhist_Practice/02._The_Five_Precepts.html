@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. The Five Precepts</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/01._Introduction_to_the_Sangha.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(01)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to The Basics of Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/03._Personal_Impressions.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(03)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/basics-of-buddhist-practice/02.%20The%20Five%20Precepts.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>02. The Five Precepts</h3>
+<p><em>Could you please explain the five precepts?</em></p>
+<p>The five precepts are the basic training rules one observes: the training not to kill, steal, indulge in improper sex, use wrong speech or take drinks or drugs. These are the field of training one takes upon oneself. Someone came to Ajaan Mahā Boowa and asked him if it’s ok to take just a little drink…not a lot, and he said: “If you’re going to take the precepts you should adhere to them strictly. If you’re not going to keep them, don't take them in the first place”. That’s correct, because if you take the precept not to drink, then you should refrain from drinking. If you know you are going to drink, you should not take that precept. It’s not good to resolve to do something, then break that resolution. That weakens one’s strength of resolve. Taking a precept and then just breaking it is not right. If you take on a precept, you should have the full intention to keep it.</p>
+<p>The precepts are really the definition of the human state. The five precepts are the required minimal behavior for remaining at the level of a human being. If one goes against them or breaks them, to that extent one is going below the human level. Someone who breaks them continually all the time is going down and down and down. This is very bad, because it’s easy to go down but very difficult to get back up. So people should be careful to keep to the precepts as vigorously as possible. </p>
+<p>People tend to think that taking a drink doesn't matter. It’s true. The actual taking of a drink is not thought to be very important or considered so by the Buddha. He said that the problem is what you do when you're under the influence of alcohol. When you take a drink you’re no longer in full control yourself. Because of that, you can do things that you shouldn’t do at all.</p>
+<p>If one looks at it from a psychological point of view, one can ask: “Why do I want to drink?”, “What’s the purpose?” If you look you'll find out that drink is really an anesthetic. People want to do it to anesthesia themselves, at least to some extent. They want to dull themselves so they don't notice the dukkha. This isn’t the right way to do things because it’s dulling one’s mind. It’s going against the way of the Buddhist path. One should be sharp so one can see things clearly and understand clearly, so as to penetrate clearly into the truth of Buddhism. If one goes dulling the mind all the time it’s going right the opposite way. It’s not the right thing to do at all. The fifth precept is a really important one because many people say they’re ready to keep the other precepts but taking a drink now and then they have to do that because when you are doing business of some kind the best place to talk to people is in a pub over a drink, or something like that. Take newspapermen. In the West, newspapermen usually have alcoholic problems. They really do. Because they get a lot of their information in the pub. It’s not a good state at all.</p>
+<p>But the nature of the sīla is rather interesting. Sīla, morality generally, is a relative thing. But it’s not relative in the way they thought of it in the 1960’s in America. It’s not relative to the individual. It’s relative to the human being as a human being. It is the set of conditions that relates to the human being. Which are correct for the human being to practice. So to break those precepts is really going against one’s own nature. If you take something like a tiger, a tiger has a different set of precepts. It has in effect precepts, the precepts of its nature. Its nature is that of the tiger. If it acts within the bounds of what a tiger is then it keeps to that state. It’s that way with most animals. The dhamma of a tiger, or the dhamma of a human being, or the dhamma of a dog. These are different levels and forms of nature.</p>
+<p>The human being is a very high form of nature, so we should at least try to keep the five precepts. Although we get enough dukkha as a human being, an animal gets a lot more. The animal is much more likely to find dukkha in a gross way. The law amongst animals is the law of the jungle; it’s violent, full of fear and danger. Human beings don't have to be in that state. Because of that, sīla is one of the first things we should attend to.</p>
+<p>In the way of practice, if your sīla is not good then you can be sure when you do the samādhi practice, any shortcomings in sīla will come up and cause trouble. The kilesas will bring it up. They’ll bring it up as a problem. This problem will disturb your practice. It can quite easily prevent you from getting into samādhi. One must be careful to watch the sīla, not break it.</p>
+<p>If a bhikkhu breaks any of the vinaya precepts, he quickly goes and confesses it to another bhikkhu. He knows that if he doesn’t do that, it will come up in his practice and bother him. So he has to put that right first. In addition, if you go beyond the five sīla to the eight or ten sīla, or further than that, then you are going to level of the devas, the practice of the devas. It’s always said that the higher levels of precepts is the way of the devas. It’s the level of the devas in the sense these are fundamental necessities of that realm. It doesn’t mean that you'll necessarily attain the level of the devas by keeping that level of sīla. It means if you are practicing in that way, you have the basic necessities. You can then gradually put your mind into the right state to get to the deva realm.</p>
+<p>Morality can be a very difficult issue, sometimes. When you get problems that are obviously either right or wrong, there is no question about it. But you can get problems where both sides are right and you don't know which one to go with. Their positions are opposites, they're contrary. Then you have to go to other principles. You must check what to do. Life is not simple. Because of that, you often get moral dilemmas concerning what you should do in a particular situation. You can see two or three possible courses of action and you can’t say that any of them are actually wrong. So you don't know what is the right thing to do. In that case you have to use wisdom. But that doesn’t really come so much under the heading of sīla. It’s more the and responsibility of wisdom to see the way through it.</p>
+<p><em>What if there is a certain amount of drink in the food?</em></p>
+<p>The Buddha said if you can’t smell it or taste it, then it doesn’t matter.</p>
+<p><em>In the West they don't teach that one should not drink at all.</em></p>
+<p>The precepts say one should not drink. For each precept the rule says, “I undertake the rule of training to refrain from…”. It is not a prohibition like, ‘thou shalt not’. If one takes upon oneself that rule of training, one makes the determination or the resolve to keep to that rule. If one does that then one should keep to it. Taking drinks or drugs brings about altered states of consciousness, the mind is somehow affected. And these substances do not take the mind to a higher level, but rather to a lower-level. They distort the mind in some ways. Those conditions are not a help on the path of Buddhist practice.</p>
+<p>And you must be very careful about the potential harmful effects. LSD can have all sorts of odd effects. The effects are mostly sensory phenomena. and the amount of sensory phenomena people can take depends on the individual. Some people can’t take much, and it drives them half-mad. Drugs can be very damaging.</p>
+<p>Usually people who take drugs are trying to find a short cut. They're trying to get into a certain mental state by a short cut. What they don't realize is that the background of that state can only be correct if there's hard work behind it. You must go about it in the right way. If you attempt it by way of these short cut methods, you gain it, but you lose it just as quickly. It’s not something that is a true part of your nature. if you attain some of those states by the hard way of the practice then you know how you got there. The way you’ve done it is orthodox and straight forward. No one can complain about it or criticize it or say it’s wrong. If you attain something by taking drugs, its all wrong, the whole lot.</p>
+<p><em>It is often said about non-killing that if someone had killed Hitler first, the lives of millions of beings would have been saved, how is that?</em></p>
+<p>The precepts are personal matters. One takes them as rules of training. Because of that, if someone had killed Hitler he would owe that as a debt in himself. That’s what matters. That’s the whole way of it. We are not thinking here in vast numbers of people, or in what's right for society. It’s not that direction. The direction is what's right for oneself and one’s future. It must be like that because, in truth, the only thing we really know is our own consciousness. We don't know any other. The whole lot is a really within oneself. Because it’s within oneself, what happens in that inner world is what really matters. What happens out in the world externally is not so important. In any case, you don't know and that killing Hitler would have saved all of those lives; something far worse may have happened. You just can’t tell. There were a lot of nasty people around at that time, so you just don’t know.</p>
+<p><em>Would the intention matter, if you killed out of greed or hate and if you killed out of wanting to save lives?</em></p>
+<p>I doubt it, because the whole situation would be a delusion in oneself. It would be a completely deluded situation internally and in that case the understanding would be wrong.</p>
+<p><em>What is the kamma of policemen and soldiers who have the right to kill?</em></p>
+<p>The volition required to kill someone is not a wholesome volition in any way. It does not matter socially whether one is a policeman or a bandit or whatever. It’s still the volition to kill. It’s true people take on the duty of a policeman or a soldier. Because they have taken on that duty, they should perform that duty. That may mean that in the line of duty they will have to kill somebody to protect society. There have to be people like that in the world. Nevertheless, that kamma will come back on them just the same.</p>
+<p>When it comes to the teaching of Buddhism, it’s like the Buddha said: there are only a few people with little dust in their eyes, only a few. We can’t expect many people to be like that. The best we can expect is that the general teaching on morality will reach people and take a little bit of the dust away from their eyes. In that way, more people will be in the position to understand. As it is, the general run of people in the world are not capable of much understanding. They go the way of their kamma: they kill when they feel they have to and they are dragged down by it. It’s been going on that way for an extremely long time, and the momentum of kamma will keep it going like that. Those people who have enough understanding to see clearly the nature of this world realize that this is not a good condition and know they should try to get free. For them, keeping the precepts strictly is very important. They should not give way on them at all. Again, it’s like if a policeman has to kill in his duty he shouldn’t take the precept of against killing.</p>
+<p><em>Would you elaborate on what constitutes wrong sex?</em></p>
+<p>It’s elaborated in the suttas, where it says that there shouldn’t be sex with anyone who's underage, betrothed to be married and so on. One also has to think in terms of what the law in a particular country and what is socially acceptable in that country. One must realize that to go against those customs might be a danger to oneself, if one is living in a country or a society like that. So one has to adjust one’s behavior according to the circumstances.</p>
+<p><em>In the contemplation of the body, do we have to look at the other four aggregates too?</em></p>
+<p>No. Take the body as the body. Take it in the way we normally think of the body. We aren’t attempting to find out what the body actually is. Rather we are trying to see this body in what we might call the light of “truth”. See what it is to the extent that we realize that this isn’t me. It isn’t mine. This is the important thing. Later on we can examine the body is a mental image. At the beginning of body contemplation, we must look at the body in the way we normally do. Otherwise, the investigation becomes more and more nebulous. Then the practice doesn’t work properly. The work of the practice is to see the body as a loathsome mess of bits and pieces.</p>
+<p><em>Irritation causes angry emotions. To look at them should I stay with the feeling?</em></p>
+<p>The thing is to watch and see how feeling arises. Because it isn’t static, it’s always changing. Notice that when feelings of anger arise there is a tendency for thoughts of anger to arise as well. Then you begin to realize how paṭiccasamuppāda is true, how feeling is the condition for anger or greed or whatever to come up. You can see the link there quite clearly. To realize that is very important.</p>
+<p>When you investigate feeling, you should find out where it is located and define it exactly. A precise definition is very important here. Buddha taught that things should be done precisely, in detail, as much as possible. So you should define exactly where the feeling is, how it’s changing and what its nature is as an experience. You can’t really describe that accurately to anybody, but you know in yourself what this feeling does, what arises out of it, and how it dies away. You experience how it’s constantly arising and dying away. The Buddha said feeling is similar to raindrops falling in a puddle and causing bubbles come up and die away, pop, pop, pop. Like that the bubbles arise and die away all the time. That’s the nature of feeling. But it’s not as if the rain is coming down one drop at a time; it’s pouring down and the bubbles are popping up all over the puddle. Feeling is like that.</p>
+<p>The Buddha gave a very valuable set of similes for the five khandhas. He said the body is like a lump of foam. Sometimes the ajaans say the body is full of holes. There is an experience where the body appears to be full of holes. Feeling is compared to the bubbles coming from rain drops. Saññā, which is memory, is like a mirage seen in the desert. Sankhāra, the thought process, is like a banana tree. You peel away the layers of skin looking for the hard wood underneath, but there isn’t any. The last one viññāṇa, or consciousness, is like a magician at the crossroads performing magic tricks. The whole of it is just his magic, so there is no substance in it at all. The five are given in the Sanyutta Nikāya.</p>
+<p><em>I once saw myself as the five khandhas. I thought I should feel happy but I did not.</em></p>
+<p>You won’t feel happy because the kilesas will come up and cause trouble because you’re cutting away at them. The happiness doesn’t necessarily come up then. When you finally do cut down those kilesas and destroy them, then you will see the advantage, the relief that comes. Like you’ve been carrying a load all the time, and suddenly you just throw it off. It’s then that you get the happiness. One has to work to get that. In one way or another the kilesas will try to find a way to cause trouble, they usually do.</p>
+<p><em>What is the kilesa of fear?</em></p>
+<p>Fear is a very important one. It’s one of the tricks of the kilesas. There are two types of fear. One which is object based and the other which isn’t. If you go out into the jungle and see a tiger, fear arises. It’s pretty obvious what happens there. The tiger is seen as a danger, and fear arises because of that. The other type of fear comes because of changes in processes going on within oneself, due to the practice. With that type of fear, there is no special object. The fear can come up as just a plain feeling. When the fear arises, you search around looking for something to pin the fear on. But you can’t find anything, so you think: “What is it? Is it a ghost or what?” you don't know what it is. In fact, the fear is just a process going on inside you. When that comes up, it’s important to deal with it directly, thinking, “This is an opportunity to look at fear. Look at it. The one thing you must never do is run away from fear. It’s the worst thing you can do. Look at fear and realize this is just a trick of the kilesas. Nothing else. There is really nothing to be afraid of; there is no object, you can’t find it. Usually you find that the fear dies away very quickly because the one thing the kilesas don’t like is being looked at.</p>
+<p><em>Sometimes I feel my mind is in a very high level of agitation expecting something dangerous to come in.</em></p>
+<p>You should question why is that high level of agitation there. It’s there due to kamma, of course. Don't worry, keep on with the practice and all those experiences can help you. A very profound understanding of Dhamma is not something that we can attain suddenly. If we come to that understanding suddenly, we couldn’t stand it. At the same time, most people find it very difficult to get into the state where they can understand Dhamma deeply. If you’re especially sensitive, you may be able to understand fairly easily. So be careful to let it come up at the appropriate time.</p>
+<p><em>I saw a woman the other day and got the feeling she hated me and I was afraid, all of a sudden all I saw was a skeleton and a bit of flesh and the feeling disappeared.</em></p>
+<p>You can see how effective it is to see a person in a way that is not as we usually think of that person. Any hatred disappears because there is no longer anything to pin the hatred onto. It’s a very important principle. When we talk about a person what do we mean? A person is composed of the five khandhas there, so which one is the person? When we think of a person we usually think of the body, but sometimes it’s the speech, the sound of their voice. Sometimes it’s the mannerisms, the way they move, sometimes it’s the location they live at. When you consider what is the person, apart from all these, you can’t find it. You realize that what we call a person is just like a tornado, continually whirling around. There is no entity there. So you realize that there's nothing there to like or to hate at all. The citta, the original citta, that’s a different matter. That’s not the person. You can’t pin any personal identity onto the citta at all. You can’t say that the citta is the khandhas.</p>
+<p>We can say that the citta with kilesas, the citta with avijjā, is responsible for the 5 khandhas. In the ultimate analysis you can say that avijjā and the five khandhas, the whole lot are like clouds. There's no substance in any of them. We can’t accept it like that because we’ve still got avijjā. Because we still have avijjā, we must think in the ways of avijjā, in the ways of ignorance. The avijjā is like something distorted or twisted inside the citta. If that straightens out, the whole lot just dissolves.</p>
+<p><em>Are citta and viññāṇa the same thing?</em></p>
+<p>Viññāṇa is really a function of the citta. When the citta functions as viññāṇa it receives sensations. The one who knows, that’s the citta. If it’s something you sense, then that’s an object and not the citta. The citta is the one who knows and receives sensation, but it’s not the sensation. The sensation is what it knows and receives. If something is known, there must be the knowing of that. There's a division between the one that knows it and the thing that’s known. The one that knows it, that’s the citta.</p>
+<p><em>Is there any difference between the citta and the patisandhi viññāṇa?</em></p>
+<p>Patisandhi viññāṇa is a very special term which is usually translated as rebirthlinking consciousness. It’s that consciousness that goes to the bhava, the next place of existence. It’s the consciousness that grasps at birth. That’s the Patisandhi viññāṇa. That’s the only time it’s used. Patisandhi means linking back, linking across.</p>
+<p>It’s what they call a kamma image, an image coming up from kamma at the time of death, which presents the situation we can be reborn in. If you’re mindful at that time, you'll be able to remember your previous life. You’ll remember the life you’ve just left. Mindfulness is essential. Mindfulness will give one a good human birth and may lead one higher. We can say that the more rapidly a being grasps a birth, the lower that birth will tend to be. If a being has enough strength to hold back then the birth will be much better, much higher. Mindfulness helps to restrain. This is a realm of the mind that is difficult to understand.</p>
+<p>Some people can know the citta or the aura of other people. How they know it is different in different people. Some people just see an aura of lights in different colors. These things depend on the person, the characteristics of that person and how their minds work.</p>
+<p>People should be very careful about psychic phenomena. Many kinds of psychic knowledge do exist, but in the ordinary person they can so easily get involved with kilesas. They can turn into this field of delusion. If a person has the power of knowing something, knowing the future, sometimes it may be genuine. If they're just completely uninterested it’s probably genuine but the slightest interest, with that the kilesas are likely to get in and make it all wrong. This is the trouble with people who can foretell things and see in the distance, you don't know if they're speaking truth or not. They don't know themselves. It’s only the Arahants who's really reliable.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/01._Introduction_to_the_Sangha.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">01</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">01. Introduction to the Sangha</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="The Basics of Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">The Basics of Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/The_Basics_of_Buddhist_Practice/03._Personal_Impressions.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. Personal Impressions</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. The Benefits of Sangha</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex justify-center items-center" title="Return to Teachings for the Monks">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/02._The_Tornado_of_Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(02)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/teaching-for-the-monks/01.%20The%20Benefits%20of%20Sangha.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>01. The Benefits of Sangha</h3>
+<p>When a monk first ordains, he should live in a Sangha community because there is a lot that he must learn. By learning about the Sangha and his own place in it, he learns to see its true value. He also learns the basis of the meditation practice from a skilled teacher. If a monk goes off on his own too quickly, he is likely to find disappointment. Disappointment arises because he has not taken enough account of his own kilesas. The kilesas that he had as a layperson, before he put on the yellow robe, are still there. They don’t simply fly away when one puts on the yellow robe. Because they are inside, wherever he goes he takes his kilesas with him. Because of that, it is necessary to receive a first grounding in a community with other monks who can keep him straight, and where he can test yourself against other people. In that way, a monk can get rid of quite a number of the grosser kilesas in his character. When he has studied enough in the community to learn what is necessary, he can then go off on his own into the forest to deepen his practice. Many monks gain great value from practicing alone in the forest; but not all monks do. Some monks find that when they go off to the forest their minds are just wandering. Because they cannot keep their minds still, they can’t get down to the practice as they did before. Those monks are probably not suited to go to the forest alone, certainly not to begin with.</p>
+<p>For those monks who go off to the forest, the advantages are that they can practice their own meditation without social hindrances: without having to do lots of chores and duties, and without having to refer to anyone else. These are quite valuable advantages for a monk practicing meditation. But if he is not careful, he can go the wrong way. He can start getting upset, even angry, at the difficulties and hardships of living in the forest. But if he has the right attitude, such difficulties are a very good teacher. In fact, they are one of the best teachers. If he comes face to face with a dangerous wild animal, like a tiger, which might attack them at any moment, the only defense that he has to protect himself is Dhamma. If he brings up the Dhamma, he'll be okay. But he must make the effort to bring up the Dhamma, and not just give away to fear.</p>
+<p>Many people give way to fear, and that has bad consequences. The tiger might not eat him, but it still sets up within him something that might cause a lot of trouble should he give away to it. When fear comes up strong and unbidden, catching one off balance, one doesn’t know what to do. That fear then takes over and assumes control of one's mind and body. A person can just stand there quivering. And if he doesn’t get back to Dhamma, by bringing up the idea of Dhamma in his mind, he may go mad. It can cause a lot of damage. But if he is strong enough, if he has done enough practice for the Dhamma to come up in his mind, that experience can be very valuable. Overcoming fear is very important. Fear is an enemy that comes up in the guise of a friend. It makes out that it is a friend warning you of danger, but in fact it makes you do all the wrong things. Because of that, fear must be overcome.</p>
+<p>Going to the forest can be of great advantage. No doubt about it. But a monk shouldn’t be too eager to go to the forest. He must realize that he may have difficult problems and questions coming up. Mostly, those practicing in the forest, who have problems they can’t solve on their own, go back to the teacher and ask him, maybe just a visit for half an hour or an hour, and then return to the forest again. It's important that he keep in touch with the teacher. The other difficulty to watch out for practicing in the forest, particularly for Western monks, is the effect of food. The alms food monks receive in the villages is often quite insufficient and of poor quality, so they may experience stomach trouble. In fact, many do. Putting up with stomach trouble is also a beneficial practice, but the benefits of good health should not be overlooked. A monk should not blindly think that can neglect his health indefinitely; that’s not the way of Dhamma. The way of the Dhamma teaches that we should not unnecessarily put ourselves in difficulties. If a monk does that, he is being careless. And carelessness is a mental defilement that should be overcome, not promoted. A monk should always be careful and watchful, both of which strengthen his mindfulness.</p>
+<p><em>Are the kilesas in the five khandhas or in the citta? And what is the citta? Is it a sixth khandha on top of the other five?</em></p>
+<p>No. First take the five khandhas. The first khandha is the body, which is part of the physical world. The human body is made up of the substance of the world, and relies on the world to survive. It is completely geared to the world. Most of the things we use in the world depend on the body. That building, for instance: why is it that shape and that size? Because of the shape and size of the human body. Why is each step on the stairs just so high? Because that’s the height we can step. Why do we have the lights on? Because eyes need light to see things. It's we didn’t have eyes, we wouldn’t need light. Looking around you, you will find countless things whose functions are determined by the human body. So the body is part and parcel of the world.</p>
+<p>The other four khandhas – feeling, memory, thought, and consciousness – depend on the body. When the body dies, they break up and disappear. Without the body, there is no support for the other khandhas. It only requires the doctor to inject you with some anesthesia for the whole lot to disappear. The body goes on functioning, but the other khandhas, as far as we know, all cease temporarily. Then when you come to, the mental khandhas start working again. Because they depend upon the body, there is nothing absolute about the mental khandhas. Like the body, they are not kilesas either. They are neutral.</p>
+<p>Fundamentally, the khandhas are not an integral part of us. They are there for our use. I use the simile of a computer. The body is like the hardware, which forms the material basis. The four mental khandhas are like the software, which render the hardware useful. And the citta is like the person who uses it. The person using the computer can make it do whatever he wants it to do – good things or bad things or stupid things. In a similar way the citta is the one who plays with our khandhas and pushes them about. It’s the master of them. The khandhas are used for the sake of the citta, for the promotion of what it wants. If the citta were pure, it wouldn’t matter. But it’s not. It has kilesas inside it. It’s the citta with kilesas that causes all the trouble. If the kilesas were in the body, when the body died, the kilesas would all disappear. But in fact the kilesas are in the citta, which doesn’t die, so they carry on to the next life. Because of that, we are reborn again and again.</p>
+<p>In meditation practice it is important to see that the kilesas are in the citta, not in the khandhas. But the khandhas take on those aspects of the kilesas which the citta makes them take on. For instance, anger. Anger starts off in the citta and immediately infiltrates the mental khandhas. First of all, consciousness becomes aware of it, followed by the memory associated with whatever cause produce the angry reaction. Thinking angry thoughts increases the anger, which brings up unpleasant feeling, causing a further negative reaction. And pretty soon the anger comes out in speech and action. In this way, the kilesas are pushing us around all the time.</p>
+<p>The whole purpose of Buddha-Dhamma, and the whole purpose of developing the meditation practice, is to get rid of those defiling kilesas. That is the primary goal. Other objectives may be achieved as well – some people may develop psychic powers, allowing them to see the future and the past – but these are merely byproducts of the practice. They are not the main aim. The main aim is to get rid of those kilesas. In fact, byproducts such as the psychic powers can be a definite disadvantage, because they can very easily lead one astray. So people who discover they have psychic powers should be very cautious and not get caught in them. If you play with them, they become very sticky. After a while you become addicted to them, always hankering after knowledge of an external nature. You easily get caught in the habit of playing with psychic phenomena. This can be a big trap, so you should strongly resist it. After all, we have enough powers at our disposal already. If you want to know what’s happening on the other side of the world, you can quite easily use radio, television, telephone and so on. You don't need psychic powers.</p>
+<p><em>What is the relationship between the citta and Nibbāna?</em></p>
+<p>The pure citta is Nibbāna. The citta that we experience is the citta that has been usurped by the kilesas. And because of that usurpation by the kilesas, the citta is constantly changing. In the ultimate sense, we can say that Nibbāna is always there, and that even the functioning of the kilesas is part of the situation. But that is an ultimate way of looking at it. And it doesn’t mean that we mustn’t work to counteract the kilesas. The relationship of the citta to Nibbāna is difficult to describe. The citta that we experience – we call it the citta, but we don’t really know what it is – is so involved with kilesas that we cannot distinguish it. The citta is not an object of awareness; it's more like a function of awareness. It is difficult to put into words, because everything we know in this world is impermanent, constantly changing. So we know the citta only in its changingness, in the way it changes all the time. When it comes to the pure citta, it is impossible to know it in the way we know the nature of change, because the pure citta has no duality. When there is no duality, we have no means by which we can know it, except for the knowing nature of the citta itself. That goes rather high.</p>
+<p><em>Can you say something about the relationship between citta and consciousness?</em></p>
+<p>When consciousness arises, the citta is the one that empowers it. If I want to make this microphone give a sound out there, it must be empowered by the sound of my voice. It cannot do it on its own. In the same way, viññāṇa cannot function on its own. Viññāṇa functions only because the citta makes it function. My own interpretation is that viññāṇa is the citta turning into dualism, as though splitting into two. When the citta splits into two, it is back in the world straightaway. So you get the duality of the citta on the one hand, and what it knows on the other – and that’s viññāṇa. The citta coupled with what it knows is viññāṇa. So there must be the object and the subject in viññāṇa. It must be dual.</p>
+<p><em>So the citta is pure knowing without an object?</em></p>
+<p>Yes, you can say that. But only if it is the pure citta, because the kilesa-citta always has an object. Due to the way the kilesa-citta functions, delusion is always present. Greed or aversion may or may not be present, but delusion always is. I look on greed and aversion as being the two arms of delusion. They come out of delusion, so without delusion there would be no greed or aversion. Avijjā, or fundamental ignorance, is the factor that creates and perpetuates delusion, insuring that it is always there in our minds. Delusion is inherent in the functioning duality of our minds, which is really a distortion of the citta’s knowing. So duality means delusion.</p>
+<p>But because we have learnt to view the world in a certain way without questioning that view, we cannot see what’s wrong. For example, when we were young children, we learnt things from our dad and our mom, from teachers and so on. But we were too young to question, so we just accepted them. The perception of the world that we learnt at that age went in very deep and has stuck there. When we became adults, we still retained that childhood view. In other words, the child is still there. And that child comes out quite often, mostly in an emotional mode. The child tends to come up in the emotions. When you observe your own behavior, or the behavior of others, you can see the child at work. And all the attitudes, ideas, ways of thinking, beliefs and so on coming from childhood are riddled with delusion.</p>
+<p><em>The emotional residue left over from many people’s childhood is guilt. Do you have any recommendations for people who suffer from guilt?</em></p>
+<p>The surest way to deal with guilt is to first accept it. Most people instinctively try to resist their guilt, saying: “I’m not guilty, I’m perfectly alright!” If you turn and say: “Alright, I accept the guilt. I am guilty! Now what am I guilty of?” You probably won’t even know what you are guilty of. So you say: “Alright, I’m guilty! What do I do now?” And you may find that the whole sequence starts to break up. You might have to do it many times, but it will break up. The important point is to accept it. You know that the guilt is there because you can feel it. It’s a valid emotion. But it is the ‘I’ that’s guilty, the ‘self’. And that is a delusion to start with. So by accepting the guilt, you help to diminish that ‘I’ a bit, but you don’t lose anything of value. All you lose is a bit more delusion. Many people feel guilt; it is a very common experience. And that guilt is always built up from the past.</p>
+<p><em>Regarding your own practice, could you share some of your breakthrough experiences and what actions or efforts appeared to support them?</em></p>
+<p>By practicing and developing in meditation, one gains a sense of certainty, a sense of knowing, knowing where one’s going although one hasn’t actually got there. But it is a sense of knowing that you just can’t describe. You’ve just got to do it, that’s all. It’s no good talking to people about the really important things that happen in our practice, because it wouldn’t mean anything to someone who has not had the same experience. For instance, Ajaan Mahā Boowa says he does not like talking about jhāna to somebody who has not experienced the true nature of jhāna. There is a lot of talk about jhāna from people who have developed the concept of what jhāna is, but mostly their ideas are quite wrong. Ajaan Mahā Boowa has said that those who have the tendency to jhāna inherently in their character, meaning that it’s in their kamma, must go that way. Other people should not try it. So if it is not inherently in your character, you shouldn’t attempt to develop jhāna. It is enough for you to develop samādhi. But Ajaan Mahā Boowa did not state the difference between jhāna and samādhi. He simply said that they are different. But he stressed that if you do not know what the difference is, then you should keep to samādhi.</p>
+<p><em>How essential is it for those developing samādhi to have a parikamma object they can always bring their mind back to throughout the day?</em></p>
+<p>It's quite essential. Ajaan Mahā Boowa said that when he first started practicing meditation, he used the parikamma of Buddho, continually repeating the sound Buddho internally. As he practiced in that way over a period of months and years, his practice progressed for a while and then deteriorated, only to progress again and then deteriorate once more. In the end, he became so fed up with the constant fluctuations that he decided to repeat Buddho relentlessly day and night, not stopping his internal repetition for anything except sleep. After a time the results came: he attained a firm basis in samādhi. That is the value of the parikamma. Your mind must have something to hold on to; otherwise, it just jumps to other things. Once you choose a parikamma, it is best to stick with that preparatory object for as long as possible in order to see the benefits. It's not good to jump from one parikamma to another too quickly if one doesn't seem to work for you. You may find that the parikamma progresses up to a certain point where you get a blockage and you can’t go further. If you then quickly change to a different parikamma, nearly always you will find that you encounter the same blockage hindering your progress as you did with the first one. You must overcome that blockage within yourself before you can go further. The way to do that is to just keep relentlessly focusing on the one parikamma until you break through. You shouldn’t be changing parikammas often. If you feel after a reasonable amount of time that you cannot make progress with your first choice of parikamma, it's alright to change. But don’t change just because it becomes a bit difficult.</p>
+<p>The parikamma is important, very important. If you really want to get in to the samādhi practice, the best way to do it is to keep it going the whole time. No matter what you are doing, keep your awareness focused on the breath. After all, whatever you do, the breathing is always going to be there anyway. So just be aware of it. Being aware of the breath does not mean trying to be very onepointed or very concentrated on it, but just being mindful of it. After all, it is called ānāpāna-sati. Sati means mindfulness, so it’s the mindfulness of breathing, which means you maintain the awareness of the breath all the time, even though you are doing other things.</p>
+<p>That is the way of kammaṭṭhāna. Kammaṭṭhāna is a combination of the Pāli word kamma, which means action, and ṭhāna, which means a basis. So kammaṭṭhāna is a basis for action, or a basis for meditation practice. It refers not only to the practice of meditation, but also the practice of training oneself in the monastic discipline. It can refer to the training one does based on the Vinaya, and the training one does in learning to get along with other people, called sāmaggī in Pāli. It means getting together with other people, and doing things with them, without always just wanting to do everything on one’s own. All these sorts of things are very helpful. These external practices, as well as the meditation practice, are all a great help in mental development. In fact one can overcome many gross kilesas by following the external trainings. If somebody says to you: “Go do that!” the tendency is to say: “Why the hell do you pick on me?” But the person who is training himself recognizes the dissension arising within him and decides to do it anyway as part of his practice to overcome the defilements in his mind. Many gross defilements can be overcome in that way.</p>
+<p><em>In the wisdom develops samādhi practice, would one still keep up the parikamma during the day?</em></p>
+<p>Yes, you can use a wisdom parikamma, there are such meditation objects. But the practice of gaining samādhi from wisdom is for those people whose minds are very interested in thinking about things and seeing how they work. For instance, you think about the bits and pieces that make up your physical body and investigate how they work. When done properly, that can lead to samādhi. What happens is this: the interest in the thinking starts to concentrate the mind, and as it concentrates the mind you get the factors of pīti and sukha coming up, so the mind goes into samādhi. If you keep working intently at something for a long time, eventually it becomes interesting. Once your interest is aroused, it becomes intriguing. Because of that, you want to keep on doing it, and that continuity of attention can lead to samādhi. But if you find that thinking leads to too much mental distraction, not allowing the mind to stick on the object for long, then you must use the basic samādhi practice, and develop wisdom from that.</p>
+<p><em>Is it possible to have profound realization and not be aware of it?</em></p>
+<p>No. It is possible to have profound realization and not to know what it is. For example, you see bright lights coming up and you feel good inside, then you reflect on it, thinking: “I know there were bright lights, I know what I felt inside, but I don’t know what it was.” That is quite possible. Should you call it samādhi? Should call it jhāna? Should you call it stream-entry? You don’t know. Because it's something new that you have never experienced before, you don't know what words to put to it. The ideas and concepts you have about meditation practice are like a map, whereas the experiences you encounter resemble actually walking the road. Often you cannot recognize the road from looking at the symbols on the map. And putting labels on your experiences in meditation can be dangerous. You can easily misrepresent the importance of your experiences, which can become a hindrance to going further in the practice. It can also develop conceit. So whatever happens, just keep on with the practice and resist labeling your experiences as this or that state of attainment.</p>
+<p><em>Can you speak a little bit more above the arising of conceit when there is success in meditation?</em></p>
+<p>Conceit is a factor of greed. Conceit is the promotion of self, always making out that ‘self is good’, or ‘self is better than other people’, or ‘self is very pure and straight’. If you build up self higher and higher, when it comes down, as it surely will, it hurts. It's analogous to the fall of the twin towers in America. Everyone looked on them as invincible symbols of prosperity, and then bang! That's the way conceit works: it's built on grand assumptions about oneself. Conceit comes about by thought, so thoughts with conceit are ones that you must look at often to realize their nature. When you have conceited thoughts, the best remedy is to quickly turn around and find the opposite in yourself to deflate the ego a little bit. Notice where you still have a lot of kilesas. In that way, you bring your mind more into balance.</p>
+<p><em>When one investigates the thoughts, how much attention should one give to the content of the thinking?</em></p>
+<p>The content of thinking is important, because thought content changes your attitudes. When you think of something, you take up the emotional attitude associated to do that thought. This is why, when you repeat a parikamma, you use the word Buddho, which has a very positive connotation. Thought content has quite a significant impact on the mind. So you must be mindful and watchful. If bad thoughts come up on their own, even though you don’t want them, let them come up, but look at them carefully and see them for what they are. You mustn’t try to suppress unwanted thoughts, because that can have a bad effect. But it has a bad effect only if they are strong thoughts that come up very forcefully. I read a funny story once. An old Scotchman who was a patient at a mental hospital kept yelling at the psychiatrists all the time: “Get away from me you filthy people, get away! Don’t tell me what to do! I don’t want to hear it!” He was swearing all day long in very crude language. So the doctors consulted together and decided they better give him a lobotomy to quiet him down, which they did. Afterwards, the old man kept yelling at the top of his voice: “Speak up! Speak up! I can’t hear you! Where are you? I can’t hear you!” Satisfied, the doctors all agreed that this was quite an improvement. But obviously the cause of his problem was still there, it was just channeled in a different direction.</p>
+<p>You should never underrate the potential of the mind to produce strange phenomena. Anybody who has read about the phenomena occurring in schizophrenia, or about psychic phenomena, will realize that the mind can produce almost anything with great strength. So you should be very cautious when strange sounds arise in meditation, especially people talking to you, because the citta with kilesas is quite capable of creating that effect. If you do experience voices coming up in meditation, don’t do what they say unless it’s absolutely reasonable – it must conform to reason. You must consider it carefully and decide whether it’s reasonable or not. If it’s reasonable, it doesn’t matter. But if it’s something bizarre, never do it.</p>
+<p><em>It is said that when a thought arises you should not grasp the sign or the content of it. What does that mean?</em></p>
+<p>I interpret not grasping the sign of any object that comes up in the mind to mean not grasping the memory associated with it. In other words, thoughts trigger off memory, which is the sign. The content of thought will depend on what the medium is. Presumably the content is something that has meaning like audible speech or visible written words or something with a symbolic content. So you merely notice that object without grabbing hold on it. When you grasp at the object, it immediately takes the mind away. For instance, when you start doing the meditation practice – whether it’s breathing practice or Buddho or whatever – you get memories coming up, which bring up thoughts and other mental phenomena. When memories come up, your natural tendency is to be interested. So you grasp them, which is taṇhā: you want to know. It's craving. The correct thing to do in that situation is to have mindfulness, to be aware of what's happening and to realize the danger of being pulled away from the meditation practice. And then make the determination: “I’m not interested in that thought pattern. That is not what I’m doing. I don’t want to follow these thoughts. I’m not going to think about that now.” But to do that usually requires some training, where you reflect time after time each time you give away or forget. Gradually you can reach a point where a warning comes up almost immediately. It’s like a red flag coming up inside, warning: This is dangerous!</p>
+<p><em>Does the Arahant have a natural sense restraint that requires no effort?</em></p>
+<p>When a person attains Arahant, the citta – the internal aspect – goes still. It's unmoving. But the five khandhas – the personality aspect – are still there and they are going to act much in the way they did before, except that there won’t be any fire left. Because the kilesas have gone, the fire will be extinguished. In the state of the Arahant, the five khandhas still remain, but the kilesas have disappeared. There are no kilesas left. Because there are no kilesas left, the five khandhas do not act in wrong ways, and at the same time there is no kamma produced. Actions done by the Arahant are called kriya, which means mere action. Those actions do not make kamma. In more technical terms, this is my understanding: in the ordinary person there is the bhavanga citta. The conscious moments of bhavanga link one with another, because of which the idea of time and continuity arise. With the Arahants, that continuity is broken. The continuity is no longer inherently present. Because of that, the tendency is for any action to be just that action. It does not follow on into a train of actions like it does with most people.</p>
+<p><em>Why is the appreciation and the acceptance of everything in the practice not enough?</em></p>
+<p>The appreciation of everything is also putting an attitude onto everything. And the tendency there would be for the mind to wander far and wide. So you must ask yourself: “Who or what is doing the appreciating?” When you look at the khandhas you will find that the appreciation will basically be thinking, probably about the world. And although the thoughts may not be particularly harmful, they are still not the way. You can have appreciation, certainly; there is nothing wrong with that. But it’s not enough on its own.</p>
+<p>It’s difficult to understand what is necessary. We are trying to reach Nibbāna. Ultimately, to reach Nibbāna we must give up everything, everything without exception. Anything that's left will pull us back. In other words, Nibbāna is the state of non-dualism. It’s a complete purity. It is emptiness, meaning empty of the world. Now if we hold on to anything at all, that will keep us back and prevent us getting there. It’s like the person who has done a lot of practice and finds everything is empty, everything is gone, and they still cannot get there. So he goes to the teacher and asks what’s wrong, why hasn't he reached Nibbāna? And the teacher says: “Because you are still there! While you’re still there, you won’t make it!” When the self gets out of the way – there it is. In that case, you can say the self wants Nibbāna. As long as the self wants Nibbāna, it can’t get to Nibbāna. When it stops searching and gives up, there it is, as it should be. As it always was. Don’t think Nibbāna is far away. It's not. Nibbāna is there within you, always. Ajaan Mahā Boowa once described it this way: Nibbāna is there within you, but it’s wrapped up by a lot of rubbish. Our job in meditation is to pull away to all those wrappings. Once we pull off the wrappings, there it is. But the wrappings are on pretty tight, so they are not easy to pull away.</p>
+<p><em>How does the Sotāpanna’s understanding of emptiness differs from the Arahant’s understanding of emptiness?</em></p>
+<p>In neither case is there an understanding; there can’t be. It’s an experience. The experience of emptiness, if it is complete, must be always the same. You cannot get differences on that score. Because of that, whether it is an Arahant, or anyone else, if they experience emptiness, that’s it. But that experience cannot be accurately described.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/talks/Teachings_for_the_Monks/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Teachings for the Monks">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Teachings for the Monks</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/talks/Teachings_for_the_Monks/02._The_Tornado_of_Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. The Tornado of Self</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
