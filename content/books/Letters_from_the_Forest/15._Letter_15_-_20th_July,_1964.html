@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15. Letter 15 - 20th July, 1964</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Letters_from_the_Forest/14._Letter_14_-_17th_July,_1964.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(14)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Letters_from_the_Forest/index.html" class="group flex justify-center items-center" title="Return to Letters from the Forest">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Letters_from_the_Forest/16._Letter_16_-_8th_September,_1964.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(16)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>Letter 15 - 20th July, 1964</h3>
+<p>Wat Pa Baan Taad <br />
+20th July, 1964</p>
+<p>Dear Jane,<br />
+I have now had a chance to talk to Ven. Ācariya Mahā Boowa about your letter of July 8th. First, with regard to your practice, he was very pleased and said that if you can develop that ‘whirlpool’ it will be very good. I presume that you feel yourself to be at the centre of the whirlpool, and the centre is still, but all around there is anicca. If that is so, you should stay in the centre with awareness as long as you can. But keep to the centre and don’t let your mind wander out into the whirlpool. If you hear music or see visions (nimittas) external to that centre, just discard them as being distractions. The best thing is to keep your attention directed inwards and not outwards. With regard to the breathing practice, Ven. Ācariya said it is like someone who has lost a cow: first he follows the footprints, but once he sees the cow his interest in the footprints dies away.<br />
+With regard to the other matter, Ven. Ācariya said more or less the same as I wrote in my last letter to you. He said that you should reflect how the other man and your husband are both four elements (or five khandhas), so why become more attached to one than the other? He also said that if you give way it would be very bad as far as sīla-dhamma is concerned. He also said that you should try as hard as possible not to let your citta go out to this person when you meet him (i.e. keep it inside yourself) and remain very mindful. At other times, don’t think of him at all. Ven. Ācariya said that the repetition of Buddho (or Dhammo or Saṅgho) is a very potent remedy, for love is passionate like fire and the repetition of Buddho is like pouring water on the fire. Finally, when I explained to him that it all arose after your practice had been going well, he said, “Oh, it’s Māra,” and that the Lord Buddha had much the same sort of thing to contend with.<br />
+In effect, this all means that you have got a battle to fight and you must not underestimate the enemy (the enemy is your own kilesa-māra). The best weapon is, of course, mindfulness! Do not allow your citta to go out, but keep it inward. Whether you do this by repeating Buddho, by willpower controlling the citta, or by watching and examining your own bodily feelings and changes doesn’t matter much. But you must take this matter as one of urgent seriousness, meaning that it is advisable to think out and plan your tactics well in advance. You might, for example, inwardly reflect and examine precisely what changes take place to make your citta go out to this man when you meet him. Do this quite often, and then when you meet him, you will be well-prepared to counter the situation. I have given a lot of suggestions, and you must select and use what you find works best – but don’t try and use them all. Here is another one: when you meet this man, think of death and imagine what this man would be like as a corpse. This may work very well, because you will find an internal revolt against such thought. This internal revolt will be your own kilesas ‘squirming,’ because Māra loves ‘all things bright and beautiful,’ and death, or the thought of it, hits him where it hurts most. It will also rapidly force your citta back inward and have quite a sobering and cooling effect. Some passages from the Visuddhimagga on the contemplation of a corpse may be quite helpful in preparing the ground for this. You must not let your admiration for this man stand in the way of any of these methods of controlling your own mind. Remember that they will do no harm to him at all and, if they are effective in cooling your own heart, they can do nothing but good.<br />
+One question Ven. Ācariya asked: Does this man love you? If not, it makes the problem that much easier; otherwise, you are likely to have quite a difficult battle with Māra. I am enclosing a print of Ven. Ācariya Mun, who was Ven. Ācariya Mahā Boowa’s teacher. Nobody here doubts that he was an Arahant, and at his cremation they found a number of Arahatta-dhātu in the ashes. These Arahatta-dhātu are called ‘Holy Sārira’ in other branches of Buddhism. They are small, hard and irregularly- shaped objects about a quarter inch in diameter which are often found after an Arahant’s body has been cremated, while they are never found after an ordinary person’s cremation. Sometimes they are like blue sapphires or clear like diamonds. The dhātu of the Buddha were said to be the second type. The inscription under the photo says “Ven. Ācariya Mun Bhūridatto. Aged 80 years. Born Thursday, the second lunar month, the Year of the Goat, Buddhist Era 2414 (1871 AD). Died Friday, the 6th night of the moon, the 12th month, the Year of the Ox, at 2:23 am, which equals the 11th of November, 2492 BE (1949). Cremated on Tuesday, the 31st of January, 2493 (1950).”<br />
+There is some mistake in this, as the dates of birth and death don’t add up to eighty years, but very few country people in Thailand know the exact date (and sometimes year) of their birth, so the mistake is not very out of place.</p>
+<p>One further point, the Ven. Ācariya Mahā Boowa never claims or displays any psychic powers. Therefore, he would never say that he could or would help you in your present problem except by the normal means of giving instructions as to what you should do. But nevertheless, he may help you quite a lot through the power of his citta, and you would be quite unaware of it. In fact, everyone here is quite sure that he has psychic abilities, but he never uses them in any way that is obvious or that does not allow of some normal explanation.<br />
+Out here in the forest, things go on much as usual. About six weeks ago my evening practice was interrupted by the sound of very rapid sub- machine gun fire about a hundred yards away in the forest. Later, we heard that a man from the village had been killed – by whom we don’t know. But, the village is full of guns and rogues who I suppose have their own private feuds. Fortunately, they are all afraid of Ven. Ācariya and keep out of the wat. In some ways, Thailand is quite a wild country.<br />
+I’m enclosing a letter to Jhānananda. I don’t know her address and would be glad if you would send it on. I feel rather sorry for her. She has tried to practice the way of Buddhism for a long time, but has twice got attached to bad teachers. I suspect that this may be the kamma result of teaching others in the past before she was fit enough to do so. Perhaps the collapse of her group is a blessing in disguise! But please don’t tell her that I said so.</p>
+<p>Yours,<br />
+Pañña–</p>
+<hr />
+<p>Jane’s Recollections</p>
+<p>Jhānananda was a Jewish Latvian Nun. She was born in 1895. I think she was ordained in China and spent the war in hiding in the south of France where she learnt tailoring.<br />
+I first met her at the Buddhist Society Summer School in 1958. I saw her in the Ladies Room and fled thinking she was a monk what with her shaved head and brown robes. I hadn’t really seen her beautiful, soft, serene face or I would have guessed she was a woman.<br />
+At that time she was looking after Acharn Paññāvaḍḍho in Alexandra Road. We became good friends and my daughter and I loved visiting her in her council flat in later years. It was a bleak building and one reached her room by an iron staircase. She had to share a bathroom, and I am not sure it was even on her floor. But her balcony was covered with plants and she had some beautiful Buddha Rūpas which made her room a haven of peace. She was an extremely good cook.<br />
+Jhānananda was very blunt and had no time for deviations from the path. She was always scolding me for my flights of fancy. She saw the first two Noble Truths wherever she looked. When I showed her my first grandchild she said, “What’s so good about that?” Music was just noise to her. She died in 1972. Her obituary makes fascinating reading. I wish I had time to write her life story; perhaps someone else will one day.<br />
+Now for the letter: I can’t remember anything about the still centre with the whirlpool effect. It seems, for once, that I had experienced something in my practice that was valuable, but I’m afraid that as soon as you identify something good in your practice and try and explain it to someone else and then hope it will occur again, it never does. I soon learnt that it is better to keep quiet about such things, even to the extent of not discussing it with one’s teacher.<br />
+Rereading the letter, I remember being told that the Lord Buddha had much the same thing to contend with, and that seemed to melt the grip this infatuation had on me. It was almost tangible and started me on the road to recovery. It was typical of Tan Acharn Mahā Boowa that he could be so kind and gentle when he sensed one was in real trouble. Acharn Paññāvaḍḍho’s advice to learn about the life of the Buddha – not just to read the Suttas – was brilliant because it meant I could build up a strong love and veneration for him which I have never lost. Apart from all the veneration and support lavished on the Buddha, he had much to contend with in his life. His father’s little kingdom was eventually overrun by warring neighbours after the Buddha had twice prevented it. There were quarrelsome bhikkhus, women demanding to be allowed to become nuns and then he lost two of his closest, dearest disciples in his old age, which he described as being like losing the sun and the moon.<br />
+Affection and respect for the Buddha is rather rare in Westerners, so after we moved to Cornwall I started a Sutta reading group to try and remedy that. It never really caught on, the repetitions bored people and they probably only came for the meditation sessions that we began the evening with, and the coffee and dark chocolate and chat afterwards! No harm in that, I enjoyed them too.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Letters_from_the_Forest/14._Letter_14_-_17th_July,_1964.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">14</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">14. Letter 14 - 17th July, 1964</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Letters_from_the_Forest/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Letters from the Forest">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Letters from the Forest</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Letters_from_the_Forest/16._Letter_16_-_8th_September,_1964.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">16</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">16. Letter 16 - 8th September, 1964</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
