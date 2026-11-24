@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. The Basis of Practice</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/01._Introduction_to_Buddhist_Practice.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(01)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/index.html" class="group flex justify-center items-center" title="Return to Introduction to Buddhist Practice">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/03._The_Importance_of_Samādhi.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(03)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/Ajaan-Pannavaddho-Introduction-to-Buddhist-Practice/02.%20The%20Basis%20of%20Practice.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>02. The Basis of Practice</h3>
+<p>When one begins doing Buddhist meditation it is important to know the reason why one should do it, otherwise one easily becomes confused. To begin with the Buddha saw that there is one problem which all of us have, the problem of discontent. Everybody is discontented in one way or another. They are always wanting this or wanting that, and wanting means that they are discontented, never satisfied. All of us are like that – we are always wanting things, we are always discontented and we are always trying to cure this discontent. We are forever trying to find some way to cure it. Now if one really has enough wisdom one can cure it, but mostly people go the wrong way about it and they create more discontent for themselves all the time.</p>
+<p>So what we have to do is learn the way to understand this process. When one has this discontent, inside one there are things which automatically tend to make one go in the wrong direction. These are greed, hate, and delusion. These are the reasons why we always go in the wrong direction rather than the right direction. It is because these factors are constantly coming up to lead us to do wrong things. So we have to learn about greed, hate and delusion. We have to learn to see them in ourselves. When we realise that the things we do come back on us to produce more discontent, more suffering, then we want to find a way to cure it. People always want to cure their suffering but they are rarely prepared to go out and find the proper way of doing it. Because of that people go about in the world doing the wrong thing time after time and they never do cure themselves, they never get rid of their suffering.</p>
+<p>When we realise that this discontent that we have had throughout our lives is caused by ourselves then we realise that we can also cure it. If it was put on us by a God or some other entity, then we would not be able to do much about it. But the fact is, it is we who have done it and we always make our own future. What we do, our actions, lead us to become what we will be in the future. So we must learn to do the right actions and not the wrong ones.</p>
+<p>When we want to overcome this problem, we have to employ three factors to begin with. Firstly, we must have good moral behaviour. Moral behaviour in this case means that we practise the five precepts. We train ourselves to avoid killing anything. We train ourselves to avoid stealing, or taking anything that has not been given to us. We train ourselves to avoid wrong forms of sex. We train ourselves to avoid wrong speech. And we train ourselves to avoid taking drinks or drugs which distort the mind. All of these five are actions of body or speech. This is basically what is meant by morality in Buddhism.</p>
+<p>Morality in Buddhism is designed to bring us to a sense of happiness, a sense of contentment in this world. It will not reach a very high sense of contentment but it will make us content in the ordinary way of the world. If we go against these moral precepts we make more trouble for ourselves and we find that there is fire inside the heart. So morality is an essential thing because it sets us right with the world.</p>
+<p>After morality, the second factor we must develop is the training of our mind. We must train the mind because although we behave properly in the world and do the correct things, our mind is not under control. Our thoughts are wild, they jump here and there all over the place. If we try to control them we find that they are very difficult to control and before long they have jumped away. The meditation practise is in fact involved with the controlling of thoughts. This is what we have to do in meditation practise. The reason why we have to do this is to make the mind strong. When the mind is distracted and jumping about it is not very strong. If we wish to find out things which are necessary to be found out it becomes difficult because the mind refuses to stick on them.</p>
+<p>The sort of things which it is necessary to find out about are really the answer to the question: “who and what am I?” To find the answer we must start by looking at ourselves, looking at the body and the mind. When we do the meditation to control the mind, we will find that as we continue on doing it we gain a sense of contentment and happiness. It is rather like doing work. Say you have a job to do which you must do even though you do not particularly like doing it. So you get down to it and to begin with the going is rough and progress is slow because the mind jumps about and will not stick on it. As time goes on the mind gradually remains more and more on that work until it starts to become interesting. When interest comes it is easy to keep the mind on the work. Eventually it may become so absorbing that you forget everything else.</p>
+<p>Meditation practise is like this too. We have to put our mind onto a particular object and keep it on that. At first the mind does not want to do it and it jumps about. Then after a time, as we put more effort into it and it becomes more habitual, the practise becomes a little more interesting, until we reach a point where we look forward to doing the meditation practise. At this stage a sense of happiness and contentment will arise in connection with our practice. This is the way of what we call “samādhi”, the meditation practice which makes the mind strong. The reason we develop samādhi is that when the mind is strong then we can develop wisdom.</p>
+<p>Wisdom is the investigation of this body to understand what actually this body really is. Is it something which is beautiful or not beautiful? If we think that it is beautiful, suppose we take the skin off, would it be beautiful then? Look inside at the internal organs, the bones, everything inside this body. We will come to see that this body is not quite what we thought it was. We have to ask: who does this body belong to? Is it mine? When we investigate this carefully we see that, no it is not ours. The body comes from the world, it relies on the would and it goes back to the world. The world is the owner of this body, not me. So the body is something which is separate from us. If we can realise this very deeply, then we will find that a lot of our troubles disappear because the concern for the body disappears. The belief that when we die everything is gone, that goes as well because we realise as well that when death comes it is just the body which dies. The body dies and goes back to the world, but the one that really matters does not die, it stays the same. If we can come to this realisation then we will really gain some deep understanding.</p>
+<p>As we go on with this practice of developing wisdom, the factors of greed, hatred, and delusion begin to die away. They die away because the one thing they cannot stand is being seen. It is like a dark room, if one turns on a light the room is immediately bright, regardless of how long it may have previously been dark. It is the same within ourselves. If we can see the true nature of this and realise the truth in a deep way, then the things which have deluded us for a long, long time just disappear. After all, delusion is something which can be eliminated just by realisation. And this can happen very quickly. Once we are in the right state to understand the realisation will come, simultaneously the delusion will go. When the delusion goes these three factors – greed, hatred, delusion – tend to die away gradually. Bit by bit they disappear. Problems we have had in the past just dry up. This is the purpose of the practice because when these delusions start disappearing within us there is a sense of lightness and buoyancy. We feel bright and we know where we are going. We feel quite confident about the future. We know that what ever happens our future will be good. This is very important.</p>
+<p>This is basically the way of Buddhism, the path that it goes along. The fundamental cause of why we should practice Buddhism is the fact that we all have discontent, we are not satisfied. And so we can see that the cause of this discontent is ourselves. We have produced the causes and we have produced them because of delusion and ignorance. It is out of ignorance which is very deeply rooted and cannot be eliminated merely by learning or knowing about it. With the ordinary ignorance in the world we just learn about that thing and the ignorance of it disappears. But fundamental ignorance will not disappear so easily because it is so very deeply rooted. It is a kind of blindness where we cannot see, even when we have ignorance, because of which we are always going and doing the wrong things. And although we are doing the wrong things we think those things are right. We think that this is the way to overcome our discontent. But our fundamental understanding is wrong so it does not turn out that way. Instead, the wrong things we do we accumulate for our future. So that in the future we will experience the bad results that come from wrong actions, which equals more discontent. So we have to learn to overcome these delusions, the greed and the hate within us. If we can accomplish that then all of our problems will disappear automatically.</p>
+<p>As to meditation practice itself, probably the best approach for Westerners is to do the breathing practice. This is not a breathing exercise. It merely uses the breath as a convenient object to pin ones attention on. If you can sit comfortably cross–legged then do so, but in any case sit down comfortably in any manner which suits your best, being careful to sit upright and not to slouch. It should be a sitting posture which you can maintain for quite a long time. Then you should put your attention on your breathing somewhere in the area of the nose or the upper lip, wherever you feel the passing of the breath the strongest. Keep your attention right on that point and watch carefully as the breath comes in and goes out, constantly in-out, in-out all the time. After a short time you will find that the mind jumps away, thinking of this and that, and so your attention is no longer on the breath. You must strive to recognise this as soon as you can and bring the mind back to the breath. Soon it jumps away somewhere else and again you have to bring it back, over and over again, bring the mind back to the meditation practise. As you become more practised try to anticipate distractions arising before the mind actually jumps away or while it is experiencing distraction so that you can stop these thoughts before they have a chance to drag you away.</p>
+<p>The factor which is essential here all the time is what we call mindfulness. It means keeping ones attention on what one is doing in the present, here and now. When practising breathing meditation you should strive to notice the feeling of the breath the whole of the time it is going out and the whole of the time it is coming in. Keep your attention right there and be aware of it continuously. As you become more skilled at this it becomes more interesting and your attention becomes more acute until you become engrossed in an effort to make it more and more precise, more and more exact so that your mind remain solely on the breath to the exclusion of all else. This is where the interest comes up. You can continue doing this until all you have left is breathing and nothing else. When you reach that stage then the mind is becoming very well concentrated.</p>
+<p>It can then go further where your point of attention drops to the heart and breathing stops. If you find that the breathing stops, do not worry. The breath will come back again. If you can reach that point where your attention drops down to the heart you will find that this state is the happiest moment that you have ever experienced. This is a point, a state, where everything else disappears and there remains just knowingness and nothing else at all. Such is the state that you will not be satisfied until you can get back to it again.</p>
+<p>This however is not the end result. This is a state of deep samādhi. If you can get to that state then the mind becomes very concentrated. Coming out of that state your mind is calm and wieldy, very flexible, and you can turn the mind to investigating the body or whatever you like and the mind will go into it very easily. Because the state of samādhi is so very pleasant there is a tendency for the mind to become attached to it to the exclusion of the investigation practice. If that should happen you must make an effort to do the work at hand which is the investigation of the body. You have to turn your mind to the investigation practice once it has become well rested in samādhi.</p>
+<p>The important thing to realise about meditation practice is that it is keeping your attention on the practice, keeping your attention on what you are doing. The attention is what matters. Without the attention it is not meditation practice. Meditation is really training your attention, training yourself not to let the mind wander to distant things, or into the past or future. Keep your mind here and now.</p>
+<p>The trouble is that ever since birth we let our minds wander about all over the place. It has become habitual. It has come to the point now where we are taught that this incessant thinking is desirable, that we should be up with all the latest news on everything which is happening. Consequently our minds are jumping about all over the place. The more they jump about, the more unhappiness we experience, because concentration, contentment and happiness are all the same thing. If we are concentrated, we are happy. Happiness comes from controlling our minds. Then we have a refuge firmly established within ourselves.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/01._Introduction_to_Buddhist_Practice.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">01</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">01. Introduction to Buddhist Practice</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Introduction to Buddhist Practice">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Introduction to Buddhist Practice</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Introduction_to_Buddhist_Practice/03._The_Importance_of_Samādhi.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">03</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">03. The Importance of Samādhi</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

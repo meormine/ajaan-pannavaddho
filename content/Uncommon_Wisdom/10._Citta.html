@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10. Citta</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/09._Self.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <svg class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            <span class="font-medium">(09)</span>
+        </a>
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Uncommon Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/11._Nibbāna.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(11)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/uncommon-wisdom/10.%20Citta.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>10. Citta</h3>
+<p>Kruba Ajaans of the Thai Forest Tradition have always placed a special emphasis on what they call “the one who knows.” In doing so, they make a fundamental distinction between two very different aspects of the mind: the unchanging knower, and the fluctuating states of mind that are known. Because we fail to understand the difference, we take transient mental states to be real, to be the mind itself. In fact, they’re just changing conditions that never remain stable from one moment to the next. The knowing essence of mind—the one who knows—is the only stable reality.</p>
+<p>Mostly, we group all mental functions together and refer to them as mind. But in truth, states of mind exist in conjunction with the knowing of them. When we see that distinction clearly, a realization occurs that mental states like good and evil, happiness and suffering or praise and blame are conditions separate from the awareness that knows them. The knower occupies a neutral position between dualities like happiness and suffering. One simply knows them. If we can see this clearly, we can put down the whole lot and let them go.</p>
+<p>The Pāli word “citta” is often used when referring to “the one who knows.” The word citta itself is very difficult to translate. When discussing the nature of the citta, language has its limitations. Attempts at translating a word like citta into English always lead to misunderstanding because no comparable English equivalent exists which encompasses all aspects of its true meaning. In fact, the true nature of the citta cannot be expressed in words or concepts. Concepts such as mind, soul or spirit all miss the point. All words carry certain preconceived notions that limit their definition. But the citta is completely unlimited. Because it encompasses everything, the citta has no boundaries by which to delineate it.</p>
+<p>For that reason, the word citta is best left untranslated. It is far better for people to struggle to understand an unfamiliar term than for them to completely misunderstand that term due to a misleading translation. Misunderstanding disguised as knowledge never leads to the truth.</p>
+<p>The term citta is usually translated as “mind,” but this is quite misleading. What we generally refer to as the mind is different from citta. The mind incorporates the mental faculties of feeling, memory, thought and consciousness, and is usually considered to be that which thinks and remembers. Those mental faculties are inherently unstable: they all constantly arise, remain momentarily and die away. The citta, on the other hand, does not arise and does not die away. It exists entirely without reference to time and space.</p>
+<p>The citta is difficult to explain, mainly because it does not represent a material object. Because the citta is not something that can be pointed to or examined in any way, from the world’s viewpoint it does not exist. You can know the citta, but you can’t see it. It doesn’t resemble an external object. It’s not a sensory thing that you can contact. You can’t perceive the knowing essence because the knower and the knowing are the same. For the citta to perceive itself, it would have to split into two, and it can’t do that.</p>
+<p>In beginning to understand the nature of the citta, we should realize that it has various aspects. On one level, there is the citta of ordinary life. This citta is rather like the movement of the waves on the surface of the ocean, in contrast to the still depths below. We might call the one that moves on the surface the superficial citta. The superficial citta knows the five senses of sight, sound, smell, taste and touch. It is the one who makes decisions, the one who makes kamma; in other words, the one who is active. This is what we mean by the citta in ordinary life.</p>
+<p>This superficial citta has qualities and faculties that are changing all the time. It is never without change. When the citta is associated with the aggregates of body and mind, it is bound up with the world of constant change. The citta changes because it must change. Because the aggregates are part of the world, they are inherently impermanent; so the citta cannot remain fixed in that situation.</p>
+<p>However, the superficial citta is always grounded in something we call the “original citta,” or the “primordial citta.” Unlike the ordinary citta, the original citta is something which is vast and unfathomable. It is like the depth and breadth of the ocean, as opposed to wave-like sensations rippling on the surface. The waves are not separate from the ocean, but they do not really affect the ocean either. At the same time, the waves can be quite turbulent and full of motion. They are never still. The basic condition of waves on the ocean’s surface is constant change. The depths, however, always remain as they are: still and unchanging.</p>
+<p>The mental aggregates, or nāma khandhas, of feeling, memory, thought and consciousness are also bound up with the surface motion. The fundamental ignorance, or avijjā, which permeates the ordinary citta and influences its knowing, uses the functions of these mental aggregates to perceive objects, such as seeing forms and hearing sounds. When the citta is modified in this way, we call it consciousness, being that function which acknowledges sensations. The citta is modified in that way because avijjā, which has been infused into the citta, usurps the citta and uses the citta’s power to its own ends.</p>
+<p>One of avijjā’s primary aims is to experience sensations. The reason it wants sensations is to prove its own existence—its self-identity. The only way that the citta with avijjā can verify its identity is by relating itself to other things through sense experiences. So consciousness is necessary for the citta infused with ignorance to relate to other things, thus reinforcing its own self-existence.</p>
+<p>Consciousness is necessary to experience the duality of subject and object, but it is completely extraneous and unnecessary to the original citta. So from the point of view of the reality of the knowingness which is the true citta, consciousness is superfluous because the true knowing is always present in the citta, even after all the physical and mental aggregates have disappeared.</p>
+<p>Because of that, we cannot really say anything definitive about the original citta at all. Although its scope is immeasurably large, it remains for us a mystery, an unknown quantity.</p>
+<p>For that reason, the citta always causes people great uncertainty. But it’s also the one that is most valuable, the one that really matters. Its subtlety makes it difficult to fathom. We can say that the citta is the essence in a person—everything else is peripheral. In that sense, citta is life, the essential component in what it means to be alive. Because of that, anything that lacks citta isn’t alive—it’s just inert material substance and nothing more.</p>
+<p>The citta is the active one. It creates the five aggregates of body and mind; it creates vedanā, saññā, saṅkhāra and viññāṇa. It creates everything. You mustn’t think of the five aggregates as being five different rooms that the citta enters one after another. It’s not like that. The citta creates a moment of viññāṇa, which then dies away. Then it creates vedanā, and that dies away. Then it goes to saññā, and that dies away. Then saṅkhāra, then viññāṇa again. It performs the duties of feeling, memory, thought and consciousness. They’re all the jurisdiction of the citta, the whole lot. It performs multiple tasks.</p>
+<p>To give an idea of what the citta’s nature is: We see, hear, smell, taste and touch things, but how do we know those sensations? Where is the knowing located? Suppose we see something and we know perfectly well that it is such and such an object, and we know its purpose and so on—there’s something in us which knows that sensory input. But when we search for that which knows, we find it very difficult to catch hold of the quality of knowing independent of what is known.</p>
+<p>Say we know a sensation. The knowing is not the same as the sensation. Knowing is not a sensory experience. Sensation is an object of awareness, something that is known. But the knowing itself is never an object of awareness; rather, it’s awareness itself. Normally, whatever we experience is perceived through the senses. But we can never experience the citta in this way because the citta is actually that which knows all sensations. The citta is the center, everything else is peripheral. Basically, it is the knowing essence within us.</p>
+<p>But you should approach the knowing with caution because, although the citta is the one that knows, it does not always know correctly. That’s normally the case when its knowing is contaminated from within by mental defilements such as greed, hatred and delusion. The citta still knows, but it knows falsely. What ensue from that wrong view are unwholesome actions of body, speech and mind.</p>
+<p>The body and the mind are simply mechanisms. The citta is the force that controls their behavior. The citta exercises the powers of intent and volition. That intention, in turn, creates kamma. Because the body and the mind cannot act independently of the citta, only the citta can be held responsible for kamma and its consequences. When the kilesas usurp the citta’s power, they tend to make body and mind act in ways that promote greed, hatred and delusion.</p>
+<p>The real power of the citta is neutral, but the kilesas are biased, so they harness the strength of the citta for unwholesome purposes. The kilesas want this and want that. All the time, they are grasping at something. And they push the citta about to make body and mind strive to attain those things. In the end, the citta reaps the consequences of those actions, which is why there is so much pain and suffering.</p>
+<p>When the citta, under the influence of the kilesas, wants to go in a certain direction, it makes the body and the mind do its bidding. Body and mind simply follow, carrying out the dictates of the citta. Because of that, neither body nor mind is really essential. The essential thing is the citta. But in order to free the citta of kilesas, we must have both the body and the mind as the mechanisms necessary to see the kilesas in action. The kilesas are located in the citta, but they express themselves through body and mind.</p>
+<p>Body and mind are comparable to a computer: the body is the hardware and the mind is the software. The person using them is the citta. The computer must be there for the person to use it, just as body and mind are needed for the citta to function in the world. A person can use a computer with good or bad intentions. Either way, the computer simply follows commands. The intentions are found in the person, not in the computer.</p>
+<p>Similarly, the kilesas are not found in the body or in the mind; the kilesas are located in the citta. When a person dies, the mental aggregates die along with the body and disappear. But the citta—the knowing essence of mind—does not die. That means that after death the kilesas remain with the citta. They don’t disappear—and neither do the results of kamma created by the kilesas nor the tendency for them to arise in the future. Because the kilesas and their consequences are still there, a new birth will take place. Kamma is then reactivated in conjunction with the next body and mind.</p>
+<p>The citta is the very foundation of saṁsāra. It is the essence of being that wanders from birth to birth. That wandering is governed by kamma and its consequences. And it is the citta that carries the kamma from birth to birth. This would seem to imply that the citta is some kind of entity, like a soul. But it is not an entity at all, just as the vastness of space is not an entity. The citta is simply a reality that knows; a vast knowing essence at the depths of one’s being that knows the nature of kamma and its appropriate consequences from one birth to the next.</p>
+<p>The kamma that determines the next birth will then dictate the citta’s level in that plane of existence. That’s the level at which the citta normally functions—what it tends to always revert to. If you investigate often, you can locate the level that it seems to revert to inside yourself. We call this “the ground of the citta,” meaning the level of the citta.</p>
+<p>In the cycle of rebirth, the citta can experience many different levels. Our cittas are on the human level, but there is quite a lot of variation even on this level, from people who are extremely low and coarse to people who are very high and near to the deva realms. It’s quite a broad range. We should investigate to discover our normal level within this range. This is important to know. If we can gain some understanding of our own level, we can better understand where our faults lie, and how we can go about correcting them.</p>
+<p>Due to various circumstances, the level of the citta can change at times, but it tends to revert back to its basic level. If a person practices in good ways, or in bad ways, and they go on doing that for a long time, the level of the citta can reestablish itself. That is, the ground of the citta can change. For example, if a person who is normally quite friendly gets into a long-lasting situation that causes a lot of anger to come up, that anger can take over and become the citta’s basic level. We also see the same thing in people who have mental trouble. When they become stuck in that mental state for a long time, that state becomes the level of the citta.</p>
+<p>One of the problems we have is that we all tend to think that things are fixed inside. That’s not so. States of mind change all the time, going this way or that way. It depends entirely on the conditions that produce the state. Conditions that occur very frequently can bias the citta in a certain direction. To put it in another way: When we develop habits, those habits tend to take hold of us. When we become thoroughly involved in those habits, they can be so strong that they become part of us. Habitual involvement can change our whole mental outlook.</p>
+<p>The most effective way to shift the ground of the citta in a positive direction is to put the Buddha’s teaching into practice. Constant, sustained meditation practice develops good mental habits. Good habits lead to a sharper mental focus and greater degrees of calm and concentration. When the citta is raised to a sufficient level of calm and concentration, the knowing essence within becomes more apparent. In truth, that knowingness is so very refined compared to our physical form that its true nature becomes apparent only in a state of meditative calm.</p>
+<p>Although the citta is bound to the physical body from birth, its presence is so subtle that normally we are unable to detect it. The citta’s knowing is actually dispersed throughout the body in such a way that we can’t pinpoint its exact location. Only the practice of meditation can identify its presence and separate it from everything else associated with the body. In samādhi meditation we can experience that separation, seeing the citta as the knowing and the body as the known.</p>
+<p>In order to reach that stage, we must first discipline the mind to overcome the resistance formed by accumulated bad mental habits. In other words, we have to train the mind to calm down and stay at home. When the mind is very calm, it is easy to direct it inward. It will be content to stay inside and go deep until it understands things clearly. Whereas, if we try to do that with our ordinary consciousness, the mind will jump about and will not stay fixed on one object, because it is still hungry and unsatisfied.</p>
+<p>The mind is always hungry and searching for something to satisfy its appetite. So it seeks satisfaction in sensations, which is searching in the wrong direction. It jumps around all over the place like a monkey, but never receives any satisfaction. The way to cure that is to temporarily halt sensory experience—clamp down and block it off.</p>
+<p>In meditation, this means keeping the mind focused on only one object. You undercut the feeling of dissatisfaction by allowing the mind only one object, using mindfulness to hold the object in place. This anchors the mind and prevents it from drifting. Because it can no longer jump about, the restlessness gradually subsides. In the Visuddhimagga, the restless mind is compared to a calf that is taken away from its mother and tied to a post with a rope. At first, it brays and jumps about, trying to escape. Because the rope prevents that, it eventually gets used to the situation, calms down and goes to sleep by the post.</p>
+<p>When you anchor your mental focus on one object for a long time, the mind will calm down and fill with inner peace. Eventually, you’ll get to a point where the citta is so fully satisfied that it no longer searches for sensations. When that happens, the citta goes still and quiet. When the citta becomes still and quiet because it no longer wants to experience external sensations, you can begin to see its true nature. Seeing that, you realize how rarely the citta is in harmony with itself.</p>
+<p>Meditation is a process of going inward. Essentially, this process moves from external to internal, from coarse to subtle; it moves from an emphasis on the body to an emphasis on the mind, from a condition of activity to a condition of stillness. In other words, it involves a movement away from the realm of the known and into the realm of the knowing.</p>
+<p>Once the mind becomes skilled at achieving calm and concentration, it begins questioning its relationship to the known, the objects of awareness. The body is made up entirely of inert material substance, physical matter that on its own has no awareness. Since physical matter is incapable of knowing itself, what is it that knows the body? Where is that awareness located? Feelings don’t know themselves; they are known. What is it that’s aware of feelings? Memories, perceptions and thoughts are objects of awareness. They are known as they arise and cease, but they themselves have no innate awareness. So what knows them?</p>
+<p>If body, feelings, memories, thoughts and perceptions are all known, there must be an independent knower that encompasses all aspects of body and mind. There is, of course, but the problem is that ignorance weaves a web of delusion around the knower, distorting the knowing in such a way as to cloud the difference between that which knows and that which is known.</p>
+<p>In that respect, the phrase “the one who knows” and the word “citta” are used by the Thai Forest Tradition in a way that other Buddhists might find difficult to comprehend. Sometimes, this understanding may seem at odds with what we read in the early Buddhist texts. One of the standard formulas found in the suttas states that a full comprehension of the five aggregates results in the destruction of greed, hatred and delusion. This statement represents a simplified view of a very complex experience. The implication is that the five aggregates encompass the entire world of human experience; that nothing—including an independent awareness—exists outside the domain of the five aggregates. If nothing exists separately from the five khandhas, then everything that exists must be included within their domain.</p>
+<p>That is actually true, but not in the way people normally think. It hinges on what is meant by “existence.” Change is the essence of existence and everything in the five khandhas is constantly changing; therefore the five khandhas are the domain of existence. Without change, there is no existence. On the other hand, changing phenomena are not real, because reality never changes. Thus the five khandhas exist, but they are not real. They are not reality because reality is not impermanent. Because it never changes, reality is not known through sensation; and because we can’t sense reality, it’s not associated with the five khandhas. However, reality can be known: We know it by being it.</p>
+<p>We can put it like this: everything in the world is impermanent; everything is constantly changing. Again, change is the very nature of existence. Without change, there is no existence. Everything that is impermanent is unreal. It never has any time to be real; it’s changing all the time. What we have here is a fundamental lack of reality.</p>
+<p>The citta, on the other hand, is the exception to the rule. Existing separately from the five khandhas, the citta is comparable to the unfathomable vastness of space. Just as space is the medium without which nothing could come into being, the citta is the stable conscious continuum without which nothing in the realm of the five aggregates or the six sense bases could come into being. The citta is the unchanging reality in which everything in the world arises and then ceases. Because the citta does not change, it does not exist—but it is real. Being awareness itself, it is that all-encompassing presence in which arising and passing are known.</p>
+<p>In truth, there is nothing really wrong with the citta. Within itself, it is naturally pure already. It’s the defiling influences infiltrating the citta which cause it to experience happiness and suffering, gladness and sorrow. But the true nature of the citta has none of those qualities. Moods like happiness and suffering are not intrinsic to the citta. They merely deceive the untrained mind, which follows after them until it forgets itself, forgets its true nature.</p>
+<p>Really speaking, the citta is already still and unperturbed: just like the ocean. When the wind blows, the surface water ripples. The ripples are due to the shifting winds on the surface, not to the ocean itself. The ocean depths remain unmoving and unaffected. When thoughts and perceptions arise, the surface of the mind ripples; when sense impressions arise, the surface of the mind ripples. The rippling is due to the thoughts and sensations. When the mind follows its surface activity, it loses sight of its true nature. If it doesn’t follow after them, it can know fully the fluctuating nature of mental activity and still remain unmoved.</p>
+<p>Our practice should be focused on seeing that which knows thoughts and sensations as they arise and pass away. We must train the mind to know all aspects of mental activity without getting lost in any of them. By doing that, the natural peacefulness of the citta will stand out clearly and remain unperturbed by happiness, suffering, gladness or sorrow. If we can experience this distinction with clarity, we can relinquish all aspects of existence and let them go their own natural way. Ultimately, this is the goal of Buddhist practice.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/09._Self.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Prev</span>
+                <span class="text-xs font-mono text-stone-500">09</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all">
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Previous</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">09. Self</span>
+                </div>
+            </div>
+        </a>
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Uncommon Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Uncommon Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/11._Nibbāna.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">11</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">11. Nibbāna</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>

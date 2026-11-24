@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01. Purpose</title>
+	<link rel="icon" href="../../../static/favicon.svg" type="image/x-icon">
+    <link href="../../../static/css/main.css" rel="stylesheet">
+    <style>
+        /* Base transitions and typography overrides */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose strong { color: #7CB342; font-weight: 600; }
+		.prose h3 { margin-bottom: 1.25rem; line-height: 1.8; }
+        .prose h3 { color: #7CB342; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-dhamma-light text-dhamma-ink dark:bg-dhamma-dark dark:text-dhamma-inkDark min-h-screen flex flex-col">
+    
+   <nav class="border-b border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-black/50 backdrop-blur sticky top-0 z-10">
+        <div class="w-[92%] md:max-w-4xl mx-auto py-4 flex justify-between items-center">
+            
+            <div class="flex items-center gap-1 sm:gap-4 relative min-w-0">
+                <button id="menu-btn" class="p-1.5 sm:p-2 rounded-lg hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors shrink-0" aria-label="Open Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+
+                <div id="dropdown-menu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl shadow-lg overflow-hidden flex flex-col z-50">
+                    <a href="../../../biography.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <span class="text-sm font-medium">Biography</span>
+                    </a>
+                    <a href="../../../talks.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                        <span class="text-sm font-medium">Talks</span>
+                    </a>
+                    <a href="../../../writings.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <span class="text-sm font-medium">Writings</span>
+                    </a>
+					<a href="../../../quotes.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <span class="text-sm font-medium">Quotes</span>
+                    </a>
+					<a href="../../../download.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors border-b border-stone-100 dark:border-stone-800">
+    <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+    </svg>
+    <span class="text-sm font-medium">Downloads</span>
+</a>
+                    <a href="../../../about.html" class="flex items-center gap-3 px-4 py-3 hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+                        <svg class="w-5 h-5 text-dhamma-saffron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="text-sm font-medium">About</span>
+                    </a>
+                </div>
+
+                <a href="../../../index.html" class="flex items-center gap-1.5 sm:gap-3 group ml-1 sm:ml-0 min-w-0 shrink-0">
+                    <img src="../../../static/logo.svg" class="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-12 transition-transform shrink-0" alt="Logo">
+                    <span class="text-base sm:text-lg font-bold tracking-tight whitespace-nowrap">Ajaan Paññāvaḍḍho</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-0.5 sm:gap-2 shrink-0">
+                <a id="rss-link" href="https://buddhanussati.github.io/dhamma-quotes/pannavaddho.xml" target="_blank" title="RSS Feed" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors text-stone-600 dark:text-stone-400 hover:text-dhamma-saffron dark:hover:text-dhamma-saffron">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 11a9 9 0 0 1 9 9"></path>
+                        <path d="M4 4a16 16 0 0 1 16 16"></path>
+                        <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                </a>
+
+                <button id="theme-toggle" class="p-1.5 sm:p-2 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1-0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow w-[90%] md:max-w-3xl mx-auto py-10">
+        
+<div class="flex justify-between items-center mb-8 pb-4 border-b border-stone-200 dark:border-stone-800 text-sm">
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+    
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex justify-center items-center" title="Return to Uncommon Wisdom">
+            <img src="../../../static/logo.svg" class="w-6 h-6 opacity-60 group-hover:opacity-100 group-hover:rotate-45 transition-all duration-300" alt="Archive">
+        </a>
+    </div>
+    
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/02._Presence.html" class="flex items-center gap-1.5 text-stone-500 hover:text-dhamma-saffron transition-colors group">
+            <span class="font-medium">(02)</span>
+            <svg class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+        
+    </div>
+</div>
+
+
+<div class="mb-10 w-full flex justify-center items-center rounded-lg bg-stone-50 dark:bg-stone-800/30 p-4 border border-stone-100 dark:border-stone-800">
+    <div class="w-full max-w-[500px] overflow-hidden">
+        <iframe src="https://archive.org/embed/uncommon-wisdom/01.%20Purpose.mp3" width="500" height="30" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+<article class="prose dark:prose-invert max-w-none mb-16 text-lg">
+    <h3>01. Purpose</h3>
+<p>Have you properly considered your purpose for doing meditation practice? It is important to get the purpose right; that is, the reason why you do it. We start off with the fundamental basis of Buddhism, the fact that we all experience dukkha or discontent which we are trying to cure. We attempt to cure our discontent by using cause-and-effect methods; in other words, we initiate those causes that we believe will lead to the relief of our suffering. In doing so, we search for causes, or actions, that result in less dukkha and greater contentment. Dukkha can be anything from small irritations all the way up to intense suffering. This is fundamentally what we are trying to remedy. It makes no difference whether we are Buddhists or not, we are all driven by this quest to find happiness.</p>
+<p>If we’re wise and we understand the situation correctly, then we might actually choose the right course of action and manage to get the happiness we are seeking. But because our minds are clouded by defilements, we tend to make the wrong decisions. Due to thinking and acting wrongly, we pile up more and more suffering. Failing to understand the correct way to get rid of suffering, we tend to make the same mistakes over and over again. This is the situation that we are in.</p>
+<p>In order to reverse that situation, it is necessary to first turn our lack of understanding into correct understanding. If we can accomplish that, then we truly will get rid of suffering. So the purpose of Buddhist practice is to comprehend within ourselves the right way to eliminate dukkha. This is really the whole of Buddhism: to learn how to think properly, how to behave properly and how to speak properly. Only when we put those factors into practice can we cure the discontent.</p>
+<p>In order to learn how to think, behave and speak properly, we must train ourselves. We train ourselves to have a sharp mind, to understand the reasons for the things that happen in our lives, and thus to get to know ourselves properly. By getting to know ourselves, we get to know other people. By getting to know other people we learn how to behave rightly towards them—all because we know how to behave rightly within ourselves.</p>
+<p>The means to achieve this is the method that was taught by the Buddha, which is comprised of sīla or morality, samādhi or training of the mind, and paññā or wisdom. If we learn how to practice those three effectively, we can overcome the mental defilements, the kilesas, that cause the discontent we experience. As we overcome the kilesas, the discontent and suffering will lessen and eventually die away. This goal can be achieved. Many have done it already. Countless people have trained in sīla, samādhi and paññā and achieved very good results, experiencing high degrees of contentment and happiness. So the way to happiness is the way of sīla, samādhi and paññā.</p>
+<p>The Buddha taught that since the pain and suffering we experience is our fault to begin with, we can therefore free ourselves from it. We can gain release from it by learning to develop wisdom and understanding. We develop this understanding by training ourselves to control our actions, to sharpen our minds and to stop the restless waywardness of our thoughts. When we accomplish that, we can hold the mind still and penetrate deeply with wisdom. At that level, we can use the mind to probe the question of the causes of happiness and suffering.</p>
+<p>The Buddha called the quest to solve these problems and overcome our discontent the Path to Freedom. It begins with training ourselves in the way of morality, then developing the mind, and thirdly developing wisdom based upon mindfulness and effort. Mindfulness means keeping the mind in the present moment and thus being aware of oneself all the time. It means restraining the mind from thinking and wandering aimlessly; in other words, not forgetting oneself. This teaching of the Buddha forms the basis of Buddhist practice.</p>
+<p>This is how we should understand the purpose and aim of meditation practice. The right understanding gives us confidence to push forward in our meditation. It also gives a method whereby we can work out what we should do and what we shouldn’t do, based on our purpose and what we’re trying to achieve. If we know that, we can figure out the best method of developing the skills we need to get to our destination.</p>
+<p>When we first take up Buddhist meditation, we’re not really seeking the truth. The first thing we need to do is develop the faculties which will enable us to search for the truth. It’s rather like somebody who’s in training for a boxing match. That person has to do a lot of training, but the training itself isn’t the prizefight. No medals are awarded for the training. But although the fighter does not achieve his objective while training, the training is, nonetheless, absolutely essential for success in the fight. In much the same way, meditators have to train themselves to develop various essential skills and faculties so that the mind becomes capable of penetrating the cloud of ignorance surrounding it.</p>
+<p>As part of that basic training, every meditator should observe at least the five basic moral precepts. One, not to take life; two, not to steal or take what has not been properly given; three, not to engage in sexual misconduct; four, not to lie or deceive; and five, not to indulge in intoxicants that cloud the mind. These five sīla are considered the minimum criteria for being a decent human being. More than that, their practice creates an environment that is most suitable to the development of samādhi and wisdom.</p>
+<p>When beginning Buddhist practice, meditators should not start out trying to fathom the most profound truths of Buddhism: they are way beyond the understanding of ordinary people. Because they don’t know any better, beginners tend to give them a meaning which is false. It’s purely speculation. Whereas, when they start with their current situation and their immediate problems, here and now, they already have a real basis to work with. People can understand the teaching at that level. When you talk about suffering and discontent, everyone can relate to that. They have plenty of experience. When you talk about how we so often misunderstand our situation, thinking our actions are going to bring a good result only to find that the opposite usually happens, people understand that. This gives them a good basis for practical development.</p>
+<p>As mentioned above, the Buddhist path of practice is organized according to three basic disciplines: moral virtue, samādhi and wisdom. The two factors of samādhi and wisdom are developed mostly through formal meditation practice with morality serving as a preparatory basis. The whole of Buddhism is practical. The Buddha said that Dhamma is like a steppingstone to get us across the stream; in other words, a practical teaching. As for the higher stages of practice, there is time enough to go on to those privately with your teacher when you reach that level. First, you must learn to calm your restless mind and bring it under control. Only then can you harness its true power.</p>
+<p>The training in samādhi consists of learning the art of stopping thoughts and holding the mind still. Thinking is the factor that prevents us from becoming calm. When we can stop our thoughts and hold them still, the results of samādhi will come automatically. Samādhi is quite a natural state. When we stop the restlessness of the mind and keep it still, it will either go into sleep or into samādhi. If we prevent it from going to sleep, it will then drop into samādhi. It’s natural. It’s not something strange. Were it something strange, the Buddha would not have taught it. In fact, samādhi is inherent to the mind. If we learn to stay clear of the kilesas with the thoughts and restlessness they bring up, samādhi will happen of its own accord.</p>
+<p>If we could stop the mind from thinking and hold it still for long enough, we would automatically drop into a state of samādhi. But as soon as the mind starts moving in that direction, the kilesas immediately jump up and begin creating doubt and anxiety, causing that calm mental state to break up. Defilements are constantly disturbing the mind and preventing it from settling down. They act like the wind that blows up the waves on the surface of the ocean. When the wind stops, the waves calm down and quietly recede back into the ocean. The kilesas can also be compared to muddy water. If the water remains still long enough, the mud will settle down to the bottom, allowing the water to become clean and clear.</p>
+<p>For most people in the West, samādhi is their weakest faculty. Generally speaking, those people need samādhi more because they live in a very restless and noisy social environment. One of the advantages of gaining a basis in samādhi is a profound change in our social values. The calm and concentration of samādhi will clearly show up the false values of the society around us, and point out what the essential values should be. This change in perspective also highlights the negative side of many things that we tend to cherish and value. It is as though our whole outlook experiences a shift of emphasis.</p>
+<p>Samādhi also gives an appreciation of the value of just sitting back, taking it easy and not thinking about anything in particular—an attitude which is so foreign to people in the West. It is almost as if we must learn to do nothing, because, in doing nothing, we are freeing the mind to go its own way. If we do that in the right way, the mind will tend to lead us in a very positive direction. This is valuable because we are learning to listen to Dhamma, rather than listening to our own opinions and the opinions of others. But it can be a hard lesson for people in the West to learn. One of the primary advantages of samādhi is that when the mind is still we can see just how harmful our restless thoughts are. It motivates us with a sense of urgency to try to solve that problem.</p>
+<p>Samādhi brings a state of calm. When we do that often, the calm penetrates and gets in deep and becomes part of our nature. When it reaches that level, we tend to be calm the whole time. Then, the kilesas don’t come up easily, and when they do they are seen for what they are. In the end, when that calm state becomes continuous, we feel repulsed by behavior that’s full of kilesas and don’t even want to be associated with it. That’s a sign that samādhi is firm and reliable inside. Samādhi must be firm enough to fix our undivided attention on a meditation object, like the senses or the body. When we establish our mental focus on the body, for instance, we must be able to keep it solely on the body.</p>
+<p>The practice of samādhi is extremely valuable in its ability to wake us up and sharpen the mind. Samādhi pulls the mind together and concentrates it. But although it fosters a very clear mind, samādhi on its own will not turn into wisdom. Wisdom must be cultivated.</p>
+<p>When concentration is firm, it’s time to start cultivating wisdom. If you have trained yourself to keep your mind on a single object, like the breath, that training can then come into play when you are investigating with wisdom. You can use the same basic principles in the wisdom practice that you developed in the samādhi practice. You may find it very difficult to attain samādhi. Nonetheless, you should try to do so. And you should use the fruits of samādhi to develop some wisdom. Wisdom, when practiced properly, can be an aid in developing samādhi as well.</p>
+<p>There are three levels of developing wisdom. First, there is suttamāya-paññā, which is the wisdom developed through listening to or reading about the Dhamma. Cintamāya-paññā is the wisdom developed by reflecting on what one has heard or read. The third, bhāvanāmāya-paññā, which is the wisdom developed through the practice of meditation, is the most important because it is gained through direct experience.</p>
+<p>When you see your own faults internally through direct experience, and realize that they bring you only suffering, you automatically turn away from them. It is not as though you make a mental note to refrain from acting in those ways again; but rather, those faults are like a hot iron that you won’t touch with a barge pole. That internal effect occurs straight away as soon as you see your faults with penetrating wisdom.</p>
+<p>Withdrawing from samādhi is an ideal time to focus on wisdom and turn that attention to investigating the body. That calm mental state allows wisdom to penetrate without difficulty so that the body’s true nature can be seen more easily. You’ll notice a significant difference from your earlier wisdom practice, which was much more academic and intellectual, and which the mind resisted doing because the kilesas kept interfering to pull it away. Samādhi frees you from all that. It’s a very valuable state if you can achieve it, but it’s not easy. There are many barriers to overcome.</p>
+<p>There are two main advantages of attaining a deep state of samādhi. First of all, it provides an unshakeable refuge. You know clearly that when you are in that state nothing can harm you. Secondly, when the mind becomes tired from investigating a lot with wisdom, you can use that state to give the mental faculties a rest. In fact, you can use samādhi to refresh the mind at anytime. Samādhi always leaves a very strong aftertaste of calm. The mind is no longer stubborn or difficult, being, instead, completely pliable.</p>
+<p>That’s the point where wisdom takes over. The wisdom practice uses the calm and concentration of samādhi as an aid to penetrate deeply. But you must develop that calm basis first; otherwise, the mind is constantly scattered. It has no strength. It’s like a water nozzle that sprays water out in all directions; the water has no power behind it. However, when you focus the water into one jet, it becomes quite strong. The mind is like that. You need to bring the mind into a very focused state. Then you can deal directly and forcefully with any problems that arise.</p>
+<p>Problems arise in meditation practice because our minds are full of defilements. It’s as though the mind is pure water mixed with a lot of mud. Because of the mud, the water is not fit for use. Since we cannot find a refuge in the pure water of the mind, we find something else to take refuge in. We seek refuge in our physical bodies, in other people, in places and in other worldly attachments. We try grasping at these things. The trouble is that when we grasp them they never last, they are always changing.</p>
+<p>In truth, we cannot really grasp anything properly, because as soon as we catch hold of it, it’s gone. We want to somehow make things belong to us and become part of us. But our attempt to grasp these things is based on a false premise. Say we buy an object and call it ours. What in that object has changed by the mere act of purchasing it? Nothing. It is the same after we bought it as it was before. Only our idea of it has changed. It now “belongs” to us. Because this grasping is based on a false premise, we can never find satisfaction in what we grasp. And because of their unsatisfactory nature, we cannot take refuge in external things.</p>
+<p>People are always searching for a satisfactory refuge, but they never find one. To begin with, they look inside themselves. But, although the primary refuge exists inside them, they can’t reach it because it’s concealed by the defiling presence of greed, hatred and delusion. Due to defilements, when people focus inside themselves, all they see is a mess. They find nothing there that they want, nothing to serve as a refuge. What do people do then? They search in the world outside themselves. Consequently, people become interested in all sorts of mundane things that lead them on and on in a fruitless search for the contentment of a secure personal refuge. They end up with only more discontent, more suffering, because they grasp at things that have no real substance, like grasping a handful of air. Yet they keep on grasping, hoping to find contentment but inevitably experiencing the opposite.</p>
+<p>The Buddha taught methods that can be used to cure our discontent from within, not out in the world. In other words, we try to counter those kilesas that cause us to suffer all the time. As we begin eliminating the kilesas, we catch a glimpse of the mind’s true essence, what we call the citta. And we begin to see how valuable it is. When we begin to understand the true value of the citta, an attachment to that essence of mind begins to manifest. When the attachment to the citta grows strong, attachment to the external world dies away.</p>
+<p>The more we eliminate the kilesas, the more we see the value of the citta. Until, finally, when we realize the nature of the citta completely, the attachment to the world entirely disappears. There is no need to make an effort to give up things because at that stage giving up is automatic. This is the true aim of the Buddha’s teaching.</p>
+<p>In his teachings, the Buddha used the normal conventions of language: similes and metaphors and so on. He spoke about relative truths in the world. The Buddha did not teach absolute truth because absolute truth cannot be described. What the Buddha taught was the skillful means by which we can reach the point where that absolute truth is known. The whole of the teaching is a method to take us from our present deluded state to a state where the mind is clear enough and knows enough to make the “jump” to Nibbāna, so to speak. We have to raise the mind’s level up to that point; only then can we cross over. When we try to accomplish it without raising the level of the mind, there is no hope of success.</p>
+<p>When beginning the training, we start off where we are—as ordinary people with ordinary understanding. Initially, we have to work with that ordinary understanding and make the best use of it. As we go on, we’ll see that ordinary understanding isn’t sufficient. So we have to find new methods, new understanding and more subtle ways of looking at things. It’s not that the ordinary understanding is wrong, but rather that it’s inadequate—it doesn’t explain subtler conditions properly.</p>
+<p>There are many things in ordinary understanding that can’t explain various anomalies that arise in meditation—experiences which don’t fit with our ordinary understanding. For that reason, we need to discover a new way of understanding. After we’ve used that new method for awhile, we’ll find that it is no longer adequate, so we develop another way of understanding. By that means, we keep on adjusting our methods as we gradually progress in meditation.</p>
+<p>The way of Buddhism leads toward absolute truth. The only way to reach there is to adapt the mind’s state accordingly. If we adapt the mind’s level to that of absolute truth, then we can experience absolute truth. The purpose of Buddhist training is to reach that point. The absolute truth is Nibbāna, of course. So we have to adjust the mind to the conditions that lead to Nibbāna. When we have incorporated those conditions into the mind, we will eventually reach the goal. Otherwise, we won’t succeed. The whole training points the way to Nibbāna.</p>
+<p>Please understand as well that the way of Buddhism is not a hard and fast system. The recommendations coming directly from the Buddha are the best because he took the nature of human beings into account. But they are not set in stone. The whole of Buddhism is a method. You can adapt the method to your own needs. You needn’t practice exactly according to what the books say. Being a method, the Buddha’s teaching is not itself an absolute truth. It is true as far as the world goes, but absolute truth is something utterly beyond.</p>
+<p>To begin with, you must start off by using the regular methods, because you don’t yet know. But once you’ve become used to the regular methods, then you can start searching about a bit more. You eventually find out what works and you use it. You must always test new methods by the results they give. Do the results lead to more calm, more understanding? Or do they lead to less calm and less understanding? If the methods lead to more calm and greater understanding, they are probably worth pursuing.</p>
+<p>Experiment for yourself to find out the best practice for you. That’s the way of kammaṭṭhāna. The word kammaṭṭhāna means “basis of action” or “field of action.” The field of action is the whole of what we do in the scope of meditation practice. In practicing kammaṭṭhāna, the idea is to be innovative. You have to think for yourself quite a lot. You must search for and find your own methods. When you come up against a problem in your meditation, you should work out the best way to overcome that problem. Often, people who practice kammaṭṭhāna have their own unique meditation methods which are quite different from those other people use. You must learn to find tricks that help you to overcome the problems you encounter in the practice. Then you can work out the answers for yourself.</p>
+<p>The defilements of the mind do not behave in a predictable and orderly fashion. Instead, they create havoc in your thoughts and emotions and in the process cause numerous problems. Because of that, there are times when you have to use morality to overcome a problem, times when you have to use samādhi and times when you have to use wisdom. Normally, it’s recommended that samādhi be practiced first to control the mind before developing wisdom. But when a problem arises where it’s appropriate to employ wisdom first, then that’s the right choice for that situation and you should use it.</p>
+<p>The way of developing meditation is not a straightforward, cut and dried process. Each person must find their own way, which means you must be resourceful, and even, to some extent, inventive in choosing meditation techniques. If you encounter a hindrance with no prescribed method to circumvent it, you will have to rely on wisdom to devise a method on the spot. You can’t depend only on what the books say. The books are just the bare bones. It’s your job to put the flesh on them.</p>
+<p>When you have established a true refuge internally, attachment to everything else naturally disappears. The things you do wrong and the problems you create are all concerned with the mind flowing out into the world. It is as though the mind leaks into the world, causing all of its energy to escape. When you keep your attention inside and stop that leakage, you are always in the present and everything is just right.</p>
+<p>It is also important to realize that inside your mind there is something that will tell you what is right, tell you what defilement is and tell you the right thing to do. That something is Dhamma. Once you realize it is there, you have to learn to recognize and listen to it. It never forces you, but there is something that will tell you what is correct, and it’s often where you don’t want to go.</p>
+<p>You should learn to know that one very well, because it is an excellent guide. The more you can get to know the Dhamma, the more you have an internal teacher to guide you. You probably have an external teacher, and that is necessary; but finally, you must replace the external teacher with the internal one. When that has been accomplished, you no longer need to be with a teacher. You can practice on your own then. For that reason, you have to learn to recognize the internal teacher, and listen carefully to the teaching of the Dhamma.</p>
+<p>By recognizing the internal teacher and listening carefully, you learn to distinguish between the kilesas and the Dhamma. In the end, you find that the kilesas are, in fact, yourself. The kilesas are the ones in charge of everything you do—all of your thoughts, speech and actions. And the Dhamma seems to be separate, something other, something which points the way. You must learn to recognize the Dhamma, which gives a feeling of being something outside yourself. You must come to realize that, while everything else is false, the Dhamma is real. Your task is to get rid of the false things that are the kilesas, so that only the Dhamma is left.</p>
+<p>The Buddha said that he taught only two things: dukkha and the cessation of dukkha. Only those two. Similarly, the Buddha once picked up a handful of leaves from the forest floor and asked his disciples which were greater, the leaves in his hand or those in the forest. His disciples said that the leaves in his hand were few, while the leaves in the forest were many. The Buddha said that what he taught was like the leaves in his hand, compared to all that he knew, which was like the leaves in the forest. And, he asked “Why don’t I teach you all those other things? Because they do not lead to the cessation of dukkha, they do not lead to Nibbāna.”</p>
+<p>In other words, the Buddha was saying: I am giving you the method by which you should train and develop your mind. When you follow that method correctly, you will come to Nibbāna. Then you will see the truth for yourself, and all questions will be answered.</p>
+</article>
+
+<hr class="border-stone-200 dark:border-stone-800 mb-8">
+
+<div class="flex flex-row justify-between items-center gap-2 mt-12 py-6 border-t border-stone-200 dark:border-stone-800">
+    
+    <div class="w-1/3 flex justify-start">
+        
+    </div>
+
+    <div class="w-1/3 flex justify-center">
+        <a href="../../../content/books/Uncommon_Wisdom/index.html" class="group flex flex-col items-center">
+            <img src="../../../static/logo.svg" class="w-6 h-6 sm:w-10 sm:h-10 mb-1 group-hover:rotate-45 transition-transform duration-500" alt="Uncommon Wisdom">
+            
+            <span class="text-[10px] uppercase tracking-widest font-bold text-dhamma-saffron sm:hidden">Index</span>
+            
+            <span class="hidden sm:block text-xs font-bold tracking-widest uppercase text-dhamma-saffron mt-1">Uncommon Wisdom</span>
+        </a>
+    </div>
+
+    <div class="w-1/3 flex justify-end">
+        
+        <a href="../../../content/books/Uncommon_Wisdom/02._Presence.html" class="group">
+            <div class="flex flex-col items-center sm:hidden">
+                <span class="text-sm font-bold text-stone-400 group-hover:text-dhamma-saffron transition-colors">Next</span>
+                <span class="text-xs font-mono text-stone-500">02</span>
+            </div>
+            
+            <div class="hidden sm:flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-stone-100 dark:hover:bg-stone-800 transition-all text-right">
+                <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-stone-400">Next</span>
+                    <span class="text-sm font-semibold truncate max-w-[150px]">02. Presence</span>
+                </div>
+                <svg class="w-5 h-5 text-dhamma-saffron group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+    </main>
+
+    <footer class="border-t border-stone-200 dark:border-stone-800 py-6 mt-10">
+        <div class="w-[90%] md:max-w-4xl mx-auto text-center text-sm text-stone-500 dark:text-stone-400">
+            May all beings be happy and peaceful.
+        </div>
+    </footer>
+
+    <script>
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+            document.documentElement.classList.add('dark');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+		
+		// Hamburger Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        menuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+		
+    </script>
+</body>
+</html>
